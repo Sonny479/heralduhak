@@ -12,74 +12,120 @@
 <body data-page="home">
   <a class="skip" href="#main">본문 바로가기</a>
 
-  <header class="site-header" role="banner">
-    <div class="container header__inner">
-      <a href="index.html" class="brand" aria-label="HERALD유학 캐나다 홈">HERALD유학 캐나다</a>
-      <nav class="gnb" aria-label="주요 메뉴">
-        <button class="gnb__toggle" aria-expanded="false" aria-controls="gnbMenu">메뉴</button>
-        <ul id="gnbMenu" class="gnb__list">
-          <li><a data-key="about" href="about.html">회사소개</a></li>
-          <li><a data-key="consult" href="consult.html">상담예약</a></li>
-          <li><a data-key="study" href="study-canada.html">캐나다유학소개</a></li>
-          <li><a data-key="early" href="early.html">조기유학프로그램</a></li>
-          <li><a data-key="tutoring" href="tutoring.html">아카데믹튜터링</a></li>
-          <li><a data-key="transfer" href="transfer.html" style="color: brown;">캐나다대학편입프로그램</a></li>
-        </ul>
-      </nav>
-      <a class="btn btn--kakao" href="https://pf.kakao.com/_your_channel" target="_blank" rel="noopener">카카오 상담</a>
-    </div>
-  </header>
+  <!-- ===== Header ===== -->
+<!-- ===== Header ===== -->
+<header class="site-header" role="banner">
+  <div class="header__inner">
+    <!-- 로고 -->
+    <a href="index.html" class="header__brand" aria-label="HERALD UHAK CA">
+      <img src="./assets/img/head-logo1.png" alt="HERALD UHAK CA">
+    </a>
+
+    <!-- 내비게이션 -->
+    <nav class="gnb" aria-label="주요 메뉴">
+      <a href="./about.html">회사소개</a>
+      <a href="./consult.html" >상담예약</a>
+      <a href="./canada.html">캐나다유학소개</a>
+      <a href="./programs.html">조기유학프로그램</a>
+      <a href="./tutoring.html">아카데믹튜터링</a>
+      <a href="./college.html">캐나다 대학편입 프로그램</a>
+      <a href="https://pf.kakao.com" target="_blank" class="btn-kakao">카카오 상담</a>
+    </nav>
+  </div>
+</header>
+
+    <!-- ===== Right Floating Menu ===== -->
+<aside class="aside-nav" aria-label="빠른 이동">
+  <!-- 검은 배경으로 묶이는 메뉴 스택 -->
+  <div class="aside-stack">
+    <a href="https://pf.kakao.com" target="_blank" class="aside-item" data-scroll="external">
+      <img src="./assets/img/aside-menu1.png" alt="카카오톡 상담">
+    </a>
+    <a href="https://blog.naver.com" target="_blank" class="aside-item" data-scroll="external">
+      <img src="./assets/img/aside-menu2.png" alt="블로그">
+    </a>
+    <a href="#section-consult" class="aside-item">
+      <img src="./assets/img/aside-menu3.png" alt="유학상담 예약">
+    </a>
+    <a href="./notice.html" class="aside-item">
+      <img src="./assets/img/aside-menu4.png" alt="공지사항">
+    </a>
+    <a href="#section-office" class="aside-item">
+      <img src="./assets/img/aside-menu5.png" alt="학원 위치">
+    </a>
+  </div>
+
+  <!-- 독립 TOP 버튼 (배경 분리) -->
+  <a href="#top" class="top-btn" aria-label="맨 위로">
+    <img src="./assets/img/top-btn.png" alt="TOP">
+  </a>
+</aside>
 
   <main id="main">
-    <!-- Hero slider (unchanged) -->
-    <section class="section section--hero hero--slider reveal" aria-labelledby="hero-title">
+    <!-- ===== Hero (밝은 이미지 강조) ===== -->
+    <section class="section section--hero hero--slider reveal section--photo" aria-labelledby="hero-title">
       <div class="slider" data-autoplay="true" data-interval="5000">
         <div class="slides">
+
           <article class="slide" id="slide1">
-            <img class="slide__bg" src="./assets/img/hero-1.jpg" alt="">
+            <img class="slide__bg" src="./assets/img/hero-banner1.png" alt="">
             <div class="slide__inner container">
               <div class="slide__text">
-                <h1 id="hero-title" class="title-xl">
-                  글로벌 인재로 성장하는 첫걸음t<br>
+                <p class="subtitle">
+                  글로벌 인재로 성장하는 첫걸음<br>
                   부모의 안심과 학생의 성장을 함께하는 곳
-                  <span class="text-brand">HERALD 유학 캐나다</span>가 기준이됩니다.
-                </h1>
-                <p class="subtitle">2006년부터 축적된 노하우로 조기유학부터 명문대 편입까지 전 과정을 설계합니다.</p>
-                <div class="hero__cta">
-                  <a class="btn btn--primary" href="consult.html">상담 예약하기</a>
-                  <a class="btn btn--ghost" href="about.html">왜 HERALD인가?</a>
+                </p>
+
+                <img src="./assets/img/hero-text-img.png" alt="HERALD UHAK CA" class="hero__title-img">
+
+                <p class="subtitle">유학부터 명문대 편입까지 전 과정을 설계합니다.</p>
+
+                <div class="hero__cta-img">
+                  <a href="consult.html"><img src="./assets/img/reserve-btn1.png" alt="상담 예약하기"></a>
+                  <a href="about.html"><img src="./assets/img/why-herald-btn1.png" alt="왜 HERALD인가?"></a>
                 </div>
               </div>
             </div>
           </article>
 
           <article class="slide" id="slide2">
-            <img class="slide__bg" src="./assets/img/hero-2.jpg" alt="">
+            <img class="slide__bg" src="./assets/img/hero-banner2.png" alt="">
             <div class="slide__inner container">
               <div class="slide__text">
-                <h1 class="title-xl">조기유학 · 아카데믹 튜터링 · 대학편입(UT)<br>한 곳에서 이어지는 맞춤형 로드맵</h1>
+                <p class="subtitle">
+                  조기유학 · 아카데믹 튜터링 · 대학편입(UT)<br>
+                  한 곳에서 이어지는 맞춤형 로드맵
+                </p>
+
                 <p class="subtitle">학생 수준·목표·예산에 맞춘 현실적인 플랜 제안</p>
-                <div class="hero__cta">
-                  <a class="btn btn--primary" href="early.html">조기유학 프로그램</a>
-                  <a class="btn btn--ghost" href="tutoring.html">튜터링 소개</a>
+
+                <div class="hero__cta-img">
+                  <a href="consult.html"><img src="./assets/img/reserve-btn2.png" alt="조기유학 프로그램"></a>
+                  <a href="about.html"><img src="./assets/img/why-herald-btn2.png" alt="튜터링 소개"></a>
                 </div>
               </div>
             </div>
           </article>
 
           <article class="slide" id="slide3">
-            <img class="slide__bg" src="./assets/img/hero-3.jpg" alt="">
+            <img class="slide__bg" src="./assets/img/hero-banner3.png" alt="">
             <div class="slide__inner container">
               <div class="slide__text">
-                <h1 class="title-xl">2년제 컬리지 → 4년제 대학<br>University Transfer 트랙 안내</h1>
+                <p class="subtitle">
+                  2년제 컬리지 → 4년제 대학<br>
+                  University Transfer 트랙 안내
+                </p>
+
                 <p class="subtitle">Coquitlam · Langara · Douglas 등 연계</p>
-                <div class="hero__cta">
-                  <a class="btn btn--primary" href="transfer.html">대학편입 프로그램</a>
-                  <a class="btn btn--ghost" href="study-canada.html">캐나다 유학 소개</a>
+
+                <div class="hero__cta-img">
+                  <a href="consult.html"><img src="./assets/img/reserve-btn3.png" alt="대학편입 프로그램"></a>
+                  <a href="about.html"><img src="./assets/img/why-herald-btn3.png" alt="캐나다 유학 소개"></a>
                 </div>
               </div>
             </div>
           </article>
+
         </div>
 
         <button class="slider__nav prev" aria-label="이전 슬라이드">‹</button>
@@ -93,128 +139,183 @@
       </div>
     </section>
 
-    <!-- ① 조기유학 프로그램 -->
-    <section class="section section--lined reveal" aria-labelledby="early-title">
-      <div class="container">
-        <h2 id="early-title" class="title-md" style="text-align:center;">조기유학 프로그램</h2>
-        <p class="lead" style="text-align:center;">다양한 맞춤형 프로그램으로, 안전하고 성공적인 유학 경험을 제공합니다.</p>
 
-        <div class="columns columns--4">
-          <article class="col">
-            <h3 class="col__title">밴쿠버 공립학교</h3>
-            <p class="col__desc">안전한 환경, 미래를 여는 최고의 선택</p>
-            <div class="col__cta">
-              <a class="btn btn--primary btn--sm" href="https://www.naver.com" target="_blank" rel="noopener">Start here</a>
-            </div>
-          </article>
-          <article class="col">
-            <h3 class="col__title">천주교 사립학교</h3>
-            <p class="col__desc">따뜻한 교육, 책임감 있는 학업 지원</p>
-            <div class="col__cta">
-              <a class="btn btn--primary btn--sm" href="https://www.naver.com" target="_blank" rel="noopener">Start here</a>
-            </div>
-          </article>
-          <article class="col">
-            <h3 class="col__title">부모 동반 유학</h3>
-            <p class="col__desc">가족과 함께하는 특별한 글로벌 여정</p>
-            <div class="col__cta">
-              <a class="btn btn--primary btn--sm" href="https://www.naver.com" target="_blank" rel="noopener">Start here</a>
-            </div>
-          </article>
-          <article class="col">
-            <h3 class="col__title">관리형 유학</h3>
-            <p class="col__desc">입학부터 명문대 진학까지 이어지는 체계적 관리</p>
-            <div class="col__cta">
-              <a class="btn btn--primary btn--sm" href="https://www.naver.com" target="_blank" rel="noopener">Start here</a>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
 
-    <!-- ② 유학 상담 예약 -->
-    <section class="section section--lined reveal" aria-labelledby="consult-title">
-      <div class="container ta-center">
-        <h2 id="consult-title" class="title-md">유학 상담 예약</h2>
-        <p class="lead">간단 신청만 하시면, 전문가가 빠르게 연락드립니다.</p>
-        <div class="cta__actions">
-          <a class="btn btn--primary" href="https://www.naver.com" target="_blank" rel="noopener">Start here</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ③ 유학·교육 컨설팅 후기: 무한 마키(왼→오) -->
-   <section class="section section--lined reveal" aria-labelledby="review-title">
-  <div class="container ta-center">
-    <h2 id="review-title" class="title-md">유학·교육 컨설팅 후기</h2>
-    <p class="muted">Real Experiences Real Stories</p>
-
-    <div class="marquee" data-dup="auto" data-dir="right">
-      <div class="marquee__track">
-        <div class="marquee__item"><img src="./assets/img/review-1.jpg" alt="카톡 후기 1"></div>
-        <div class="marquee__item"><img src="./assets/img/review-1.jpg" alt="카톡 후기 2"></div>
-        <div class="marquee__item"><img src="./assets/img/review-1.jpg" alt="카톡 후기 3"></div>
-        <!-- 필요하면 계속 추가 -->
-      </div>
-    </div>
-  </div>
 </section>
+          <!-- ===== Section 2: 조기유학 프로그램 ===== -->
+      <section class="section section--early" aria-labelledby="early-title"
+              style="--bg:url('./assets/img/second-section.png')">
+        <div class="container">
+          <h2 id="early-title" class="title-md mb-12">조기유학 프로그램</h2>
+          <p class="ex-subtitle">다양한 맞춤형 프로그램으로, 안전하고 성공적인 유학 경험을 제공합니다.</p>
+          
+          <div class="early-grid">
+            <article class="early-card">
+              <h3 class="early-title">밴쿠버 공립학교</h3>
+              <p class="early-desc">안전한 환경, 미래를 여는 최고의 선택</p>
+              <img src="./assets/img/second-section-icon1.png" alt="" class="early-icon">
+              <a href="#" class="early-btn">START HERE →</a>
+            </article>
+
+            <article class="early-card">
+              <h3 class="early-title">천주교 사립학교</h3>
+              <p class="early-desc">따뜻한 교육, 책임감 있는 학업 지원</p>
+              <img src="./assets/img/second-section-icon2.png" alt="" class="early-icon">
+              
+              <a href="#" class="early-btn">START HERE →</a>
+            </article>
+
+            <article class="early-card">
+              <h3 class="early-title">부모 동반 유학</h3>
+              <p class="early-desc">가족과 함께하는 특별한 글로벌 여정</p>
+              <img src="./assets/img/second-section-icon3.png" alt="" class="early-icon">
+              
+              <a href="#" class="early-btn">START HERE →</a>
+            </article>
+
+            <article class="early-card">
+              <h3 class="early-title">관리형 유학</h3>
+              <p class="early-desc">입학부터 명문대 진학까지 이어지는 체계적 관리</p>
+              <img src="./assets/img/second-section-icon4.png" alt="" class="early-icon">
+              
+              <a href="#" class="early-btn">START HERE →</a>
+            </article>
+          </div>
+        </div>
+      </section>
 
 
-    <!-- ④ Office -->
-    <section class="section reveal" aria-labelledby="office-title">
-      <div class="container">
-        <h2 id="office-title" class="title-md" style="text-align:center;">Office</h2>
+      <!-- ===== Section 3: 상담 예약 CTA ===== -->
+      <section id="section-consult" class="cta3-section" aria-labelledby="cta3-title">
+        <div class="cta3-inner">
+          <img src="./assets/img/hero-text-img2.png" alt="HERALD UHAK CA" class="cta3-logo">
 
-        <div class="grid grid--2 office">
-          <article class="card">
-            <h3 class="card__title">VANCOUVER office</h3>
-            <address class="addr">
-              KoreaHerald Education Canada Inc.<br>
-              601 West Broadway, Vancouver, BC<br>
-              +1 778 829 3956
-            </address>
-            <span class="badge">채널톡등록안내</span>
-            <div class="mapbox" aria-label="Google Map 지도 표기 (자리)">
-              <span>Google Map 지도 표기</span>
-            </div>
-            <p class="muted mt-12">벤쿠버법인에서 본사 원장이 캐나다 유학·교육 컨설팅을 진행합니다.</p>
-          </article>
+          <h2 id="cta3-title" class="cta3-heading">유학 상담 예약</h2>
+          <p class="cta3-desc">간단 신청만 하시면, 전문가가 빠르게 연락드립니다.</p>
 
-          <article class="card">
-            <h3 class="card__title">SEOUL office</h3>
-            <address class="addr">
-              (주)디지털헤럴드<br>
-              서울시 중구 남대문로10길 6<br>
-              02-319-0003
-              <br>
-              <br>
-              <br>
-            </address>
-            <div class="mapbox" aria-label="Google Map 지도 표기 (자리)">
-              <span>Google Map 지도 표기</span>
-            </div>
-            <p class="muted mt-12">서울본원 HIS헤럴드교육센터에서 유학준비부터 대학입학까지 전과정을 튜터링합니다.</p>
-          </article>
+          <a href="./consult.html" class="cta3-btn">상담 예약하기</a>
+        </div>
+      </section>
+
+
+      <!-- ===== Section 4: REAL EXPERIENCES ===== -->
+      <section id="section-stories" class="stories-section" aria-labelledby="stories-title">
+        <div class="container">
+          <h2 id="stories-title" class="stories-heading">
+            REAL EXPERIENCES<br>REAL STORIES
+          </h2>
+          <p class="stories-sub">유학·교육 컨설팅 후기</p>
+          <p class="stories-desc">
+            <span class="text-band">2006년부터 축적된 노하우로 조기유학부터 명문대 편입까지 전 과정을 설계합니다.</span>
+          </p>
+        </div>
+
+        <!-- 중앙 1194px 뷰포트 -->
+        <div class="stories-viewport">
+          <div class="stories-track">
+            <!-- 원본 8장 -->
+            <div class="story-card"><img src="./assets/img/real-story1.png" alt="후기 1"></div>
+            <div class="story-card"><img src="./assets/img/real-story2.png" alt="후기 2"></div>
+            <div class="story-card"><img src="./assets/img/real-story3.png" alt="후기 3"></div>
+            <div class="story-card"><img src="./assets/img/real-story4.png" alt="후기 4"></div>
+            <div class="story-card"><img src="./assets/img/real-story5.png" alt="후기 5"></div>
+            <div class="story-card"><img src="./assets/img/real-story6.png" alt="후기 6"></div>
+            <div class="story-card"><img src="./assets/img/real-story7.png" alt="후기 7"></div>
+            <div class="story-card"><img src="./assets/img/real-story8.png" alt="후기 8"></div>
+            <!-- 아래 ‘무한루프’용 복제분은 JS가 자동으로 채움 -->
+          </div>
+        </div>
+      </section>
+
+            <!-- ===== Section 5: OFFICE ===== -->
+      <section id="section-office" class="office-section" aria-labelledby="office-title">
+        <div class="office__inner">
+          <h2 id="office-title" class="office__heading">OFFICE</h2>
+
+          <div class="office__grid">
+            <!-- Vancouver -->
+            <article class="office-card">
+              <header class="office-card__head">
+                <h3 class="office-card__title">VANCOUVER office</h3>
+                <p class="office-card__meta">
+                  KoreaHerald Education Canada Inc.<br>
+                  601 West Broadway, Vancouver, BC<br>
+                  +1 778 829 3956
+                </p>
+              </header>
+
+              <div class="office-card__map">
+                <!-- 지금은 이미지 플레이스홀더, 실제 지도는 아래 주석 iframe으로 교체 -->
+                <img src="./assets/img/map-example.png" alt="Vancouver office map">
+                <!-- 실제 지도(원할 때 src만 채워 교체)
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=YOUR_EMBED_CODE"
+                  loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                  allowfullscreen></iframe>
+                -->
+              </div>
+
+              <p class="office-card__desc">
+                밴쿠버법인에서 본사 원장이 캐나다 유학·교육 컨설팅을 진행합니다.
+              </p>
+            </article>
+
+            <!-- Seoul -->
+            <article class="office-card">
+              <header class="office-card__head">
+                <h3 class="office-card__title">SEOUL office</h3>
+                <p class="office-card__meta">
+                  (주)디지털헤럴드<br>
+                  서울시 중구 남대문로10길 6<br>
+                  02-319-0003
+                </p>
+              </header>
+
+              <div class="office-card__map">
+                <img src="./assets/img/map-example.png" alt="Seoul office map">
+                <!-- 실제 지도 iframe으로 교체 가능(위와 동일 구조) -->
+              </div>
+
+              <p class="office-card__desc">
+                서울본원 HIS헤럴드교육센터에서 유학준비부터 대학 입학까지 전과정을 튜터링합니다.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+      
+          <!-- ===== Footer ===== -->
+    <footer class="site-footer" role="contentinfo">
+      <div class="footer__inner">
+        <!-- 왼쪽 영역 -->
+        <div class="footer__left">
+          <a href="index.html" class="footer__brand" aria-label="HERALD UHAK CA">
+            <img src="./assets/img/herald uhak ca logo3.png" alt="HERALD UHAK CA 로고">
+          </a>
+
+          <nav class="footer__links" aria-label="푸터 메뉴">
+            <a href="./about.html">회사소개</a>
+            <span class="sep" aria-hidden="true">|</span>
+            <a href="./consult.html">상담예약</a>
+            <span class="sep" aria-hidden="true">|</span>
+            <a href="./programs.html">프로그램</a>
+          </nav>
+
+          <p class="footer__copy">
+            Copyrights KOREAHERALD EDUCATION CANADA Inc. © 2024 All Rights Reserved.<br>
+            400 601 West Broadway, Vancouver, British Columbia, Canada V5Z4C2
+          </p>
+        </div>
+
+        <!-- 오른쪽 영역 -->
+        <div class="footer__right">
+          <h3 class="footer__title">상담요청</h3>
+          <ul class="footer__hours">
+            <li>주중 09:00 - 20:00</li>
+            <li>토요일 10:00 - 16:00</li>
+          </ul>
         </div>
       </div>
-    </section>
-  </main>
-
-  <a class="floating-kakao" href="https://pf.kakao.com/_your_channel" target="_blank" rel="noopener" aria-label="카카오톡 상담 바로가기">K</a>
-
-  <footer class="site-footer">
-    <div class="container">
-      <p>
-        Copyrights KOREAHERALD EDUCATION CANADA Inc. ⓒ 2024 All Rights Reserved.
-        <br>400 601 West Broadway, Vancouver, British Columbia, Canada V5Z4C2
-      </p>
-      <nav aria-label="푸터">
-        <a href="about.html">회사소개</a>
-        <a href="consult.html">상담예약</a>
-        <a href="study-canada.html">프로그램</a>
-      </nav>
-    </div>
-  </footer>
+    </footer>
 </body>
 </html>
