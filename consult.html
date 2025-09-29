@@ -12,181 +12,230 @@
 <body data-page="consult">
   <a class="skip" href="#main">본문 바로가기</a>
 
-  <!-- 공통 헤더 -->
-  <header class="site-header" role="banner">
-    <div class="container header__inner">
-      <a href="index.html" class="brand">HERALD유학 캐나다</a>
-      <nav class="gnb" aria-label="주요 메뉴">
-        <button class="gnb__toggle" aria-expanded="false" aria-controls="gnbMenu">메뉴</button>
-        <ul id="gnbMenu" class="gnb__list">
-          <li><a data-key="about" href="about.html">회사소개</a></li>
-          <li><a data-key="consult" href="consult.html">상담예약</a></li>
-          <li><a data-key="study" href="study-canada.html">캐나다유학소개</a></li>
-          <li><a data-key="early" href="early.html">조기유학프로그램</a></li>
-          <li><a data-key="tutoring" href="tutoring.html">아카데믹튜터링</a></li>
-          <li><a data-key="transfer" href="transfer.html" style="color: brown;">캐나다대학편입프로그램</a></li>
-        </ul>
-      </nav>
-      <a class="btn btn--kakao" href="https://pf.kakao.com/_your_channel" target="_blank" rel="noopener">카카오 상담</a>
+    <!-- ===== Header ===== -->
+<header class="site-header" role="banner">
+  <div class="header__inner">
+    <!-- 로고 -->
+    <a href="index.html" class="header__brand" aria-label="HERALD UHAK CA">
+      <img src="./assets/img/head-logo1.png" alt="HERALD UHAK CA">
+    </a>
+
+    <!-- 내비게이션 -->
+    <nav class="gnb" aria-label="주요 메뉴">
+      <a href="./about.html">회사소개</a>
+      <a href="./consult.html" >상담예약</a>
+      <a href="./study-canada.html">캐나다유학소개</a>
+      <a href="./early.html">조기유학프로그램</a>
+      <a href="./tutoring.html">아카데믹튜터링</a>
+      <a href="./transfer.html">캐나다 대학편입 프로그램</a>
+      <a href="https://pf.kakao.com" target="_blank" class="btn-kakao">카카오 상담</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main" class="page-consult" role="main" aria-label="상담예약 본문">
+  <!-- Hero -->
+  <section class="consult-hero">
+    <div class="container">
+      <h1 class="consult-hero__brand">
+        <img src="./assets/img/head-logo1.png" alt="HERALD UHAK CA" height="28" decoding="async">
+      </h1>
+      <p class="consult-hero__title">상담예약</p>
+      <p class="consult-hero__subtitle">신규 상담 접수 폼</p>
     </div>
-  </header>
+  </section>
 
-  <main id="main">
-    <!-- Hero -->
-    <section class="section section--hero reveal" aria-labelledby="page-title">
-      <div class="container">
-        <h1 id="page-title" class="title-xl">상담예약</h1>
-        <p class="subtitle">신규 상담 접수 폼</p>
-      </div>
-    </section>
+  <!-- Form Card -->
+  <section class="section section--form">
+    <div class="container">
+      <form id="consultForm" class="consult-card" novalidate>
+        <!-- 상단 안내 -->
+        <div class="consult-card__header">
+          <h2 class="consult-card__title">
+            <span aria-hidden="true">📘</span> 신규상담
+            <small class="consult-card__hours">업무시간: 평일 10:00~18:00 (현지/한국 공휴일 제외)</small>
+          </h2>
+          <p class="consult-card__notice">
+            ※ <strong>신규상담 문의는 HERALD유학 캐나다 카카오톡</strong>으로 시간에 무관하게 연락주시면
+            상담시간 내에 최대한 빠르게 연락드립니다.
+          </p>
+        </div>
 
-    <!-- Form -->
-    <section class="section reveal">
-      <div class="container">
-        <div class="grid grid--2">
-          <!-- Left: Form -->
-          <form id="consultForm" class="form card" novalidate>
-            <h2 class="card__title">● 신규상담</h2>
-            <p class="note" role="note">
-              ※ 신규상담문의는 HERALD유학 캐나다 <strong>카카오톡</strong>으로 시간에 무관하게 연락주시면
-              상담시간 내에 최대한 빠르게 연락드립니다.
-            </p>
+        <!-- 필드 그룹 -->
+        <div class="form-grid">
 
-            <div class="form__row">
-              <label for="student">학생이름</label>
-              <input id="student" name="student" type="text" placeholder="예) 홍길동" required>
+          <!-- 학생 이름 -->
+          <div class="form-field">
+            <label for="studentName" class="form-label">학생 이름</label>
+            <input type="text" id="studentName" name="studentName" class="input" placeholder="예) 홍길동, 홍길동" required>
+            <p class="field-help" id="nameHelp" aria-live="polite"></p>
+          </div>
+
+          <!-- 성별 -->
+          <fieldset class="form-field">
+            <legend class="form-label">성별</legend>
+            <div class="choice-row">
+              <label class="choice">
+                <input type="radio" name="gender" value="남자" required>
+                <span>남자</span>
+              </label>
+              <label class="choice">
+                <input type="radio" name="gender" value="여자" required>
+                <span>여자</span>
+              </label>
             </div>
+          </fieldset>
 
-            <fieldset class="form__row">
-              <legend class="legend">성별</legend>
-              <div class="choices" role="radiogroup" aria-label="성별">
-                <label><input type="radio" name="gender" value="남" required> 남자</label>
-                <label><input type="radio" name="gender" value="여"> 여자</label>
-              </div>
-            </fieldset>
-
-            <div class="form__row">
-              <label for="grade">현재학년</label>
-              <select id="grade" name="grade" required>
-                <option value="">선택</option>
-                <option>Gr.1</option><option>Gr.2</option><option>Gr.3</option>
-                <option>Gr.4</option><option>Gr.5</option><option>Gr.6</option>
-                <option>Gr.7</option><option>Gr.8</option><option>Gr.9</option>
-                <option>Gr.10</option><option>Gr.11</option><option>Gr.12</option>
+          <!-- 현재 학년 -->
+          <div class="form-field">
+            <label for="grade" class="form-label">현재 학년</label>
+            <div class="select-wrap">
+              <select id="grade" name="grade" class="select" required>
+                <option value="" selected disabled>선택</option>
+                <option>Gr.1</option>
+                <option>Gr.2</option>
+                <option>Gr.3</option>
+                <option>Gr.4</option>
+                <option>Gr.5</option>
+                <option>Gr.6</option>
+                <option>Gr.7</option>
+                <option>Gr.8</option>
+                <option>Gr.9</option>
+                <option>Gr.10</option>
+                <option>Gr.11</option>
+                <option>Gr.12</option>
                 <option>Post Secondary</option>
               </select>
-              <p class="hint">(Gr.1~Gr.12 + Post Secondary, 총 13개 중 선택)</p>
             </div>
+            <p class="field-hint">Gr.1~Gr.12 + Post Secondary, 총 13개 선택</p>
+          </div>
 
-            <div class="form__row">
-              <label for="phone">모바일연락처</label>
-              <input id="phone" name="phone" type="tel" placeholder="예) 010-1234-5678" required>
-            </div>
+          <!-- 모바일 연락처 -->
+          <div class="form-field">
+            <label for="phone" class="form-label">모바일 연락처</label>
+            <input type="tel" id="phone" name="phone" class="input" placeholder="예) 010-1234-5678" inputmode="tel">
+          </div>
 
-            <div class="form__row">
-              <label for="kakao">카카오ID</label>
-              <input id="kakao" name="kakao" type="text" placeholder="예) herald_edu" required>
-              <p class="hint">※ 캐나다/미국 거주로 현지 연락처가 없으면 <strong>카카오 보이스톡</strong>으로 상담드려요. 정확히 입력해주세요.</p>
-            </div>
-
-            <div class="form__row">
-              <label for="email">이메일</label>
-              <input id="email" name="email" type="email" placeholder="example@email.com" required>
-            </div>
-
-            <div class="form__row">
-              <label for="country">거주국가</label>
-              <input id="country" name="country" type="text" placeholder="예) 대한민국 / 캐나다 / 미국" required>
-            </div>
-
-            <fieldset class="form__row">
-              <legend class="legend">관심프로그램 <span class="hint">(최대 2개 선택)</span></legend>
-              <div class="checkbox-grid" aria-describedby="interestHint">
-                <label><input type="checkbox" name="interest" value="부모동반유학"> 부모동반유학</label>
-                <label><input type="checkbox" name="interest" value="공립학교무상교육"> 공립학교무상교육</label>
-                <label><input type="checkbox" name="interest" value="천주교사립학교"> 천주교사립학교</label>
-                <label><input type="checkbox" name="interest" value="관리형유학"> 관리형유학</label>
-                <label><input type="checkbox" name="interest" value="아카데믹튜터링"> 아카데믹튜터링</label>
-                <label><input type="checkbox" name="interest" value="대학편입프로그램"> 대학편입프로그램</label>
-              </div>
-              <p id="interestHint" class="hint" aria-live="polite">최대 2개까지 선택 가능합니다.</p>
-            </fieldset>
-
-            <div class="form__row">
-              <label for="message">문의내용</label>
-              <textarea id="message" name="message" rows="6" maxlength="500" placeholder="- 계획하는 유학시기
-- 예산범위
-- BC주 내 선호 city
-- 기타"></textarea>
-              <div class="counter" id="msgCount">0/500</div>
-              <p class="hint">※ 문의내용은 최대 500자까지 가능합니다.</p>
-            </div>
-
-            <div class="form__row">
-              <label class="legend">개인정보 취급방침</label>
-              <label style="display:flex;gap:8px;align-items:center;">
-                <input type="checkbox" required> 동의합니다
-              </label>
-              <details class="form__row">
-                <summary class="btn btn--ghost btn--sm" style="width:max-content">방침 보기</summary>
-                <p class="hint">
-                  상담 접수·안내를 위한 최소한의 개인정보(이름/연락처/카카오ID/이메일)를 수집하며,
-                  목적 달성 후 관련 법령에 따라 안전하게 보관·파기합니다.
-                </p>
-              </details>
-            </div>
-
-            <div class="form__row" style="display:flex; gap:10px;">
-              <button type="submit" class="btn btn--primary" style="flex:1;">상담 요청하기</button>
-              <a class="btn btn--kakao" href="https://pf.kakao.com/_your_channel" target="_blank" rel="noopener" style="flex:1;">카카오톡 상담하기</a>
-            </div>
-          </form>
-
-          <!-- Right: 안내/바로가기 -->
-          <aside class="card">
-            <h3 class="card__title">상담 안내</h3>
-            <p class="card__body">
-              접수 후 업무시간 내 빠르게 연락드립니다.<br>
-              카카오톡 채널을 통해 실시간 상담도 가능합니다.
+          <!-- 카카오 ID -->
+          <div class="form-field">
+            <label for="kakaoId" class="form-label">카카오 ID</label>
+            <input type="text" id="kakaoId" name="kakaoId" class="input" placeholder="예) herald_edu">
+            <p class="field-hint">
+              ※ 캐나다/미국 거주로 현지 연락처가 없으면 <strong>카카오 보이스톡</strong>으로 상담드려요. 정확히 입력해주세요.
             </p>
-            <div class="form__row">
-              <a class="btn btn--kakao btn--block" href="https://pf.kakao.com/_your_channel" target="_blank" rel="noopener">카카오톡 상담 바로가기</a>
-            </div>
-            <div class="form__row">
-              <p class="hint">업무시간: 평일 10:00~18:00 (현지/한국 공휴일 제외)</p>
-            </div>
-          </aside>
-        </div>
-      </div>
-    </section>
+          </div>
 
-    <!-- CTA (선택) -->
-    <!--<section class="section section--cta reveal" aria-labelledby="cta-title">
-      <div class="container cta__inner">
-        <h2 id="cta-title" class="title-md">빠른 상담이 필요하신가요?</h2>
-        <p class="subtitle">폼 제출 또는 카카오톡 채널로 연락주세요.</p>
-        <div class="cta__actions">
-          <a class="btn btn--primary" href="#consultForm">상담 폼으로 이동</a>
-          <a class="btn btn--ghost" href="https://pf.kakao.com/_your_channel" target="_blank" rel="noopener">카카오톡 열기</a>
-        </div>
-      </div>
-    </section>
-  </main>-->
+          <!-- 이메일 -->
+          <div class="form-field">
+            <label for="email" class="form-label">이메일</label>
+            <input type="email" id="email" name="email" class="input" placeholder="example@email.com" inputmode="email">
+          </div>
 
-  <!-- 공통 플로팅/푸터 -->
-  <a class="floating-kakao" href="https://pf.kakao.com/_your_channel" target="_blank" rel="noopener" aria-label="카카오톡 상담 바로가기">K</a>
-  <footer class="site-footer">
-    <div class="container">
-      <p>
-        Copyrights KOREAHERALD EDUCATION CANADA Inc. ⓒ 2024 All Rights Reserved.
-        <br>400 601 West Broadway, Vancouver, British Columbia, Canada V5Z4C2
-      </p>
-      <nav aria-label="푸터">
-        <a href="about.html">회사소개</a>
-        <a href="consult.html">상담예약</a>
-        <a href="study-canada.html">프로그램</a>
-      </nav>
+          <!-- 거주국가 -->
+          <div class="form-field">
+            <label for="country" class="form-label">거주국가</label>
+            <input type="text" id="country" name="country" class="input" placeholder="예) 대한민국 / 캐나다 / 미국">
+          </div>
+
+          <!-- 관심 프로그램 (최대 2개) -->
+          <fieldset class="form-field">
+            <legend class="form-label">
+              관심 프로그램 <span class="muted">(최대 <strong>2개</strong>까지 선택)</span>
+            </legend>
+            <div class="choice-grid" data-max="2" id="interestGroup">
+              <label class="choice">
+                <input type="checkbox" name="interests" value="부모동반유학">
+                <span>부모동반유학</span>
+              </label>
+              <label class="choice">
+                <input type="checkbox" name="interests" value="공립학교 무상교육">
+                <span>공립학교 무상교육</span>
+              </label>
+              <label class="choice">
+                <input type="checkbox" name="interests" value="천주교 사립학교">
+                <span>천주교 사립학교</span>
+              </label>
+              <label class="choice">
+                <input type="checkbox" name="interests" value="관리형 유학">
+                <span>관리형 유학</span>
+              </label>
+              <label class="choice">
+                <input type="checkbox" name="interests" value="아카데믹 튜터링">
+                <span>아카데믹 튜터링</span>
+              </label>
+              <label class="choice">
+                <input type="checkbox" name="interests" value="대학편입 프로그램">
+                <span>대학편입 프로그램</span>
+              </label>
+            </div>
+          </fieldset>
+
+          <!-- 문의내용 (500자 제한) -->
+          <div class="form-field">
+            <label for="message" class="form-label">
+              문의내용 <span class="muted">※ 최대 500자까지 가능합니다.</span>
+            </label>
+            <textarea id="message" name="message" class="textarea" rows="6"
+              placeholder="- 계획하는 유학시기&#10;- 예산범위&#10;- BC주 내 선호 City&#10;- 기타"
+              maxlength="500"></textarea>
+            <div class="char-counter"><span id="charNow">0</span> / 500</div>
+          </div>
+
+          <!-- 개인정보 취급방침 동의 -->
+          <div class="form-field form-field--agree">
+            <label class="choice">
+              <input type="checkbox" id="agree" name="agree" required>
+              <span>개인정보 취급방침에 동의합니다.</span>
+            </label>
+            <button type="button" class="btn btn--ghost" id="openPolicy">방침 보기</button>
+          </div>
+
+        </div>
+
+        <!-- 액션 버튼 -->
+        <div class="form-actions">
+          <button type="submit" class="btn btn--primary" id="submitBtn">상담 요청하기</button>
+          <a class="btn btn--kakao" id="kakaoBtn" href="https://pf.kakao.com" target="_blank" rel="noopener">카카오톡 상담하기</a>
+        </div>
+
+      </form>
     </div>
-  </footer>
+  </section>
+</main>
+
+
+          <!-- ===== Footer ===== -->
+    <footer class="site-footer" role="contentinfo">
+      <div class="footer__inner">
+        <!-- 왼쪽 영역 -->
+        <div class="footer__left">
+          <a href="index.html" class="footer__brand" aria-label="HERALD UHAK CA">
+            <img src="./assets/img/herald uhak ca logo3.png" alt="HERALD UHAK CA 로고">
+          </a>
+
+          <nav class="footer__links" aria-label="푸터 메뉴">
+            <a href="./about.html">회사소개</a>
+            <span class="sep" aria-hidden="true">|</span>
+            <a href="./consult.html">상담예약</a>
+            <span class="sep" aria-hidden="true">|</span>
+            <a href="./programs.html">프로그램</a>
+          </nav>
+
+          <p class="footer__copy">
+            Copyrights KOREAHERALD EDUCATION CANADA Inc. © 2024 All Rights Reserved.<br>
+            400 601 West Broadway, Vancouver, British Columbia, Canada V5Z4C2
+          </p>
+        </div>
+
+        <!-- 오른쪽 영역 -->
+        <div class="footer__right">
+          <h3 class="footer__title">상담시간</h3>
+          <ul class="footer__hours">
+            <li>주중 09:00 - 20:00</li>
+            <li>토요일 10:00 - 16:00</li>
+          </ul>
+        </div>
+      </div>
+    </footer>
 </body>
 </html>

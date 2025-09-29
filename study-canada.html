@@ -12,225 +12,231 @@
 <body data-page="study">
   <a class="skip" href="#main">본문 바로가기</a>
 
-  <!-- 공통 헤더 -->
-  <header class="site-header" role="banner">
-    <div class="container header__inner">
-      <a href="index.html" class="brand">HERALD유학 캐나다</a>
-      <nav class="gnb" aria-label="주요 메뉴">
-        <button class="gnb__toggle" aria-expanded="false" aria-controls="gnbMenu">메뉴</button>
-        <ul id="gnbMenu" class="gnb__list">
-          <li><a data-key="about" href="about.html">회사소개</a></li>
-          <li><a data-key="consult" href="consult.html">상담예약</a></li>
-          <li><a data-key="study" href="study-canada.html">캐나다유학소개</a></li>
-          <li><a data-key="early" href="early.html">조기유학프로그램</a></li>
-          <li><a data-key="tutoring" href="tutoring.html">아카데믹튜터링</a></li>
-          <li><a data-key="transfer" href="transfer.html" style="color: brown;">캐나다대학편입프로그램</a></li>
-        </ul>
-      </nav>
-      <a class="btn btn--kakao" href="https://pf.kakao.com/_your_channel" target="_blank" rel="noopener">카카오 상담</a>
-    </div>
-  </header>
+  <!-- ===== Header ===== -->
+<!-- ===== Header ===== -->
+<header class="site-header" role="banner">
+  <div class="header__inner">
+    <!-- 로고 -->
+    <a href="index.html" class="header__brand" aria-label="HERALD UHAK CA">
+      <img src="./assets/img/head-logo1.png" alt="HERALD UHAK CA">
+    </a>
 
-  <main id="main">
-    <!-- ① 히어로 -->
-    <section class="section section--hero reveal" aria-labelledby="page-title">
-      <div class="container">
-        <h1 id="page-title" class="title-xl">캐나다유학소개</h1>
-        <p class="subtitle">교육 시스템 · 유학 장점 · 지역/교육청 안내</p>
-      </div>
-    </section>
+    <!-- 내비게이션 -->
+    <nav class="gnb" aria-label="주요 메뉴">
+      <a href="./about.html">회사소개</a>
+      <a href="./consult.html" >상담예약</a>
+      <a href="./study-canada.html">캐나다유학소개</a>
+      <a href="./early.html">조기유학프로그램</a>
+      <a href="./tutoring.html">아카데믹튜터링</a>
+      <a href="./transfer.html">캐나다 대학편입 프로그램</a>
+      <a href="https://pf.kakao.com" target="_blank" class="btn-kakao">카카오 상담</a>
+    </nav>
+  </div>
+</header>
 
-    <!-- ② 인트로 -->
-    <section class="section reveal" aria-labelledby="intro-title">
-      <div class="container">
-        <h2 id="intro-title" class="title-md">왜 캐나다 유학인가?</h2>
-        <p class="lead">
-          캐나다는 세계적으로 인정받는 안정된 교육시스템을 바탕으로, 다양한 선택과목과 풍부한 액티비티,
-          활발한 클럽활동을 제공하여 유학생과 가족들에게 안전하면서도 매력적인 유학 국가로 자리매김했습니다.
-        </p>
-      </div>
-    </section>
 
-    <!-- ③ 주요 장점 -->
-    <section class="section section--alt reveal" aria-labelledby="benefit-title">
-      <div class="container">
-        <h2 id="benefit-title" class="title-md">캐나다 유학의 주요 장점</h2>
+<main id="main">
+  <!-- ① 히어로 -->
+  <section class="section section--hero reveal" aria-labelledby="page-title">
+    <div class="container">
+      <h1 id="page-title" class="title-xl">왜 캐나다 유학인가?</h1>
+      <p class="subtitle">
+        캐나다는 세계적으로 인정받는 안정된 교육시스템을 바탕으로, 다양한 선택과정과 풍부한 액티비티,
+        활발한 클럽활동을 제공하여 유학생과 학부모님께 매력적이면서도 안전한 유학 국가로 자리잡았습니다.
+      </p>
 
-        <div class="grid grid--2">
-          <article class="card"><h3 class="card__title">북미 표준 영어</h3><p class="card__body">명확한 발음과 국제적으로 인정받는 영어 교육 환경.</p></article>
-          <article class="card"><h3 class="card__title">안전하고 체계적인 교육시스템</h3><p class="card__body">학업뿐 아니라 생활 전반의 안정성을 보장.</p></article>
-          <article class="card"><h3 class="card__title">ELL(English Learning Support)</h3><p class="card__body">영어가 모국어가 아닌 학생도 빠르게 적응하도록 지원.</p></article>
-          <article class="card"><h3 class="card__title">진정한 글로벌 환경</h3><p class="card__body">100여 개국의 학생들과 함께 배우는 다문화 경험.</p></article>
-          <article class="card"><h3 class="card__title">포용적 사회 분위기</h3><p class="card__body">차별이 적고 다양한 문화를 존중하는 분위기.</p></article>
-          <article class="card"><h3 class="card__title">합리적인 유학 비용</h3><p class="card__body">다른 영어권 대비 경제적인 학비와 생활비.</p></article>
-          <article class="card">
-            <h3 class="card__title">공립학교 무상교육</h3>
+      <!-- 주요 장점 카드 -->
+      <div class="adv-cards card card--elev">
+        <div class="adv-grid">
+          <article class="adv-card"><h3>북미 표준 영어</h3><p>명확한 발음과 국제적으로 인정받는 영어 교육.</p></article>
+          <article class="adv-card"><h3>안전하고 체계적</h3><p>학생 안전 최우선, 생활 전반의 안정성 보장.</p></article>
+          <article class="adv-card"><h3>ELL 지원</h3><p>영어가 모국어가 아닌 학생도 빠른 적응.</p></article>
+          <article class="adv-card"><h3>다양한 교과 환경</h3><p>100여 개 선택과목과 비교과 활동.</p></article>
+          <article class="adv-card"><h3>포용적 사회</h3><p>차별이 적고 다양한 문화를 존중.</p></article>
+          <article class="adv-card"><h3>합리적 비용</h3><p>타 영어권 대비 경제적인 학비·생활비.</p></article>
+          <article class="adv-card">
+            <h3>공립 무상교육</h3>
             <ul class="bullet">
               <li>부모가 정부 인가 대학 재학 또는 <strong>워크퍼밋</strong> 보유 시</li>
               <li>자녀 수와 관계없이 <strong>무상 공립 교육</strong> 가능</li>
             </ul>
           </article>
-          <article class="card"><h3 class="card__title">부모 동반 비자</h3><p class="card__body">미성년 국제학생 유학 시 부모 Visitor 비자 발급.</p></article>
-          <article class="card"><h3 class="card__title">간소한 비자 절차</h3><p class="card__body">대면 인터뷰 없이 서류 심사 중심으로 진행.</p></article>
-          <article class="card"><h3 class="card__title">한국과 가까운 영어권</h3><p class="card__body">인천–밴쿠버 직항 약 10시간.</p></article>
+          <article class="adv-card"><h3>부모 동반 비자</h3><p>미성년 유학 시 부모 Visitor 비자 발급.</p></article>
+          <article class="adv-card"><h3>간소한 절차</h3><p>대사관 대면 없이 서류 중심 심사.</p></article>
+          <article class="adv-card"><h3>한국과 가까운 시차</h3><p>인천–밴쿠버 직항 약 10시간.</p></article>
         </div>
 
-        <div class="ta-center" style="margin-top:20px">
-          <a class="start-here" href="early.html#vancouver-public">밴쿠버 지역 공립 무상교육 안내 보기 →</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ④ 밴쿠버 지역/교육청 + 지도 (이전 응답 내용 유지) -->
-    <section class="section reveal" aria-labelledby="van-title">
-      <div class="container">
-        <h2 id="van-title" class="title-md">밴쿠버, 최고의 유학 선택</h2>
-        <p class="lead">
-          온화한 기후·아름다운 자연환경·쾌적한 생활환경을 갖춘 밴쿠버는 캐나다에서 가장 살기 좋은 도시 중 하나로 꼽힙니다.
-          메트로 밴쿠버는 버나비·코퀴틀람·써리·랭리·메이플릿지 등으로 구성되며, 각 <strong>교육청</strong>이 국제학생 전형을 독립 운영합니다.
-        </p>
-
-        <div class="geo">
-          <figure class="geo__map card">
-            <img src="./assets/img/metrovan-districts.png" alt="밴쿠버와 메트로밴쿠버를 Google Map에서 보여주며 각 교육청별 구역을 표기">
-            <figcaption class="muted">밴쿠버와 메트로밴쿠버를 Google Map에서 보여주며 각 교육청별 구역을 표기</figcaption>
-          </figure>
-
-          <aside class="geo__legend card" aria-label="교육청 빠른 이동">
-            <h3 class="card__title">교육청 범례</h3>
-            <ol class="legend">
-              <li><a href="#sd-vsb"><span class="num">1</span> 밴쿠버(VSB)</a></li>
-              <li><a href="#sd-nvsd"><span class="num">2</span> 노스밴쿠버</a></li>
-              <li><a href="#sd-csd"><span class="num">3</span> 코퀴틀람</a></li>
-              <li><a href="#sd-bby"><span class="num">4</span> 버나비</a></li>
-              <li><a href="#sd-surrey"><span class="num">5</span> 써리</a></li>
-              <li><a href="#sd-langley"><span class="num">6</span> 랭리</a></li>
-              <li><a href="#sd-mrpm"><span class="num">7</span> 메이플릿지·핏미도우</a></li>
-              <li><a href="#sd-abb"><span class="num">8</span> 아보츠포드</a></li>
-            </ol>
-            <details class="map-embed">
-              <summary>지도를 크게 보기 (Google Maps)</summary>
-              <div class="embed-ratio">
-                <iframe title="Metro Vancouver" src="https://www.google.com/maps?q=Metro%20Vancouver&output=embed" loading="lazy"></iframe>
-              </div>
-            </details>
-          </aside>
-        </div>
-
-        <!-- 교육청 카드 (요약) -->
-        <div class="grid grid--2 mt-24">
-          <article id="sd-vsb" class="card"><h3 class="card__title"><span class="num num--inline">1</span> 밴쿠버 교육청 (VSB)</h3><ul class="bullet"><li>UBC 인근 최상급 교육환경, 인기 최고.</li><li>다운타운 접근 용이, 공원·바닷가 인접.</li><li>과정: Gr.1–7 / Gr.8–12.</li></ul></article>
-          <article id="sd-nvsd" class="card"><h3 class="card__title"><span class="num num--inline">2</span> 노스밴쿠버</h3><ul class="bullet"><li>스키장 인접, 자연환경 우수.</li><li>안전·학업 성취도 높음.</li><li>과정: Gr.1–7 / Gr.8–12.</li></ul></article>
-          <article id="sd-csd" class="card"><h3 class="card__title"><span class="num num--inline">3</span> 코퀴틀람</h3><ul class="bullet"><li>대규모 학군, 한인 편의시설 풍부.</li><li>예체능·스포츠 활발.</li><li>학제: Gr.1–5 / Gr.6–8 / Gr.9–12.</li></ul></article>
-          <article id="sd-bby" class="card"><h3 class="card__title"><span class="num num--inline">4</span> 버나비</h3><ul class="bullet"><li>IB·AP 강세, 인프라 우수.</li></ul></article>
-          <article id="sd-surrey" class="card"><h3 class="card__title"><span class="num num--inline">5</span> 써리</h3><ul class="bullet"><li>BC 최대 학군, 프로그램 다양.</li><li>South Surrey/White Rock 생활 편의 우수.</li></ul></article>
-          <article id="sd-langley" class="card"><h3 class="card__title"><span class="num num--inline">6</span> 랭리</h3><ul class="bullet"><li>쾌적·안정 지역, 영어 몰입 유리.</li><li>학제: Gr.1–5 / Gr.6–8 / Gr.9–12.</li></ul></article>
-          <article id="sd-mrpm" class="card"><h3 class="card__title"><span class="num num--inline">7</span> 메이플릿지·핏미도우</h3><ul class="bullet"><li>전원적·합리적 주거 비용, 액티비티 풍부.</li></ul></article>
-          <article id="sd-abb" class="card"><h3 class="card__title"><span class="num num--inline">8</span> 아보츠포드</h3><ul class="bullet"><li>안전한 소도시, 생활비 합리적.</li><li>관리형/홈스테이 유학 적합.</li></ul></article>
+        <div class="ta-center mt-20">
+          <a class="btn btn--primary" href="early.html#vancouver-public">밴쿠버 지역 공립 무상교육 안내 보기 →</a>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- ⑤ 사립/보딩 vs 공립 비교 (이번 요청 섹션) -->
-    <section class="section section--alt reveal" aria-labelledby="cmp-title">
-      <div class="container">
-        <h2 id="cmp-title" class="title-md">밴쿠버 사립/보딩스쿨 vs 공립학교 School District <span class="muted">입학 절차 비교</span></h2>
-        <p class="subtitle">
-          캐나다 유학의 두 가지 주요 진학 경로인 <strong>사립·보딩스쿨</strong>과 <strong>공립학교(School District)</strong>는
-          입학 절차, 준비 기간, 비용, 교육 환경에서 차이가 있습니다. 자녀의 학업 목표·예산·생활 방식에 맞춰 선택하세요.
-        </p>
+  <!-- ② 밴쿠버 섹션 + 지도 -->
+  <section class="section reveal" aria-labelledby="van-title">
+    <div class="container">
+      <h2 id="van-title" class="title-md ta-center mb-16">밴쿠버, 최고의 유학 선택</h2>
+      <p class="lead ta-center mb-24">
+        온화한 기후·아름다운 자연·안정된 생활환경을 갖춘 밴쿠버는 캐나다에서 가장 살기 좋은 도시 중 하나입니다.
+        메트로 밴쿠버는 각 <strong>교육청</strong>이 국제학생 프로그램을 독립적으로 운영합니다.
+      </p>
 
-        <div class="table-wrap" role="region" aria-label="사립/보딩 vs 공립 비교 표" tabindex="0">
-          <table class="table table--contrast">
-            <thead>
-              <tr>
-                <th scope="col" class="w-20">구분</th>
-                <th scope="col">사립/보딩스쿨</th>
-                <th scope="col">공립학교 School District</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">입학 시기</th>
-                <td>9월 학기 시작, 일부 1–2월 소규모 전형 가능</td>
-                <td>9월 학기 중심, 일부 교육청은 1–2월 소규모 입학 가능</td>
-              </tr>
-              <tr>
-                <th scope="row">지원 시기</th>
-                <td>전년도 9월부터 원서 접수(선착순). 인기 학교는 1년 전 조기 마감 가능</td>
-                <td>전년도 10월 접수 시작, <em>Early bird</em> 지원자 우선 배정</td>
-              </tr>
-              <tr>
-                <th scope="row">전형 요소</th>
-                <td>필수: 최근 2년 성적표, 예방접종 기록, 여권 사본<br>추가: 에세이·영어시험·인터뷰(학교별 상이)</td>
-                <td>필수: 최근 2년 성적표, 예방접종 기록, 여권 사본<br>교육청 영어 레벨 테스트 진행(일부 학교 입학 후 인터뷰/라이팅)</td>
-              </tr>
-              <tr>
-                <th scope="row">입학 결정</th>
-                <td>지원 후 약 2주 내 합격 통보, <abbr title="Letter of Acceptance">LOA</abbr> 발급</td>
-                <td>지원 후 수 주 내 배정 통보 및 LOA 발급(희망 3지망 내에서 공식 배정, 교육청별 상이)</td>
-              </tr>
-              <tr>
-                <th scope="row">학비 납부</th>
-                <td>입학금+학비: 연간 CAD $18,000–40,000<br>명문 보딩: 국제학생 기준 수학 포함 약 $70,000–$90,000</td>
-                <td>학비: 연간 CAD $15,000–18,000(교육청/학년별 차이)</td>
-              </tr>
-              <tr>
-                <th scope="row">비자 신청</th>
-                <td>LOA + 학비 납부 영수증으로 진행</td>
-                <td>LOA + 학비 납부 영수증 필요</td>
-              </tr>
-              <tr>
-                <th scope="row">교육 환경</th>
-                <td>소규모·기숙·계열 초중고 구성 → 가족적 분위기<br>보조교사 지원·체계적 개별 관리, IB·AP·대회/프로젝트형 학점 커리큘럼<br>학부모에 월간 리포트 제공</td>
-                <td>일반적으로 교사:학생 약 1:25, 보조교사 참여(학교별 차이)<br>ELL(ESL) 지원, French Immersion 과정 인기</td>
-              </tr>
-              <tr>
-                <th scope="row">준비 기간</th>
-                <td>최소 9–12개월 전 준비 권장</td>
-                <td>약 6–9개월 전 준비 가능</td>
-              </tr>
-              <tr>
-                <th scope="row">특징</th>
-                <td>높은 명문대 진학률, 다양한 방과후 활동, 글로벌 네트워크</td>
-                <td>비용 효율적, 홈스테이로 현지 문화·공교육 시스템 직접 경험</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+      <div class="geo">
+        <figure class="geo__map card">
+          <!-- 제공하신 지도 이미지로 교체 -->
+          <img src="./assets/img/map-study-canada.png" alt="메트로 밴쿠버 주요 교육청 지도">
+        </figure>
 
-        <p class="muted" style="margin-top:12px">
-          ※ 금액/일정은 교육청·학교·학년·환율에 따라 달라질 수 있습니다.
-        </p>
+        <aside class="geo__legend card" aria-label="교육청 빠른 안내">
+          <h3 class="card__title">주요 교육청</h3>
+          <ul class="legend">
+            <li><span class="num">1</span> 밴쿠버 교육청 (VSB)</li>
+            <li><span class="num">2</span> 노스밴쿠버</li>
+            <li><span class="num">3</span> 코퀴틀람</li>
+            <li><span class="num">4</span> 버나비</li>
+            <li><span class="num">5</span> 써리</li>
+            <li><span class="num">6</span> 랭리</li>
+            <li><span class="num">7</span> 메이플릿지·핏미도우</li>
+            <li><span class="num">8</span> 아보츠포드</li>
+          </ul>
+        </aside>
       </div>
-    </section>
 
-    <!-- CTA -->
-    <section class="section section--cta reveal" aria-labelledby="cta-title">
-      <div class="container cta__inner">
-        <h2 id="cta-title" class="title-md">우리 아이에게 맞는 트랙은?</h2>
-        <p class="subtitle">사립/보딩 vs 공립 비교 상담으로 예산·목표·생활방식에 맞는 최적의 로드맵을 제안드립니다.</p>
-        <div class="cta__actions">
-          <a class="btn btn--primary" href="consult.html">상담 예약하기</a>
-        </div>
+      <!-- 교육청 요약 카드 -->
+      <div class="grid grid--2 mt-24">
+        <article class="card"><h3 class="card__title">밴쿠버 교육청 (VSB)</h3><ul class="bullet"><li>UBC 인접, 인기 최고.</li><li>다운타운 접근 용이.</li><li>학제: Gr.1–7 / Gr.8–12.</li></ul></article>
+        <article class="card"><h3 class="card__title">노스밴쿠버</h3><ul class="bullet"><li>자연환경 우수, 안전도 높음.</li><li>학제: Gr.1–7 / Gr.8–12.</li></ul></article>
+        <article class="card"><h3 class="card__title">코퀴틀람</h3><ul class="bullet"><li>대규모 학군, 한인 편의시설 풍부.</li><li>학제: Gr.1–5 / Gr.6–8 / Gr.9–12.</li></ul></article>
+        <article class="card"><h3 class="card__title">버나비</h3><ul class="bullet"><li>IB·AP 강세, 인프라 우수.</li></ul></article>
+        <article class="card"><h3 class="card__title">써리</h3><ul class="bullet"><li>BC 최대 규모, 프로그램 다양.</li><li>South Surrey/White Rock 생활 편의 우수.</li></ul></article>
+        <article class="card"><h3 class="card__title">랭리</h3><ul class="bullet"><li>쾌적·안정 지역, 영어 몰입 유리.</li><li>학제: Gr.1–5 / Gr.6–8 / Gr.9–12.</li></ul></article>
+        <article class="card"><h3 class="card__title">메이플릿지·핏미도우</h3><ul class="bullet"><li>전원적 환경, 합리적 주거비.</li></ul></article>
+        <article class="card"><h3 class="card__title">아보츠포드</h3><ul class="bullet"><li>안전한 소도시, 생활비 합리적.</li><li>관리형/홈스테이 유학 적합.</li></ul></article>
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
+
+  <!-- ③ 사립/보딩 vs 공립 비교 -->
+  <section class="section section--alt reveal" aria-labelledby="cmp-title">
+    <div class="container">
+      <h2 id="cmp-title" class="title-md ta-center mb-12">밴쿠버 사립/보딩스쿨 vs 공립학교 School District <span class="muted">입학 절차 비교</span></h2>
+      <p class="subtitle ta-center">입학 절차, 준비 기간, 비용, 교육환경의 차이를 한눈에 확인하세요.</p>
+
+      <div class="table-wrap" role="region" aria-label="사립/보딩 vs 공립 비교 표" tabindex="0">
+        <table class="table table--contrast">
+          <thead>
+            <tr>
+              <th scope="col" class="w-20">구분</th>
+              <th scope="col">사립/보딩스쿨</th>
+              <th scope="col">공립 School District</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">입학 시기</th>
+              <td>9월 학기 시작, 일부 1–2월 소규모 전형 가능</td>
+              <td>9월 학기 중심, 일부 교육청 1–2월 소규모 입학 가능</td>
+            </tr>
+            <tr>
+              <th scope="row">지원 시기</th>
+              <td>전년도 9월부터 선착순 접수(인기 학교는 조기 마감)</td>
+              <td>전년도 10월 접수 시작, Early-bird 우선 배정</td>
+            </tr>
+            <tr>
+              <th scope="row">전형 요소</th>
+              <td>성적표·예방접종·여권 + (학교별) 에세이/영어시험/인터뷰</td>
+              <td>성적표·예방접종·여권 + 교육청 영어 레벨 테스트</td>
+            </tr>
+            <tr>
+              <th scope="row">입학 결정</th>
+              <td>지원 후 약 2주 내 합격 통보, LOA 발급</td>
+              <td>수 주 내 배정 통보 및 LOA 발급(교육청별 상이)</td>
+            </tr>
+            <tr>
+              <th scope="row">학비</th>
+              <td>CAD $18,000–40,000 / 명문 보딩: $70,000–90,000</td>
+              <td>CAD $15,000–18,000(교육청/학년별 차이)</td>
+            </tr>
+            <tr>
+              <th scope="row">비자</th>
+              <td>LOA + 학비 납부 영수증으로 진행</td>
+              <td>LOA + 학비 납부 영수증 필요</td>
+            </tr>
+            <tr>
+              <th scope="row">교육 환경</th>
+              <td>소수정예·기숙·개별관리, IB·AP·프로젝트형 커리큘럼</td>
+              <td>교사:학생 약 1:25, ELL(ESL) 지원, French Immersion 인기</td>
+            </tr>
+            <tr>
+              <th scope="row">준비 기간</th>
+              <td>최소 9–12개월 권장</td>
+              <td>약 6–9개월 가능</td>
+            </tr>
+            <tr>
+              <th scope="row">특징</th>
+              <td>명문대 진학률 높음, 방과후·대회 기회 풍부</td>
+              <td>비용 효율적, 홈스테이로 현지 문화 체험</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="muted mt-8">※ 금액/일정은 교육청·학교·학년·환율에 따라 달라질 수 있습니다.</p>
+
+      <div class="ta-center mt-24">
+        <a class="btn btn--primary" href="consult.html">상담 예약하기</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ④ CTA -->
+  <section class="section section--cta reveal" aria-labelledby="cta-title">
+    <div class="container cta__inner">
+      <h2 id="cta-title" class="title-md">우리 아이에게 맞는 트랙은?</h2>
+      <p class="subtitle">사립/보딩 vs 공립 비교 상담으로 예산·목표·생활방식에 맞는 최적의 로드맵을 제공합니다.</p>
+      <div class="cta__actions">
+        <a class="btn btn--primary" href="consult.html">상담 예약하기</a>
+      </div>
+    </div>
+  </section>
+</main>
+
 
   <a class="floating-kakao" href="https://pf.kakao.com/_your_channel" target="_blank" rel="noopener" aria-label="카카오톡 상담 바로가기">K</a>
 
-  <footer class="site-footer">
-    <div class="container">
-      <p>
-        Copyrights KOREAHERALD EDUCATION CANADA Inc. ⓒ 2024 All Rights Reserved.
-        <br>400 601 West Broadway, Vancouver, British Columbia, Canada V5Z4C2
-      </p>
-      <nav aria-label="푸터">
-        <a href="about.html">회사소개</a>
-        <a href="consult.html">상담예약</a>
-        <a href="study-canada.html">프로그램</a>
-      </nav>
-    </div>
-  </footer>
+         <!-- ===== Footer ===== -->
+    <footer class="site-footer" role="contentinfo">
+      <div class="footer__inner">
+        <!-- 왼쪽 영역 -->
+        <div class="footer__left">
+          <a href="index.html" class="footer__brand" aria-label="HERALD UHAK CA">
+            <img src="./assets/img/herald uhak ca logo3.png" alt="HERALD UHAK CA 로고">
+          </a>
+
+          <nav class="footer__links" aria-label="푸터 메뉴">
+            <a href="./about.html">회사소개</a>
+            <span class="sep" aria-hidden="true">|</span>
+            <a href="./consult.html">상담예약</a>
+            <span class="sep" aria-hidden="true">|</span>
+            <a href="./programs.html">프로그램</a>
+          </nav>
+
+          <p class="footer__copy">
+            Copyrights KOREAHERALD EDUCATION CANADA Inc. © 2024 All Rights Reserved.<br>
+            400 601 West Broadway, Vancouver, British Columbia, Canada V5Z4C2
+          </p>
+        </div>
+
+        <!-- 오른쪽 영역 -->
+        <div class="footer__right">
+          <h3 class="footer__title">상담시간</h3>
+          <ul class="footer__hours">
+            <li>주중 09:00 - 20:00</li>
+            <li>토요일 10:00 - 16:00</li>
+          </ul>
+        </div>
+      </div>
+    </footer>
 </body>
 </html>

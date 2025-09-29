@@ -206,4 +206,120 @@ document.addEventListener('DOMContentLoaded', () => {
   // 내부 앵커 스무스 스크롤(우리가 이미 넣은 로직과 중복되지 않으면 패스)
 });
 
+// =========================
+// About page only scripts
+// =========================
+(function () {
+  var html = document.documentElement;
+  if (!html || html.getAttribute('data-page') !== 'about') return;
 
+  // 1) 인터섹션 옵저버로 섹션 페이드인 (중복 방지)
+  if (!window.__ABOUT_OBS_INITIALIZED__) {
+    window.__ABOUT_OBS_INITIALIZED__ = true;
+
+    try {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) {
+            e.target.classList.add('is-in');
+            io.unobserve(e.target);
+          }
+        });
+      }, { threshold: 0.15 });
+
+      document.querySelectorAll('.js-observe').forEach(function (el) { io.observe(el); });
+    } catch (err) {
+      // 구형 브라우저 폴백: 즉시 표시
+      document.querySelectorAll('.js-observe').forEach(function (el) {
+        el.classList.add('is-in');
+      });
+    }
+  }
+
+  // 2) CTA 버튼(선택) – consult 페이지로 이동 (기본 a링크지만, 혹시 버튼으로 바뀌어도 안전)
+  var cta = document.getElementById('cta-consult');
+  if (cta && cta.tagName === 'BUTTON') {
+    cta.addEventListener('click', function () { window.location.href = 'consult.html'; });
+  }
+})();
+
+/* =========================
+   Consult Page Scripts (scoped)
+   ========================= */
+(function(){
+  var html = document.documentElement;
+  if (!html || html.getAttribute('data-page') !== 'consult') return;
+
+  var form = document.getElementById('consultForm');
+  var message = document.getElementById('message');
+  var charNow = document.getElementById('charNow');
+  var interestGroup = document.getElementById('interestGroup');
+  var maxPick = parseInt(interestGroup?.dataset.max || '2', 10);
+
+  // 글자수 카운터
+  if (message && charNow) {
+    var updateCount = function(){
+      var len = message.value.length;
+      charNow.textContent = String(len);
+    };
+    message.addEventListener('input', updateCount);
+    updateCount();
+  }
+
+  // 관심 프로그램: 최대 2개 제한
+  if (interestGroup) {
+    var checkboxes = interestGroup.querySelectorAll('input[type="checkbox"]');
+    interestGroup.addEventListener('change', function(){
+      var picked = Array.from(checkboxes).filter(function(c){ return c.checked; });
+      if (picked.length > maxPick) {
+        // 마지막 클릭 취소
+        var last = picked[picked.length-1];
+        last.checked = false;
+        alert('관심 프로그램은 최대 ' + maxPick + '개까지 선택할 수 있어요.');
+      }
+    });
+  }
+
+  // 간단 검증 & 제출 (백엔드 미연동: 일단 기본 동작 방지)
+  if (form) {
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+
+      // 필수값
+      var requiredOk = true;
+      ['studentName','grade','agree'].forEach(function(id){
+        var el = document.getElementById(id);
+        if (!el) return;
+        if ((el.type === 'checkbox' && !el.checked) || (el.value || '').trim() === '') {
+          requiredOk = false;
+          el.focus();
+        }
+      });
+
+      // 성별 라디오
+      var genderChecked = !!form.querySelector('input[name="gender"]:checked');
+      if (!genderChecked) { requiredOk = false; form.querySelector('input[name="gender"]').focus(); }
+
+      if (!requiredOk) {
+        alert('필수 항목을 확인해주세요.');
+        return;
+      }
+
+      // 여기서 실제 전송 로직 연결 (fetch/POST 등)
+      alert('상담 요청이 접수되었습니다. 담당자가 상담시간 내에 연락드릴게요!');
+      form.reset();
+      if (charNow) charNow.textContent = '0';
+    });
+  }
+
+  // 방침 보기 (모달 대신 새 창/탭 또는 앵커로 연결)
+  var openPolicy = document.getElementById('openPolicy');
+  if (openPolicy) {
+    openPolicy.addEventListener('click', function(){
+      // 내부 페이지가 있으면 변경: e.g., window.location.href = 'privacy.html';
+      window.open('privacy.html', '_blank');
+    });
+  }
+})();
+
+document.querySelectorAll('.table-wrap').forEach(el=>el.style.scrollBehavior='smooth');

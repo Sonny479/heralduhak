@@ -9,6 +9,7 @@
   --light:#f7f9fc; --light-text:#0e1116; --light-muted:#5b6170; --light-line:#e5e8ef;
 }
 
+
 /* ===== Reset / Base ===== */
 *{box-sizing:border-box}
 html,body{height:100%}
@@ -105,7 +106,7 @@ a{color:inherit}
   transition:transform .2s ease, background .2s ease
 }
 .card:hover{transform:translateY(-2px); background:#ffffff12}
-.card__title{margin:0 0 8px; font-size:18px}
+.card__title{margin:0 0 8px; font-size:18px;}
 .card__body{margin:0; color:var(--muted)}
 .card--light{
   background:#fff; color:var(--light-text);
@@ -587,3 +588,235 @@ input::placeholder,textarea::placeholder{color:#8c90a1}
   color:#cfd8e3; opacity:.9;
 }
 .footer__hours li{ line-height:1.8; }
+
+/* =========================
+   About Page (scoped)
+   ========================= */
+[data-page="about"] {
+  --about-blue-900: #0d3b9f;
+  --about-blue-800: #1f58c4;
+  --about-blue-700: #2a6fe5;
+  --about-blue-100: #e9f1ff;
+  --about-blue-050: #f5f9ff;
+  --about-sky-100: #eaf4ff;
+  --about-text: #0e1b2a;
+  --about-muted: #5a6a85;
+  --about-card-bg: #ffffff;
+  --about-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  --about-radius-lg: 16px;
+  --about-radius-md: 12px;
+  --about-radius-sm: 10px;
+}
+
+[data-page="about"] .page-about .accent { color: var(--about-blue-700); }
+
+[data-page="about"] .about-section-title{
+  margin: 0 0 20px; font-size: 28px; font-weight: 800; letter-spacing: -0.02em; color: var(--about-text);
+}
+
+/* ① Hero */
+[data-page="about"] .about-hero{
+  padding: 80px 0 48px;
+  background: linear-gradient(180deg, var(--about-blue-800), var(--about-blue-700));
+  color: #fff;
+}
+[data-page="about"] .about-hero__inner{ max-width: var(--max, 1200px); margin: 0 auto; }
+[data-page="about"] .about-hero__title{
+  margin: 0 0 12px; font-size: 34px; font-weight: 900; letter-spacing: -0.02em;
+}
+[data-page="about"] .about-hero__subtitle{
+  margin: 0 0 12px; font-size: 18px; font-weight: 700; opacity: 0.95;
+}
+[data-page="about"] .about-hero__desc{
+  margin: 0; font-size: 15px; line-height: 1.7; opacity: 0.95;
+}
+
+/* ② Reasons (보드 + 카드) */
+[data-page="about"] .about-reasons{
+  padding: 48px 0 64px;
+  background:
+    linear-gradient(180deg, #ffffff 0, #ffffff 30%, var(--about-blue-050) 30%, var(--about-blue-050) 100%);
+}
+[data-page="about"] .about-board{
+  background: var(--about-card-bg);
+  border-radius: var(--about-radius-lg);
+  box-shadow: var(--about-shadow);
+  padding: 28px;
+  margin-top: 12px;
+}
+[data-page="about"] .reason-card{
+  border: 1px solid #e6ecf5;
+  border-radius: var(--about-radius-md);
+  padding: 18px 16px;
+  background: #fff;
+  display: grid;
+  gap: 6px;
+}
+[data-page="about"] .reason-card + .reason-card{ margin-top: 14px; }
+
+/* 데스크톱에서 2x2 그리드 */
+@media (min-width: 960px){
+  [data-page="about"] .about-board{
+    display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
+  }
+  [data-page="about"] .reason-card{ margin: 0; }
+}
+[data-page="about"] .reason-card__title{
+  font-size: 17px; font-weight: 800; color: var(--about-text);
+}
+[data-page="about"] .reason-card__desc{
+  font-size: 14px; color: var(--about-muted); line-height: 1.6;
+}
+
+/* ③ Returnee */
+[data-page="about"] .about-returnee{ background:#fff; padding: 56px 0 64px; }
+[data-page="about"] .about-badge{
+  display: inline-block;
+  padding: 8px 14px;
+  margin-bottom: 8px;
+  font-size: 13px; font-weight: 800;
+  color: var(--about-blue-800);
+  background: var(--about-sky-100);
+  border-radius: 999px;
+}
+[data-page="about"] .about-grid{
+  display: grid; gap: 16px; margin-top: 16px;
+}
+@media (min-width: 960px){
+  [data-page="about"] .about-grid{ grid-template-columns: 1fr 1fr; }
+}
+[data-page="about"] .about-box{
+  background: #fff; border: 1px solid #e6ecf5;
+  border-radius: var(--about-radius-md);
+  padding: 18px 16px;
+}
+[data-page="about"] .about-box__title{
+  margin: 0 0 10px; font-size: 16px; font-weight: 800; color: var(--about-text);
+}
+[data-page="about"] .about-box__desc{
+  margin: 0; font-size: 14px; color: var(--about-muted); line-height: 1.7;
+}
+
+/* ④ CTA */
+[data-page="about"] .about-cta{
+  background: linear-gradient(180deg, var(--about-blue-700), var(--about-blue-900));
+  color: #fff; padding: 60px 0 72px;
+}
+[data-page="about"] .about-cta__inner{ text-align: center; max-width: 880px; margin: 0 auto; }
+[data-page="about"] .about-cta__title{ margin:0 0 8px; font-size: 28px; font-weight: 900; }
+[data-page="about"] .about-cta__desc{ margin: 0 0 8px; font-size: 15px; opacity: .95; }
+[data-page="about"] .about-btn{
+  display:inline-block; padding: 12px 22px; border-radius: 999px;
+  font-weight: 800; font-size: 14px; text-decoration: none;
+}
+[data-page="about"] .about-btn--primary{
+  color:#0e1b2a; background: #fff;
+  box-shadow: 0 6px 18px rgba(0,0,0,.15);
+}
+[data-page="about"] .about-btn--primary:focus,
+[data-page="about"] .about-btn--primary:hover{ transform: translateY(-1px); }
+
+/* 진입 페이드(옵저버 전용) */
+[data-page="about"] .js-observe{ opacity:0; transform: translateY(18px); transition: all .6s ease; }
+[data-page="about"] .js-observe.is-in{ opacity:1; transform:none; }
+
+/* =========================
+   Consult Page (scoped)
+   ========================= */
+[data-page="consult"] .consult-hero{
+  background: linear-gradient(180deg,#233b75,#1b2f5f);
+  color:#fff;
+  padding: 48px 0 56px;
+}
+[data-page="consult"] .consult-hero__brand{margin:0 0 6px}
+[data-page="consult"] .consult-hero__title{
+  margin:0; font-size:28px; font-weight:900; letter-spacing:-.02em;
+}
+[data-page="consult"] .consult-hero__subtitle{
+  margin:4px 0 0; font-size:14px; opacity:.9;
+}
+
+/* Card */
+[data-page="consult"] .section--form{background:#eef3fa;padding:32px 0 72px}
+[data-page="consult"] .consult-card{
+  background:#fff; border-radius:14px; box-shadow:0 10px 30px rgba(0,0,0,.12);
+  max-width:760px; margin: -36px auto 0; padding:18px 18px 20px; border:1px solid #e6ecf5;
+}
+@media (min-width:768px){
+  [data-page="consult"] .consult-card{padding:22px}
+}
+[data-page="consult"] .consult-card__header{
+  border:1px dashed #c5d7ff; border-radius:10px; padding:12px 14px; background:#f6f9ff; margin-bottom:14px;
+}
+[data-page="consult"] .consult-card__title{margin:0;font-size:16px;font-weight:900;color:#173a8b;display:flex;align-items:center;gap:8px}
+[data-page="consult"] .consult-card__hours{font-weight:600;color:#5572b8;margin-left:8px}
+[data-page="consult"] .consult-card__notice{margin:8px 0 0;font-size:13px;color:#234}
+[data-page="consult"] .form-grid{display:grid;gap:14px}
+
+/* Inputs */
+[data-page="consult"] .form-label{display:block;font-size:14px;font-weight:800;margin-bottom:6px;color:#0e1b2a}
+[data-page="consult"] .input,
+[data-page="consult"] .select,
+[data-page="consult"] .textarea{
+  width:100%; border:1px solid #ccd7ea; background:#fff; border-radius:10px;
+  padding:12px 14px; font-size:14px; color:#0e1b2a; outline:none;
+}
+[data-page="consult"] .input:focus,
+[data-page="consult"] .select:focus,
+[data-page="consult"] .textarea:focus{border-color:#2a6fe5; box-shadow:0 0 0 3px rgba(42,111,229,.15)}
+[data-page="consult"] .select-wrap{position:relative}
+[data-page="consult"] .field-hint{margin:6px 0 0; font-size:12px; color:#5a6a85}
+[data-page="consult"] .field-help{margin:4px 0 0; font-size:12px; color:#2a6fe5}
+[data-page="consult"] .muted{color:#6a7a95;font-weight:600}
+
+/* Choices */
+[data-page="consult"] .choice-row{display:flex;gap:16px}
+[data-page="consult"] .choice-grid{display:grid;grid-template-columns:1fr;gap:8px}
+@media (min-width:560px){
+  [data-page="consult"] .choice-grid{grid-template-columns:repeat(2,1fr)}
+}
+[data-page="consult"] .choice{display:inline-flex;align-items:center;gap:8px;font-size:14px}
+[data-page="consult"] .choice input[type="checkbox"],
+[data-page="consult"] .choice input[type="radio"]{width:18px;height:18px}
+
+/* Counter & agree */
+[data-page="consult"] .char-counter{margin-top:6px;text-align:right;font-size:12px;color:#6a7a95}
+[data-page="consult"] .form-field--agree{display:flex;align-items:center;gap:10px}
+
+/* Actions */
+[data-page="consult"] .form-actions{display:flex;gap:10px;margin-top:10px}
+[data-page="consult"] .btn{
+  display:inline-flex;justify-content:center;align-items:center;
+  padding:12px 16px;border-radius:12px;border:1px solid transparent;
+  font-weight:800;font-size:14px;text-decoration:none;min-width:160px;
+}
+[data-page="consult"] .btn--primary{background:#2a6fe5;color:#fff}
+[data-page="consult"] .btn--primary:hover{filter:brightness(.98)}
+[data-page="consult"] .btn--kakao{background:#fee500;color:#111}
+[data-page="consult"] .btn--kakao:hover{filter:brightness(.98)}
+[data-page="consult"] .btn--ghost{background:#fff;border-color:#d7dfef;color:#334}
+
+/* ===== study-canada 전용 ===== */
+.adv-cards { padding: 20px; margin-top: 20px; }
+.adv-cards.card--elev { box-shadow: 0 12px 24px rgba(0,0,0,.12); }
+.adv-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 12px; }
+@media (min-width: 960px){ .adv-grid{ grid-template-columns: repeat(2,minmax(0,1fr)); } }
+@media (min-width: 1200px){ .adv-grid{ grid-template-columns: repeat(3,minmax(0,1fr)); } }
+.adv-card h3{ margin:0 0 6px; font-weight:700; }
+.adv-card .bullet{ margin:6px 0 0 16px; }
+
+.geo{ display:grid; grid-template-columns: 1fr; gap:16px; align-items:start; }
+@media (min-width: 1024px){ .geo{ grid-template-columns: 2fr 1fr; } }
+.geo__map img{ width:100%; height:auto; display:block; border-radius:8px; }
+.geo__legend .legend{ list-style:none; padding:0; margin:8px 0 0; }
+.geo__legend .legend li{ display:flex; align-items:center; gap:8px; padding:8px 0; border-bottom:1px solid var(--line,#e7eaf0); }
+.num{ display:inline-flex; align-items:center; justify-content:center; width:22px; height:22px; border-radius:50%; background:#3165ff; color:#fff; font-size:12px; font-weight:700; }
+.muted{ color: var(--muted,#6b7280); }
+.mt-8{ margin-top:8px } .mt-20{ margin-top:20px } .mt-24{ margin-top:24px }
+.ta-center{ text-align:center }
+.card--elev{ background:#fff; border-radius:12px; }
+
+.table-wrap{ overflow-x:auto; -webkit-overflow-scrolling:touch; }
+.table--contrast thead th{ background:#edf2ff; }
+.table--contrast th, .table--contrast td{ border:1px solid #e5e7eb; padding:12px; text-align:center; }
+.w-20{ width:20% }
