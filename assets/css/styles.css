@@ -273,6 +273,11 @@ input::placeholder,textarea::placeholder{color:#8c90a1}
 /* 이미지 타이틀/버튼 크기 */
 .hero__title-img{ width: 252px;  height:26px; margin: 20px 0 0; }
 .hero__title-img2{ width: 379px;  height:40px; margin: 20px 0 0; }
+.hero__title-img3{ width: 505px;  height:53px; margin: 0 0 20px; }
+.hero__title-img4{ width: 505px;  height:53px; margin: 20px 0 20px; }
+.about__title-logo-img1{width: 350px; height: 40px; margin: 20px 0 0;}
+.about__title-logo-img2{width: 252px; height: 26px; margin: 0 0 0;}
+.about__title-logo-img3{width: 379px; height: 40px; margin: 0 0 40px;}
 .hero__cta-img{ display:flex; gap:12px; flex-wrap:wrap; align-items:center; margin-top:12px; }
 .hero__cta-img img{ height:48px; width:auto; display:block; }
 @media (max-width:640px){
@@ -453,8 +458,8 @@ input::placeholder,textarea::placeholder{color:#8c90a1}
 .cta3-inner{ width:min(960px, 92%); margin:0 auto; }
 
 .cta3-logo{
-  display:block; margin:0 auto 16px;
-  width:min(460px, 70%); height:auto;
+  display:block; margin:0 auto 32px;
+  width:379px; height:40px;
 }
 
 .cta3-heading{
@@ -877,7 +882,7 @@ input::placeholder,textarea::placeholder{color:#8c90a1}
   background:#fff; color:#333; border:1px solid var(--light-line);
   font-weight:600; cursor:pointer;
 }
-.lang-switch__btn:hover{ filter:brightness(0.97); }
+.lang-switch__btn:hover{ filter:brightness(0hero__title-img.97); }
 .lang-switch__list{
   position:absolute; top:38px; right:0; min-width:80px;
   background:#fff; border:1px solid var(--light-line); border-radius:8px;
