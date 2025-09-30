@@ -14,7 +14,9 @@
   <!-- Skip to content -->
   <a class="skip" href="#main">본문 바로가기</a>
 
+  
   <!-- ===== Header ===== -->
+<!-- ===== Header ===== -->
 <header class="site-header" role="banner">
   <div class="header__inner">
     <!-- 로고 -->
@@ -32,109 +34,137 @@
       <a href="./transfer.html">캐나다 대학편입 프로그램</a>
       <a href="https://pf.kakao.com" target="_blank" class="btn-kakao">카카오 상담</a>
     </nav>
+      <!-- ===== [ADD] Header: Language Switch ===== -->
+    <div class="lang-switch" id="langSwitch">
+      <button class="lang-switch__btn" aria-haspopup="listbox" aria-expanded="false">
+        <span class="lang-switch__label" data-lang-label>KR</span>
+        <svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10l5 5 5-5" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+      </button>
+      <ul class="lang-switch__list" role="listbox" aria-label="Language">
+        <li><button role="option" data-lang="en" data-label="US">US</button></li>
+        <li><button role="option" data-lang="ko" data-label="KR">KR</button></li>
+      </ul>
+    </div>
   </div>
+    
 </header>
 
-  <!-- ========== Main (회사소개 본문) ========== -->
-  <main id="main" class="page-about" role="main" aria-label="회사소개 본문">
+  <!-- ===== Main ===== -->
+<main id="main" class="about-page">
 
-    <!-- ① 헤럴드유학 소개 -->
-    <section class="section about-hero js-observe" aria-labelledby="about-title">
-      <div class="container about-hero__inner">
-        <h1 id="about-title" class="about-hero__title">
-          HERALD UHAK <span class="accent">CA</span>는?
-        </h1>
-        <p class="about-hero__subtitle">자녀 맞춤형 유학으로 미래를 준비합니다</p>
-        <p class="about-hero__desc">
-          HERALD유학 캐나다는 2006년부터 국내외에서 쌓아온 글로벌 유학·교육컨설팅 경험을 바탕으로,
-          조기 유학부터 고등학교 졸업, 명문대 진학까지 학생과 학부모 맞춤형 성공 유학 로드맵을 제공합니다.
-        </p>
-      </div>
-    </section>
+  <!-- ① Intro Hero -->
+  <section class="about-hero" aria-labelledby="about-hero-title">
+    <div class="container about-hero__inner">
+      <h1 id="about-hero-title" class="about-hero__title">
+        <img src="./assets/img/hero-text-img.png" alt="HERALD UHAK CA" class="hero__title-img">는?
+      </h1>
+      <p class="about-hero__desc text-base fw-medium">
+        HERALD유학 캐나다는 2006년부터 국내외에서 쌓아온 글로벌 유학·교육컨설팅의 경험을 바탕으로
+        <br class="br-lg">
+        <strong>조기 유학부터 고등학교 졸업, 명문대 진학</strong>까지 학생과 학부모 맞춤형 <strong>성공 유학 로드맵</strong>을 제공합니다.
+      </p>
+    </div>
+  </section>
 
-    <!-- ② 왜 HERALD유학 캐나다인가? -->
-    <section class="section about-reasons js-observe" aria-labelledby="reasons-title">
-      <div class="container">
-        <h2 id="reasons-title" class="about-section-title">왜 HERALD유학 캐나다인가?</h2>
+  <!-- ② Why HERALD -->
+  <section class="about-why" aria-labelledby="about-why-title">
+    <div class="container">
+      <div class="about-why__card">
+        <h2 id="about-why-title" class="about-why__title">왜 
+                  <img src="./assets/img/HERALDlogo-about-second.png" alt="HERALD UHAK CA" class="hero__title-img2">
+          인가?</h2>
+        <p class="about-why__lead text-base fw-medium">학생의 목표·적성·가정 상황에 맞춘 현실적이고 안전한 유학 설계</p>
 
-        <div class="about-board" role="list">
-          <!-- 카드 1 -->
-          <article class="reason-card" role="listitem">
-            <h3 class="reason-card__title">학생 맞춤 학교 추천 프로그램</h3>
-            <p class="reason-card__desc">
-              공립, 천주교 사립, 국제학교 등 학생의 목표와 적성에 맞는 최적의 학교를 추천합니다.
+        <div class="about-why__grid">
+          <!-- 1 -->
+          <article class="why-item">
+            <span class="why-item__badge text-base fw-bold">학생 맞춤 학교 추천 프로그램</span>
+            <p class="why-item__body text-base fw-medium">
+              공립, 천주교 사립, 국제학교 등 <strong>학생의 목표와 적성</strong>에 맞는 최적의 학교를 추천합니다.
             </p>
           </article>
 
-          <!-- 카드 2 -->
-          <article class="reason-card" role="listitem">
-            <h3 class="reason-card__title">20년차 안전하고 체계적인 관리형 유학</h3>
-            <p class="reason-card__desc">
-              학업부터 생활까지 24시간 밀착 관리로 자녀의 안전과 성장을 보장합니다.
+          <!-- 2 -->
+          <article class="why-item">
+            <span class="why-item__badge text-base fw-bold">20년차 안전하고 체계적인 관리형 유학</span>
+            <p class="why-item__body text-base fw-medium">
+              학업부터 생활까지 <strong>24시간 밀착 관리</strong>로 자녀의 안전과 성장을 보장합니다.
             </p>
           </article>
 
-          <!-- 카드 3 -->
-          <article class="reason-card" role="listitem">
-            <h3 class="reason-card__title">문화·언어 적응 및 글로벌 성장 프로그램</h3>
-            <p class="reason-card__desc">
-              안전한 현지인/한인 홈스테이부터 다양한 활동·프로그램으로 문화·언어 적응을 돕습니다.
+          <!-- 3 -->
+          <article class="why-item">
+            <span class="why-item__badge text-base fw-bold">문화·언어 적응 &amp; 글로벌 성장 프로그램</span>
+            <p class="why-item__body text-base fw-medium">
+              캐나다 현지 문화와 언어 적응을 돕는 <strong>안전한 현지인/한인 홈스테이</strong>부터
+              다양한 활동과 프로그램을 제공합니다.
             </p>
           </article>
 
-          <!-- 카드 4 -->
-          <article class="reason-card" role="listitem">
-            <h3 class="reason-card__title">국가별 전문가의 명문대 진학 지원</h3>
-            <p class="reason-card__desc">
-              캐나다·미국·영국·호주·싱가폴·일본·한국 진학 컨설팅, EC 활동, The Herald Student Reporters,
-              전공 교수와 함께하는 논문 리서치 프로젝트까지 제공합니다.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ③ 리터니(Returnee) 컨설팅 -->
-    <section class="section about-returnee js-observe" aria-labelledby="returnee-title">
-      <div class="container">
-        <div class="about-badge" aria-hidden="true">단기유학 후 리터니(RETURNee)</div>
-        <h2 id="returnee-title" class="about-section-title">학생 국제학교 입학 컨설팅</h2>
-
-        <div class="about-grid">
-          <article class="about-box">
-            <h3 class="about-box__title">대상 &amp; 범위</h3>
-            <p class="about-box__desc">
-              캐나다에서 단기(3년 이내) 유학을 마치고 귀국한 학생을 대상으로, 외국인학교 및 송도·제주 국제학교,
-              서울 강남권 국제학교 진학을 위한 입학 로드맵과 맞춤형 1:1 입학시험 준비 튜터링을 제공합니다.
-            </p>
-          </article>
-
-          <article class="about-box">
-            <h3 class="about-box__title">전형 프로그램</h3>
-            <p class="about-box__desc">
-              서울 본원 <strong>HIS헤럴드교육센터</strong>가 20여 년간 운영해온 대표 전문 프로그램으로,
-              리터니 학생의 학업 공백을 최소화하고 국제학교 입학 성공률을 높여온 검증된 컨설팅 서비스입니다.
+          <!-- 4 -->
+          <article class="why-item">
+            <span class="why-item__badge text-base fw-bold">국가별 전문가의 명문대 진학 지원</span>
+            <p class="why-item__body text-base fw-medium">
+              캐나다를 시작으로 <strong>미국·영국·호주·싱가폴·일본·한국</strong> 대학 입학 컨설팅.
+              <em>EXTRACURRICULAR ACTIVITY, THE HERALD STUDENT REPORTERS</em>,
+              전 분야의 명문대 교수와 함께하는 <strong>논문 리서치 프로젝트</strong>까지 제공합니다.
             </p>
           </article>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- ④ CTA -->
-    <section class="section about-cta js-observe" aria-labelledby="cta-title">
-      <div class="container about-cta__inner">
-        <h2 id="cta-title" class="about-cta__title">믿을 수 있는 파트너</h2>
-        <p class="about-cta__desc">
-          HERALD유학 캐나다는 학생의 꿈과 잠재력을 현실로 만드는 믿을 수 있는 파트너입니다.
-        </p>
-        <p class="about-cta__desc">자녀의 글로벌 성공 여정을 HERALD유학과 함께 시작하세요.</p>
-        <a href="consult.html" class="about-btn about-btn--primary" id="cta-consult">상담 예약하기</a>
+  <!-- ③ Returnee (단기유학 후 리터니) -->
+  <section class="about-returnee" aria-labelledby="returnee-title">
+    <div class="container">
+      <h2 id="returnee-title" class="returnee__title text-2xl fw-bold">
+        단기유학 후 리터니(RETURNee)
+      </h2>
+      <p class="returnee__sub text-2xl fw-bold">학생 국제학교 입학 컨설팅</p>
+
+      <div class="returnee__grid">
+        <!-- 대상 & 범위 -->
+        <article class="returnee-card">
+          <span class="returnee-card__badge text-lg fw-bold">대상 &amp; 범위</span>
+          <p class="returnee-card__body text-base fw-medium">
+            캐나다에서 <strong>단기(3년 이내) 유학</strong>을 마치고 귀국한 학생을 대상으로,
+            <strong>외국인 학교 및 송도·제주 국제학교</strong>, 서울 강남권 국제학교 진학을 위한
+            <strong>입학 로드맵</strong>과 맞춤형 <strong>1:1 입학시험 준비 튜터링</strong>을 제공합니다.
+          </p>
+        </article>
+
+        <!-- 검증된 프로그램 -->
+        <article class="returnee-card">
+          <span class="returnee-card__badge2 text-lg fw-bold">검증된 프로그램</span>
+          <p class="returnee-card__body text-base fw-medium">
+            이는 서울 본원 <strong>HIS헤럴드교육센터</strong>가 지난 20년간 운영해온 대표 전문 프로그램으로,
+            리터니 학생의 <strong>학업 공백을 최소화</strong>하고 <strong>국제학교 입학 성공률을 높여온</strong> 서비스입니다.
+          </p>
+        </article>
       </div>
-    </section>
+    </div>
+  </section>
 
-  </main>
+  <!-- ④ CTA -->
+  <section class="about-cta" aria-labelledby="about-cta-title">
+    <div class="container about-cta__inner">
+      <img src="./assets/img/HERALDlogo-about-third.png" alt="HERALD UHAK CA" class="hero__title-img2">
+      <p class="about-cta__lead text-2xl fw-bold">
+        믿을 수 있는 파트너
+      </p>
+      <p class="about-cta__desc text-base fw-medium">
+        HERALD유학 캐나다는 학생의 꿈과 잠재력을 현실로 만드는 믿을 수 있는 파트너입니다.
+        <br class="br-lg">자녀의 글로벌 성공 여정을 HERALD유학과 함께 시작하세요.
+      </p>
 
-           <!-- ===== Footer ===== -->
+      <a href="consult.html" class="btn-hero btn-hero--primary">상담 예약하기</a>
+    </div>
+  </section>
+
+</main>
+
+      <!-- ===== Footer ===== -->
     <footer class="site-footer" role="contentinfo">
       <div class="footer__inner">
         <!-- 왼쪽 영역 -->
@@ -158,13 +188,7 @@
         </div>
 
         <!-- 오른쪽 영역 -->
-        <div class="footer__right">
-          <h3 class="footer__title">상담시간</h3>
-          <ul class="footer__hours">
-            <li>주중 09:00 - 20:00</li>
-            <li>토요일 10:00 - 16:00</li>
-          </ul>
-        </div>
+        
       </div>
     </footer>
 </body>

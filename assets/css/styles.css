@@ -9,14 +9,59 @@
   --light:#f7f9fc; --light-text:#0e1116; --light-muted:#5b6170; --light-line:#e5e8ef;
 }
 
+/* ===== Typography Base ===== */
+:root{
+  /* 전역 글꼴(노토 산스 KR 고정) */
+  --font-sans: "Noto Sans KR","Noto Sans",system-ui,-apple-system,"Segoe UI",Roboto,"Apple SD Gothic Neo","Malgun Gothic","Helvetica Neue",Arial,sans-serif;
+
+  /* 본문 기본 */
+  --text-base: 16px;
+  --leading-base: 1.6;
+}
+
+/* 제목 계층(선택) */
+h1,h2,h3,h4,h5,h6{ font-family: var(--font-sans); margin:0 0 .5em; line-height:1.25; }
+h1{ font-weight:800; font-size:clamp(2rem, 2.5vw + 1rem, 2.75rem); }
+h2{ font-weight:700; font-size:clamp(1.5rem, 2vw + .75rem, 2rem); }
+h3{ font-weight:700; font-size:1.5rem; }
+h4{ font-weight:600; font-size:1.25rem; }
+h5{ font-weight:600; font-size:1.125rem; }
+h6{ font-weight:500; font-size:1rem; }
+strong,b{ font-weight:700; }
+
+/* 굵기 유틸 */
+.fw-regular{   font-weight:400; } /* Regular   */
+.fw-medium{    font-weight:500; } /* Medium    */
+.fw-semibold{  font-weight:700; } /* Semibold→KR은 600이 없어 700 매핑 */
+.fw-bold{      font-weight:700; } /* Bold      */
+.fw-extrabold{ font-weight:900; } /* Extrabold→KR은 800이 없어 900 매핑 */
+
+/* 크기 유틸(선택) */
+.text-xs{  font-size:12px; }
+.text-sm{  font-size:14px; }
+.text-base{font-size:16px; }
+.text-lg{  font-size:18px; }
+.text-xl{  font-size:20px; }
+.text-22{  font-size:22px; }
+.text-2xl{ font-size:24px; }
+.text-3xl{ font-size:30px; }
+.text-32{  font-size:32px;}
+.text-4xl{ font-size:36px; }
+.text-48{ font-size:48px; }
+
 
 /* ===== Reset / Base ===== */
 *{box-sizing:border-box}
 html,body{height:100%}
 body{
-  margin:0;
-  font-family:system-ui,-apple-system,Segoe UI,Roboto,Apple SD Gothic Neo,Noto Sans KR,sans-serif;
-  background:var(--bg); color:var(--text);
+    margin:0;
+    font-family:var(--font-sans);
+    font-size:var(--text-base);
+    line-height:var(--leading-base);
+    background:var(--bg); color:var(--text);
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+    text-rendering:optimizeLegibility;
 }
 a{color:inherit}
 
@@ -45,8 +90,9 @@ a{color:inherit}
 
 /* ===== Typography ===== */
 .title-xl{font-size:40px; line-height:1.2; margin:0 0 16px; letter-spacing:-.01em}
-.title-md{font-size:28px; line-height:1.25; margin:0 0 16px; color: #0093D0;}
-.subtitle{opacity:.95; margin:0 0 20px; color: #263F71; font-size: 32px; color:var(--light)}
+.title-md{line-height:1.25; margin:0 0 16px; color: #B92E2C;}
+.subtitle{opacity:.95; margin:0 0 20px;}
+.subtitle2{opacity:.95; margin:0 0 1px;}
 .lead{color:var(--muted); margin:0 0 32px}
 .ta-center{ text-align:center; }
 .muted{ color:var(--muted); }
@@ -74,8 +120,8 @@ a{color:inherit}
   display:flex; justify-content:space-between; align-items:center;
 }
 .header__brand img{
-  width:277px;   /* 너비 고정 */
-  height:24px;   /* 높이 고정 */
+  width:157px;   /* 너비 고정 */
+  height:35px;   /* 높이 고정 */
   object-fit:contain;  /* 원본 비율 왜곡 방지 */
   display:block;
 }
@@ -185,6 +231,7 @@ input::placeholder,textarea::placeholder{color:#8c90a1}
 .hero-slide .hero-btns{
   display:flex; gap:12px; justify-content:center;
 }
+
 .hero-slide .hero-btns a{
   display:inline-flex; align-items:center; justify-content:center;
   padding:12px 20px; border-radius:999px;
@@ -224,7 +271,8 @@ input::placeholder,textarea::placeholder{color:#8c90a1}
 .dot.is-active{ background:var(--brand1); border-color:var(--brand1); }
 
 /* 이미지 타이틀/버튼 크기 */
-.hero__title-img{ max-width: 520px; width: 90%; height:auto; margin: 8px 0 8px; }
+.hero__title-img{ width: 252px;  height:26px; margin: 20px 0 0; }
+.hero__title-img2{ width: 379px;  height:40px; margin: 20px 0 0; }
 .hero__cta-img{ display:flex; gap:12px; flex-wrap:wrap; align-items:center; margin-top:12px; }
 .hero__cta-img img{ height:48px; width:auto; display:block; }
 @media (max-width:640px){
@@ -301,7 +349,7 @@ input::placeholder,textarea::placeholder{color:#8c90a1}
     var(--bg) center/cover no-repeat;
   text-align: center;
 }
-.ex-subtitle{opacity:.95; margin:0 0 20px; color: #263F71;}
+.ex-subtitle{opacity:.95; margin:0 0 20px; color: #803130;}
 
 
 .early-grid {
@@ -319,7 +367,7 @@ input::placeholder,textarea::placeholder{color:#8c90a1}
 
 .early-card {
   background: #ffffff;
-  border: 2px solid #1e90ff;
+  border: 1px solid #EDA340;
   border-radius: 12px;
   padding: 28px 20px;
   display: flex;
@@ -327,19 +375,21 @@ input::placeholder,textarea::placeholder{color:#8c90a1}
   align-items: center;
 }
 .early-icon { max-width: 100px; height: auto; margin-bottom: 12px; }
-.early-title { font-size: 1.2rem; font-weight: 700; margin-bottom: 6px; color:#3062C3; }
-.early-desc { font-size: 1rem; margin-bottom: 12px; color:#666666; }
+.early-title { margin-bottom: 6px; color:#B92E2C; }
+.early-desc { margin-bottom: 12px; color:#666666; }
 .early-btn {
   display: inline-block;
   padding: 10px 20px;
-  background: #1e90ff;
+  background: #CE5D5F;
   color: #fff;
   border-radius: 30px;
   font-weight: 600;
   text-decoration: none;
   transition: background .2s;
 }
-.early-btn:hover { background: #0066cc; }
+.early-btn:hover {   
+  background:#803130; color:#fff; transform:translateY(-1px);
+ }
 
 /* ===== Aside Floating Menu ===== */
 .aside-nav{
@@ -395,7 +445,7 @@ input::placeholder,textarea::placeholder{color:#8c90a1}
 
 /* ===== Section 3: 상담 예약 CTA ===== */
 .cta3-section{
-  background:#0093D0; /* 필요시 이미지/그라데이션으로 교체 가능 */
+  background:#803130; /* 필요시 이미지/그라데이션으로 교체 가능 */
   color:#fff;
   padding:72px 0;
   text-align:center;
@@ -430,15 +480,15 @@ input::placeholder,textarea::placeholder{color:#8c90a1}
 
 /* ===== Section 4: REAL EXPERIENCES (1194px centered + seamless loop) ===== */
 .stories-section{ background:#fff; padding:80px 0; text-align:center; }
-.stories-heading{ font-size:clamp(22px, 2.8vw, 34px); font-weight:800; color:#0093D0; line-height:1.3; margin-bottom:12px; }
-.stories-sub{ font-size:1.2rem; font-weight:600; margin-bottom:8px; color: #444444; }
+.stories-heading{ color:#CE5D5F; line-height:1.3; margin-bottom:12px; }
+.stories-sub{ margin-bottom:8px; color: #444444; }
 /* 텍스트 뒤 배경 띠 */
 .text-band{
   display:inline-block; max-width: 1194px; width: auto;
-  background: #1d4f8b;              /* 파란 띠 색 */
+  background: #803130;              /* 파란 띠 색 */
   color: #fff;
   padding: 6px 14px;                /* 텍스트 주변 여백 */
-  border: 2px solid #2d78c7;        /* 밝은 파란 테두리 */
+  border: 2px solid #EDA340;        /* 밝은 파란 테두리 */
   border-radius: 6px;
   line-height: 1.4;
   box-decoration-break: clone;      /* 줄바꿈 시 띠가 끊기지 않게 */
@@ -488,9 +538,7 @@ input::placeholder,textarea::placeholder{color:#8c90a1}
 }
 .office__heading{
   text-align:center;
-  font-size:clamp(22px, 2.4vw, 36px);
-  font-weight:900;
-  color:#123e7a;
+  color:#803130;
   letter-spacing:.5px;
   margin-bottom:28px;
 }
@@ -506,22 +554,20 @@ input::placeholder,textarea::placeholder{color:#8c90a1}
 
 .office-card{
   background:#fff;
-  border:2px solid #14a3ff;           /* 파란 라운드 보더 */
+  border:2px solid #EDA340;           /* 파란 라운드 보더 */
   border-radius:16px;
   padding:22px;
   display:flex; flex-direction:column; gap:16px;
 }
 .office-card__title{
-  font-size:clamp(18px, 1.8vw, 26px);
-  font-weight:900;
-  color:#0491db;
+  color:#B92E2C;
   margin:0 0 6px;
 }
 .office-card__meta{
-  color:#4b5563; line-height:1.5; margin:0;
+  color:#803130; line-height:1.5; margin:0;
 }
 .office-card__map{
-  border:2px solid #14a3ff;           /* 지도 영역 보더 */
+  border:2px solid #c75d5e;           /* 지도 영역 보더 */
   border-radius:12px;
   overflow:hidden;
   background:#eaf6ff;
@@ -534,12 +580,12 @@ input::placeholder,textarea::placeholder{color:#8c90a1}
   border:0;
 }
 .office-card__desc{
-  color:#374151; margin:0;
+  color:#444444; margin:0;
 }
 
 /* ===== Footer ===== */
 .site-footer{
-  background:#1f3a66; /* 이미지와 유사한 딥블루 */
+  background:#4B3C37; /* 이미지와 유사한 딥블루 */
   color:#cfd8e3;
   padding: 36px 0;
 }
@@ -557,8 +603,8 @@ input::placeholder,textarea::placeholder{color:#8c90a1}
 
 .footer__brand img{
   display:block;
-  height:28px; /* 필요 시 24~32px 사이 조절 */
-  width:auto;
+  height:40px; /* 필요 시 24~32px 사이 조절 */
+  width:280px;
   margin-bottom:12px;
 }
 
@@ -617,7 +663,7 @@ input::placeholder,textarea::placeholder{color:#8c90a1}
 /* ① Hero */
 [data-page="about"] .about-hero{
   padding: 80px 0 48px;
-  background: linear-gradient(180deg, var(--about-blue-800), var(--about-blue-700));
+  background: #803130;
   color: #fff;
 }
 [data-page="about"] .about-hero__inner{ max-width: var(--max, 1200px); margin: 0 auto; }
@@ -628,7 +674,7 @@ input::placeholder,textarea::placeholder{color:#8c90a1}
   margin: 0 0 12px; font-size: 18px; font-weight: 700; opacity: 0.95;
 }
 [data-page="about"] .about-hero__desc{
-  margin: 0; font-size: 15px; line-height: 1.7; opacity: 0.95;
+  margin: 0; line-height: 1.7; opacity: 0.95;
 }
 
 /* ② Reasons (보드 + 카드) */
@@ -699,12 +745,12 @@ input::placeholder,textarea::placeholder{color:#8c90a1}
 
 /* ④ CTA */
 [data-page="about"] .about-cta{
-  background: linear-gradient(180deg, var(--about-blue-700), var(--about-blue-900));
+  background: #F1E6DE;
   color: #fff; padding: 60px 0 72px;
 }
 [data-page="about"] .about-cta__inner{ text-align: center; max-width: 880px; margin: 0 auto; }
 [data-page="about"] .about-cta__title{ margin:0 0 8px; font-size: 28px; font-weight: 900; }
-[data-page="about"] .about-cta__desc{ margin: 0 0 8px; font-size: 15px; opacity: .95; }
+[data-page="about"] .about-cta__desc{  opacity: .95; }
 [data-page="about"] .about-btn{
   display:inline-block; padding: 12px 22px; border-radius: 999px;
   font-weight: 800; font-size: 14px; text-decoration: none;
@@ -820,3 +866,228 @@ input::placeholder,textarea::placeholder{color:#8c90a1}
 .table--contrast thead th{ background:#edf2ff; }
 .table--contrast th, .table--contrast td{ border:1px solid #e5e7eb; padding:12px; text-align:center; }
 .w-20{ width:20% }
+
+/* =========================================
+   [ADD] Language Switch (Header Right)
+========================================= */
+.lang-switch{ position:relative; margin-left:12px; }
+.lang-switch__btn{
+  display:inline-flex; align-items:center; gap:6px;
+  height:32px; padding:0 12px; border-radius:8px;
+  background:#fff; color:#333; border:1px solid var(--light-line);
+  font-weight:600; cursor:pointer;
+}
+.lang-switch__btn:hover{ filter:brightness(0.97); }
+.lang-switch__list{
+  position:absolute; top:38px; right:0; min-width:80px;
+  background:#fff; border:1px solid var(--light-line); border-radius:8px;
+  box-shadow:0 8px 18px rgba(0,0,0,.08); list-style:none; margin:0; padding:6px;
+  display:none; z-index:30;
+}
+.lang-switch__list li{ margin:0; }
+.lang-switch__list button{
+  width:100%; text-align:left; padding:8px 10px; border-radius:6px; border:0; background:transparent; cursor:pointer;
+  font-weight:600; color:#333;
+}
+.lang-switch__list button:hover{ background:#f5f7fb; }
+.lang-switch.is-open .lang-switch__list{ display:block; }
+
+/* =========================================
+   [ADD] Hero CTA Buttons
+   - size: 240×48 / pill
+   - 색상 변수만 바꾸면 전체 스타일 유지
+========================================= */
+:root{
+  --hero-btn-fill: #cd5656;        /* 채워진 버튼 배경 (빨강 톤) */
+  --hero-btn-fill-hover: #b94c4c;  /* hover */
+  --hero-btn-text: #ffffff;        /* 채워진 버튼 텍스트 */
+  --hero-btn-border: #cd5656;      /* 아웃라인 테두리/텍스트 */
+  --hero-btn-soft: #ffecec;        /* 아웃라인 배경(연한 핑크) */
+}
+
+.hero-cta{ display:flex; gap:12px; flex-wrap:wrap; }
+
+.btn-hero{
+  display:inline-flex; align-items:center; justify-content:center;
+  min-width:240px; height:48px; padding:0 18px;
+  border-radius:9999px; font-weight:700; font-size:16px;
+  transition:transform .15s ease, box-shadow .2s ease, background .2s ease, color .2s ease, border-color .2s ease;
+  text-decoration:none;
+}
+
+/* Filled */
+.btn-hero--primary{
+  background:var(--hero-btn-fill); color:var(--hero-btn-text); border:1.5px solid var(--hero-btn-fill);
+  box-shadow:0 2px 0 rgba(0,0,0,.06);
+}
+.btn-hero--primary:hover{
+  background:var(--hero-btn-fill-hover); border-color:var(--hero-btn-fill-hover); transform:translateY(-1px);
+  box-shadow:0 8px 16px rgba(205,86,86,.25);
+}
+
+/* Outline + soft background */
+.btn-hero--outline{
+  background:var(--hero-btn-soft); color:var(--hero-btn-border); border:1.5px solid var(--hero-btn-border);
+}
+.btn-hero--outline:hover{
+  filter:brightness(0.98); transform:translateY(-1px);
+  box-shadow:0 8px 16px rgba(205,86,86,.15);
+}
+
+/* ============================
+   Section 5: OFFICE (size down)
+   - 총 너비: 720 x 395 (2카드)
+   - 카드: 340 x 395
+   - 지도: 308 x 168
+============================ */
+#section-office .office__grid{
+  width:720px; max-width:100%;
+  margin:0 auto;
+  display:flex; gap:40px; align-items:stretch;
+}
+
+#section-office .office-card{
+  width:340px; height:395px;
+  padding:16px;
+  background:#fff;
+  border: 1px solid #EDA340;
+  border-radius:16px;
+  display:flex; flex-direction:column; gap:12px;
+  overflow:hidden;
+}
+
+/* 헤더(제목/메타) 간격만 정리 */
+#section-office .office-card__head{ display:flex; flex-direction:column; gap:6px; }
+
+/* 지도 박스: 카드 패딩(16*2=32) 고려 → 내용폭 308px */
+#section-office .office-card__map{
+  width:100%; height:168px;
+  border-radius:12px; overflow:hidden; background:#fff;
+}
+#section-office .office-card__map img,
+#section-office .office-card__map iframe{
+  width:100%; height:100%;
+  display:block; border:0; object-fit:cover;
+}
+
+/* 설명 문단은 남는 공간에 자연스럽게 배치 */
+#section-office .office-card__desc{ margin-top:auto; }
+
+/* 모바일 스택(선택) */
+@media (max-width: 768px){
+  #section-office .office__grid{ width:100%; flex-direction:column; gap:16px; }
+  #section-office .office-card{ width:100%; height:auto; }
+  #section-office .office-card__map{ height:168px; }
+}
+
+/* ========== ABOUT page ========== */
+.about-page .container{ max-width: var(--max); margin: 0 auto; padding: 0 20px; }
+
+/* ① Intro Hero */
+.about-hero{
+  background:#8c3b37; /* 버건디 톤(캡처 참고) */
+  color:#fff;
+  padding: 64px 0 88px;
+  position: relative;
+}
+.about-hero__title{
+  text-align:center; font-weight:800;
+  font-size: clamp(28px, 2.8vw + 8px, 40px);
+  margin:0 0 10px;
+}
+.about-hero__desc{
+  text-align:center; opacity:.95;
+}
+.br-lg{ display:none; }
+@media (min-width: 992px){ .br-lg{ display:inline; } }
+
+/* ② Why HERALD (white card on top) */
+.about-why{ background:#F8F3EC; padding: 60px 0 100px; } /* 연한 베이지 배경 */
+.about-why__card{
+  background:#fff; border-radius:16px; padding:28px;
+  box-shadow: 0 18px 36px rgba(0,0,0,.12);
+}
+.about-why__title{
+  text-align:center; color:#8c3b37; font-weight:800; margin:4px 0 6px;
+  font-size: clamp(20px, 2vw + 6px, 28px);
+}
+.about-why__lead{
+  text-align:center; color:#444444; margin:0 0 22px;
+}
+.about-why__grid{
+  display:grid; grid-template-columns: 1fr; gap:14px;
+}
+@media (min-width: 860px){
+  .about-why__grid{ grid-template-columns: 1fr 1fr; gap:16px; }
+}
+.why-item{
+  background:#F8F3EC; border:1px solid #e9ded7; border-radius:12px;
+  padding:16px; min-height:112px;
+  display:flex; flex-direction:column; gap:10px;
+}
+.why-item__badge{
+  display:inline-block; align-self:flex-start;
+  background:#cf6a6a; color:#fff; border-radius:999px;
+  padding:6px 12px;
+}
+.why-item__body{ color:#444444; }
+
+/* ③ Returnee */
+.about-returnee{ background:#ffffff; padding:60px 0; }
+.returnee__title{
+  text-align:center; background:#8c3b37; color:#fff; width:fit-content;
+  display:block; padding:8px 16px; 
+  margin:0 auto 10px;
+}
+.returnee__sub{
+  text-align:center;  color:#803130; margin:0 0 20px;
+}
+.returnee__grid{
+  display:grid; grid-template-columns: 1fr; gap:16px; max-width: 980px; margin:0 auto;
+}
+@media (min-width: 860px){
+  .returnee__grid{ grid-template-columns: 1fr 1fr; }
+}
+.returnee-card{
+  background:#fff; border:1px solid #e9ded7; border-radius:12px; padding:16px;
+  box-shadow: 0 8px 18px rgba(0,0,0,.06);
+}
+.returnee-card__badge{
+  width:138px; height:41px; text-align:center;display:inline-block; background:#CE5D5F; color:#fff; border-radius:999px;
+  padding:6px 12px;  
+}
+.returnee-card__badge2{
+  width:169px; height:41px; text-align:center;display:inline-block; background:#CE5D5F; color:#fff; border-radius:999px;
+  padding:6px 12px;  
+}
+.returnee-card__body{ color:#473d3d;}
+
+/* ④ CTA */
+.about-cta{
+  background:#e6ddd6; /* 연한 베이지/그레이 믹스 */
+  padding:56px 0 80px; color:#433a3a;
+}
+.about-cta__inner{ text-align:center; }
+.about-cta__title{
+  display:inline-flex; align-items:center; gap:10px;
+  font-weight:800; color:#8c3b37; margin:0 0 8px;
+  font-size: clamp(20px, 2vw + 6px, 26px);
+}
+.about-cta__lead{ margin: 4px 0 8px; color: #803130;}
+.about-cta__desc{ opacity:.9; margin:0 0 32px; color:#4B3C37;}
+
+/* 버튼은 기존 .btn-hero 사용(없다면 아래 유지) */
+.btn-hero{
+  display:inline-flex; align-items:center; justify-content:center;
+  min-width:240px; height:48px; padding:0 18px; border-radius:9999px;
+  font-weight:700; font-size:16px; text-decoration:none;
+  transition:transform .15s ease, box-shadow .2s ease, background .2s ease, color .2s ease, border-color .2s ease;
+}
+.btn-hero--primary{
+  background:#8c3b37; color:#fff; border:1.5px solid #8c3b37; box-shadow:0 2px 0 rgba(0,0,0,.06);
+}
+.btn-hero--primary:hover{
+  background:#7b332f; border-color:#7b332f; transform:translateY(-1px);
+  box-shadow:0 10px 20px rgba(140,59,55,.25);
+}
+
