@@ -10,7 +10,6 @@
 </head>
 <body data-page="<!-- about | consult | study | early | tutoring | transfer -->">
   <a class="skip" href="#main">본문 바로가기</a>
-
  <!-- ===== Header ===== -->
 <!-- ===== Header ===== -->
 <header class="site-header" role="banner">
@@ -30,7 +29,19 @@
       <a href="./transfer.html">캐나다 대학편입 프로그램</a>
       <a href="https://pf.kakao.com" target="_blank" class="btn-kakao">카카오 상담</a>
     </nav>
+      <!-- ===== [ADD] Header: Language Switch ===== -->
+    <div class="lang-switch" id="langSwitch">
+      <button class="lang-switch__btn" aria-haspopup="listbox" aria-expanded="false">
+        <span class="lang-switch__label" data-lang-label>KR</span>
+        <svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10l5 5 5-5" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+      </button>
+      <ul class="lang-switch__list" role="listbox" aria-label="Language">
+        <li><button role="option" data-lang="en" data-label="US">US</button></li>
+        <li><button role="option" data-lang="ko" data-label="KR">KR</button></li>
+      </ul>
+    </div>
   </div>
+    
 </header>
 
 
@@ -97,7 +108,7 @@
 </body></html>
 
 
-        <!-- ===== Footer ===== -->
+         <!-- ===== Footer ===== -->
     <footer class="site-footer" role="contentinfo">
       <div class="footer__inner">
         <!-- 왼쪽 영역 -->
@@ -121,13 +132,7 @@
         </div>
 
         <!-- 오른쪽 영역 -->
-        <div class="footer__right">
-          <h3 class="footer__title">상담시간</h3>
-          <ul class="footer__hours">
-            <li>주중 09:00 - 20:00</li>
-            <li>토요일 10:00 - 16:00</li>
-          </ul>
-        </div>
+        
       </div>
     </footer>
 </body>

@@ -336,26 +336,7 @@ document.querySelectorAll('.table-wrap').forEach(el=>el.style.scrollBehavior='sm
   const $list = $switch.querySelector('.lang-switch__list');
   const $label = $switch.querySelector('[data-lang-label]');
 
-  const I18N = {
-    ko: {
-      "hero.ctaConsult": "상담 예약하기",
-      "hero.ctaWhy": "왜 HERALD인가?",
-      "hero.ctaEarly": "조기유학 프로그램",
-      "hero.ctaTutoring": "튜터링 소개",
-      "hero.ctatransfer": "대학 편입 프로그램",
-      "hero.ctastudycanada": "캐나다 유학 소개",
-      // TODO: 필요한 키 계속 추가 (메뉴/섹션 등)
-    },
-    en: {
-      "hero.ctaConsult": "Book a Consultation",
-      "hero.ctaWhy": "Why HERALD?",
-      "hero.ctaEarly": "Early Study Program",
-      "hero.ctaTutoring": "Tutoring Intro",
-      "hero.ctatransfer": "University Transfer Program",
-      "hero.ctastudycanada": "Study in Canada",
-      // TODO: 영어 문구 계속 추가
-    }
-  };
+
 
   function applyI18n(lang){
     const dict = I18N[lang] || I18N.ko;
