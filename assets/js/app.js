@@ -401,3 +401,55 @@ document.querySelectorAll('.table-wrap').forEach(el=>el.style.scrollBehavior='sm
   setLang(saved, saved==='en' ? 'US' : 'KR');
 })();
 
+// ===== Consult page only =====
+(function(){
+  const doc = document;
+  const isConsult = (doc.documentElement.getAttribute('data-page') === 'consult') ||
+                    (doc.body && doc.body.getAttribute('data-page') === 'consult');
+  if(!isConsult) return;
+
+  const form = doc.getElementById('consultForm');
+  const message = doc.getElementById('message');
+  const charNow = doc.getElementById('charNow');
+  const interestGroup = doc.getElementById('interestGroup');
+  const maxPick = parseInt(interestGroup?.dataset.max || '2', 10);
+
+  // 글자수
+  if (message && charNow){
+    const update = () => { charNow.textContent = String(message.value.length); };
+    message.addEventListener('input', update); update();
+  }
+
+  // 관심 프로그램 최대 2개
+  if (interestGroup){
+    const boxes = interestGroup.querySelectorAll('input[type="checkbox"]');
+    interestGroup.addEventListener('change', () => {
+      const picked = Array.from(boxes).filter(b => b.checked);
+      if (picked.length > maxPick){
+        picked[picked.length - 1].checked = false;
+        alert('관심 프로그램은 최대 ' + maxPick + '개까지 선택할 수 있어요.');
+      }
+    });
+  }
+
+  // 간단 검증
+  if (form){
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const need = ['studentName','grade','agree'];
+      for (const id of need){
+        const el = doc.getElementById(id);
+        if (!el) continue;
+        if ((el.type === 'checkbox' && !el.checked) || (el.value || '').trim() === ''){
+          el.focus(); alert('필수 항목을 확인해주세요.'); return;
+        }
+      }
+      alert('상담 요청이 접수되었습니다. 담당자가 상담시간 내에 연락드릴게요!');
+      form.reset(); if (charNow) charNow.textContent = '0';
+    });
+  }
+
+  // 방침 보기
+  const openPolicy = doc.getElementById('openPolicy');
+  if (openPolicy){ openPolicy.addEventListener('click', () => window.open('privacy.html','_blank')); }
+})();

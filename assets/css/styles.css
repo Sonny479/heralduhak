@@ -1096,3 +1096,669 @@ input::placeholder,textarea::placeholder{color:#8c90a1}
   box-shadow:0 10px 20px rgba(140,59,55,.25);
 }
 
+/* ===== CONSULT (캡처 매칭) ===== */
+:root{ --overlap: 80px; }  /* 카드가 배너에 걸리는 정도(필요시 56~80px 사이로 조절) */
+
+html[data-page="consult"], body[data-page="consult"]{ background:#efe6e0; }
+
+/* Hero */
+.consult-hero{
+  position:relative;
+  height: 360px;
+  background-color:#8c3b37;
+  background-image:url("./assets/img/consult-bg.png");
+  background-size:cover; background-position:center; background-repeat:no-repeat;
+  color:#fff;
+  padding: 64px 0 140px; /* 하단 크게 → 폼과 경계 맞닿음 */
+}
+.consult-page .container{ max-width: 1100px; margin:0 auto; padding:0 20px; }
+.consult-hero__inner{ text-align:center; }
+.consult-hero__brand{ display:inline-flex; align-items:center; gap:12px; }
+.consult-hero__logo{ width:40px; height:40px; object-fit:contain; }
+.consult-hero__title{ margin:0; font-weight:800; font-size: clamp(26px, 2.6vw + 6px, 40px); }
+.consult-hero__sub{ margin:10px 0 0; font-weight:700; opacity:.95; font-size:15px; }
+
+/* Form section – 경계 오버랩 */
+.consult-form-section{ margin-top: calc(-1 * var(--overlap)); }
+.form-card{
+  max-width: 920px; margin:0 auto;
+  background:#fff; color:#101012;
+  border:1px solid #e6e9ef;
+  border-radius:12px;
+  padding:22px 22px 26px;
+  box-shadow:0 22px 44px rgba(0,0,0,.22);
+}
+
+/* 헤더/상단 알림 */
+.form-card__head{ display:flex; align-items:center; gap:10px; margin-bottom:10px; }
+.form-card__title{ margin:0;  color:#CE5D5F; display:flex; align-items:center; gap:6px; }
+.form-card__title .ico{ font-size:18px; }
+.form-card__meta{ margin:0;  color:#999999; }
+.form-card__notice{
+  margin:8px 0 12px; padding:10px 12px; border-radius:8px;
+  background:#fff4f2; color:#b24b4b; border:1px solid #f1d5d1;
+  font-weight:700; font-size:13px;
+}
+
+/* 1열 폼 */
+.form-grid{ display:grid; grid-template-columns: 1fr; gap:14px; }
+.field{ display:flex; flex-direction:column; gap:6px; }
+.field .label, .field > label{ font-weight:700; color:#2f3441; font-size:14px; }
+
+.field input[type="text"],
+.field input[type="tel"],
+.field input[type="email"],
+.field select{
+  width:100%; height:44px; padding:0 12px;
+  border:1px solid #dfe3ea; border-radius:10px; background:#fff; font-size:15px;
+}
+.field textarea{
+  width:100%; min-height:140px; padding:12px;
+  border:1px solid #dfe3ea; border-radius:10px; background:#fff; font-size:15px; resize:vertical;
+}
+.select-wrap{ position:relative; }
+.field .help{ margin:2px 0 0; font-size:12px; color:#8a93a2; }
+.field .help.warn{ color:#b24b4b; }
+.field .muted{ color:#b24b4b; font-style:normal; font-weight:700; }
+
+.choice-row{ display:flex; flex-wrap:wrap; gap:14px; }
+.choice{ display:inline-flex; align-items:center; gap:6px; font-weight:600; }
+.choice input{ width:16px; height:16px; }
+.char{ text-align:right; font-size:12px; color:#8a93a2; }
+
+/* 동의/방침 */
+.agree-row{ align-items:center; gap:10px; }
+.check{ display:inline-flex; align-items:center; gap:8px; font-weight:600; }
+.btn-policy{
+  margin-left:auto; height:34px; padding:0 12px; border-radius:8px; cursor:pointer;
+  background:#f2f4f8; color:#333; border:1px solid #e5e8ef;
+}
+
+/* 액션(좌 레드 / 우 옐로우) */
+.form-actions{ display:flex; gap:12px; margin-top:16px; }
+.btn-submit{
+  flex:1; height:48px; border-radius:999px; border:1.5px solid #c24c4c;
+  background:#c24c4c; color:#fff; font-weight:800; font-size:16px; cursor:pointer;
+  box-shadow:0 1px 0 rgba(0,0,0,.06); transition:.15s;
+}
+.btn-submit:hover{ background:#b24444; border-color:#b24444; transform:translateY(-1px); box-shadow:0 12px 22px rgba(194,76,76,.22); }
+.form-actions .btn-kakao{
+  flex:1; height:48px; border-radius:999px; line-height:48px; text-align:center; text-decoration:none;
+  border:1.5px solid #f0c53f; background:#ffd23f; color:#2c2412; font-weight:800; font-size:16px;
+  transition:.15s;
+}
+.form-actions .btn-kakao:hover{ background:#f2c942; border-color:#e4bc2f; transform:translateY(-1px); box-shadow:0 12px 22px rgba(242,201,66,.22); }
+
+/* 모바일 */
+@media (max-width: 640px){
+  :root{ --overlap: 56px; }
+  .consult-hero{ padding:56px 0 120px; }
+  .form-card{ max-width: 94vw; padding:18px; }
+}
+
+/* === 상담예약: 카드가 배너 위에 올라오게 (오버라이드) === */
+:root{ --consult-overlap: 120px; }  /* 카드가 배너에 걸리는 양(필요시 56~88px로 조절) */
+
+/* 1) 배너(1번)는 아래 레이어 */
+.consult-hero{
+  position: relative;
+  z-index: 0;           /* 배너 아래 */
+  overflow: visible;    /* 경계에 걸친 카드가 보이도록 */
+}
+/* 배너에 ::before/::after 오버레이가 있다면 뒤로 */
+.consult-hero::before,
+.consult-hero::after{ z-index: 0 !important; }
+
+/* 2) 신청서 섹션(2번)과 카드 자체를 위 레이어 + 경계 오버랩 */
+.consult-form-section{
+  position: relative;
+  margin-top: calc(-1 * var(--consult-overlap));  /* 배너와 겹치기 */
+  z-index: 2;                                     /* 배너보다 위 */
+}
+.form-card{
+  position: relative;
+  z-index: 3;                /* 카드가 최상단(그림자도 보이게) */
+  box-shadow: 0 22px 44px rgba(0,0,0,.22);
+}
+
+/*! 여기서부터 새롭게 추가 25.09.30  */
+
+/* Todo : why-canada.html의 css 내역*/
+p {
+  margin: unset;
+}
+
+button {
+  cursor: pointer;
+}
+
+ul {
+  margin-block: unset;
+}
+
+.why-canada-main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.why-canada-main .section1 {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.why-canada-main .section1 .banner-bg {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url('/assets/img/banner_img.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 360px;
+}
+
+.why-canada-main .section1 .banner-bg strong {
+  color: #FFF;
+  text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.25);
+  font-family: "Noto Sans";
+  font-size: 32px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-top: 126px;
+}
+
+.why-canada-main .section1 .banner-bg p {
+  text-align: center;
+  color: #FFF;
+  text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.25);
+  font-family: "Noto Sans";
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  text-transform: uppercase;  
+  margin-top: 16px;
+}
+
+.why-canada-main .section1 .canada-advantage-bg {
+  background-color:#F8F3EC;
+  height: 800px;
+}
+
+.why-canada-main .section1 .canada-advantage-table {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  padding: 48px 56px;
+  background-color: #FFF;
+  border-radius: 16px;
+  box-shadow: 2px 2px 25px 0 rgba(45, 43, 64, 0.50);
+  width: 100%;
+  max-width: 1192px;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 290px;
+}
+
+.why-canada-main .section1 .canada-advantage-table strong {
+  color: #4B3C37;
+  text-align: center;
+  font-family: "Noto Sans";
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
+.why-canada-main .section1 .canada-advantage-table .advantage-contents {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.why-canada-main .section1 .canada-advantage-table .advantage-contents .adv-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 16px;
+  gap: 8px;
+  /* flex: 1 0 0; */
+  border-radius: 8px;
+  border: 1px solid var#CCC;
+  background: #FFF;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 528px;
+}
+
+.why-canada-main .section1 .canada-advantage-table .advantage-contents .adv-box strong {
+  color: #CE5D5F;
+  font-family: "Noto Sans";
+  font-size: 16px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.why-canada-main .section1 .canada-advantage-table .advantage-contents .adv-box p {
+  color: #444;
+  font-family: "Noto Sans";
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.why-canada-main .section1 .canada-advantage-table .go-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 48px;
+  border-radius: 99px;
+  padding: 0 32px;
+  background-color: #803130;
+  color: #F5F5F5;
+  font-family: "Noto Sans";
+  font-size: 16px;
+  font-weight: 800;
+  text-transform: uppercase;
+  border: unset;
+}
+
+.why-canada-main .section2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background-color: #fff;
+  gap: 16px;
+  padding: 56px 0;
+}
+
+.why-canada-main .section2 .Vancouver_abroad {
+  display: flex;
+  flex-direction: column;
+}
+
+.why-canada-main .section2 .Vancouver_abroad strong {
+  color: #803130;
+  text-align: left;
+  font-family: "Noto Sans";
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
+.why-canada-main .section2 .Vancouver_abroad p {
+  color: #333;
+  font-family: "Noto Sans";
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+.why-canada-main .section2 .Vancouver_abroad p strong {
+  color: #333;
+  font-family: "Noto Sans";
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.why-canada-main .section2 .map-contents {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
+
+.why-canada-main .section2 .map-contents .map-img {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border-radius: 16px;
+  border: 1px solid #DDD;
+  background-color: #FFF;
+  padding: 16px;
+  gap: 16px;
+  align-self: stretch;
+}
+
+.why-canada-main .section2 .map-contents .map-img .map-text {
+  color: #999;
+  font-family: "Noto Sans";
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 15px;
+}
+
+.why-canada-main .section2 .map-contents .edu-spot {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: stretch;
+  gap: 16px;
+  flex: 1 0 0;
+  border-radius: 8px;
+  padding: 32px 16px;
+  border: 1px solid #DDD;
+  background-color: #FFF;
+}
+
+.why-canada-main .section2 .map-contents .edu-spot .edu-title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+
+.why-canada-main .section2 .map-contents .edu-spot .edu-title img {
+  width: 24px;
+  height: 24px;
+}
+
+.why-canada-main .section2 .map-contents .edu-spot .edu-title span {
+  color: #CE5D5F;
+  text-align: center;
+  font-family: "Noto Sans";
+  font-size: 20px;
+  font-weight: 800;
+  line-height: normal;
+}
+
+.why-canada-main .section2 .map-contents .edu-spot .edu-contents {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.why-canada-main .section2 .map-contents .edu-spot .edu-contents .edu-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+
+.why-canada-main .section2 .map-contents .edu-spot .edu-contents .edu-box img {
+  width: 24px;
+  height: 24px;
+}
+
+.why-canada-main .section2 .map-contents .edu-spot .edu-contents .edu-box span {
+  color: #803130;
+  font-family: "Noto Sans";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px
+}
+
+.why-canada-main .section2 .map-contents .edu-spot .edu-contents .big-map {
+  display: flex;
+  padding: 4px 10px;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  border-radius: 99px;
+  border: 1px solid #CCC;
+  background-color: #F6F6F6;
+  color: #999;
+  font-family: "Noto Sans";
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 12.5px;
+}
+
+.why-canada-main .section2 .detail-contents {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 16px;
+} 
+
+.why-canada-main .section2 .detail-contents .detail-box {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 286px;
+}
+
+.why-canada-main .section2 .detail-contents .detail-box .detail-title {
+  display: flex;
+  align-items: center;
+  align-self: stretch;
+  padding: 8px 16px;
+  gap: 16px;
+  border-radius: 8px 8px 0 0;
+  background-color: #F1E6DE;
+  border: 1px solid #F1E6DE; 
+}
+
+.why-canada-main .section2 .detail-contents .detail-box .detail-title img {
+  width: 24px;
+  height: 24px;
+}
+
+.why-canada-main .section2 .detail-contents .detail-box .detail-title span {
+  color: #CE5D5F;
+  font-family: "Noto Sans";
+  font-size: 16px;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.why-canada-main .section2 .detail-contents .detail-box ul {
+  display: flex;
+  padding-block: 16px;
+  padding-left: 30px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  align-self: stretch;
+  border-radius: 0 0 8px 8px;
+  border-right: 1px solid #CCC;
+  border-bottom: 1px solid #CCC;
+  border-left: 1px solid #CCC;
+  background-color: #FFF;
+  min-height: 116px;
+}
+
+.why-canada-main .section2 .detail-contents .detail-box ul li {
+  color: #333;
+  font-family: "Noto Sans";
+  font-size: 16px;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: uppercase;
+  align-self: stretch;
+  list-style-type: disc;
+  /* max-width: 520px; */
+}
+
+.why-canada-main .section2 .detail-contents .detail-box ul li span {
+  padding-left: 1px;
+}
+
+.why-canada-main .section3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background: #F8F3EC;
+  padding-block: 64px;
+}
+
+.why-canada-main .section3 .compare-school {
+  display: flex;
+  flex-direction: column;
+}
+
+.why-canada-main .section3 .compare-school .compare-title {
+  color: #4B3C37;
+  font-family: "Noto Sans";
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.why-canada-main .section3 .compare-school .compare-title strong {
+  color: #CE5D5F;
+  text-align: center;
+  font-family: "Noto Sans";
+  font-size: 22px;
+  font-weight: 900;
+  line-height: 22px;
+  text-transform: uppercase;
+}
+
+.why-canada-main .section3 .compare-school .compare-sub-title {
+  color: #333;
+  font-family: "Noto Sans";
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+.why-canada-main .section3 .compare-table {
+  border-collapse: collapse; 
+  text-align: center;
+  width: 100%; 
+  background-color: #fff;
+  border-color: #CFCFCF;
+}
+
+.why-canada-main .section3 .compare-table thead tr {
+  font-family: "Noto Sans";
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 21px;
+  letter-spacing: -0.32px;
+}
+
+.why-canada-main .section3 .compare-table thead tr th {
+  padding-block: 17px;
+}
+
+.why-canada-main .section3 .compare-table thead tr .white-bg {
+  background-color: #fff;
+  color: #803130;
+}
+
+.why-canada-main .section3 .compare-table thead tr .light-red-bg {
+  border-right: 1px solid #FFF;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), rgba(136, 12, 36, 0.70);
+}
+
+.why-canada-main .section3 .compare-table thead tr .red-bg {
+  border-left: 1px solid #FFF;
+  background-color:#CE5D5F;
+}
+
+.why-canada-main .section3 .compare-table tbody tr td {
+  padding-block: 19px;
+  color: #444;
+  font-family: "Noto Sans";
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 21px;
+  letter-spacing: -0.32px;
+}
+
+.why-canada-main .section4 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding-block: 72px;
+  background-image: url('/assets/img/herald_bg.png');
+}
+
+.why-canada-main .section4 .reservation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+
+.why-canada-main .section4 .reservation img {
+  width: 505px;
+  height: 53px;
+}
+
+.why-canada-main .section4 .reservation .suggestion-text {
+  text-align: center;
+}
+
+.why-canada-main .section4 .reservation .suggestion-text strong {
+  color: #FFF;
+  font-family: "Noto Sans";
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.why-canada-main .section4 .reservation .suggestion-text p {
+  color: #FFF;
+  font-family: "Noto Sans";
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  text-transform: uppercase;
+  margin-top: 8px;
+}
+
+.why-canada-main .section4 .reservation .reservation-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 48px;
+  border-radius: 999px;
+  border: 2px solid #F5F5F5;
+  background-color: transparent;
+  color: #F5F5F5;
+  font-family: "Noto Sans";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.opacity {
+  opacity: 0.8;
+}
+
+.font-black {
+  color: #000;
+}
+
+.font-blue {
+  color: #006FFF;
+}
+
+.max-1192 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1192px;
+}
+
+.margin-t16 {
+  margin-top: 16px;
+}
+
+.margin-t24 {
+  margin-top: 24px;
+}
+
+.margin-t32 {
+  margin-top: 32px;
+}
+
