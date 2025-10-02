@@ -379,7 +379,7 @@ document.querySelectorAll('.table-wrap').forEach(el=>el.style.scrollBehavior='sm
 
   // init
   const saved = localStorage.getItem('site_lang') || 'ko';
-  setLang(saved, saved==='en' ? 'US' : 'KR');
+  setLang(saved, saved==='en' ? 'EN' : 'KR');
 })();
 
 // ===== Consult page only =====
