@@ -56,7 +56,7 @@
       <strong>Why Study in Canada?</strong>
       <p>Based on a globally recognized, stable education system, Canada offers a wide range of electives, rich activities, and vibrant clubs,<br>making it a safe yet attractive study destination for international students and their families.</p>
     </div>
-    <div class="canada-advantage-bg"></div>
+    <div class="canada-advantage-bg eng-height925"></div>
     <div class="canada-advantage-table">
       <strong>Main Advantages of Studying in Canada</strong>
       <div class="advantage-contents">
@@ -136,8 +136,8 @@
       </div>
       <div class="detail-contents margin-t16">
         <div class="detail-box">
-          <div class="detail-title"><img src="/assets/img/Frame1.png"><span>Vancouver School Board (VSB)</span></div>
-          <ul>
+          <div class="detail-title eng-padding-inline14"><img src="/assets/img/Frame1.png"><span class="eng-font14">Vancouver School Board (VSB)</span></div>
+          <ul class="eng-height194">
             <li>Top-level educational environment near UBC</li>
             <li>Easy downtown access, close to parks and beaches</li>
             <li>Grades: Gr.1–7 / Gr.8–12</li>
@@ -145,8 +145,8 @@
         </div>
 
         <div class="detail-box">
-          <div class="detail-title"><img src="/assets/img/Frame2.png"><span>North Vancouver</span></div>
-          <ul>
+          <div class="detail-title eng-padding-inline14"><img src="/assets/img/Frame2.png"><span class="eng-font14">North Vancouver</span></div>
+          <ul class="eng-height194">
             <li>Close to ski resorts, excellent natural environment</li>
             <li>Safe, high academic achievement</li>
             <li>Grades: Gr.1–7 / Gr.8–12</li>
@@ -154,8 +154,8 @@
         </div>
 
         <div class="detail-box">
-          <div class="detail-title"><img src="/assets/img/Frame3.png"><span>Coquitlam</span></div>
-          <ul>
+          <div class="detail-title eng-padding-inline14"><img src="/assets/img/Frame3.png"><span class="eng-font14">Coquitlam</span></div>
+          <ul class="eng-height194">
             <li>Large district, abundant Korean community facilities</li>
             <li>Active in arts and sports</li>
             <li>Grades: Gr.1–5 / Gr.6–8 / Gr.9–12</li>
@@ -163,38 +163,38 @@
         </div>
 
         <div class="detail-box">
-          <div class="detail-title"><img src="/assets/img/Frame4.png"><span>Burnaby</span></div>
-          <ul>
+          <div class="detail-title eng-padding-inline14"><img src="/assets/img/Frame4.png"><span class="eng-font14">Burnaby</span></div>
+          <ul class="eng-height194">
             <li>Strong in IB and AP, excellent infrastructure</li>
           </ul>
         </div>
 
         <div class="detail-box">
-          <div class="detail-title"><img src="/assets/img/Frame5.png"><span>Surrey</span></div>
-          <ul>
+          <div class="detail-title eng-padding-inline14"><img src="/assets/img/Frame5.png"><span class="eng-font14">Surrey</span></div>
+          <ul class="eng-height194">
             <li>Largest district in BC, wide program variety</li>
             <li>Excellent amenities in South Surrey/White Rock</li>
           </ul>
         </div>
 
         <div class="detail-box">
-          <div class="detail-title"><img src="/assets/img/Frame6.png"><span>Langley</span></div>
-          <ul>
+          <div class="detail-title eng-padding-inline14"><img src="/assets/img/Frame6.png"><span class="eng-font14">Langley</span></div>
+          <ul class="eng-height194">
             <li>Pleasant and safe area, good for English immersion</li>
             <li>Grades: Gr.1–5 / Gr.6–8 / Gr.9–12</li>
           </ul>
         </div>
 
         <div class="detail-box">
-          <div class="detail-title"><img src="/assets/img/Frame7.png"><span>Maple Ridge & Pitt Meadows</span></div>
-          <ul>
+          <div class="detail-title eng-padding-inline14"><img src="/assets/img/Frame7.png"><span class="eng-font14">Maple Ridge & Pitt Meadows</span></div>
+          <ul class="eng-height194">
             <li>Affordable housing in suburban area, many activities</li>
           </ul>
         </div>
 
         <div class="detail-box">
-          <div class="detail-title"><img src="/assets/img/Frame8.png"><span>Abbotsford</span></div>
-          <ul>
+          <div class="detail-title eng-padding-inline14"><img src="/assets/img/Frame8.png"><span class="eng-font14">Abbotsford</span></div>
+          <ul class="eng-height194">
             <li>Safe small city, affordable living costs</li>
             <li>Suitable for managed/homestay study abroad</li>
           </ul>
@@ -284,7 +284,7 @@
           <strong>Which track is right for my child?</strong>
           <p>Through private/boarding vs public comparison consultation, we suggest the optimal roadmap fitting your budget, goals, and lifestyle.</p>
         </div>
-        <button type="button" class="reservation-btn">Book a Consultation</button>
+        <button type="button" class="reservation-btn eng-width220">Book a Consultation</button>
       </div>
     </div>
   </section>
@@ -304,7 +304,7 @@
         <span class="sep" aria-hidden="true">|</span>
         <a href="./consult.html">Consultation</a>
         <span class="sep" aria-hidden="true">|</span>
-        <a href="./programs.html">Programs</a>
+        <a href="./tutoring.html">Programs</a>
       </nav>
 
       <p class="footer__copy">
@@ -314,5 +314,51 @@
     </div>
   </div>
 </footer>
+<script>
+(function () {
+  var root = document.getElementById('langSwitch');
+  if (!root) return;
+
+  // 현재 파일 기준 라벨 세팅 (US/KR)
+  var labelEl = root.querySelector('[data-lang-label]');
+  if (labelEl) {
+    labelEl.textContent = /_kr\.html$/i.test(location.pathname) ? 'KR' : 'US';
+  }
+
+  // 옵션 클릭 시 언어 전환 (about.html <-> about_kr.html)
+  root.addEventListener('click', function (e) {
+    var opt = e.target.closest('[data-lang]');
+    if (!opt) return;
+
+    var choice = opt.getAttribute('data-lang'); // 'en' | 'ko'
+    var path   = location.pathname;
+    var last   = path.lastIndexOf('/');
+    var dir    = last >= 0 ? path.slice(0, last + 1) : '';
+    var file   = last >= 0 ? path.slice(last + 1) : path || 'study-canada.html';
+
+    // 안전하게 현재 파일명 결정 (빈 파일명일 경우 기본값)
+    if (!file) file = 'study-canada.html';
+
+    // _kr 제거한 베이스 파일명
+    var base = file.replace(/_kr(?=\.html$)/i, '');
+
+    // 목표 파일명 만들기
+    var target = (choice === 'ko')
+      ? base.replace(/\.html$/i, '_kr.html')
+      : base; // en(US)은 _kr 없는 버전
+
+    // 동일 페이지면 라벨만 갱신
+    if (file.toLowerCase() === target.toLowerCase()) {
+      if (labelEl) labelEl.textContent = (choice === 'ko') ? 'KR' : 'US';
+      return;
+    }
+
+    // 쿼리/해시 유지
+    var nextUrl = dir + target + location.search + location.hash;
+    location.assign(nextUrl);
+  });
+})();
+</script>
+
 </body>
 </html>

@@ -434,3 +434,4 @@ document.querySelectorAll('.table-wrap').forEach(el=>el.style.scrollBehavior='sm
   const openPolicy = doc.getElementById('openPolicy');
   if (openPolicy){ openPolicy.addEventListener('click', () => window.open('privacy.html','_blank')); }
 })();
+

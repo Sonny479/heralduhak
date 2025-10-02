@@ -168,7 +168,7 @@
         <span class="sep" aria-hidden="true">|</span>
         <a href="./consult.html">Consultation</a>
         <span class="sep" aria-hidden="true">|</span>
-        <a href="./programs.html">Programs</a>
+        <a href="./tutoring.html">Programs</a>
       </nav>
 
       <p class="footer__copy">
@@ -187,5 +187,51 @@
     </div>
   </div>
 </footer>
+<script>
+(function () {
+  var root = document.getElementById('langSwitch');
+  if (!root) return;
+
+  // 현재 파일 기준 라벨 세팅 (US/KR)
+  var labelEl = root.querySelector('[data-lang-label]');
+  if (labelEl) {
+    labelEl.textContent = /_kr\.html$/i.test(location.pathname) ? 'KR' : 'US';
+  }
+
+  // 옵션 클릭 시 언어 전환 (about.html <-> about_kr.html)
+  root.addEventListener('click', function (e) {
+    var opt = e.target.closest('[data-lang]');
+    if (!opt) return;
+
+    var choice = opt.getAttribute('data-lang'); // 'en' | 'ko'
+    var path   = location.pathname;
+    var last   = path.lastIndexOf('/');
+    var dir    = last >= 0 ? path.slice(0, last + 1) : '';
+    var file   = last >= 0 ? path.slice(last + 1) : path || 'about.html';
+
+    // 안전하게 현재 파일명 결정 (빈 파일명일 경우 기본값)
+    if (!file) file = 'about.html';
+
+    // _kr 제거한 베이스 파일명
+    var base = file.replace(/_kr(?=\.html$)/i, '');
+
+    // 목표 파일명 만들기
+    var target = (choice === 'ko')
+      ? base.replace(/\.html$/i, '_kr.html')
+      : base; // en(US)은 _kr 없는 버전
+
+    // 동일 페이지면 라벨만 갱신
+    if (file.toLowerCase() === target.toLowerCase()) {
+      if (labelEl) labelEl.textContent = (choice === 'ko') ? 'KR' : 'US';
+      return;
+    }
+
+    // 쿼리/해시 유지
+    var nextUrl = dir + target + location.search + location.hash;
+    location.assign(nextUrl);
+  });
+})();
+</script>
+
 </body>
 </html>
