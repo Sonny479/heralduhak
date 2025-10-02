@@ -37,11 +37,11 @@
       <!-- ===== [ADD] Header: Language Switch ===== -->
     <div class="lang-switch" id="langSwitch">
       <button class="lang-switch__btn" aria-haspopup="listbox" aria-expanded="false">
-        <span class="lang-switch__label" data-lang-label>KR</span>
+        <span class="lang-switch__label" data-lang-label>EN</span>
         <svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10l5 5 5-5" fill="none" stroke="currentColor" stroke-width="2"/></svg>
       </button>
       <ul class="lang-switch__list" role="listbox" aria-label="Language">
-        <li><button role="option" data-lang="en" data-label="US">US</button></li>
+        <li><button role="option" data-lang="en" data-label="EN">EN</button></li>
         <li><button role="option" data-lang="ko" data-label="KR">KR</button></li>
       </ul>
     </div>
@@ -196,10 +196,10 @@
   var root = document.getElementById('langSwitch');
   if (!root) return;
 
-  // 현재 파일 기준 라벨 세팅 (US/KR)
+  // 현재 파일 기준 라벨 세팅 (EN/KR)
   var labelEl = root.querySelector('[data-lang-label]');
   if (labelEl) {
-    labelEl.textContent = /_kr\.html$/i.test(location.pathname) ? 'KR' : 'US';
+    labelEl.textContent = /_kr\.html$/i.test(location.pathname) ? 'KR' : 'EN';
   }
 
   // 옵션 클릭 시 언어 전환 (about.html <-> about_kr.html)
@@ -222,11 +222,11 @@
     // 목표 파일명 만들기
     var target = (choice === 'ko')
       ? base.replace(/\.html$/i, '_kr.html')
-      : base; // en(US)은 _kr 없는 버전
+      : base; // en(EN)은 _kr 없는 버전
 
     // 동일 페이지면 라벨만 갱신
     if (file.toLowerCase() === target.toLowerCase()) {
-      if (labelEl) labelEl.textContent = (choice === 'ko') ? 'KR' : 'US';
+      if (labelEl) labelEl.textContent = (choice === 'ko') ? 'KR' : 'EN';
       return;
     }
 
