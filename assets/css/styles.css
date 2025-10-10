@@ -416,7 +416,7 @@ input::placeholder,textarea::placeholder{color:#8c90a1}
 
 /* 검은 배경 스택 (메뉴 5개만 포함) */
 .aside-stack{
-  background: #000;
+  background: #880C24;
   border-radius: 28px;
   padding: 14px 12px;
   box-shadow: 0 8px 24px rgba(0,0,0,.35);
@@ -440,7 +440,7 @@ input::placeholder,textarea::placeholder{color:#8c90a1}
 }
 
 /* TOP 버튼은 분리(검은 배경 밖) */
-.top-btn img{ width: 54px; height:auto; display:block; }
+.top-btn img{ width: 60px; height:auto; display:block; }
 .top-btn{ filter: drop-shadow(0 6px 18px rgba(0,0,0,.35)); transition: transform .15s ease; }
 .top-btn:hover{ transform: translateY(-2px); }
 
@@ -453,6 +453,65 @@ input::placeholder,textarea::placeholder{color:#8c90a1}
 @media (max-width: 640px){
   .aside-nav{ top: auto; bottom: 20px; right: 10px; gap:10px; }
 }
+
+/* ===== Aside: Consultation Hours badge (Notice와 TOP 사이) ===== */
+.aside-hours{
+  display:flex; justify-content:center; align-items:center;
+  /* 스택과 TOP 사이 간격 */
+  margin-top: 8px; 
+  margin-bottom: 6px;
+
+  /* 배지 배경/형태 (원본 이미지가 둥글면 아래 3줄은 생략 가능) */
+  background: #880C24;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0,0,0,.35);
+  padding: 6px 8px;
+}
+
+.aside-hours img{
+  width: 180px;      /* aside 시안 기준 자연스러운 폭 */
+  height: auto;
+  display:block;
+}
+
+/* 반응형 보정 */
+@media (max-width: 1024px){
+  .aside-hours img{ width: 184px; }
+}
+@media (max-width: 640px){
+  .aside-hours{ margin: 6px 0; }
+  .aside-hours img{ width: 168px; }
+}
+
+/* ===== Aside kr ===== */
+.aside-hours-kr{
+  display:flex; justify-content:center; align-items:center;
+  /* 스택과 TOP 사이 간격 */
+  margin-top: 8px; 
+  margin-bottom: 6px;
+
+  /* 배지 배경/형태 (원본 이미지가 둥글면 아래 3줄은 생략 가능) */
+  background: #880C24;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0,0,0,.35);
+  padding: 6px 8px;
+}
+
+.aside-hours-kr img{
+  width: 130px;      /* aside 시안 기준 자연스러운 폭 */
+  height: auto;
+  display:block;
+}
+
+/* 반응형 보정 */
+@media (max-width: 1024px){
+  .aside-hours-kr img{ width: 184px; }
+}
+@media (max-width: 640px){
+  .aside-hours{ margin: 6px 0; }
+  .aside-hours-kr img{ width: 168px; }
+}
+/* aside kr 끝*/
 
 /* ===== Section 3: 상담 예약 CTA ===== */
 .cta3-section{
