@@ -3077,3 +3077,66 @@ ul {
   height: 240px !important;
   padding: 24px 8px !important;
 }
+
+/* ===== GNB dropdown ===== */
+.gnb{ position: relative; }
+.gnb__list{ display:flex; align-items:center; gap:28px; list-style:none; margin:0; padding:0; }
+.gnb__list > li{ position:relative; }
+.gnb__list > li > a{ display:block; padding:16px 6px; }
+
+.has-sub > a{ position:relative; }
+.has-sub > a::after{
+  content:""; display:inline-block; width:6px; height:6px; margin-left:6px;
+  border-right:1.5px solid currentColor; border-bottom:1.5px solid currentColor; transform: rotate(45deg) translateY(-2px);
+}
+
+/* submenu */
+.gnb__list .sub{
+  position:absolute; top:100%; left:0; min-width:240px;
+  background:#fff; color:#4a4a4a; list-style:none; margin:0; padding:12px 0;
+  border-radius:8px; box-shadow:0 8px 24px rgba(16,24,40,.12);
+  opacity:0; visibility:hidden; transform:translateY(8px); transition:.18s ease;
+  z-index: 50;
+}
+.gnb__list .sub li a{
+  display:block; padding:10px 18px; white-space:nowrap;
+}
+.gnb__list .sub li a:hover{ background:#f7f7f9; color:#7b2d5b; } /* 포인트 컬러는 브랜드 톤에 맞게 */
+
+.gnb__list > li:hover > .sub,
+.gnb__list > li:focus-within > .sub{
+  opacity:1; visibility:visible; transform:translateY(0);
+}
+
+/* language switch */
+.gnb__list .lang-switch{ margin-left:auto; display:flex; align-items:center; gap:8px; }
+.gnb__list .lang-switch .sep{ opacity:.4; }
+
+/* ===== Mobile ===== */
+.nav-toggle{
+  display:none; margin-left:8px; border:1px solid #e1e1e6; background:#fff;
+  padding:8px 12px; border-radius:8px;
+}
+@media (max-width: 1024px){
+  .nav-toggle{ display:inline-block; }
+  .gnb__list{
+    position:absolute; top:var(--header-h,64px); left:0; right:0;
+    flex-direction:column; align-items:flex-start; gap:0;
+    background:#fff; color:#222; border-top:1px solid #eee;
+    max-height:0; overflow:hidden; transition:max-height .25s ease;
+  }
+  .gnb__list.is-open{ max-height:70vh; overflow:auto; }
+
+  .gnb__list > li > a{ padding:14px 18px; width:100%; }
+  .gnb__list .lang-switch{ margin:8px 12px 12px auto; }
+
+  /* mobile submenu (accordion) */
+  .gnb__list .sub{
+    position:static; box-shadow:none; border-radius:0; background:#fafafa;
+    width:100%; padding:0; transform:none; opacity:1; visibility:visible; display:none;
+  }
+  .gnb__list .sub li a{ padding:12px 24px; }
+  .gnb__list .has-sub.open > .sub{ display:block; }
+  .has-sub > a::after{ transform:rotate(45deg); margin-left:10px; }
+  .has-sub.open > a::after{ transform:rotate(-135deg); }
+}

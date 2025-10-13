@@ -25,16 +25,49 @@
         <img src="./assets/img/head-logo1.png" alt="HERALD UHAK CA">
       </a>
 
-      <!-- Navigation -->
-      <nav class="gnb" aria-label="Main menu" data-i18n-aria-label="header.nav.aria">
-        <a href="./about.html" data-i18n="header.menu.about">About</a>
-        <a href="./consult.html" data-i18n="header.menu.consult">Consultation</a>
-        <a href="./study-canada.html" data-i18n="header.menu.study">Study in Canada</a>
-        <a href="./early.html" data-i18n="header.menu.early">Early Study Abroad</a>
-        <a href="./tutoring.html" data-i18n="header.menu.tutoring">Academic Tutoring</a>
-        <a href="./transfer.html" data-i18n="header.menu.transfer">University Transfer (Canada)</a>
-        <a href="https://pf.kakao.com" target="_blank" class="btn-kakao" data-i18n="header.menu.kakao">Kakao Chat</a>
-      </nav>
+        <!-- Navigation -->
+    <nav class="gnb" aria-label="Main navigation">
+      <button class="nav-toggle" aria-expanded="false" aria-controls="gnbList">Menu</button>
+      <ul id="gnbList" class="gnb__list">
+        <li><a href="./about.html">About Us</a></li>
+
+        <li class="has-sub">
+          <a href="./study-canada.html">Study in Canada</a>
+          <ul class="sub">
+            <li><a href="./study-canada.html#why">Why study in Canada?</a></li>
+            <li><a href="./study-canada.html#vancouver">Vancouver: Your Top Study Destination</a></li>
+            <li><a href="./study-canada.html#public-private">Public vs. Private Schools</a></li>
+          </ul>
+        </li>
+
+        <li class="has-sub">
+          <a href="./early.html">K-12 Study Abroad Program</a>
+          <ul class="sub">
+            <li><a href="./early.html#parent">Parent-Accompanied Study Abroad</a></li>
+            <li><a href="./early.html#tuition-free">Tuition-Free Public Schools</a></li>
+            <li><a href="./early.html#catholic">Catholic Private Schools</a></li>
+            <li><a href="./early.html#guardianship">Guardianship Program</a></li>
+          </ul>
+        </li>
+
+        <li class="has-sub">
+          <a href="./tutoring.html">Academic Tutoring</a>
+          <ul class="sub">
+            <li><a href="./tutoring.html#programs">Canada-Specific Tutoring Programs</a></li>
+            <li><a href="./tutoring.html#team">Meet HERALD Tutoring Team</a></li>
+          </ul>
+        </li>
+
+        <li class="has-sub">
+          <a href="./transfer.html">University Transfer Program</a>
+          <ul class="sub">
+            <li><a href="./transfer.html#coquitlam">Coquitlam college</a></li>
+            <li><a href="./transfer.html#langara">Langara college</a></li>
+            <li><a href="./transfer.html#douglas">Douglas college</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
 
       <!-- ===== Language Switch ===== -->
       <div class="lang-switch" id="langSwitch">
@@ -90,10 +123,10 @@
             <div class="slide__inner container">
               <div class="slide__text">
                 <p class="subtitle2 fw-bold text-32 text-light" data-i18n="hero.banner1.l1">
-                  The first step to becoming a global talent
+                  The First Step to Becoming a Global Leader
                 </p>
                 <p class="subtitle fw-bold text-48 text-light" data-i18n="hero.banner1.l2">Where Parents Find Assurance and Students Discover Growth</p>
-                <p class="subtitle text-xl" data-i18n="hero.banner1.l3">HERALD Uhak Canada sets the standard.</p>
+                <p class="subtitle text-xl" data-i18n="hero.banner1.l3">HERALD Uhak Canada Sets the Standard</p>
 
                 <img src="./assets/img/hero-text-img.png" alt="HERALD UHAK CA" class="hero__title-img3">
 
@@ -111,7 +144,7 @@
             <div class="slide__inner container">
               <div class="slide__text">
                 <p class="subtitle2 fw-bold text-32 text-light" data-i18n="hero.banner2.l1">20 Years of Trusted Expertise in Global Education</p>
-                <p class="subtitle2 fw-bold text-48 text-light" data-i18n="hero.banner2.l2">A reliable partner opening children’s future</p>
+                <p class="subtitle2 fw-bold text-48 text-light" data-i18n="hero.banner2.l2">A Reliable Partner in Opening Your Child’s Future</p>
                 <p class="subtitle text-xl" data-i18n="hero.banner2.l3">Begin Your Journey with HERALD Uhak Canada</p>
 
                 <div class="hero-cta">
@@ -128,7 +161,7 @@
             <div class="slide__inner container">
               <div class="slide__text">
                 <p class="subtitle2 fw-bold text-32 text-light" data-i18n="hero.banner3.tagline">
-                  Your Trusted Gateway to Global Education -
+                  Your Trusted Gateway to Global Education – 
                 </p>
                 <img src="./assets/img/hero-text-img.png" alt="HERALD UHAK CA" class="hero__title-img4">
 
@@ -165,28 +198,28 @@
         <div class="early-grid">
           <article class="early-card">
             <h3 class="early-title text-2xl fw-bold" data-i18n="program.early.card1.title">Vancouver Public Schools</h3>
-            <p class="early-desc text-base fw-semibold" data-i18n-html="program.early.card1.desc">A safe environment and <br>The best choice for the future</p>
+            <p class="early-desc text-base fw-semibold" data-i18n-html="program.early.card1.desc">A safe environment and <br>one of the best choices for your child’s future.</p>
             <img src="./assets/img/second-section-icon1.png" alt="">
             <a href="#" class="early-btn" data-i18n="program.early.cta">START HERE →</a>
           </article>
 
           <article class="early-card">
             <h3 class="early-title text-2xl fw-bold" data-i18n="program.early.card2.title">Catholic Private Schools</h3>
-            <p class="early-desc text-base fw-semibold" data-i18n-html="program.early.card2.desc">Warm education,<br>Responsible academic support</p>
+            <p class="early-desc text-base fw-semibold" data-i18n-html="program.early.card2.desc">Warm guidance and<br>responsible academic support.</p>
             <img src="./assets/img/second-section-icon2.png" alt="">
             <a href="#" class="early-btn" data-i18n="program.early.cta">START HERE →</a>
           </article>
 
           <article class="early-card">
-            <h3 class="early-title text-2xl fw-bold" data-i18n="program.early.card3.title">Parent-Accompanied Study Abroad</h3>
-            <p class="early-desc text-base fw-semibold" data-i18n-html="program.early.card3.desc">A special global journey<br>together with family</p>
+            <h3 class="early-title text-2xl fw-bold" data-i18n="program.early.card3.title">Study Abroad with Parents</h3>
+            <p class="early-desc text-base fw-semibold" data-i18n-html="program.early.card3.desc">A unique global journey that families can share together.</p>
             <img src="./assets/img/second-section-icon3.png" alt="">
             <a href="#" class="early-btn" data-i18n="program.early.cta">START HERE →</a>
           </article>
 
           <article class="early-card">
-            <h3 class="early-title text-2xl fw-bold" data-i18n="program.early.card4.title">Managed Study Abroad</h3>
-            <p class="early-desc text-base fw-semibold" data-i18n-html="program.early.card4.desc">From admission to prestigious universities<br>systematic management</p>
+            <h3 class="early-title text-2xl fw-bold" data-i18n="program.early.card4.title">Guardianship Program</h3>
+            <p class="early-desc text-base fw-semibold" data-i18n-html="program.early.card4.desc">Comprehensive management from school admission to top university placement.</p>
             <img src="./assets/img/second-section-icon4.png" alt="">
             <a href="#" class="early-btn" data-i18n="program.early.cta">START HERE →</a>
           </article>
@@ -198,8 +231,8 @@
     <section id="section-consult" class="cta3-section" aria-labelledby="cta3-title">
       <div class="cta3-inner">
         <img src="./assets/img/hero-text-img2.png" alt="HERALD UHAK CA" class="cta3-logo">
-        <h2 id="cta3-title" class="cta3-heading" data-i18n="cta3.title">Study Abroad Consultation</h2>
-        <p class="cta3-desc" data-i18n="cta3.desc">Just submit a simple request and an expert will contact you promptly.</p>
+        <h2 id="cta3-title" class="cta3-heading" data-i18n="cta3.title">Book a Consultation</h2>
+        <p class="cta3-desc" data-i18n="cta3.desc">Simply submit a quick request, one of our experts will get back to you promptly.</p>
         <a href="./consult.html" class="cta3-btn" data-i18n="hero.ctaConsult">Book a Consultation</a>
       </div>
     </section>
@@ -208,12 +241,10 @@
     <section id="section-stories" class="stories-section" aria-labelledby="stories-title">
       <div class="container">
         <h2 id="stories-title" class="stories-heading text-32 fw-extrabold" data-i18n-html="stories.title">
-          REAL EXPERIENCES<br>REAL STORIES
+          Study Abroad & Education Consulting Reviews
         </h2>
-        <p class="stories-sub text-xl fw-medium" data-i18n="stories.subtitle">Study Abroad & Education Consulting Reviews</p>
-        <p class="stories-desc">
-          <span class="text-band" data-i18n="stories.desc">Since 2006, we have designed the full journey from early study abroad to university transfer with proven expertise.</span>
-        </p>
+        <p class="stories-sub text-xl fw-medium" data-i18n="stories.subtitle">REAL EXPERIENCES, REAL STORIES</p>
+        &nbsp;
       </div>
 
       <div class="stories-viewport">
@@ -250,10 +281,9 @@
             <div class="office-card__map">
               <img src="./assets/img/map-example.png" alt="Vancouver office map" data-i18n-alt="office.vancouver.map.alt">
             </div>
-
-            <p class="office-card__desc text-sm fw-medium" data-i18n="office.vancouver.desc">
-              Our Head Director provides study abroad and education consulting through our Vancouver branch.
-            </p>
+              <p class="office-card__desc text-sm fw-medium" data-i18n="office.vancouver.desc">
+                Our Head Director provides study abroad and education consulting through our Vancouver branch.              
+              </p>
           </article>
 
           <!-- Seoul -->
@@ -270,10 +300,9 @@
             <div class="office-card__map">
               <img src="./assets/img/map-example.png" alt="Seoul office map" data-i18n-alt="office.seoul.map.alt">
             </div>
-
-            <p class="office-card__desc text-sm fw-medium" data-i18n="office.seoul.desc">
-                  From study abroad preparation to university admissions, we offer full tutoring support for every stage of the journey.           
-            </p>
+              <p class="office-card__desc text-sm fw-medium" data-i18n="office.vancouver.desc">
+                From study abroad preparation to university admissions, we offer full tutoring support for every stage of the journey.
+              </p>
           </article>
         </div>
       </div>

@@ -413,6 +413,8 @@ document.querySelectorAll('.table-wrap').forEach(el=>el.style.scrollBehavior='sm
     });
   }
 
+
+
   // 간단 검증
   if (form){
     form.addEventListener('submit', (e) => {
@@ -435,3 +437,32 @@ document.querySelectorAll('.table-wrap').forEach(el=>el.style.scrollBehavior='sm
   if (openPolicy){ openPolicy.addEventListener('click', () => window.open('privacy.html','_blank')); }
 })();
 
+// ===== GNB: mobile toggle & submenu accordion =====
+(function(){
+  const nav = document.querySelector('.gnb');
+  if(!nav) return;
+
+  const toggleBtn = nav.querySelector('.nav-toggle');
+  const list = nav.querySelector('.gnb__list');
+  if(toggleBtn && list){
+    toggleBtn.addEventListener('click', ()=>{
+      const open = list.classList.toggle('is-open');
+      toggleBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+  }
+
+  // mobile submenu accordion
+  const mq = window.matchMedia('(max-width: 1024px)');
+  nav.querySelectorAll('.has-sub > a').forEach(a=>{
+    a.addEventListener('click', (e)=>{
+      if(!mq.matches) return; // desktop은 기본 hover 동작
+      e.preventDefault();
+      const li = a.closest('.has-sub');
+      const open = li.classList.toggle('open');
+      // 다른 open 닫기 (선택)
+      nav.querySelectorAll('.has-sub').forEach(x=>{
+        if(x !== li) x.classList.remove('open');
+      });
+    });
+  });
+})();

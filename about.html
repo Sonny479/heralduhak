@@ -22,16 +22,50 @@
       <img src="./assets/img/head-logo1.png" alt="HERALD UHAK CA">
     </a>
 
-    <!-- Navigation -->
-    <nav class="gnb" aria-label="Main menu">
-      <a href="./about.html">About</a>
-      <a href="./consult.html">Consultation</a>
-      <a href="./study-canada.html">Study in Canada</a>
-      <a href="./early.html">Early Study Abroad</a>
-      <a href="./tutoring.html">Academic Tutoring</a>
-      <a href="./transfer.html">University Transfer (Canada)</a>
-      <a href="https://pf.kakao.com" target="_blank" class="btn-kakao">Kakao Chat</a>
+        <!-- Navigation -->
+    <nav class="gnb" aria-label="Main navigation">
+      <button class="nav-toggle" aria-expanded="false" aria-controls="gnbList">Menu</button>
+      <ul id="gnbList" class="gnb__list">
+        <li><a href="./about.html">About Us</a></li>
+
+        <li class="has-sub">
+          <a href="./study-canada.html">Study in Canada</a>
+          <ul class="sub">
+            <li><a href="./study-canada.html#why">Why study in Canada?</a></li>
+            <li><a href="./study-canada.html#vancouver">Vancouver: Your Top Study Destination</a></li>
+            <li><a href="./study-canada.html#public-private">Public vs. Private Schools</a></li>
+          </ul>
+        </li>
+
+        <li class="has-sub">
+          <a href="./early.html">K-12 Study Abroad Program</a>
+          <ul class="sub">
+            <li><a href="./early.html#parent">Parent-Accompanied Study Abroad</a></li>
+            <li><a href="./early.html#tuition-free">Tuition-Free Public Schools</a></li>
+            <li><a href="./early.html#catholic">Catholic Private Schools</a></li>
+            <li><a href="./early.html#guardianship">Guardianship Program</a></li>
+          </ul>
+        </li>
+
+        <li class="has-sub">
+          <a href="./tutoring.html">Academic Tutoring</a>
+          <ul class="sub">
+            <li><a href="./tutoring.html#programs">Canada-Specific Tutoring Programs</a></li>
+            <li><a href="./tutoring.html#team">Meet HERALD Tutoring Team</a></li>
+          </ul>
+        </li>
+
+        <li class="has-sub">
+          <a href="./transfer.html">University Transfer Program</a>
+          <ul class="sub">
+            <li><a href="./transfer.html#coquitlam">Coquitlam college</a></li>
+            <li><a href="./transfer.html#langara">Langara college</a></li>
+            <li><a href="./transfer.html#douglas">Douglas college</a></li>
+          </ul>
+        </li>
+      </ul>
     </nav>
+
 
     <!-- Language Switch -->
     <div class="lang-switch" id="langSwitch">
@@ -54,12 +88,15 @@
   <section class="about-hero" aria-labelledby="about-hero-title">
     <div class="container about-hero__inner">
       <h1 id="about-hero-title" class="about-hero__title">
-        <img src="./assets/img/hero-text-img.png" alt="HERALD UHAK CA" class="about__title-logo-img1"> What is it?
+        About us - <img src="./assets/img/hero-text-img.png" alt="HERALD UHAK CA" class="about__title-logo-img1">
       </h1>
+    <h2>
+      Preparing Your Child’s Future with Tailored Study Abroad Programs
+    </h2>
       <p class="about-hero__desc text-base fw-medium">
-        Since 2006, HERALD Uhak Canada has accumulated global experience in study abroad and education consulting,
+        Since 2006, HERALD Uhak Canada has drawn on its extensive global experience in study abroad and education consulting to guide students and families toward success. 
         <br class="br-lg">
-        providing tailored <strong>successful study abroad roadmaps</strong> for students and parents from <strong>early study abroad through high school graduation to admission into prestigious universities</strong>.
+        From early study abroad to high school graduation and admissions to top universities, we provide personalized roadmaps that match each student’s goals and strengths.
       </p>
     </div>
   </section>
@@ -68,7 +105,7 @@
   <section class="about-why" aria-labelledby="about-why-title">
     <div class="container">
       <div class="about-why__card">
-        <h2 id="about-why-title" class="about-why__title">Why 
+        <h2 id="about-why-title" class="about-why__title">Why Choose
           <img src="./assets/img/HERALDlogo-about-second.png" alt="HERALD UHAK CA" class="about__title-logo-img2">
           ?
         </h2>
@@ -77,36 +114,35 @@
         <div class="about-why__grid">
           <!-- 1 -->
           <article class="why-item">
-            <span class="why-item__badge text-base fw-bold">Student-tailored School Recommendation Program</span>
+            <span class="why-item__badge text-base fw-bold">◈ Personalized School Placement</span>
             <p class="why-item__body text-base fw-medium">
-              We recommend the optimal schools—public, Catholic private, or international—suited to <strong>the student’s goals and aptitude</strong>.
+              We recommend the most suitable schools for each student’s aspirations and aptitudes, including public schools, Catholic private schools, and boarding schools.
             </p>
           </article>
 
           <!-- 2 -->
           <article class="why-item">
-            <span class="why-item__badge text-base fw-bold">20 Years of Safe and Systematic Managed Study Abroad</span>
+            <span class="why-item__badge text-base fw-bold">◈ 20 Years of Proven Managed Study Abroad</span>
             <p class="why-item__body text-base fw-medium">
-              From academics to daily life, our <strong>24-hour close management</strong> ensures your child’s safety and growth.
+              With two decades of expertise, we ensure student safety and growth through structured, 24-hour academic and lifestyle support.
             </p>
           </article>
 
           <!-- 3 -->
           <article class="why-item">
-            <span class="why-item__badge text-base fw-bold">Cultural & Language Adaptation & Global Growth Programs</span>
+            <span class="why-item__badge text-base fw-bold">◈ Cultural & Language Integration Programs</span>
             <p class="why-item__body text-base fw-medium">
-              From <strong>safe local/Korean homestays</strong> that help adapt to Canadian culture and language, 
-              we provide diverse activities and programs.
+              From safe homestays (both Canadian and Korean host families) to diverse local activities, we help students adapt to Canadian culture and language while developing a global mindset.
             </p>
           </article>
 
           <!-- 4 -->
           <article class="why-item">
-            <span class="why-item__badge text-base fw-bold">Prestigious University Admission Support by Country Experts</span>
+            <span class="why-item__badge text-base fw-bold">◈ Expert University Admissions Consulting</span>
             <p class="why-item__body text-base fw-medium">
-              Starting with Canada, we provide university admission consulting for <strong>USA, UK, Australia, Singapore, Japan, Korea</strong>.
-              <em>EXTRACURRICULAR ACTIVITY, THE HERALD STUDENT REPORTERS</em>,
-              and <strong>research paper projects with professors from top universities</strong>.
+              Starting with Canada and extending to the U.S., U.K., Australia, Singapore, Japan, and Korea, our expert team supports admissions to top universities worldwide.<br>
+              - <em>Extracurricular Activities & Herald Student Reporters Program</em><br>
+              - <em>and Research Projects with Distinguished University Professors</em>
             </p>
           </article>
         </div>
@@ -118,18 +154,16 @@
   <section class="about-returnee" aria-labelledby="returnee-title">
     <div class="container">
       <h2 id="returnee-title" class="returnee__title text-2xl fw-bold">
-        Returnee after Short-term Study Abroad
+        ◈ Consulting for Returnee Students
       </h2>
-      <p class="returnee__sub text-2xl fw-bold">International School Admission Consulting</p>
 
       <div class="returnee__grid">
         <!-- Target & Scope -->
         <article class="returnee-card">
           <span class="returnee-card__badge text-lg fw-bold">Target & Scope</span>
           <p class="returnee-card__body text-base fw-medium">
-            For students who completed <strong>short-term (within 3 years) study abroad</strong> in Canada and returned home,
-            we provide an <strong>admission roadmap</strong> and tailored <strong>1:1 entrance exam tutoring</strong> for
-            <strong>foreign schools, Songdo/Jeju international schools</strong>, and international schools in Seoul’s Gangnam area.
+            For students returning to Korea after short-term study abroad (within 3 years), we provide specialized guidance for admission into foreign schools(YISS, SFS, SIS, KIS etc.), 
+            Songdo/Jeju international schools, and other international schools in Seoul’s Gangnam district.
           </p>
         </article>
 
@@ -137,8 +171,8 @@
         <article class="returnee-card">
           <span class="returnee-card__badge2 text-lg fw-bold">Verified Program</span>
           <p class="returnee-card__body text-base fw-medium">
-            This is the flagship program operated by <strong>HIS Herald Education Center</strong> in Seoul for the past 20 years,
-            minimizing <strong>academic gaps</strong> for returnee students and <strong>enhancing international school admission success rates</strong>.
+            Our flagship program, operated for 20 years by HIS Herald Education Center in Seoul, 
+            offers tailored tutoring and test preparation to minimize academic gaps and maximize admission success.
           </p>
         </article>
       </div>
@@ -153,8 +187,8 @@
         A Trusted Partner
       </p>
       <p class="about-cta__desc text-base fw-medium">
-        HERALD Uhak Canada is a reliable partner turning students’ dreams and potential into reality.
-        <br class="br-lg">Start your child’s global success journey with HERALD Uhak.
+        At HERALD Uhak Canada, we turn students’ dreams and potential into reality.
+        <br class="br-lg">Start your child’s journey to global success with us.
       </p>
 
       <a href="consult.html" class="btn-hero btn-hero--primary">Book a Consultation</a>
