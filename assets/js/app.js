@@ -1,39 +1,73 @@
 // 모바일 버전 nav 햄버거바
 document.addEventListener('DOMContentLoaded', () => {
+  const mobileMediaQuery = window.matchMedia('(max-width: 1024px)');
 
   const navToggleButton = document.querySelector('.nav-toggle');
   const gnbList = document.getElementById('gnbList');
-
-  if (navToggleButton && gnbList) {
-    navToggleButton.addEventListener('click', () => {
-      navToggleButton.classList.toggle('active');
-      gnbList.classList.toggle('active');
-      const isExpanded = navToggleButton.getAttribute('aria-expanded') === 'true';
-      navToggleButton.setAttribute('aria-expanded', !isExpanded);
-    });
-  }
-
   const hasSubItems = document.querySelectorAll('.gnb__list > li.has-sub');
 
+  // 모든 'active' 클래스를 제거하고 메뉴 상태를 초기화하는 함수
+  const resetMenuState = () => {
+    navToggleButton?.classList.remove('active');
+    gnbList?.classList.remove('active');
+    navToggleButton?.setAttribute('aria-expanded', 'false');
+    document.querySelectorAll('.gnb__list .sub.active').forEach(subMenu => {
+      subMenu.classList.remove('active');
+    });
+  };
+
+  // 1. 네비게이션 토글 버튼 클릭 이벤트
+  navToggleButton?.addEventListener('click', () => {
+    if (!mobileMediaQuery.matches) return; // 모바일이 아니면 동작하지 않음
+
+    navToggleButton.classList.toggle('active');
+    gnbList.classList.toggle('active');
+    const isExpanded = navToggleButton.getAttribute('aria-expanded') === 'true';
+    navToggleButton.setAttribute('aria-expanded', !isExpanded);
+  });
+
+  // 2. 서브 메뉴 토글 이벤트
   hasSubItems.forEach(item => {
     const mainLink = item.querySelector(':scope > a');
     const subMenu = item.querySelector(':scope > ul.sub');
 
-    if (mainLink && subMenu) {
-      mainLink.addEventListener('click', (event) => {
-        event.preventDefault();
-        const isActive = subMenu.classList.contains('active');
+    mainLink?.addEventListener('click', (event) => {
+      // 모바일이 아닌 경우, 기존 링크 이동 동작을 허용하고 active 클래스만 초기화
+      if (!mobileMediaQuery.matches) {
+        resetMenuState(); // 혹시라도 남아있을 active 클래스 정리
+        return; // 링크 기본 동작 실행 (페이지 이동)
+      }
 
-        document.querySelectorAll('.gnb__list .sub.active').forEach(openSubMenu => {
-          openSubMenu.classList.remove('active');
-        });
+      event.preventDefault(); // 모바일에서는 링크 이동 방지
 
-        if (!isActive) {
-          subMenu.classList.add('active');
-        }
+      const isActive = subMenu.classList.contains('active');
+
+      // 모든 열려있는 서브 메뉴 닫기 (현재 클릭된 것 포함)
+      document.querySelectorAll('.gnb__list .sub.active').forEach(openSubMenu => {
+        openSubMenu.classList.remove('active');
       });
-    }
+
+      // 만약 클릭된 서브 메뉴가 이전에는 active가 아니었다면, active 클래스 추가
+      if (!isActive) {
+        subMenu.classList.add('active');
+      }
+    });
   });
+
+  // 3. 미디어 쿼리 변경 감지 및 초기화
+  const handleMediaQueryChange = (event) => {
+    if (!event.matches) { // 데스크톱 (1024px 초과)으로 전환될 때
+      resetMenuState(); // 모든 메뉴 active 클래스 제거
+    }
+  };
+
+  // 페이지 로드 시 현재 상태에 따라 초기화
+  if (!mobileMediaQuery.matches) {
+    resetMenuState();
+  }
+
+  // 화면 크기 변경 시 이벤트 리스너 추가
+  mobileMediaQuery.addEventListener('change', handleMediaQueryChange);
 });
 
 

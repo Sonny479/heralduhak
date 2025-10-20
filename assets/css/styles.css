@@ -296,7 +296,7 @@ input::placeholder,textarea::placeholder{color:#8c90a1}
 .hero__title-img4{ width: 505px;  height:53px; margin: 20px 0 20px; }
 .about__title-logo-img1{width: 350px; height: 40px; margin: 20px 0 0;}
 .about__title-logo-img2{width: 252px; height: 26px; margin: 0 0 0;}
-.about__title-logo-img3{width: 379px; height: 40px; margin: 0 0 40px;}
+.about__title-logo-img3{width: 379px; height: 40px; margin: 0 0 20px;}
 .hero__cta-img{ display:flex; gap:12px; flex-wrap:wrap; align-items:center; margin-top:12px; }
 .hero__cta-img img{ height:48px; width:auto; display:block; }
 @media (max-width:640px){
@@ -3620,19 +3620,144 @@ a {
 }
 
 .sp-row {
-  display: flex;
+  position: relative;
+  display: inline-flex;
   flex-direction: row;
-  gap: 8px;
+  gap: 32px;
 }
 
-/* .sp-row::after {
+.redbrown {
+  background-color: #803130 !important;
+}
+
+.redbrown .about-cta__desc {
+  color: #fff;
+}
+
+.redbrown
+
+.footer-line::after {
   content: "";
+  position:absolute;
   width: 2px;
-  height: 30px;
-  background-color: #fff;
-  position: absolute;
-  border: 2px solid #fff;
-} */
+  height: 23px;
+  background-color: #CCC;
+  top: 9px;
+  left: 48.5%;
+  transform: translateX(-50%);
+  opacity: 0.7;
+}
+
+.uhak-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 16px;
+}
+
+.uhak-row .friends-box {
+  background-color: #F8F3EC;
+  padding: 10px 8px 10px 8px;
+}
+
+.uhak-row .friends-box .friends-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.uhak-row .friends-box strong {
+  color: #9A695B;
+  font-family: "Noto Sans";
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: -0.9px;
+  align-items: center;
+  display: flex;
+}
+
+.uhak-row .friends-box strong img {
+  margin-left: 4px;
+}
+
+.uhak-row .friends-box p {
+  color: rgba(53, 47, 45, 0.90);
+  font-family: "Noto Sans KR";
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 22px;
+  letter-spacing: -0.7px;
+  text-align: left;
+  margin-top: 4px;
+}
+
+.uhak-row .friends-box .ch-ico {
+  margin-top: 8px;
+}
+
+.uhak-row .friends-box button .new_ch {
+  background-image: url('/assets/img/new_ch.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 256px;
+  height: 40px;
+}
+
+.uhak-row .friends-box button .new_ch:hover {
+  background-image: url('/assets/img/new_ch_hover.png');
+}
+
+
+
+
+.uhak-row .friends-box2 {
+  background-color: #F8F3EC;
+  padding: 10px 8px 10px 8px;
+  display: flex;
+  flex-direction: row;
+}
+
+.uhak-row .friends-box2 .friends-col {
+  margin-right: 16px;
+}
+
+.uhak-row .friends-box2 .friends-col strong {
+  color: #9A695B;
+  font-family: "Noto Sans";
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: -0.9px;
+  align-items: center;
+  display: flex;
+}
+
+.uhak-row .friends-box2 .friends-col strong img {
+  margin-left: 4px;
+}
+
+.uhak-row .friends-box2 .friends-col p {
+  color: rgba(53, 47, 45, 0.90);
+  font-family: "Noto Sans KR";
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 21px;
+  letter-spacing: -0.7px;
+  text-align: left;
+  margin-top: 4px;
+}
+
+.uhak-row .friends-box2 .qr-ico {
+  display: flex;
+  align-items: center;
+}
+
+.uhak-row .friends-box2 .qr-ico img {
+  border: 2px solid #4B3C37;
+}
+
+
+
 
 
 @media (max-width: 1024px) {
