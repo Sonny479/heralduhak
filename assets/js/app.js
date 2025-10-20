@@ -1,20 +1,59 @@
-// 모바일 메뉴 토글
-const toggleBtn = document.querySelector('.gnb__toggle');
-const gnbList = document.querySelector('#gnbMenu');
-if (toggleBtn && gnbList) {
-  toggleBtn.addEventListener('click', () => {
-    const open = gnbList.classList.toggle('is-open');
-    toggleBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
-    document.body.style.overflow = open ? 'hidden' : '';
-  });
-  gnbList.addEventListener('click', e => {
-    if (e.target.tagName === 'A' && gnbList.classList.contains('is-open')) {
-      gnbList.classList.remove('is-open');
-      toggleBtn.setAttribute('aria-expanded', 'false');
-      document.body.style.overflow = '';
+// 모바일 버전 nav 햄버거바
+document.addEventListener('DOMContentLoaded', () => {
+
+  const navToggleButton = document.querySelector('.nav-toggle');
+  const gnbList = document.getElementById('gnbList');
+
+  if (navToggleButton && gnbList) {
+    navToggleButton.addEventListener('click', () => {
+      navToggleButton.classList.toggle('active');
+      gnbList.classList.toggle('active');
+      const isExpanded = navToggleButton.getAttribute('aria-expanded') === 'true';
+      navToggleButton.setAttribute('aria-expanded', !isExpanded);
+    });
+  }
+
+  const hasSubItems = document.querySelectorAll('.gnb__list > li.has-sub');
+
+  hasSubItems.forEach(item => {
+    const mainLink = item.querySelector(':scope > a');
+    const subMenu = item.querySelector(':scope > ul.sub');
+
+    if (mainLink && subMenu) {
+      mainLink.addEventListener('click', (event) => {
+        event.preventDefault();
+        const isActive = subMenu.classList.contains('active');
+
+        document.querySelectorAll('.gnb__list .sub.active').forEach(openSubMenu => {
+          openSubMenu.classList.remove('active');
+        });
+
+        if (!isActive) {
+          subMenu.classList.add('active');
+        }
+      });
     }
   });
-}
+});
+
+
+// 모바일 메뉴 토글
+// const toggleBtn = document.querySelector('.gnb__toggle');
+// const gnbList = document.querySelector('#gnbMenu');
+// if (toggleBtn && gnbList) {
+//   toggleBtn.addEventListener('click', () => {
+//     const open = gnbList.classList.toggle('is-open');
+//     toggleBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+//     document.body.style.overflow = open ? 'hidden' : '';
+//   });
+//   gnbList.addEventListener('click', e => {
+//     if (e.target.tagName === 'A' && gnbList.classList.contains('is-open')) {
+//       gnbList.classList.remove('is-open');
+//       toggleBtn.setAttribute('aria-expanded', 'false');
+//       document.body.style.overflow = '';
+//     }
+//   });
+// }
 
 // 페이지 키로 활성 메뉴 표시
 const pageKey = document.body.getAttribute('data-page'); // home/about/consult/study/early/tutoring/transfer
@@ -344,7 +383,7 @@ document.querySelectorAll('.table-wrap').forEach(el=>el.style.scrollBehavior='sm
       const key = el.getAttribute('data-i18n');
       if(dict[key]) el.textContent = dict[key];
     });
-    $root.setAttribute('lang', lang === 'en' ? 'en' : 'ko');
+    $root.setAttribute('lang', lang === 'ko' ? 'ko' : 'en');
   }
 
   function setLang(lang, displayLabel){
@@ -364,7 +403,7 @@ document.querySelectorAll('.table-wrap').forEach(el=>el.style.scrollBehavior='sm
     const b = e.target.closest('button[data-lang]');
     if(!b) return;
     const lang = b.getAttribute('data-lang');      // 'en' | 'ko'
-    const lab  = b.getAttribute('data-label');     // 'US' | 'KR'
+    const lab  = b.getAttribute('data-label');     // 'EN' | 'KR'
     setLang(lang, lab);
     $switch.classList.remove('is-open');
     $btn.setAttribute('aria-expanded','false');
@@ -378,8 +417,8 @@ document.querySelectorAll('.table-wrap').forEach(el=>el.style.scrollBehavior='sm
   });
 
   // init
-  const saved = localStorage.getItem('site_lang') || 'ko';
-  setLang(saved, saved==='en' ? 'EN' : 'KR');
+  const saved = localStorage.getItem('site_lang') || 'kr';
+  setLang(saved, saved==='ko' ? 'KR' : 'EN');
 })();
 
 // ===== Consult page only =====
@@ -466,3 +505,6 @@ document.querySelectorAll('.table-wrap').forEach(el=>el.style.scrollBehavior='sm
     });
   });
 })();
+
+
+

@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>상담예약 - HERALD유학 캐나다</title>
+  <meta name="description" content="신규 상담 접수 · 학생정보 · 관심 프로그램(최대 2개) · 문의내용(최대 500자)">
+  <link rel="stylesheet" href="/assets/css/styles.css"/>
+  <script defer src="/assets/js/app.js"></script>
+  <noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
+</head>
+
+<body data-page="consult">
+  <a class="skip" href="#main">본문 바로가기</a>
+
+  <!-- ===== Header ===== -->
+  <!-- ===== Header ===== -->
+  <header class="site-header" role="banner">
+    <div class="header__inner">
+      <!-- 로고 -->
+      <a href="/index.html" class="header__brand" aria-label="HERALD UHAK CA">
+        <img src="/assets/img/new-header-title.png" alt="HERALD UHAK CA">
+      </a>
+
+      <!-- 내비게이션 -->
+      <div class="bind-layout">
+        <nav class="gnb_kr" aria-label="주요 메뉴">
+          <button class="nav-toggle" aria-expanded="false" aria-controls="gnbList">메뉴</button>
+          <ul id="gnbList" class="gnb__list">
+            <li><a href="/views/kr/about_us/sub1000.html">회사소개</a></li>
+  
+            <li class="has-sub">
+              <a href="/views/kr/canada_intro/sub1000.html">캐나다 유학소개</a>
+              <ul class="sub">
+                <li><a href="/views/kr/canada_intro/sub1000.html#why">캐나다유학, 무엇이 특별한가?</a></li>
+                <li><a href="/views/kr/canada_intro/sub2000.html#vancouver">밴쿠버, 최고의 유학선택</a></li>
+                <li><a href="/views/kr/canada_intro/sub3000.html#public-private">공립, 사립학교 비교와 추천</a></li>
+              </ul>
+            </li>
+  
+            <li class="has-sub">
+              <a href="/views/kr/early_abroad/sub1000.html">조기유학 프로그램</a>
+              <ul class="sub">
+                <li><a href="/views/kr/early_abroad/sub1000.html#parent">부모 동반 유학</a></li>
+                <li><a href="/views/kr/early_abroad/sub2000.html#tuition-free">공립학교 무상 교육</a></li>
+                <li><a href="/views/kr/early_abroad/sub3000.html#catholic">천주교 사립학교</a></li>
+                <li><a href="/views/kr/early_abroad/sub4000.html#guardianship">관리형 유학</a></li>
+              </ul>
+            </li>
+  
+            <li class="has-sub">
+              <a href="/views/kr/academic_tutoring/sub1000.html">아카데믹 튜터링</a>
+              <ul class="sub">
+                <li><a href="/views/kr/academic_tutoring/sub1000.html#programs">캐나다전용 프로그램</a></li>
+                <li><a href="/views/kr/academic_tutoring/sub2000.html#team">아카데믹 튜터링 강사진</a></li>
+                <li><a href="https://heraldtomorrow.com" target="_blank">헤럴드 학생기자단 캐나다</a></li>
+              </ul>
+            </li>
+  
+            <li class="has-sub">
+              <a href="/views/kr/univ_transfer/sub1000.html">캐나다 대학편입프로그램</a>
+              <ul class="sub">
+                <li><a href="/views/kr/univ_transfer/sub1000.html#coquitlam">Coquitlam college</a></li>
+                <li><a href="/views/kr/univ_transfer/sub2000.html#langara">Langara college</a></li>
+                <li><a href="/views/kr/univ_transfer/sub3000.html#douglas">Douglas college</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        
+          <!-- ===== [ADD] Header: Language Switch ===== -->
+        <div class="lang-switch" id="langSwitch">
+          <button class="lang-switch__btn" aria-haspopup="listbox" aria-expanded="false">
+            <span class="lang-switch__label" data-lang-label>EN</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10l5 5 5-5" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+          </button>
+          <ul class="lang-switch__list" role="listbox" aria-label="Language">
+            <li><button role="option" data-lang="en" data-label="EN" onClick="location.href='/views/en/consult.html'">EN</button></li>
+            <li><button role="option" data-lang="ko" data-label="KR">KR</button></li>
+          </ul>
+        </div>
+      </div>
+    </div>   
+  </header>
+
+  <main id="main" class="consult-page" data-page="consult">
+
+    <!-- ① HERO (버건디 + 제공 BG + 로고/타이틀/서브) -->
+    <section class="consult-bg" aria-labelledby="hero-title">
+      <div class="consult-title">
+        <img src="/assets/img/herald_logo.png">
+        <p>상담예약</p>
+      </div>
+    </section>
+
+    <!-- ② FORM (경계 오버랩) -->
+    <section class="consult-form-section margin-b100" aria-labelledby="consult-form-title">
+      <div class="container">
+        <form id="consultForm" class="form-card" novalidate>
+          <header class="form-card__head">
+            <h2 id="consult-form-title" class="form-card__title text-22 fw-bold">
+              <img class="ico" aria-hidden="true" src="/assets/img/consult-icon.png"> 신규상담
+            </h2>
+          </header>
+
+          <!-- <p class="form-card__notice text-base fw-medium">※ 신규상담 문의는 HERALD유학 캐나다 <strong>카카오톡</strong>으로 시간에 무관하게 연락주시면 상담시간 내에 최대한 빠르게 연락드립니다.</p> -->
+
+          <!-- 1열 폼 -->
+          <div class="form-grid margin-t24">
+            <div class="field">
+              <label for="studentName" class="text-lg fw-semibold">학생 이름</label>
+              <input id="studentName" name="studentName" type="text" placeholder="예) 홍길동" required>
+            </div>
+
+            <div class="field margin-t12">
+              <span class="label text-lg fw-semibold">성별</span>
+              <div class="choice-row">
+                <label class="choice"><input type="radio" name="gender" value="M"><span>남자</span></label>
+                <label class="choice"><input type="radio" name="gender" value="F"><span>여자</span></label>
+              </div>
+            </div>
+
+            <div class="field margin-t12">
+              <label for="grade" class="text-lg fw-semibold">현재 학년</label>
+              <div class="select-wrap">
+                <select id="grade" name="grade" required>
+                  <option value="">선택</option>
+                  <option>G1</option><option>G2</option><option>G3</option><option>G4</option><option>G5</option>
+                  <option>G6</option><option>G7</option><option>G8</option><option>G9</option><option>G10</option>
+                  <option>G11</option><option>G12</option><option>Post Secondary</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="field margin-t12">
+              <label for="mobile" class="text-lg fw-semibold">모바일 연락처</label>
+              <input id="mobile" name="mobile" type="tel" inputmode="tel" placeholder="예) 778-000-3956">
+              <p class="help warn">※ 캐나다 현지 전화번호가 있으신 경우에 남겨주세요.</p>
+            </div>
+
+            <div class="field margin-t12">
+              <label for="kakao" class="text-lg fw-semibold">카카오 ID</label>
+              <input id="kakao" name="kakao" type="text" placeholder="예) herald_edu">
+              <p class="help warn">*캐나다를 제외한 국가에 거주하시는 경우, 정확한 카카오톡 ID를 남겨주시면 카톡으로 상담드립니다. </p>
+            </div>
+
+            <div class="field margin-t12">
+              <label for="email" class="text-lg fw-semibold">이메일</label>
+              <input id="email" name="email" type="email" placeholder="example@email.com">
+            </div>
+
+            <div class="field margin-t12">
+              <label for="country" class="text-lg fw-semibold">거주국가</label>
+              <input id="country" name="country" type="text" placeholder="예) 대한민국 / 캐나다 / 미국">
+            </div>
+
+            <div class="field margin-t12">
+              <span class="label text-lg fw-semibold">관심 프로그램 <em class="muted">최대 2개까지 선택</em></span>
+              <div id="interestGroup" class="choice-row" data-max="2">
+                <label class="choice"><input type="checkbox" name="interest" value="early"><span>조기유학</span></label>
+                <label class="choice"><input type="checkbox" name="interest" value="tutoring"><span>튜터링</span></label>
+                <label class="choice"><input type="checkbox" name="interest" value="transfer"><span>대학편입</span></label>
+                <label class="choice"><input type="checkbox" name="interest" value="other"><span>기타</span></label>
+              </div>
+            </div>
+
+            <div class="field margin-t12">
+              <label for="message" class="text-lg fw-semibold">문의내용 <em class="muted">※ 문의내용은 최대 500자까지 가능합니다.</em></label>
+              <textarea id="message" name="message" rows="7" maxlength="500"
+                placeholder="- 계획하는 유학시기&#10;- 예산범위&#10;- BC주 내 선호 City&#10;- 기타"></textarea>
+              <div class="char"><span id="charNow">0</span> / 500</div>
+            </div>
+
+            <div class="field agree-row margin-t12">
+              <label class="check text-lg fw-semibold">
+                <input id="agree" type="checkbox" class="policy-check" required>
+                <span>개인정보 취급방침에 동의합니다.</span>
+              </label>
+              <button type="button" id="openPolicy" class="btn-policy">방침 보기</button>
+            </div>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn-submit">상담예약 제출하기</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer__inner">
+      <!-- 왼쪽 영역 -->
+      <div class="footer__left">
+        <div class="sp-row">
+          <a href="/index.html" class="footer__brand" aria-label="HERALD UHAK CA">
+            <img src="/assets/img/new_footer2.png" alt="HERALD UHAK CA 로고">
+          </a>
+
+          <a href="/index.html" class="footer__brand" aria-label="HERALD UHAK CA">
+            <img src="/assets/img/new_footer.png" alt="HERALD UHAK CA 로고">
+          </a>
+        </div>
+
+        <nav class="footer__links" aria-label="푸터 메뉴">
+          <a href="/views/kr/about_us/sub1000.html">회사소개</a>
+          <span class="sep" aria-hidden="true">|</span>
+          <a href="/views/kr/consult.html">상담예약</a>
+          <span class="sep" aria-hidden="true">|</span>
+          <a href="/views/kr/academic_tutoring/sub1000.html">프로그램</a>
+        </nav>
+
+        <p class="footer__copy">
+          Copyright © 2025 <strong>Digital Herald Co.,</strong> Ltd. All Rights Reserved.<br>
+          4F, 6 Namdaemun-ro 10-gil, Jung-gu, Seoul, Republic of Korea (04539)
+        </p>
+        <p class="footer__copy">
+          Copyright © 2025 <strong>KoreaHerald Education Canada Inc.</strong> All Rights Reserved.<br>
+          400–601 West Broadway, Vancouver, British Columbia, Canada V5Z 4C2
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 개인정보 취급 "방침 보기" 모달창 -->
+  <div class="policy-modal">
+    <div class="modal-dim"></div>
+    <div class="modal-layout">
+      <div class="modal-wrap-sp chinese">
+        <div class="modal-content-sp">
+          <button type="button" class="modal-close">
+            <img src="/assets/img/close_btn.png">
+          </button>
+          <!-- <div class="service-img">
+            <img src="/assets/images/test/iMBA_logo.svg">
+          </div> -->
+          <div class="service-text">
+            <strong>개인정보 취급 방침</strong>
+            <p class="keep-all">
+              디지털 헤럴드(주)는(이하 `회사`는) 고객님의 개인정보를 중요시하며, "정보통신망 이용촉진 및 정보보호"에 관한 법률을 준수하고 있습니다.<br>
+              회사는 개인정보취급방침을 통하여 고객님께서 제공하시는 개인정보가 어떠한 용도와 방식으로 이용되고 있으며, 개인정보보호를 위해 어떠한 조치가 취해지고 있는지 알려드립니다.<br>
+              회사는 개인정보취급방침을 개정하는 경우 웹사이트 공지사항(또는 개별공지)을 통하여 공지할 것입니다.<br><br>
+              ο 본 방침은 : 2025 년 10 월 15 일 부터 시행됩니다.<br><br>
+              ■ 수집하는 개인정보 항목<br>
+              회사는 회원가입, 상담, 서비스 신청 등등을 위해 아래와 같은 개인정보를 수집하고 있습니다.<br>
+              ο 수집항목 : 이름 , 휴대전화번호 , 이메일 , 관심분야<br>
+              ο 개인정보 수집방법 : 홈페이지(상담신청)<br><br> 
+              ■ 개인정보의 수집 및 이용목적<br>
+              회사는 수집한 개인정보를 다음의 목적을 위해 활용합니다.<br>
+              ο 서비스 제공에 관한 계약 이행 및 서비스 제공에 따른 요금정산콘텐츠 제공<br>
+              ο 회원 관리<br>
+              회원제 서비스 이용에 따른 본인확인 , 개인 식별 , 불량회원의 부정 이용 방지와 비인가 사용 방지 , 연령확인 , 불만처리 등 민원처리 , 고지사항 전달<br>
+              ο 마케팅 및 광고에 활용<br>
+              이벤트 등 광고성 정보 전달<br><br>
+              ■ 개인정보의 보유 및 이용기간<br>
+              원칙적으로, 개인정보 수집 및 이용목적이 달성된 후에는 해당 정보를 지체 없이 파기합니다. 단, 다음의 정보에 대해서는 아래의 이유로 명시한 기간 동안 보존합니다.<br>
+              보존 항목 : 이름 , 휴대전화번호 , 이메일 , 관심분야<br>
+              보존 근거 : 회사내부방침<br>
+              보존 기간 : 회원탈퇴시까지<br><br>
+              ■ 개인정보의 파기절차 및 방법<br>
+              회사는 원칙적으로 개인정보 수집 및 이용목적이 달성된 후에는 해당 정보를 지체없이 파기합니다. 파기절차 및 방법은 다음과 같습니다.<br>
+              ο 파기절차<br>
+              회원님이 회원가입 등을 위해 입력하신 정보는 목적이 달성된 후 별도의 DB로 옮겨져(종이의 경우 별도의 서류함) 내부 방침 및 기타 관련 법령에 의한 정보보호 사유에 따라(보유 및 이용기간 참조) 
+              일정 기간 저장된 후 파기되어집니다.<br> 
+              별도 DB로 옮겨진 개인정보는 법률에 의한 경우가 아니고서는 보유되어지는 이외의 다른 목적으로 이용되지 않습니다.<br>
+              ο 파기방법<br>
+              - 전자적 파일형태로 저장된 개인정보는 기록을 재생할 수 없는 기술적 방법을 사용하여 삭제합니다.<br><br>
+              ■ 개인정보 제공<br>
+              회사는 이용자의 개인정보를 원칙적으로 외부에 제공하지 않습니다. 다만, 아래의 경우에는 예외로 합니다.<br>
+              - 이용자들이 사전에 동의한 경우<br>
+              - 법령의 규정에 의거하거나, 수사 목적으로 법령에 정해진 절차와 방법에 따라 수사기관의 요구가 있는 경우<br><br>
+              ■ 수집한 개인정보의 위탁<br>
+              회사는 고객님의 동의없이 고객님의 정보를 외부 업체에 위탁하지 않습니다. 향후 그러한 필요가 생길 경우, 위탁 대상자와 위탁 업무 내용에 대해 고객님에게 통지하고 필요한 경우 사전 동의를 받도록 하겠습니다.<br><br>
+              ■ 이용자 및 법정대리인의 권리와 그 행사방법<br>
+              이용자는 언제든지 등록되어 있는 자신의 개인정보를 조회하거나 수정할 수 있으며 가입해지를 요청할 수도 있습니다.<br> 
+              이용자들의 개인정보 조회,수정을 위해서는 ‘개인정보변경’(또는 ‘회원정보수정’ 등)을 가입해지(동의철회)를 위해서는 “회원탈퇴”를 클릭하여 본인 확인 절차를 거치신 후 직접 열람, 정정 또는 탈퇴가 가능합니다.<br> 
+              혹은 개인정보관리책임자에게 서면, 전화 또는 이메일로 연락하시면 지체없이 조치하겠습니다.<br> 
+              귀하가 개인정보의 오류에 대한 정정을 요청하신 경우에는 정정을 완료하기 전까지 당해 개인정보를 이용 또는 제공하지 않습니다. 또한 잘못된 개인정보를 제3자에게 이미 제공한 경우에는 정정 처리결과를 제3자에게 지체없이 통지하여 정정이 이루어지도록 하겠습니다.<br> 
+              회사는 이용자의 요청에 의해 해지 또는 삭제된 개인정보는 “회사가 수집하는 개인정보의 보유 및 이용기간”에 명시된 바에 따라 처리하고 그 외의 용도로 열람 또는 이용할 수 없도록 처리하고 있습니다.<br><br>
+              ■ 개인정보에 관한 민원서비스<br>
+              회사는 고객의 개인정보를 보호하고 개인정보와 관련한 불만을 처리하기 위하여 아래와 같이 관련 부서 및 개인정보관리책임자를 지정하고 있습니다.<br>
+              개인정보관리책임자 성명  :<br>
+              전화번호 :<br>
+              귀하께서는 회사의 서비스를 이용하시며 발생하는 모든 개인정보보호 관련 민원을 개인정보관리책임자 혹은 담당부서로 신고하실 수 있습니다. 회사는 이용자들의 신고사항에 대해 신속하게 충분한 답변을 드릴 것입니다.<br>
+              기타 개인정보침해에 대한 신고나 상담이 필요하신 경우에는 아래 기관에 문의하시기 바랍니다.<br><br>
+              1.개인분쟁조정위원회 (www.1336.or.kr/1336)<br>
+              2.정보보호마크인증위원회 (www.eprivacy.or.kr/02-580-0533~4)<br>
+              3.대검찰청 인터넷범죄수사센터 (http://icic.sppo.go.kr/02-3480-3600)<br>
+              4.경찰청 사이버테러대응센터 (www.ctrc.go.kr/02-392-0330)<br>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    // 방침 보기 모달 JS 
+    const modal = document.querySelector('.policy-modal');
+    const modalClose = document.querySelector('.modal-close');
+    const openPolicyBtn = document.getElementById('openPolicy');
+
+    if (openPolicyBtn) {
+      openPolicyBtn.addEventListener('click', () => {
+        modal.classList.add('active');
+      });
+    }
+
+    if (modalClose) {
+      modalClose.addEventListener('click', () => {
+        modal.classList.remove('active');
+      });
+    }
+  </script>
+</body>
+</html>
