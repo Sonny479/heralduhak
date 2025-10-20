@@ -3660,6 +3660,8 @@ a {
 .uhak-row .friends-box {
   background-color: #F8F3EC;
   padding: 10px 8px 10px 8px;
+  width: 100%;
+  max-width: 279px;
 }
 
 .uhak-row .friends-box .friends-row {
@@ -3716,6 +3718,8 @@ a {
   padding: 10px 8px 10px 8px;
   display: flex;
   flex-direction: row;
+  width: 100%;
+  max-width: 279px;
 }
 
 .uhak-row .friends-box2 .friends-col {
