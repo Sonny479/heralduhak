@@ -96,13 +96,18 @@ document.querySelectorAll('.gnb__list a').forEach(a => {
   a.classList.toggle('is-active', key === pageKey);
 });
 
-// 스크롤 리빌
-const io = new IntersectionObserver((entries)=>{
-  entries.forEach(ent=>{
-    if(ent.isIntersecting){ ent.target.classList.add('show'); io.unobserve(ent.target); }
-  });
-},{threshold:.15});
-document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+// 스크롤 리빌 (iOS 호환성 개선)
+if ('IntersectionObserver' in window) {
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(ent=>{
+      if(ent.isIntersecting){ ent.target.classList.add('show'); io.unobserve(ent.target); }
+    });
+  },{threshold:.15});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+} else {
+  // 구형 브라우저 폴백: 즉시 표시
+  document.querySelectorAll('.reveal').forEach(el=>el.classList.add('show'));
+}
 
 /* ===== Hero Slider (홈 전용) ===== */
 (function initHeroSliders(){
@@ -157,6 +162,7 @@ document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
       }, {threshold:0.3});
       io.observe(slider);
     } else {
+      // 구형 브라우저 폴백
       start();
     }
 

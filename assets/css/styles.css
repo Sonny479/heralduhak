@@ -22,7 +22,11 @@
 /* 제목 계층(선택) */
 h1,h2,h3,h4,h5,h6{ font-family: var(--font-sans); margin:0 0 .5em; line-height:1.25; }
 h1{ font-weight:800; font-size:clamp(2rem, 2.5vw + 1rem, 2.75rem); }
+h1{ font-size:2.75rem; } /* iOS fallback */
+@media (max-width: 768px) { h1{ font-size:2rem; } }
 h2{ font-weight:700; font-size:clamp(1.5rem, 2vw + .75rem, 2rem); }
+h2{ font-size:2rem; } /* iOS fallback */
+@media (max-width: 768px) { h2{ font-size:1.5rem; } }
 h3{ font-weight:700; font-size:1.5rem; }
 h4{ font-weight:600; font-size:1.25rem; }
 h5{ font-weight:600; font-size:1.125rem; }
@@ -62,6 +66,14 @@ body{
     -webkit-font-smoothing:antialiased;
     -moz-osx-font-smoothing:grayscale;
     text-rendering:optimizeLegibility;
+    /* iOS Safari 호환성 개선 */
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 a{color:inherit}
 
@@ -238,14 +250,18 @@ input::placeholder,textarea::placeholder{color:#8c90a1}
 }
 .hero-slide h1{
   font-size: clamp(32px, 3vw, 42px);
+  font-size: 42px; /* iOS fallback */
   font-weight:800;
   margin-bottom:14px;
 }
+@media (max-width: 768px) { .hero-slide h1{ font-size:32px; } }
 .hero-slide h2{
   font-size: clamp(22px, 2vw, 28px);
+  font-size: 28px; /* iOS fallback */
   font-weight:600;
   margin-bottom:12px;
 }
+@media (max-width: 768px) { .hero-slide h2{ font-size:22px; } }
 .hero-slide p{
   font-size:16px; opacity:.9; margin-bottom:24px;
 }
