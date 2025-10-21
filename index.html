@@ -26,9 +26,11 @@
 
       <!-- 내비게이션 -->
       <div class="bind-layout">
-        <nav class="gnb_kr" aria-label="주요 메뉴">
-          <button class="nav-toggle" aria-expanded="false" aria-controls="gnbList"><img src="/assets/img/nav_menu.svg" class="nav-menu"></button>
-          <ul id="gnbList" class="gnb__list">
+        <nav class="gnb_kr">
+          <button class="nav-toggle">
+            <img src="/assets/img/nav_menu.svg" class="nav-menu">
+          </button>
+          <ul class="gnb__list">
             <li><a href="/views/kr/about_us/sub1000.html">회사소개</a></li>
 
             <li class="has-sub">
@@ -92,23 +94,27 @@
         <img src="/assets/img/index_ico1.png" alt="KakaoTalk Consultation" data-i18n-alt="aside.kakao.alt"> 
         <p>카카오톡 상담</p>
       </a>
-      <a href="https://blog.naver.com" target="_blank" class="aside-item" data-scroll="external">
+      <a href="https://blog.naver.com/hisacademy" target="_blank" class="aside-item" data-scroll="external">
         <img src="/assets/img/index_ico2.png" alt="Blog" data-i18n-alt="aside.blog.alt">
         <p>블로그</p>
       </a>
-      <a href="#section-consult" class="aside-item">
+      <a href="/views/kr/consult.html" class="aside-item">
         <img src="/assets/img/index_ico3.png" alt="Study Abroad Consultation" data-i18n-alt="aside.consult.alt">
         <p>상담예약</p>
       </a>
-      <a href="./notice.html" class="aside-item">
-        <img src="/assets/img/index_ico4.png" alt="Notice" data-i18n-alt="aside.notice.alt">
+      <a href="/views/kr/early_abroad/sub4000.html#specific-section" class="aside-item">
+        <img src="/assets/img/index_ico4.png" alt="Notice">
         <p>공지사항</p>
       </a>
     </div>
 
      <!-- ★ 여기: 상담시간 배지 -->
-    <div class="aside-hours-kr" role="img" aria-label="Consultation Hours: Seoul 9:00 AM – 6:00 PM; Vancouver 9:00 AM – 6:00 PM">
-      <img src="./assets/img/aside-menu5.png" alt="">
+    <div class="aside-hours">
+      <p>
+        상담시간<br>
+        서울 7:00-14:00<br>
+        밴쿠버 9:00-18:00
+      </p>
     </div>
 
     <!-- TOP 버튼 -->
@@ -134,7 +140,9 @@
                 <p class="subtitle fw-bold text-48 text-light" data-i18n="hero.banner1.l2">부모의 안심과 학생의 성장을 함께하는 곳</p>
                 <p class="subtitle text-xl" data-i18n="hero.banner1.l3">HERALD유학 캐나다가 기준이됩니다.</p>
 
-                <img src="/assets/img/new-main-banner.png" alt="HERALD UHAK CA" class="hero__title-img3">
+                <div class="opacity-bg">
+                  <img src="/assets/img/new-main-banner.png" alt="HERALD UHAK CA" class="hero__title-img3">
+                </div>
 
                 <div class="hero-cta">
                   <a href="/views/kr/consult.html" class="btn-hero btn-hero--outline" data-i18n="hero.ctaConsult">상담 예약하기</a>
@@ -248,7 +256,7 @@
               카카오톡 친구창 상단에서<br>
               [ 헤럴드유학 HERALDUhak ] 검색
             </p>
-            <button type="button" onClick="location.href='http://pf.kakao.com/_xjsBtn'" class="ch-ico">
+            <button type="button" onClick="window.open('http://pf.kakao.com/_xjsBtn', '_blank')" class="ch-ico">
               <div class="new_ch"></div>
             </button>
           </div>
@@ -346,7 +354,7 @@
       <div class="max-800">
         <div class="talk-layout">
           <img src="/assets/img/new_opacity.png">
-          <button type="button" class="talk-btn" onClick="location.href='http://pf.kakao.com/_xjsBtn'">
+          <button type="button" class="talk-btn" onClick="window.open('http://pf.kakao.com/_xjsBtn', '_blank')">
             <p>카카오톡으로 빠른 상담 예약하기 →</p>
           </button>
         </div>

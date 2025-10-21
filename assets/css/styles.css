@@ -108,7 +108,11 @@ a{color:inherit}
 
 /* ===== Header ===== */
 .site-header{
-  position:sticky; top:0; left:0; right:0;
+  /* position:sticky;  */
+  position: fixed;
+  top:0; 
+  left:0; 
+  right:0;
   background:#fff;
   border-bottom:1px solid #e5e7eb;
   z-index:200;
@@ -127,7 +131,7 @@ a{color:inherit}
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 100px;
+  gap: 105px;
 }
 
 .header__brand img{
@@ -144,8 +148,12 @@ a{color:inherit}
   font-size: 14px;
 }
 .gnb a{
-  color:#111; text-decoration:none; padding:8px 10px;
-  border-radius:6px; transition: background .2s;
+  color:#111; 
+  text-decoration:none; 
+  padding:8px 10px;
+  border-radius:6px; 
+  transition: background .2s;
+  font-size: 16px;
 }
 
 .kor-font15 {
@@ -292,7 +300,7 @@ input::placeholder,textarea::placeholder{color:#8c90a1}
 /* 이미지 타이틀/버튼 크기 */
 .hero__title-img{ width: 252px;  height:26px; margin: 20px 0 0; }
 .hero__title-img2{ width: 379px;  height:40px; margin: 20px 0 0; }
-.hero__title-img3{ width: 505px;  height:53px; margin: 0 0 20px; }
+.hero__title-img3{ width: 505px;  height:53px;}
 .hero__title-img4{ width: 505px;  height:53px; margin: 20px 0 20px; }
 .about__title-logo-img1{width: 350px; height: 40px; margin: 20px 0 0;}
 .about__title-logo-img2{width: 252px; height: 26px; margin: 0 0 0;}
@@ -457,64 +465,18 @@ input::placeholder,textarea::placeholder{color:#8c90a1}
 .top-btn{ filter: drop-shadow(0 6px 18px rgba(0,0,0,.35)); transition: transform .15s ease; }
 .top-btn:hover{ transform: translateY(-2px); }
 
-/* ===== Aside: Consultation Hours badge (Notice와 TOP 사이) ===== */
-.aside-hours{
-  display:flex; justify-content:center; align-items:center;
-  /* 스택과 TOP 사이 간격 */
-  margin-top: 8px; 
-  margin-bottom: 6px;
-
-  /* 배지 배경/형태 (원본 이미지가 둥글면 아래 3줄은 생략 가능) */
-  background: #880C24;
-  border-radius: 16px;
-  box-shadow: 0 8px 24px rgba(0,0,0,.35);
-  padding: 6px 8px;
+.aside-hours {
+  background-color: #880C24;
+  padding: 12px 16px;
+  border-radius: 24px;
+  opacity: 0.9;
 }
 
-.aside-hours img{
-  width: 180px;      /* aside 시안 기준 자연스러운 폭 */
-  height: auto;
-  display:block;
+.aside-hours p {
+  font-size: 12px;
+  text-align: center;
+  font-family: 'Pretendard';
 }
-
-/* 반응형 보정 */
-@media (max-width: 1024px){
-  .aside-hours img{ width: 184px; }
-}
-@media (max-width: 640px){
-  .aside-hours{ margin: 6px 0; }
-  .aside-hours img{ width: 168px; }
-}
-
-/* ===== Aside kr ===== */
-.aside-hours-kr{
-  display:flex; justify-content:center; align-items:center;
-  /* 스택과 TOP 사이 간격 */
-  margin-top: 8px; 
-  margin-bottom: 6px;
-
-  /* 배지 배경/형태 (원본 이미지가 둥글면 아래 3줄은 생략 가능) */
-  background: #880C24;
-  border-radius: 16px;
-  box-shadow: 0 8px 24px rgba(0,0,0,.35);
-  padding: 6px 8px;
-}
-
-.aside-hours-kr img{
-  width: 130px;      /* aside 시안 기준 자연스러운 폭 */
-  height: auto;
-  display:block;
-}
-
-/* 반응형 보정 */
-@media (max-width: 1024px){
-  .aside-hours-kr img{ width: 184px; }
-}
-@media (max-width: 640px){
-  .aside-hours{ margin: 6px 0; }
-  .aside-hours-kr img{ width: 168px; }
-}
-/* aside kr 끝*/
 
 /* ===== Section 3: 상담 예약 CTA ===== */
 .cta3-section{
@@ -1333,6 +1295,10 @@ ul {
   margin-block: unset;
 }
 
+main {
+  margin-top: 65px;
+}
+
 .why-canada-main {
   width: 100%;
   display: flex;
@@ -1554,9 +1520,10 @@ ul {
 }
 
 .why-canada-main .section2 .map-contents .map-img .map-text {
-  color: #999;
+  /* color: #803130; */
+  color: #444;
   font-family: "Noto Sans";
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 700;
   line-height: 15px;
 }
@@ -3161,9 +3128,18 @@ ul {
 
 /* ===== GNB dropdown ===== */
 .gnb{ position: relative; }
-.gnb__list{ display:flex; align-items:center; list-style:none; margin:0; padding:0; }
+.gnb__list{
+  display:flex; 
+  align-items:center; 
+  list-style:none; 
+  margin:0; 
+  padding:0;
+}
 .gnb__list > li{ position:relative; }
-.gnb__list > li > a{ display:block; padding:16px 22px; }
+.gnb .gnb__list > li > a { 
+  display:block; 
+  padding:16px 16px; 
+}
 
 .has-sub > a{ position:relative; }
 .has-sub > a::after{
@@ -3171,21 +3147,44 @@ ul {
   border-right:1.5px solid currentColor; border-bottom:1.5px solid currentColor; transform: rotate(45deg) translateY(-2px); vertical-align: middle;
 }
 
-/* submenu */
-.gnb__list .sub{
+.gnb .gnb__list .sub {
   position:absolute; 
-  top:100%; 
+  /* top:100%;  */
+  top: 58px;
   left:0; 
   min-width:240px;
   background:#fff; 
   color:#4a4a4a; 
   list-style:none; 
-  /* margin:0;  */
   margin-top: 3px;
+  /* margin:0;  */
   /* padding:12px 0; */
   padding: 0;
   border-radius:0 0 8px 8px; 
-  /* box-shadow:0 8px 24px rgba(16,24,40,.12); */
+  box-shadow:0 8px 24px rgba(16,24,40,.12);
+  opacity:0; 
+  visibility:hidden; 
+  transform:translateY(8px); 
+  transition:.18s ease;
+  z-index: 50;
+}
+
+/* submenu */
+.gnb_kr .gnb__list .sub{
+  position:absolute; 
+  /* top:100%;  */
+  top: 50px;
+  left:0; 
+  min-width:240px;
+  background:#fff; 
+  color:#4a4a4a; 
+  list-style:none; 
+  margin-top: 3px;
+  /* margin:0;  */
+  /* padding:12px 0; */
+  padding: 0;
+  border-radius:0 0 8px 8px; 
+  box-shadow:0 8px 24px rgba(16,24,40,.12);
   opacity:0; 
   visibility:hidden; 
   transform:translateY(8px); 
@@ -3432,6 +3431,7 @@ textarea {
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 15px;
 }
 
 .gnb_kr .gnb__list li {
@@ -3446,7 +3446,7 @@ textarea {
   text-decoration: unset;
   font-family: "Noto Sans KR","Noto Sans";
   font-weight: 500;
-  font-size: 14px;
+  font-size: 16px;
   padding: 8px 16px;
 }
 
@@ -3563,8 +3563,8 @@ button {
   font-weight: 800;
 }
 
-.gap45 {
-  gap: 45px !important;
+.gap34 {
+  gap: 34px !important;
 }
 
 .aside-item img {
@@ -3578,7 +3578,7 @@ button {
   text-align: center;
   font-family: 'Pretendard';
   /* font-size: 14px; */
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 500;
   line-height: 17.5px;
   /* line-height: 28px; */
@@ -3633,8 +3633,6 @@ a {
 .redbrown .about-cta__desc {
   color: #fff;
 }
-
-.redbrown
 
 .footer-line::after {
   content: "";
@@ -3760,7 +3758,14 @@ a {
   border: 2px solid #4B3C37;
 }
 
-
+.opacity-bg {
+  display: inline-flex;
+  padding: 12px 16px;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.50);
+  margin-bottom: 30px;
+}
 
 
 
