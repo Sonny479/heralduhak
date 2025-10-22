@@ -96,8 +96,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-
-
 // 페이지 키로 활성 메뉴 표시
 const pageKey = document.body.getAttribute('data-page'); // home/about/consult/study/early/tutoring/transfer
 document.querySelectorAll('.gnb__list a').forEach(a => {
