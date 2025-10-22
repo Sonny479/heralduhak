@@ -3765,6 +3765,31 @@ a {
 
 
 @media (max-width: 1024px) {
+  .mob-scroll {
+    align-self: center;
+    width: 100%;
+    /* max-width: 340px; */
+    overflow-x: scroll;
+  }
+
+  .early-abroad-main .e-section4 .total-layout .two-item-layout .item-2 {
+    width: 340px;
+  }
+
+  .early-abroad-main .e-section4 .total-layout .two-item-layout .item-3 {
+    width: 340px;
+  }
+
+  .early-abroad-main .e-section4 .total-layout .two-item-layout {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .en-sp-width {
+    width: 180px !important;
+    height: unset !important;
+  }
+
   .ready-hero__inner {
     display: flex;
     flex-direction: column;
