@@ -436,7 +436,7 @@ document.querySelectorAll('.table-wrap').forEach(el=>el.style.scrollBehavior='sm
   function setLang(lang, displayLabel){
     localStorage.setItem('site_lang', lang);
     if(displayLabel) $label.textContent = displayLabel;
-    applyI18n(lang);
+    // applyI18n(lang);
   }
 
   // toggle open/close
