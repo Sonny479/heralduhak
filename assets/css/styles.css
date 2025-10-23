@@ -1071,7 +1071,7 @@ input::placeholder,textarea::placeholder{color:#8c90a1}
 @media (min-width: 992px){ .br-lg{ display:inline; } }
 
 /* ② Why HERALD (white card on top) */
-.about-why{ background:#F8F3EC; padding: 60px 0 100px; } /* 연한 베이지 배경 */
+.about-why{ background:#F8F3EC; padding: 60px 0 80px; } /* 연한 베이지 배경 */
 .about-why__card{
   background:#fff; border-radius:16px; padding:28px;
   box-shadow: 0 18px 36px rgba(0,0,0,.12);
@@ -1118,7 +1118,7 @@ input::placeholder,textarea::placeholder{color:#8c90a1}
 .why-item__body{ color:#444444; }
 
 /* ③ Returnee */
-.about-returnee{ background:#ffffff; padding:60px 0; }
+.about-returnee{ background:#ffffff; padding:80px 0; }
 .returnee__title{
   text-align:center; background:#8c3b37; color:#fff; width:fit-content;
   display:block; padding:8px 16px; 
@@ -1152,7 +1152,7 @@ input::placeholder,textarea::placeholder{color:#8c90a1}
 /* ④ CTA */
 .about-cta{
   background:#e6ddd6; /* 연한 베이지/그레이 믹스 */
-  padding:56px 0 80px; color:#433a3a;
+  padding:80px 0; color:#433a3a;
 }
 .about-cta__inner{ text-align:center; }
 .about-cta__title{
@@ -1419,7 +1419,7 @@ main {
   /* left: 50%;
   transform: translateX(-50%); */
   top: 290px;
-  margin-bottom: 72px;
+  margin-bottom: 80px;
 }
 
 .why-canada-main .section1 .canada-advantage-table strong {
@@ -1708,7 +1708,7 @@ main {
   align-items: center;
   width: 100%;
   background: #F8F3EC;
-  padding-bottom: 64px;
+  padding-bottom: 80px;
   /* padding-block: 64px; */
 }
 
@@ -1966,7 +1966,7 @@ main {
   align-items: center;
   width: 100%;
   background-color: #F7F7F7;
-  padding-block: 64px;
+  padding-block: 80px;
 }
 
 .early-abroad-main .e-section1 .case-title {
@@ -2138,7 +2138,7 @@ main {
   flex-direction: column;
   align-items: center;
   background: #fff;
-  padding-block: 72px;
+  padding-block: 80px;
   width: 100%;
   background: #fff;
 }
@@ -2298,7 +2298,7 @@ main {
   flex-direction: column;
   align-items: center;
   background: #fff;
-  padding-block: 104px;
+  padding-block: 80px;
   width: 100%;
   background-color: #fff;
 }
@@ -2578,7 +2578,7 @@ main {
   flex-direction: column;
   align-items: center;
   background: #fff;
-  padding-block: 72px;
+  padding-block: 80px;
   width: 100%;
   background-color: #F8F3EC;
 }
@@ -2747,7 +2747,7 @@ main {
   flex-direction: column;
   align-items: center;
   background: #fff;
-  padding-block: 83px;
+  padding-block: 80px;
   width: 100%;
 }
 
@@ -2948,7 +2948,7 @@ main {
   flex-direction: column;
   align-items: center;
   background: #F8F3EC;
-  padding-block: 80px;
+  padding: 70px 0 80px;
   width: 100%;
 }
 
@@ -3804,6 +3804,14 @@ a {
 
 
 @media (max-width: 1024px) {
+  .early-abroad-main .e-section4 .total-layout {
+    margin-top: 48px;
+  }
+  
+  .early-abroad-main .e-section6 .part2 {
+    margin-top: 60px;
+  }
+
   .stories-section {
     padding: 50px 0 60px;
   }
