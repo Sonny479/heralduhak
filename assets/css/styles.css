@@ -3834,6 +3834,7 @@ a {
     content: "";
     position: absolute;
     left: -25px;
+    /* left: -60%; */
     top: 12px;
     width: 1px;
     height: 30px;
