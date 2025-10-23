@@ -105,18 +105,20 @@ a{color:inherit}
 .title-md{line-height:1.25; margin:0 0 16px; color: #B92E2C;}
 .banner-title1{
   opacity:.95; 
-  margin:0 0 20px;
+  /* margin:0 0 20px; */
   font-size: 32px;
 }
 .banner-title2{
   font-size: 48px;
   opacity:.95; 
-  margin:0 0 1px;
+  line-height: 54px;
+  margin-bottom: 20px;
 }
 .banner-title3{
   font-size: 20px;
   opacity:.95; 
-  margin:0 0 20px;
+  margin-bottom: 20px;
+  line-height: 32px;
 }
 .lead{color:var(--muted); margin:0 0 32px}
 .ta-center{ text-align:center; }
@@ -311,7 +313,7 @@ input::placeholder,textarea::placeholder{color:#8c90a1}
 .hero__title-img3{ width: 505px;  height:53px;}
 .hero__title-img4{ width: 505px;  height:53px; margin: 20px 0 20px; }
 .about__title-logo-img1{width: 350px; height: 40px; margin: 20px 0 0;}
-.about__title-logo-img2{width: 252px; height: 26px; margin: 0 0 0;}
+.about__title-logo-img2{width: 252px; height: auto; margin: 0 0 0;}
 .about__title-logo-img3{width: 379px; height: 40px; margin: 0 0 20px;}
 .hero__cta-img{ display:flex; gap:12px; flex-wrap:wrap; align-items:center; margin-top:12px; }
 .hero__cta-img img{ height:48px; width:auto; display:block; }
@@ -415,9 +417,19 @@ input::placeholder,textarea::placeholder{color:#8c90a1}
   align-items: center;
 }
 .early-icon { max-width: 100px; height: auto; margin-bottom: 12px; }
-.early-title { margin-bottom: 6px; color:#B92E2C; }
-.early-desc { margin-bottom: 12px; color:#666666; height: 45px; }
+.early-title { 
+  margin-bottom: 6px; 
+  color:#B92E2C;
+  font-size: 24px; 
+}
+.early-desc { 
+  margin-bottom: 12px; 
+  color:#666666; 
+  height: 45px;
+  font-size: 16px; 
+}
 .early-btn {
+  font-size: 16px;
   display: inline-block;
   padding: 10px 20px;
   background: #CE5D5F;
@@ -488,7 +500,7 @@ input::placeholder,textarea::placeholder{color:#8c90a1}
 
 /* ===== Section 3: 상담 예약 CTA ===== */
 .cta3-section{
-  background:#803130; /* 필요시 이미지/그라데이션으로 교체 가능 */
+  background:#803130;
   color:#fff;
   padding:72px 0;
   text-align:center;
@@ -506,8 +518,10 @@ input::placeholder,textarea::placeholder{color:#8c90a1}
   margin:8px 0 8px;
 }
 .cta3-desc{
-  font-size:clamp(14px, 1.25vw, 18px);
-  opacity:.95; margin:0 auto 22px;
+  font-size: 18px;
+  opacity:.95; 
+  margin:0 
+  auto 22px;
 }
 
 .cta3-btn{
@@ -523,8 +537,8 @@ input::placeholder,textarea::placeholder{color:#8c90a1}
 
 /* ===== Section 4: REAL EXPERIENCES (1194px centered + seamless loop) ===== */
 .stories-section{ background:#fff; padding:80px 0; text-align:center; }
-.stories-heading{ color:#CE5D5F; line-height:1.3; margin-bottom:12px; }
-.stories-sub{ margin-bottom:8px; color: #444444; }
+.stories-heading{ color:#CE5D5F; line-height:26px; margin-bottom:12px; font-size: 32px; }
+.stories-sub{ margin-bottom:8px; color: #444444; font-size: 20px; }
 /* 텍스트 뒤 배경 띠 */
 .text-band{
   display:inline-block; max-width: 1194px; width: auto;
@@ -573,7 +587,7 @@ input::placeholder,textarea::placeholder{color:#8c90a1}
 /* ===== Section 5: OFFICE ===== */
 .office-section{
   background:#f4f6f9;
-  padding:72px 0;
+  padding:80px 0;
 }
 .office__inner{
   width:min(1280px, 92%);
@@ -584,6 +598,8 @@ input::placeholder,textarea::placeholder{color:#8c90a1}
   color:#803130;
   letter-spacing:.5px;
   margin-bottom:28px;
+  font-size: 32px;
+  line-height: 20px;
 }
 
 .office__grid{
@@ -605,9 +621,10 @@ input::placeholder,textarea::placeholder{color:#8c90a1}
 .office-card__title{
   color:#B92E2C;
   margin:0 0 6px;
+  font-size: 22px;
 }
 .office-card__meta{
-  color:#803130; line-height:1.5; margin:0;
+  color:#803130; line-height:1.5; margin:0; font-size: 14px;
 }
 .office-card__map{
   border:2px solid #c75d5e;           /* 지도 영역 보더 */
@@ -624,6 +641,7 @@ input::placeholder,textarea::placeholder{color:#8c90a1}
 }
 .office-card__desc{
   color:#444444; margin:0;
+  font-size: 14px;
 }
 
 /* ===== Footer ===== */
@@ -656,7 +674,7 @@ input::placeholder,textarea::placeholder{color:#8c90a1}
   gap: 10px; margin: 6px 0 10px;
 }
 .footer__links a{
-  color:#e5edf7; text-decoration:none; font-weight:500;
+  color:#e5edf7; text-decoration:none; font-weight:500; font-size: 16px;
 }
 .footer__links a:hover{ text-decoration:underline; }
 .footer__links .sep{ opacity:.5; }
@@ -719,11 +737,15 @@ input::placeholder,textarea::placeholder{color:#8c90a1}
   color: #fff;
   background-image: url('/assets/img/common_banner.png') !important;
   height: 360px;
+  
+  background:#8c3b37;
+  padding: 64px 0 88px;
+  position: relative;
 }
 .about-hero__inner{ max-width: var(--max, 1200px); margin: 0 auto; }
-.about-hero__title{
+/* .about-hero__title{
   margin: 0 0 12px; font-size: 34px; font-weight: 900; letter-spacing: -0.02em;
-}
+} */
 .about-hero__subtitle{
   margin: 0 0 12px; font-size: 18px; font-weight: 700; opacity: 0.95;
 }
@@ -769,7 +791,6 @@ input::placeholder,textarea::placeholder{color:#8c90a1}
 }
 
 /* ③ Returnee */
-[data-page="about"] .about-returnee{ background:#fff; padding: 56px 0 64px; }
 [data-page="about"] .about-badge{
   display: inline-block;
   padding: 8px 14px;
@@ -798,10 +819,10 @@ input::placeholder,textarea::placeholder{color:#8c90a1}
 }
 
 /* ④ CTA */
-[data-page="about"] .about-cta{
+/* [data-page="about"] .about-cta{
   background: #F1E6DE;
   color: #fff; padding: 60px 0 72px;
-}
+} */
 [data-page="about"] .about-cta__inner{ text-align: center; max-width: 880px; margin: 0 auto; }
 [data-page="about"] .about-cta__title{ margin:0 0 8px; font-size: 28px; font-weight: 900; }
 [data-page="about"] .about-cta__desc{  opacity: .95; }
@@ -906,7 +927,6 @@ input::placeholder,textarea::placeholder{color:#8c90a1}
 .adv-card .bullet{ margin:6px 0 0 16px; }
 
 .geo{ display:grid; grid-template-columns: 1fr; gap:16px; align-items:start; }
-@media (min-width: 1024px){ .geo{ grid-template-columns: 2fr 1fr; } }
 .geo__map img{ width:100%; height:auto; display:block; border-radius:8px; }
 .geo__legend .legend{ list-style:none; padding:0; margin:8px 0 0; }
 .geo__legend .legend li{ display:flex; align-items:center; gap:8px; padding:8px 0; border-bottom:1px solid var(--line,#e7eaf0); }
@@ -1038,15 +1058,10 @@ input::placeholder,textarea::placeholder{color:#8c90a1}
 .about-page .container{ max-width: var(--max); margin: 0 auto; padding: 0 20px; }
 
 /* ① Intro Hero */
-.about-hero{
-  background:#8c3b37; /* 버건디 톤(캡처 참고) */
-  color:#fff;
-  padding: 64px 0 88px;
-  position: relative;
-}
 .about-hero__title{
-  text-align:center; font-weight:800;
-  font-size: clamp(28px, 2.8vw + 8px, 40px);
+  text-align:center; 
+  font-weight:800;
+  font-size: 28px;
   margin:0 0 10px;
 }
 .about-hero__desc{
@@ -1062,7 +1077,7 @@ input::placeholder,textarea::placeholder{color:#8c90a1}
   box-shadow: 0 18px 36px rgba(0,0,0,.12);
 }
 .about-why__title{
-  text-align:center; color:#8c3b37; font-weight:800; margin:4px 0 6px;
+  text-align:center; color:#8c3b37; font-weight:800; align-items: center; margin:4px 0 6px;
   font-size: clamp(20px, 2vw + 6px, 28px);
   display: flex;
   line-height: 18px;
@@ -1098,7 +1113,7 @@ input::placeholder,textarea::placeholder{color:#8c90a1}
 .why-item__badge{
   display:inline-block; align-self:flex-start;
   background:#cf6a6a; color:#fff; border-radius:999px;
-  padding:6px 12px;
+  padding:6px 12px; font-size: 16px;
 }
 .why-item__body{ color:#444444; }
 
@@ -1108,9 +1123,10 @@ input::placeholder,textarea::placeholder{color:#8c90a1}
   text-align:center; background:#8c3b37; color:#fff; width:fit-content;
   display:block; padding:8px 16px; 
   margin:0 auto 10px;
+  font-size: 24px;
 }
 .returnee__sub{
-  text-align:center;  color:#803130; margin:0 0 20px;
+  text-align:center;  color:#803130; margin:0 0 20px; font-size: 24px;
 }
 .returnee__grid{
   display:grid; grid-template-columns: 1fr; gap:16px; max-width: 980px; margin:0 auto;
@@ -1125,12 +1141,13 @@ input::placeholder,textarea::placeholder{color:#8c90a1}
 .returnee-card__badge{
   width:190px; height:41px; text-align:center;display:inline-block; background:#CE5D5F; color:#fff; border-radius:999px;
   padding:6px 12px;  
+  font-size: 18px;
 }
 .returnee-card__badge2{
   width:190px; height:41px; text-align:center;display:inline-block; background:#CE5D5F; color:#fff; border-radius:999px;
   padding:6px 12px;  
 }
-.returnee-card__body{ color:#473d3d;}
+.returnee-card__body{ color:#473d3d; font: 16px;}
 
 /* ④ CTA */
 .about-cta{
@@ -3779,8 +3796,526 @@ a {
   height: 32px;
 }
 
+.early-program {
+  color: #B92E2C;
+  font-size: 32px;
+  line-height: 26px;
+}
+
 
 @media (max-width: 1024px) {
+  .stories-section {
+    padding: 50px 0 60px;
+  }
+
+  .section4 .reservation .reservation-btn {
+    font-size: 14px;
+  }
+
+  .section4 .reservation .suggestion-text strong {
+    font-size: 18px;
+  }
+
+  .section4 .reservation .suggestion-text p {
+    font-size: 14px;
+  }
+
+  .section4 {
+    padding-inline: 20px;
+  }
+
+  .returnee__grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .returnee-card {
+    width: 100%;
+    max-width: 584px;
+  }
+
+  .early-abroad-main .e-section6 .part2 .program-range .program-item {
+    max-width: 400px;
+  }
+
+  .early-abroad-main .e-section7 {
+    padding-block: 60px;
+    padding-inline: 20px;
+  }
+
+  .early-abroad-main .e-section3 .service-package .row .service-item strong {
+    font-size: 14px;
+  }
+
+  .early-abroad-main .e-section3 .service-package .row .service-item-short strong {
+    font-size: 14px;
+  }
+
+  .early-abroad-main .e-section3 .service-package .row .service-item p {
+    font-size: 14px;
+  }
+
+  .early-abroad-main .e-section3 .service-package .row .service-item-short p {
+    font-size: 14px;
+  }
+
+  .early-abroad-main .e-section6 .part2 .program-range .program-item p {
+    font-size: 14px;
+  }
+
+  .early-abroad-main .e-section6 .part2 .program-range .program-item .item-title {
+    font-size: 14px;
+  }
+
+  .early-abroad-main .e-section6 .part1 .difference-contents .differ-item {
+    max-width: 400px;
+  }
+
+  .early-abroad-main .e-section6 .part2 .program-range .program-item img {
+    width: 100%;
+  }
+
+  .early-abroad-main .e-section6 .part1 .difference-contents .differ-item strong {
+    font-size: 14px;
+  }
+
+  .early-abroad-main .e-section6 .part1 .difference-contents .differ-item p {
+    font-size: 14px;
+  }
+
+  .early-abroad-main .e-section6 .management-abroad {
+    margin-bottom: 0px;
+  }
+
+  .early-abroad-main .e-section6 .management-abroad .abroad-title {
+    font-size: 24px;
+  }
+
+  .early-abroad-main .e-section6 {
+    padding-block: 60px;
+    padding-inline: 20px;
+  }
+
+  .early-abroad-main .e-section5 .sub-text {
+    font-size: 14px;
+  }
+
+  .early-abroad-main .e-section5 .christian-contents .christian-table thead tr th {
+    font-size: 14px;
+  }
+
+  .early-abroad-main .e-section5 .christian-contents .christian-table tbody tr td {
+    font-size: 12px;
+  }
+
+  .early-abroad-main .e-section5 .catholic-contents .catholic-table thead tr th {
+    font-size: 14px;
+  }
+
+  .early-abroad-main .e-section5 .catholic-contents .catholic-table tbody tr td {
+    font-size: 12px;
+  }
+
+  .early-abroad-main .e-section5 .christian-contents p span {
+    font-size: 12px;
+  }
+
+  .early-abroad-main .e-section5 .catholic-contents p span {
+    font-size: 12px;
+  }
+
+  .early-abroad-main .e-section5 .catholic-school {
+    margin-bottom: unset;
+  }
+
+  .early-abroad-main .e-section5 {
+    padding-block: 60px;
+    padding-inline: 20px;
+  }
+
+  .early-abroad-main .e-section5 .catholic-school .catholic-title {
+    font-size: 24px;
+  }
+
+  .early-abroad-main .e-section4 .study-cost .cost-table thead tr th {
+    font-size: 14px;
+  }
+
+  .early-abroad-main .e-section4 .study-cost .cost-table tbody tr td {
+    font-size: 12px;
+  }
+
+  .early-abroad-main .e-section4 .study-cost .cost-title span {
+    font-size: 12px;
+  }
+
+  .early-abroad-main .e-section4 .study-cost .cost-title {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .early-abroad-main .e-section4 .study-cost .cost-title p {
+    font-size: 14px;
+  }
+
+  .early-abroad-main .e-section4 .total-layout .item-1 ul {
+    padding-left: 24px;
+  }
+
+  .early-abroad-main .e-section4 .total-layout .item-2 ul {
+    padding-left: 24px;
+  }
+
+  .early-abroad-main .e-section4 .total-layout .item-1 .i-title {
+    font-size: 14px;
+  }
+
+  .early-abroad-main .e-section4 .total-layout .item-1 ul li {
+    font-size: 14px;
+    word-break: keep-all;
+  }
+
+  .early-abroad-main .e-section4 .total-layout .two-item-layout .item-2 .i-title {
+    font-size: 14px;
+  }
+
+  .early-abroad-main .e-section4 .total-layout .two-item-layout .item-2 ul li {
+    font-size: 14px;
+    word-break: keep-all;
+  }
+
+  .early-abroad-main .e-section4 .total-layout .two-item-layout .item-3 .i-title {
+    font-size: 14px;
+  }
+
+  .early-abroad-main .e-section4 .total-layout .two-item-layout .item-3 p {
+    font-size: 14px;
+    word-break: keep-all;
+  }
+
+  .early-abroad-main .e-section4 .free-edu {
+    margin-bottom: 0;
+  }
+
+  .early-abroad-main .e-section4 .free-edu strong {
+    font-size: 24px;
+  }
+
+  .early-abroad-main .e-section4 {
+    padding-block: 60px;
+    padding-inline: 20px;
+  }
+
+  .early-abroad-main .e-section3 .service-package .s-notice {
+    font-size: 14px;
+  }
+
+  .early-abroad-main .e-section3 .service-package strong {
+    font-size: 18px;
+  }
+
+  .early-abroad-main .e-section3 {
+    padding: 60px 20px;
+  }
+
+  .early-abroad-main .e-section2 .sequence-box {
+    max-width: unset;
+    padding: 30px 10px;
+  }
+
+  .early-abroad-main .e-section2 .sequence-box .sequence-contents .box-block .box-item .box-text p {
+    font-size: 14px;
+    word-break: keep-all;
+  }
+
+  .early-abroad-main .e-section2 .sequence-box .sequence-contents .box-block .box-item .box-text strong {
+    font-size: 14px;
+    word-break: keep-all;
+  }
+
+  .early-abroad-main .e-section2 .sequence-box .sequence-title {
+    font-size: 18px;
+  }
+
+  .early-abroad-main .e-section2 {
+    padding-block: unset;
+    padding: 60px 20px;
+  }
+
+  .early-abroad-main .e-section1 .case-contents .case-box ul li {
+    font-size: 14px;
+    word-break: keep-all;
+    padding-right: 10px;
+  }
+
+  .early-abroad-main .e-section1 .case-contents .case-box .half-bg p {
+    font-size: 14px;
+    word-break: keep-all;
+  }
+
+  .early-abroad-main .e-section1 .case-contents .case-box .half-bg {
+    width: 50%;
+  }
+
+  .early-abroad-main .e-section1 .case-title {
+    font-size: 18px;
+  }
+
+  .e-section1 {
+    padding: 0 20px;
+    padding-block: 60px;
+  }
+
+  .with-title strong {
+    font-size: 24px;
+  }
+
+  .why-canada-main .section3 .compare-table thead tr th {
+    font-size: 14px;
+  }
+
+  .why-canada-main .section3 .compare-table tbody tr td {
+    font-size: 12px;
+    word-break: keep-all;
+  }
+
+  .why-canada-main .section1 .canada-advantage-table {
+    padding: 20px 10px;
+  }
+
+  .why-canada-main .section1 .canada-advantage-table strong {
+    font-size: 18px;
+  }
+
+  .new-title-layout {
+    margin-block: 60px;
+  }
+  
+  .new-title-layout strong {
+    font-size: 24px;
+  }
+
+  .why-canada-main .section3 .compare-school .compare-title strong {
+    font-size: 22px;
+  }
+
+  .why-canada-main .section3 .compare-school .compare-title {
+    font-size: 20px;
+  }
+
+  .why-canada-main .section3 {
+    padding-bottom: unset;
+    padding: 0px 20px;
+    padding-bottom: 60px;
+  }
+
+  .why-canada-main .section2 .Vancouver_abroad {
+    margin-block: unset;
+    margin-top: 60px;
+  }
+
+  .why-canada-main .section2 .detail-contents .detail-box ul {
+    min-height: unset;
+  }
+
+  .why-canada-main .section2 .detail-contents .detail-box {
+    max-width: 100%;
+  }
+
+  .why-canada-main .section2 {
+    padding: 0px 20px;
+  }
+
+  .sp-layout {
+    /* display: flex;
+    flex-direction: column;
+    gap: 8px; */
+    font-size: 14px;
+    line-height: 24px;
+    margin-top: 8px;
+  }
+
+  .why-canada-main .section1 {
+    padding: 0px 20px;
+  }
+
+  .about-cta {
+    padding: 60px 20px;
+  }
+  
+  .returnee-card__body{ 
+    font-size: 14px;
+  }
+
+  .returnee-card__badge {
+    font-size: 14px;
+    width: 45%;
+    height: unset;
+    padding: 6px 8px;
+  }
+
+  .returnee-card__badge2 {
+    font-size: 14px;
+    width: 45%;
+    height: unset;
+    padding: 6px 8px;
+  }
+
+  .about-returnee {
+    padding: 60px 20px 60px;
+  }
+
+  .returnee__sub {
+    font-size: 16px;
+  }
+
+  .returnee__title {
+    font-size: 18px;
+  }
+
+  .about-hero {
+    font-size: 32px;
+    text-align: center;
+  }
+
+  .why-item__badge {
+    font-size: 14px;
+  }
+
+  .why-item__body {
+    font-size: 14px;
+  }
+
+  .about-why__title {
+    align-items: center;
+  }
+
+  .about-why__grid {
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+  }
+
+  .about-why__card {
+    padding: 24px 10px;
+  }
+
+  .about-page .container {
+    padding: unset;
+  }
+
+  .about-why {
+    padding: 60px 20px 60px;
+  }
+
+  .about-hero__title {
+    font-size: 24px;
+  }
+
+  .footer__copy {
+    font-size: 12px;
+  }
+
+  .footer__links a {
+    font-size: 14px;
+  }
+
+  .site-footer {
+    padding: 36px 10px;
+  }
+
+  .talk-btn {
+    width: 100%; 
+  }
+
+  .talk-section .max-800 .talk-layout p {
+    font-size: 14px;
+    width: 100%;
+  }
+
+  .office__inner {
+    width: unset;
+  }
+
+  .cta3-inner {
+    width: unset;
+  }
+
+  .talk-section {
+    padding: 0 20px;
+  }
+
+  .talk-section .max-800 .talk-layout img {
+    width: 100%;
+  }
+
+  .office-card__desc {
+    line-height: normal;
+  }
+
+  .office-card__title {
+    font-size: 18px;
+  }
+
+  .office-section{
+    padding: 50px 20px 60px;
+  }
+
+  .office__heading {
+    font-size: 24px;
+    line-height: unset;
+  }
+
+  .stories-sub {
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  .stories-heading {
+    font-size: 24px;
+    line-height: unset;
+  }
+
+  .uhak-row .friends-box {
+    max-width: 400px;
+  }
+
+  .uhak-row .friends-box2 {
+    max-width: 400px;
+    justify-content: space-around;
+  }
+
+  .text-band {
+    font-size: 14px;
+  }
+
+  .cta3-section{
+    padding: 60px 20px;
+  }
+
+  .early-btn {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  .section--early {
+    padding: 60px 20px;
+  }
+
+  .early-desc { 
+    font-size: 14px; 
+  }
+
+  .early-title { 
+    font-size: 18px; 
+  }
+
+  .early-program {
+    color: #B92E2C;
+    font-size: 24px;
+    line-height: unset;
+  }
 
   .opacity-bg {
     padding: unset;
@@ -3793,29 +4328,20 @@ a {
   .banner-title1 {
     font-size: 16px;
     opacity:.95; 
-    margin:0 0 20px;
   }
 
   .banner-title2 {
     font-size: 18px;
     opacity:.95; 
-    margin:0 0 1px;
+    margin: unset;
+    line-height: normal;
   }
 
   .banner-title3 {
     font-size: 14px;
     opacity:.95; 
-    margin:0 0 20px;
-  }
-
-  .aside-nav {
-    position: absolute;
-    /* top: 685px; */
-    top: 607px;
-    right: unset;
-    gap: unset;
-    z-index: 100;
-    width: 100%;
+    margin-bottom: 10px;
+    margin-top: 5px;
   }
 
   .aside-stack{
@@ -3829,17 +4355,53 @@ a {
     width: 100%;
   }
 
-
   .aside-item + .aside-item::before {
-    content: "";
-    position: absolute;
-    left: -25px;
-    /* left: -60%; */
-    top: 12px;
-    width: 1px;
-    height: 30px;
-    background: #cfcfcf;
+    width: 0px;
+    height: 0px;
   }
+
+  .aside-nav {
+    position: absolute;
+    top: 607px; /* 필요에 따라 조절 */
+    right: unset;
+    gap: unset;
+    z-index: 100;
+    width: 100%;
+  }
+
+  .aside-stack {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: unset;
+    padding: 14px 12px;
+    gap: unset;
+    background: #880C24;
+    box-shadow: unset;
+    width: 100%;
+  }
+
+  .aside-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex-basis: 25%;
+    box-sizing: border-box;
+    color: #dedede;
+    text-decoration: none;
+  }
+
+  .aside-item + .aside-item {
+    border-left: 1px solid #adadad;
+    /* border-left: 1px solid rgba(255, 255, 255, .12); */
+  }
+
+
+
+
+
 
   .aside-hours {
     display: none;
@@ -3854,12 +4416,6 @@ a {
   .top-btn img{ 
     width: 50px; 
   }
-  
-
-
-
-
-
 
   .mob-scroll {
     align-self: center;
@@ -3869,11 +4425,11 @@ a {
   }
 
   .early-abroad-main .e-section4 .total-layout .two-item-layout .item-2 {
-    width: 340px;
+    width: 100%;
   }
 
   .early-abroad-main .e-section4 .total-layout .two-item-layout .item-3 {
-    width: 340px;
+    width: 100%;
   }
 
   .early-abroad-main .e-section4 .total-layout .two-item-layout {
@@ -3882,8 +4438,9 @@ a {
   }
 
   .en-sp-width {
-    width: 180px !important;
+    width: 90% !important;
     height: unset !important;
+    max-width: 400px;
   }
 
   .ready-hero__inner {
@@ -3901,8 +4458,17 @@ a {
     width: 320px;
   }
 
+  .early-abroad-main .e-section7 .faq-contents .faq-item .faq-question .font-red {
+    font-size: 14px;
+  }
+
   .early-abroad-main .e-section7 .faq-contents .faq-item .faq-question .question-text {
     text-align: left;
+    font-size: 14px;
+  }
+
+  .early-abroad-main .e-section7 .faq-contents .faq-item .faq-answer {
+    font-size: 14px;
   }
 
   .early-abroad-main .e-section7 .faq-contents .faq-item .faq-question .arrow-img {
@@ -3914,7 +4480,7 @@ a {
   }
 
   .early-abroad-main .e-section6 .part1 .difference-title img {
-    width: 320px;
+    width: 100%;
   }
 
   .early-abroad-main .e-section6 .part2 .program-range {
@@ -3942,16 +4508,20 @@ a {
     height: 32px;
   }
 
+  .sp-arrow-box {
+    align-self: center;
+  }
+
+  .sp-arrow-box .sp-arrow {
+    margin-left: unset;
+  }
+
   .align-items {
     align-items: center;
   }
 
   .early-abroad-main .e-section2 .sequence-box {
-    width: 340px;
-  }
-
-  .sp-arrow {
-    width: 24px;
+    width: 100%;
   }
 
   .early-abroad-main .e-section2 .sequence-box .sequence-contents .box-block {
@@ -3959,7 +4529,8 @@ a {
   }
 
   .early-abroad-main .e-section3 .uhak-title {
-    width: 320px;
+    width: 100%;
+    max-width: 400px;
     height: unset;
   }
 
@@ -3973,6 +4544,7 @@ a {
 
   .why-canada-main .section2 .map-contents {
     flex-direction: column;
+    padding-top: 60px;
   }
 
   .why-canada-main .section2 .map-contents .map-img {
@@ -3981,6 +4553,7 @@ a {
 
   .why-canada-main .section2 .detail-contents {
     justify-content: center;
+    margin-bottom: 60px;
   }
 
   .r-map {
@@ -4006,16 +4579,19 @@ a {
   }
 
   .about__title-logo-img2 {
-    width: 190px;
+    width: 70%;
+    max-width: 250px;
   }
 
   .about__title-logo-img3 {
-    width: 300px;
+    width: 100%;
+    max-width: 400px;
     height: unset;
   }
 
   .about-title-img {
-    width: 300px;
+    width: 90%;
+    max-width: 400px;
   }
 
   .hero__title-img4 {
@@ -4041,15 +4617,12 @@ a {
   }
 
   .cta3-logo {
-    width: 340px;
+    width: 100%;
+    height: unset;
   }
 
   .talk-section .max-800 .talk-layout {
     align-items: center;
-  }
-
-  .talk-section .max-800 .talk-layout img {
-    width: 340px;
   }
 
   .consulting-time {
@@ -4084,6 +4657,7 @@ a {
 
   .slide__inner {
     justify-content: center;
+    padding-bottom: 128px;
   }
 
   .btn-hero {
@@ -4175,6 +4749,8 @@ a {
   .hero--slider .slider { 
     height: 420px; 
   }
+
+  .geo{ grid-template-columns: 2fr 1fr; }
 }
 
 
@@ -4228,5 +4804,11 @@ a {
   #not-open {
     width: 18px;
     height: 18px;
+  }
+}
+
+@media (max-width: 380px) {
+  .mob-max {
+    max-width: 350px;
   }
 }
