@@ -12,6 +12,8 @@ document.addEventListener('DOMContentLoaded', () => {
     navToggleBtn.addEventListener('click', () => {
       if (isMobileView()) {
         gnbList.classList.toggle('active');
+        // 모바일 메뉴가 열렸을 때 body 스크롤 방지 (선택 사항)
+        // document.body.classList.toggle('no-scroll', gnbList.classList.contains('active'));
       }
     });
   }
@@ -54,6 +56,54 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+
+
+
+
+
+
+
+// 모바일 메뉴 토글
+// const toggleBtn = document.querySelector('.gnb__toggle');
+// const gnbList = document.querySelector('#gnbMenu');
+// if (toggleBtn && gnbList) {
+//   toggleBtn.addEventListener('click', () => {
+//     const open = gnbList.classList.toggle('is-open');
+//     toggleBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+//     document.body.style.overflow = open ? 'hidden' : '';
+//   });
+//   gnbList.addEventListener('click', e => {
+//     if (e.target.tagName === 'A' && gnbList.classList.contains('is-open')) {
+//       gnbList.classList.remove('is-open');
+//       toggleBtn.setAttribute('aria-expanded', 'false');
+//       document.body.style.overflow = '';
+//     }
+//   });
+// }
+
+
+
+
+
+// 페이지 키로 활성 메뉴 표시
+// const pageKey = document.body.getAttribute('data-page'); // home/about/consult/study/early/tutoring/transfer
+// document.querySelectorAll('.gnb__list a').forEach(a => {
+//   const key = a.getAttribute('data-key');
+//   a.classList.toggle('is-active', key === pageKey);
+// });
+
+// 스크롤 리빌 (iOS 호환성 개선)
+// if ('IntersectionObserver' in window) {
+//   const io = new IntersectionObserver((entries)=>{
+//     entries.forEach(ent=>{
+//       if(ent.isIntersecting){ ent.target.classList.add('show'); io.unobserve(ent.target); }
+//     });
+//   },{threshold:.15});
+//   document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+// } else {
+//   // 구형 브라우저 폴백: 즉시 표시
+//   document.querySelectorAll('.reveal').forEach(el=>el.classList.add('show'));
+// }
 
 /* ===== Hero Slider (홈 전용) ===== */
 (function initHeroSliders(){
@@ -117,10 +167,51 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 })();
 
+/* ===== Reviews Marquee (홈) ===== */
+// (function initMarquees(){
+//   document.querySelectorAll('.marquee[data-dup="auto"]').forEach((wrap)=>{
+//     const track = wrap.querySelector('.marquee__track');
+//     if (!track) return;
+//     track.innerHTML = track.innerHTML + track.innerHTML; // 끊김 없는 루프
+//   });
+// })();
 
+/* ===== Sticky Bar (채널톡 자리표시 링크) ===== */
+// 실제 채널톡/블로그 URL이 준비되면 아래 selector의 href를 교체하면 끝.
+// document.querySelectorAll('[data-office="vancouver"]').forEach(a=>{
+//   // a.href = 'https://channel.io/...' // TODO: HERALD CAMPUS 채널톡 URL
+// });
+// document.querySelectorAll('[data-office="seoul"]').forEach(a=>{
+//   // a.href = 'https://channel.io/...' // TODO: HIS 헤럴드교육센터 채널톡 URL
+// });
+
+
+// ===== Smooth scroll (custom easing) =====
+// function smoothScrollTo(targetY, duration = 900){
+//   const startY = window.scrollY || window.pageYOffset;
+//   const diff = Math.max(0, targetY) - startY;
+//   const startT = performance.now();
+//   const easeInOut = t => (t<.5) ? 4*t*t*t : 1 - Math.pow(-2*t+2,3)/2;
+
+//   function frame(now){
+//     const elapsed = now - startT;
+//     const p = Math.min(1, elapsed / duration);
+//     const eased = easeInOut(p);
+//     window.scrollTo(0, startY + diff * eased);
+//     if(p < 1) requestAnimationFrame(frame);
+//   }
+//   requestAnimationFrame(frame);
+// }
 
 // TOP 버튼
 document.addEventListener('DOMContentLoaded', ()=>{
+  // const topBtn = document.querySelector('.aside-nav .top-btn');
+  // if(topBtn){
+  //   topBtn.addEventListener('click', e=>{
+  //     e.preventDefault();
+  //     smoothScrollTo(0, 900); // 0.9초
+  //   });
+  // }
 
   // 내부 앵커 스무스 스크롤 (href="#section-id")
   document.querySelectorAll('a[href^="#"]:not([data-scroll="external"])').forEach(a=>{
@@ -186,9 +277,118 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
+  // 내부 앵커 스무스 스크롤(우리가 이미 넣은 로직과 중복되지 않으면 패스)
 });
 
+// =========================
+// About page only scripts
+// =========================
+// (function () {
+//   var html = document.documentElement;
+//   if (!html || html.getAttribute('data-page') !== 'about') return;
 
+//   // 1) 인터섹션 옵저버로 섹션 페이드인 (중복 방지)
+//   if (!window.__ABOUT_OBS_INITIALIZED__) {
+//     window.__ABOUT_OBS_INITIALIZED__ = true;
+
+//     try {
+//       var io = new IntersectionObserver(function (entries) {
+//         entries.forEach(function (e) {
+//           if (e.isIntersecting) {
+//             e.target.classList.add('is-in');
+//             io.unobserve(e.target);
+//           }
+//         });
+//       }, { threshold: 0.15 });
+
+//       document.querySelectorAll('.js-observe').forEach(function (el) { io.observe(el); });
+//     } catch (err) {
+//       // 구형 브라우저 폴백: 즉시 표시
+//       document.querySelectorAll('.js-observe').forEach(function (el) {
+//         el.classList.add('is-in');
+//       });
+//     }
+//   }
+
+//   // 2) CTA 버튼(선택) – consult 페이지로 이동 (기본 a링크지만, 혹시 버튼으로 바뀌어도 안전)
+//   var cta = document.getElementById('cta-consult');
+//   if (cta && cta.tagName === 'BUTTON') {
+//     cta.addEventListener('click', function () { window.location.href = 'consult.html'; });
+//   }
+// })();
+
+/* =========================
+   Consult Page Scripts (scoped)
+   ========================= */
+// (function(){
+//   var html = document.documentElement;
+//   if (!html || html.getAttribute('data-page') !== 'consult') return;
+
+//   var form = document.getElementById('consultForm');
+//   var message = document.getElementById('message');
+//   var charNow = document.getElementById('charNow');
+//   var interestGroup = document.getElementById('interestGroup');
+//   var maxPick = parseInt(interestGroup?.dataset.max || '2', 10);
+
+//   // 글자수 카운터
+//   if (message && charNow) {
+//     var updateCount = function(){
+//       var len = message.value.length;
+//       charNow.textContent = String(len);
+//     };
+//     message.addEventListener('input', updateCount);
+//     updateCount();
+//   }
+
+//   // 관심 프로그램: 최대 2개 제한
+//   if (interestGroup) {
+//     var checkboxes = interestGroup.querySelectorAll('input[type="checkbox"]');
+//     interestGroup.addEventListener('change', function(){
+//       var picked = Array.from(checkboxes).filter(function(c){ return c.checked; });
+//       if (picked.length > maxPick) {
+//         // 마지막 클릭 취소
+//         var last = picked[picked.length-1];
+//         last.checked = false;
+//         alert('관심 프로그램은 최대 ' + maxPick + '개까지 선택할 수 있어요.');
+//       }
+//     });
+//   }
+
+//   // 간단 검증 & 제출 (백엔드 미연동: 일단 기본 동작 방지)
+//   if (form) {
+//     form.addEventListener('submit', function(e){
+//       e.preventDefault();
+
+//       // 필수값
+//       var requiredOk = true;
+//       ['studentName','grade','agree'].forEach(function(id){
+//         var el = document.getElementById(id);
+//         if (!el) return;
+//         if ((el.type === 'checkbox' && !el.checked) || (el.value || '').trim() === '') {
+//           requiredOk = false;
+//           el.focus();
+//         }
+//       });
+
+//       // 성별 라디오
+//       var genderChecked = !!form.querySelector('input[name="gender"]:checked');
+//       if (!genderChecked) { requiredOk = false; form.querySelector('input[name="gender"]').focus(); }
+
+//       if (!requiredOk) {
+//         alert('필수 항목을 확인해주세요.2');
+//         return;
+//       }
+
+//       // 여기서 실제 전송 로직 연결 (fetch/POST 등)
+//       alert('상담 요청이 접수되었습니다. 담당자가 상담시간 내에 연락드릴게요!');
+//       form.reset();
+//       if (charNow) charNow.textContent = '0';
+//     });
+//   }
+// })();
+
+// document.querySelectorAll('.table-wrap').forEach(el=>el.style.scrollBehavior='smooth');
 
 /* =========================================
    [ADD] Lang Switch + i18n
@@ -278,4 +478,54 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
+
+  // 간단 검증
+  // if (form){
+  //   form.addEventListener('submit', (e) => {
+  //     e.preventDefault();
+  //     const need = ['studentName','grade','agree'];
+  //     for (const id of need){
+  //       const el = doc.getElementById(id);
+  //       if (!el) continue;
+  //       if ((el.type === 'checkbox' && !el.checked) || (el.value || '').trim() === ''){
+  //         el.focus(); alert('필수 항목을 확인해주세요.'); return;
+  //       }
+  //     }
+  //     alert('상담 요청이 접수되었습니다. 담당자가 상담시간 내에 연락드릴게요!');
+  //     form.reset(); if (charNow) charNow.textContent = '0';
+  //   });
+  // }
 })();
+
+// ===== GNB: mobile toggle & submenu accordion =====
+// (function(){
+//   const nav = document.querySelector('.gnb');
+//   if(!nav) return;
+
+//   const toggleBtn = nav.querySelector('.nav-toggle');
+//   const list = nav.querySelector('.gnb__list');
+//   if(toggleBtn && list){
+//     toggleBtn.addEventListener('click', ()=>{
+//       const open = list.classList.toggle('is-open');
+//       toggleBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+//     });
+//   }
+
+//   // mobile submenu accordion
+//   const mq = window.matchMedia('(max-width: 1024px)');
+//   nav.querySelectorAll('.has-sub > a').forEach(a=>{
+//     a.addEventListener('click', (e)=>{
+//       if(!mq.matches) return; // desktop은 기본 hover 동작
+//       e.preventDefault();
+//       const li = a.closest('.has-sub');
+//       const open = li.classList.toggle('open');
+//       // 다른 open 닫기 (선택)
+//       nav.querySelectorAll('.has-sub').forEach(x=>{
+//         if(x !== li) x.classList.remove('open');
+//       });
+//     });
+//   });
+// })();
+
+
+
