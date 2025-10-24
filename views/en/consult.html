@@ -19,7 +19,7 @@
       </a>
 
       <!-- Navigation -->
-      <div class="bind-layout">
+      <div class="bind-layout gap34">
         <nav class="gnb_kr">
           <button class="nav-toggle">
             <img src="/assets/img/nav_menu.svg" class="nav-menu">
@@ -56,11 +56,11 @@
             </li>
     
             <li class="has-sub">
-              <a href="/views/en/univ_transfer/sub1000.html">University Transfer Program</a>
+              <a href="/views/en/univ_transfer/sub1000.html">Adult Study Programs</a>
               <ul class="sub">
-                <li><a href="/views/en/univ_transfer/sub1000.html">Coquitlam college</a></li>
-                <li><a href="/views/en/univ_transfer/sub2000.html">Langara college</a></li>
-                <li><a href="/views/en/univ_transfer/sub3000.html">Douglas college</a></li>
+                <li><a href="/views/en/univ_transfer/sub1000.html">High School Program</a></li>
+                <li><a href="/views/en/univ_transfer/sub2000.html">University Transfer/AA</a></li>
+                <li><a href="/views/en/univ_transfer/sub3000.html">English Studies Program</a></li>
               </ul>
             </li>
           </ul>
@@ -85,30 +85,30 @@
 
     <section class="consult-bg" aria-labelledby="hero-title">
       <div class="consult-title">
-        <img src="/assets/img/herald_logo.png">
+        <img src="/assets/img/new-main-banner.png" class="consult-img">
         <!-- <p>상담예약</p> -->
       </div>
     </section>
 
     <!-- ② FORM (overlapped edge) -->
-    <section class="consult-form-section" aria-labelledby="consult-form-title">
+    <section class="consult-form-section margin-b100">
       <div class="container">
-        <form id="consultForm" class="form-card" novalidate>
+        <form class="form-card" novalidate>
           <header class="form-card__head">
-            <h2 id="consult-form-title" class="form-card__title text-22 fw-bold">
-              <img class="ico" aria-hidden="true" src="/assets/img/consult-icon.png">&nbsp;New Consultation Request
+            <h2 class="form-card__title en-consult-title fw-bold">
+              <img class="ico" src="/assets/img/consult-icon.png">&nbsp;New Consultation Request
             </h2>
           </header>
 
           <!-- 1-column form -->
           <div class="form-grid">
             <div class="field">
-              <label for="studentName" class="text-lg fw-semibold">Student’s Name</label>
+              <label for="studentName" class="consult-question fw-semibold">Student’s Name</label>
               <input id="studentName" name="studentName" type="text" placeholder="e.g., Chris Kim" required>
             </div>
 
             <div class="field">
-              <span class="label text-lg fw-semibold">Gender</span>
+              <span class="label consult-question fw-semibold">Gender</span>
               <div class="choice-row">
                 <label class="choice"><input type="radio" name="gender" value="M"><span>Male</span></label>
                 <label class="choice"><input type="radio" name="gender" value="F"><span>Female</span></label>
@@ -117,7 +117,7 @@
             </div>
 
             <div class="field">
-              <label for="grade" class="text-lg fw-semibold">Current Grade</label>
+              <label for="grade" class="consult-question fw-semibold">Current Grade</label>
               <div class="select-wrap">
                 <select id="grade" name="grade" required>
                   <option value="">Select</option>
@@ -140,29 +140,29 @@
             </div>
 
             <div class="field">
-              <label for="mobile" class="text-lg fw-semibold">Mobile Phone</label>
+              <label for="mobile" class="consult-question fw-semibold">Mobile Phone</label>
               <input id="mobile" name="mobile" type="tel" inputmode="tel" placeholder="e.g., 770-123-4567">
             </div>
 
             <div class="field">
-              <label for="kakao" class="text-lg fw-semibold">KakaoTalk ID</label>
+              <label for="kakao" class="consult-question fw-semibold">KakaoTalk ID</label>
               <input id="kakao" name="kakao" type="text" placeholder="e.g., herald_edu">
               <p class="help warn">※ For clients without  Canada or U.S. local phone number, we provide phone consultations via KakaoTalk Voice Call.<br>Please make sure to enter your KakaoTalk ID accurately.
               </p>
             </div>
 
             <div class="field">
-              <label for="email" class="text-lg fw-semibold">Email Address</label>
+              <label for="email" class="consult-question fw-semibold">Email Address</label>
               <input id="email" name="email" type="email" placeholder="example@email.com">
             </div>
 
             <div class="field">
-              <label for="country" class="text-lg fw-semibold">Country of Residence</label>
+              <label for="country" class="consult-question fw-semibold">Country of Residence</label>
               <input id="country" name="country" type="text" placeholder="e.g., Korea / Canada / USA">
             </div>
 
             <div class="field">
-              <span class="label text-lg fw-semibold">Programs of Interest: 
+              <span class="label consult-question fw-semibold">Programs of Interest: 
                 <!-- <em class="muted">Select up to 2</em> -->
               </span>
               <div id="interestGroup" class="choice-row" data-max="2">
@@ -170,12 +170,12 @@
                 <label class="choice"><input type="checkbox" name="interest" value="Catholic"><span>Catholic Private Schools</span></label>
                 <label class="choice"><input type="checkbox" name="interest" value="Guardianship"><span>Guardianship Program</span></label>
                 <label class="choice"><input type="checkbox" name="interest" value="Academic"><span>Academic Tutoring</span></label>
-                <label class="choice"><input type="checkbox" name="interest" value="University"><span>University Transfer Program</span></label>
+                <label class="choice"><input type="checkbox" name="interest" value="University"><span>Adult Study Programs</span></label>
               </div>
             </div>
 
             <div class="field">
-              <label for="message" class="text-lg fw-semibold">Inquiry Details 
+              <label for="message" class="consult-question fw-semibold">Inquiry Details 
                 <!-- <em class="muted">※ Up to 500 characters.</em> -->
               </label>
               <textarea id="message" name="message" rows="7" maxlength="500"
@@ -184,7 +184,7 @@
             </div>
 
             <div class="field agree-row">
-              <label class="check text-lg fw-semibold"><input id="agree" type="checkbox" required><span> I have read and agree to the Privacy Policy.</span></label>
+              <label class="check consult-question fw-semibold"><input id="agree" type="checkbox" required><span> I have read and agree to the Privacy Policy.</span></label>
               <button type="button" id="openPolicy" class="btn-policy">View Policy</button>
             </div>
           </div>

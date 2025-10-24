@@ -54,7 +54,6 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-
 /* ===== Hero Slider (홈 전용) ===== */
 (function initHeroSliders(){
   document.querySelectorAll('.slider').forEach(slider=>{

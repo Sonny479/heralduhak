@@ -3660,7 +3660,7 @@ a {
   background-color: #F8F3EC;
   padding: 10px 8px 10px 8px;
   width: 100%;
-  max-width: 279px;
+  max-width: 280px;
 }
 
 .uhak-row .friends-box .friends-row {
@@ -3718,7 +3718,8 @@ a {
   display: flex;
   flex-direction: row;
   width: 100%;
-  max-width: 279px;
+  max-width: 280px;
+  height: 152px;
 }
 
 .uhak-row .friends-box2 .friends-col {
@@ -3802,8 +3803,86 @@ a {
   line-height: 26px;
 }
 
+.consult-question {
+  font-size: 18px;
+}
+
+.en-consult-title {
+  font-size: 22px;
+}
+
+textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
+  font-size: 14px;
+  font-family: 'Noto Sans KR';
+}
 
 @media (max-width: 1024px) {
+  .cta3-btn {
+    font-size: 14px;
+  }
+
+  .cta3-desc {
+    font-size: 14px;
+  }
+
+  .btn--kakao {
+    font-size: 13px;
+  }
+
+  .en-consult-title {
+    font-size: 18px;
+  }
+
+  .margin-b100 {
+    margin-bottom: 60px;
+  }
+
+  .btn-submit {
+    font-size: 14px;
+  }
+
+  .agree-row {
+    gap: 18px;
+  }
+
+  .agree-row button {
+    font-size: 12px;
+  }
+
+  input::placeholder { /* 표준 */
+    font-size: 14px;
+  }
+
+  input::-webkit-input-placeholder { /* 크롬, 사파리 */
+    font-size: 14px;
+  }
+
+  textarea::placeholder { /* 표준 */
+    font-size: 14px;
+  }
+
+  textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
+    font-size: 14px;
+    font-family: 'Noto Sans KR';
+  }
+
+  .consult-question {
+    font-size: 14px;
+  }
+
+  .consult-bg .consult-title p {
+    font-size: 24px;
+  }
+
+  .consult-bg {
+    padding-inline: 20px;
+    height: 335px;
+  }
+
+  .consult-img {
+    width: 100%;
+  }
+
   .early-abroad-main .e-section4 .total-layout {
     margin-top: 48px;
   }
@@ -3848,8 +3927,8 @@ a {
   }
 
   .early-abroad-main .e-section7 {
-    padding-block: 60px;
-    padding-inline: 20px;
+    padding-block: unset;
+    padding: 50px 20px 60px;
   }
 
   .early-abroad-main .e-section3 .service-package .row .service-item strong {
@@ -4072,7 +4151,7 @@ a {
 
   .e-section1 {
     padding: 0 20px;
-    padding-block: 60px;
+    padding-block: 60px !important;
   }
 
   .with-title strong {
@@ -4090,6 +4169,7 @@ a {
 
   .why-canada-main .section1 .canada-advantage-table {
     padding: 20px 10px;
+    margin-bottom: 60px;
   }
 
   .why-canada-main .section1 .canada-advantage-table strong {
@@ -4448,7 +4528,7 @@ a {
   .en-sp-width {
     width: 90% !important;
     height: unset !important;
-    max-width: 400px;
+    max-width: 190px !important;
   }
 
   .ready-hero__inner {
