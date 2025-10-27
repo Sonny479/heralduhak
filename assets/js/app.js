@@ -1,294 +1,276 @@
 // 모바일 버전 nav 햄버거바
-document.addEventListener('DOMContentLoaded', function(){
-  var navToggleBtn = document.querySelector('.nav-toggle');
-  var gnbList = document.querySelector('.gnb__list');
-  var hasSubItems = document.querySelectorAll('.has-sub');
+document.addEventListener('DOMContentLoaded', () => {
+  const navToggleBtn = document.querySelector('.nav-toggle');
+  const gnbList = document.querySelector('.gnb__list');
+  const hasSubItems = document.querySelectorAll('.has-sub');
 
   // 현재 뷰포트 너비가 1024px 이하인지 확인하는 함수
-  function isMobileView(){ return window.innerWidth <= 1024; }
+  const isMobileView = () => window.innerWidth <= 1024;
 
-  // 1. nav-toggle 기능
-  if (navToggleBtn && gnbList){
-    navToggleBtn.addEventListener('click', function(){
+  // 1. nav-toggle 기능: nav-toggle 클릭 시 gnb__list active 토글
+  if (navToggleBtn && gnbList) {
+    navToggleBtn.addEventListener('click', () => {
       if (isMobileView()) {
         gnbList.classList.toggle('active');
       }
     });
   }
 
-  // 2. has-sub 기능
-  for (var i=0; i<hasSubItems.length; i++){
-    var item = hasSubItems[i];
-    var mainLink = item.querySelector('a');
-    var subMenu = item.querySelector('.sub');
-    if (mainLink && subMenu){
-      mainLink.addEventListener('click', function(e){
-        if (isMobileView()){
+  // 2. has-sub 기능: has-sub 클릭 시 해당 서브 메뉴 active 토글
+  hasSubItems.forEach(item => {
+    // has-sub 바로 아래의 <a> 태그를 클릭 이벤트 대상으로 설정
+    const mainLink = item.querySelector('a');
+    // has-sub 바로 아래의 <ul>.sub 태그가 서브 메뉴
+    const subMenu = item.querySelector('.sub');
+
+    if (mainLink && subMenu) { // 메인 링크와 서브 메뉴가 모두 존재할 경우에만 동작
+      mainLink.addEventListener('click', (e) => {
+        if (isMobileView()) {
+          // 기본 링크 이동 동작 방지 (서브 메뉴 토글이 우선)
           e.preventDefault();
-          var sub = this.parentNode.querySelector('.sub');
-          if (sub) sub.classList.toggle('active');
+
+          // 클릭된 has-sub 항목의 서브 메뉴 active 클래스 토글
+          subMenu.classList.toggle('active');
         }
       });
     }
-  }
+  });
 
-  // 3. 리사이즈 시 메뉴 초기화
-  window.addEventListener('resize', function(){
-    if (!isMobileView()){
-      if (gnbList && gnbList.classList.contains('active')){
+  // 3. 화면 크기 조절 시 메뉴 상태 초기화 (옵션)
+  // 1024px을 넘어가면 모바일 메뉴와 서브 메뉴의 active 클래스 제거
+  window.addEventListener('resize', () => {
+    if (!isMobileView()) {
+      if (gnbList.classList.contains('active')) {
         gnbList.classList.remove('active');
+        // document.body.classList.remove('no-scroll');
       }
-      for (var j=0; j<hasSubItems.length; j++){
-        var sub = hasSubItems[j].querySelector('.sub');
-        if (sub && sub.classList.contains('active')){
-          sub.classList.remove('active');
+      hasSubItems.forEach(item => {
+        const subMenu = item.querySelector('.sub');
+        if (subMenu && subMenu.classList.contains('active')) {
+          subMenu.classList.remove('active');
         }
-      }
+      });
     }
   });
 });
-
 
 /* ===== Hero Slider (홈 전용) ===== */
 (function initHeroSliders(){
-  var sliders = document.querySelectorAll('.slider');
-  for (var i=0; i<sliders.length; i++){
-    (function(slider){
-      var slidesWrap = slider.querySelector('.slides');
-      var slideEls = slider.querySelectorAll('.slide');
-      var dots = slider.querySelectorAll('.dot');
-      var prevBtn = slider.querySelector('.prev');
-      var nextBtn = slider.querySelector('.next');
+  document.querySelectorAll('.slider').forEach(slider=>{
+    const slidesWrap = slider.querySelector('.slides');
+    const slideEls = slider.querySelectorAll('.slide');
+    const dots = slider.querySelectorAll('.dot');
+    const prevBtn = slider.querySelector('.prev');
+    const nextBtn = slider.querySelector('.next');
 
-      var total = slideEls.length;
-      var index = 0;
-      var timer = null;
-      var interval = parseInt(slider.getAttribute('data-interval') || '5000', 10);
-      var autoplay = slider.getAttribute('data-autoplay') === 'true';
+    const total = slideEls.length;
+    let index = 0;
+    let timer = null;
+    const interval = parseInt(slider.getAttribute('data-interval') || '5000', 10);
+    const autoplay = slider.getAttribute('data-autoplay') === 'true';
 
-      function go(to){
-        index = (to + total) % total;
-        if (slidesWrap) slidesWrap.style.transform = 'translateX(-' + (index * 100) + '%)';
-        for (var d=0; d<dots.length; d++){
-          var active = (d === index);
-          dots[d].classList.toggle('is-active', active);
-          dots[d].setAttribute('aria-selected', active ? 'true' : 'false');
-        }
-      }
+    function go(to){
+      index = (to + total) % total;
+      slidesWrap.style.transform = `translateX(-${index * 100}%)`;
+      dots.forEach((d,i)=>{
+        d.classList.toggle('is-active', i===index);
+        d.setAttribute('aria-selected', i===index ? 'true' : 'false');
+      });
+    }
+    function next(){ go(index+1); }
+    function prev(){ go(index-1); }
 
-      function next(){ go(index+1); }
-      function prev(){ go(index-1); }
+    function start(){
+      if(!autoplay || timer) return;
+      timer = setInterval(next, interval);
+    }
+    function stop(){ if(timer){ clearInterval(timer); timer=null; } }
 
-      function start(){
-        if(!autoplay || timer) return;
-        timer = setInterval(next, interval);
-      }
-      function stop(){
-        if(timer){ clearInterval(timer); timer = null; }
-      }
+    nextBtn && nextBtn.addEventListener('click', ()=>{ stop(); next(); start(); });
+    prevBtn && prevBtn.addEventListener('click', ()=>{ stop(); prev(); start(); });
+    dots.forEach((dot,i)=> dot.addEventListener('click', ()=>{ stop(); go(i); start(); }));
 
-      if (nextBtn) nextBtn.addEventListener('click', function(){ stop(); next(); start(); });
-      if (prevBtn) prevBtn.addEventListener('click', function(){ stop(); prev(); start(); });
-      for (var d2=0; d2<dots.length; d2++){
-        (function(i2){
-          dots[i2].addEventListener('click', function(){ stop(); go(i2); start(); });
-        })(d2);
-      }
+    slider.addEventListener('mouseenter', stop);
+    slider.addEventListener('mouseleave', start);
 
-      slider.addEventListener('mouseenter', stop);
-      slider.addEventListener('mouseleave', start);
-
-      var sx = 0;
-      slider.addEventListener('touchstart', function(e){
-        sx = e.touches[0].clientX; stop();
-      }, {passive:true});
-      slider.addEventListener('touchend', function(e){
-        var dx = e.changedTouches[0].clientX - sx;
-        if (Math.abs(dx) > 30) (dx < 0 ? next() : prev());
-        start();
-      }, {passive:true});
-
-      if ('IntersectionObserver' in window){
-        var io = new IntersectionObserver(function(ents){
-          for (var k=0; k<ents.length; k++){
-            if (ents[k].isIntersecting) start(); else stop();
-          }
-        }, {threshold:0.3});
-        io.observe(slider);
-      } else {
-        start();
-      }
-
-      go(0);
+    let sx = 0;
+    slider.addEventListener('touchstart', e=>{ sx = e.touches[0].clientX; stop(); }, {passive:true});
+    slider.addEventListener('touchend', e=>{
+      const dx = e.changedTouches[0].clientX - sx;
+      if (Math.abs(dx) > 30) (dx < 0 ? next() : prev());
       start();
-    })(sliders[i]);
-  }
+    }, {passive:true});
+
+    if ('IntersectionObserver' in window){
+      const io = new IntersectionObserver((ents)=>{
+        ents.forEach(ent=> ent.isIntersecting ? start() : stop());
+      }, {threshold:0.3});
+      io.observe(slider);
+    } else {
+      // 구형 브라우저 폴백
+      start();
+    }
+
+    go(0);
+    start();
+  });
 })();
 
 
-// TOP 버튼 및 스무스 스크롤
-document.addEventListener('DOMContentLoaded', function(){
-  var links = document.querySelectorAll('a[href^="#"]:not([data-scroll="external"])');
-  for (var i=0; i<links.length; i++){
-    links[i].addEventListener('click', function(e){
-      var id = this.getAttribute('href').slice(1);
+
+// TOP 버튼
+document.addEventListener('DOMContentLoaded', ()=>{
+
+  // 내부 앵커 스무스 스크롤 (href="#section-id")
+  document.querySelectorAll('a[href^="#"]:not([data-scroll="external"])').forEach(a=>{
+    a.addEventListener('click', e=>{
+      const id = a.getAttribute('href').slice(1);
       if(!id) return;
-      var el = document.getElementById(id);
-      if(!el) return;
+      const el = document.getElementById(id);
+      if(!el) return; // 연결은 나중에 네가 추가 가능
       e.preventDefault();
-      var y = el.getBoundingClientRect().top + window.scrollY - 0;
-      if (window.scrollTo){
-        window.scrollTo({top: y, behavior:'smooth'});
-      } else {
-        window.scroll(0, y);
-      }
+      const y = el.getBoundingClientRect().top + window.scrollY - 0; // 필요 시 오프셋 조절
+      smoothScrollTo(y, 900);
     });
-  }
+  });
 });
 
-
-// ===== Stories: seamless marquee =====
-document.addEventListener('DOMContentLoaded', function(){
-  var viewport = document.querySelector('.stories-viewport');
-  var track = document.querySelector('.stories-track');
+// ===== Stories: seamless marquee (center 1194px) =====
+document.addEventListener('DOMContentLoaded', () => {
+  const viewport = document.querySelector('.stories-viewport');
+  const track = document.querySelector('.stories-track');
   if (!viewport || !track) return;
 
-  var SPEED = 60; // px/sec
-  var orig = Array.prototype.slice.call(track.children);
-  var w = track.scrollWidth;
-  var need = viewport.clientWidth * 2;
+  const SPEED = 60; // px/sec (원하는 속도 조절)
 
-  while (w < need){
-    for (var i=0; i<orig.length; i++){
-      track.appendChild(orig[i].cloneNode(true));
-    }
+  // 1) 콘텐츠를 복제해 전체 길이가 최소 2배(무한 순환) 되도록 채움
+  const orig = Array.from(track.children);
+  let w = track.scrollWidth;
+  const need = viewport.clientWidth * 2; // 2배 이상이면 자연 루프
+  while (w < need) {
+    orig.forEach(node => track.appendChild(node.cloneNode(true)));
     w = track.scrollWidth;
   }
 
-  var setWidth = 0;
-  for (var i2=0; i2<orig.length; i2++){
-    var el = track.children[i2];
-    var rect = el.getBoundingClientRect();
-    if (!rect.width) continue; // Safari 0 width guard
-    var style = window.getComputedStyle ? getComputedStyle(track) : {};
-    var gap = parseFloat(style.columnGap || style.gap || 0) || 0;
-    setWidth += rect.width;
-    if (i2 < orig.length - 1) setWidth += gap;
-  }
+  // 2) 루프 구간 너비(= 원본 세트 길이) 계산
+  const setWidth = (() => {
+    // 원본 세트 길이는 최초 8장의 폭 + 간격
+    // track 첫 세트(원본 8개)의 총 폭을 계산
+    let sum = 0;
+    for (let i = 0; i < orig.length; i++) {
+      const el = track.children[i];
+      const style = getComputedStyle(track);
+      const gap = parseFloat(style.columnGap || style.gap || 0);
+      sum += el.getBoundingClientRect().width;
+      if (i < orig.length - 1) sum += gap;
+    }
+    return Math.round(sum);
+  })();
 
-  if (setWidth > 0){
-    var duration = (setWidth / SPEED).toFixed(2);
-    track.style.setProperty('--loop', setWidth + 'px');
-    track.style.setProperty('--duration', duration + 's');
-    track.classList.add('is-animating');
-  }
+  // 3) CSS 변수 주입: 루프 길이/지속시간
+  const duration = (setWidth / SPEED).toFixed(2); // 초
+  track.style.setProperty('--loop', `${setWidth}px`);
+  track.style.setProperty('--duration', `${duration}s`);
+  track.classList.add('is-animating');
 
-  var rid = null;
-  window.addEventListener('resize', function(){
+  // 4) 리사이즈 대응(간단): 폭 변화 시 재계산
+  let rid = null;
+  window.addEventListener('resize', () => {
     cancelAnimationFrame(rid);
-    rid = requestAnimationFrame(function(){
-      var newW = track.scrollWidth;
-      if (newW < viewport.clientWidth * 2){
-        for (var i3=0; i3<orig.length; i3++){
-          track.appendChild(orig[i3].cloneNode(true));
-        }
+    rid = requestAnimationFrame(() => {
+      const newW = track.scrollWidth;
+      if (newW < viewport.clientWidth * 2) {
+        // 부족하면 한 세트 더 복제
+        orig.forEach(node => track.appendChild(node.cloneNode(true)));
       }
     });
   });
 });
 
 
-/* ===== Lang Switch + i18n ===== */
-(function(){
-  var root = document.documentElement;
-  var switchEl = document.getElementById('langSwitch');
-  if(!switchEl) return;
 
-  var btn = switchEl.querySelector('.lang-switch__btn');
-  var list = switchEl.querySelector('.lang-switch__list');
-  var label = switchEl.querySelector('[data-lang-label]');
+/* =========================================
+   [ADD] Lang Switch + i18n
+========================================= */
+(function(){
+  const $root = document.documentElement;
+  const $switch = document.getElementById('langSwitch');
+  if(!$switch) return;
+
+  const $btn = $switch.querySelector('.lang-switch__btn');
+  const $list = $switch.querySelector('.lang-switch__list');
+  const $label = $switch.querySelector('[data-lang-label]');
+
+
 
   function applyI18n(lang){
-    var dict = (window.I18N && window.I18N[lang]) || (window.I18N && window.I18N.ko) || {};
-    var els = document.querySelectorAll('[data-i18n]');
-    for (var i=0; i<els.length; i++){
-      var key = els[i].getAttribute('data-i18n');
-      if (dict[key]) els[i].textContent = dict[key];
-    }
-    root.setAttribute('lang', lang === 'ko' ? 'ko' : 'en');
+    const dict = I18N[lang] || I18N.ko;
+    document.querySelectorAll('[data-i18n]').forEach(el=>{
+      const key = el.getAttribute('data-i18n');
+      if(dict[key]) el.textContent = dict[key];
+    });
+    $root.setAttribute('lang', lang === 'ko' ? 'ko' : 'en');
   }
 
   function setLang(lang, displayLabel){
-    try {
-      localStorage.setItem('site_lang', lang);
-    } catch(e){
-      console.warn('localStorage unavailable:', e.message);
-    }
-    if (label && displayLabel) label.textContent = displayLabel;
-    // applyI18n(lang); // 필요 시 해제
+    localStorage.setItem('site_lang', lang);
+    if(displayLabel) $label.textContent = displayLabel;
+    // applyI18n(lang);
   }
 
-  btn.addEventListener('click', function(e){
+  // toggle open/close
+  $btn.addEventListener('click', e=>{
     e.stopPropagation();
-    var open = switchEl.classList.toggle('is-open');
-    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    const open = $switch.classList.toggle('is-open');
+    $btn.setAttribute('aria-expanded', open ? 'true' : 'false');
   });
-
-  list.addEventListener('click', function(e){
-    var b = e.target.closest('button[data-lang]');
+  // select
+  $list.addEventListener('click', e=>{
+    const b = e.target.closest('button[data-lang]');
     if(!b) return;
-    var lang = b.getAttribute('data-lang');
-    var lab  = b.getAttribute('data-label');
+    const lang = b.getAttribute('data-lang');      // 'en' | 'ko'
+    const lab  = b.getAttribute('data-label');     // 'EN' | 'KR'
     setLang(lang, lab);
-    switchEl.classList.remove('is-open');
-    btn.setAttribute('aria-expanded','false');
+    $switch.classList.remove('is-open');
+    $btn.setAttribute('aria-expanded','false');
   });
-
-  document.addEventListener('click', function(){
-    if(switchEl.classList.contains('is-open')){
-      switchEl.classList.remove('is-open');
-      btn.setAttribute('aria-expanded','false');
+  // close on outside
+  document.addEventListener('click', ()=> {
+    if($switch.classList.contains('is-open')){
+      $switch.classList.remove('is-open');
+      $btn.setAttribute('aria-expanded','false');
     }
   });
 
-  var saved = 'ko';
-  try {
-    saved = localStorage.getItem('site_lang') || 'ko';
-  } catch(e){
-    console.warn('localStorage not accessible in Safari private mode.');
-  }
+  // init
+  const saved = localStorage.getItem('site_lang') || 'kr';
   setLang(saved, saved==='ko' ? 'KR' : 'EN');
 })();
 
-
 // ===== Consult page only =====
 (function(){
-  var doc = document;
-  var isConsult = (doc.documentElement.getAttribute('data-page') === 'consult') ||
-                  (doc.body && doc.body.getAttribute('data-page') === 'consult');
+  const doc = document;
+  const isConsult = (doc.documentElement.getAttribute('data-page') === 'consult') ||
+                    (doc.body && doc.body.getAttribute('data-page') === 'consult');
   if(!isConsult) return;
 
-  var form = doc.getElementById('consultForm');
-  var message = doc.getElementById('message');
-  var charNow = doc.getElementById('charNow');
-  var interestGroup = doc.getElementById('interestGroup');
-  var maxPick = parseInt((interestGroup && interestGroup.dataset && interestGroup.dataset.max) || '2', 10);
+  const form = doc.getElementById('consultForm');
+  const message = doc.getElementById('message');
+  const charNow = doc.getElementById('charNow');
+  const interestGroup = doc.getElementById('interestGroup');
+  const maxPick = parseInt(interestGroup?.dataset.max || '2', 10);
 
   // 글자수 표시
   if (message && charNow){
-    function update(){ charNow.textContent = String(message.value.length); }
-    message.addEventListener('input', update);
-    update();
+    const update = () => { charNow.textContent = String(message.value.length); };
+    message.addEventListener('input', update); update();
   }
 
-  // 관심 프로그램 최대 선택 제한
+  // 관심 프로그램 최대 2개 선택 제한
   if (interestGroup){
-    var boxes = interestGroup.querySelectorAll('input[type="checkbox"]');
-    interestGroup.addEventListener('change', function(){
-      var picked = [];
-      for (var i=0; i<boxes.length; i++){
-        if (boxes[i].checked) picked.push(boxes[i]);
-      }
+    const boxes = interestGroup.querySelectorAll('input[type="checkbox"]');
+    interestGroup.addEventListener('change', () => {
+      const picked = Array.from(boxes).filter(b => b.checked);
       if (picked.length > maxPick){
         picked[picked.length - 1].checked = false;
         alert('관심 프로그램은 최대 ' + maxPick + '개까지 선택할 수 있어요.');
