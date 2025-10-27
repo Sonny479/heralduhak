@@ -3709,9 +3709,6 @@ a {
   background-image: url('/assets/img/new_ch_hover.png');
 }
 
-
-
-
 .uhak-row .friends-box2 {
   background-color: #F8F3EC;
   padding: 10px 8px 10px 8px;
@@ -3731,7 +3728,8 @@ a {
   font-family: "Noto Sans";
   font-size: 18px;
   font-weight: 600;
-  letter-spacing: -0.9px;
+  /* letter-spacing: -0.9px; */
+  letter-spacing: -1.1px;
   align-items: center;
   display: flex;
 }
@@ -3816,7 +3814,437 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
   font-family: 'Noto Sans KR';
 }
 
+.academic_tutoring {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  padding: 60px 0 80px;
+}
+
+.academic_tutoring .tutoring-title  {
+  display: flex;
+  flex-direction: column;
+}
+
+.academic_tutoring .tutoring-title .tutoring-img {
+  display: flex;
+  justify-content: center;
+}
+
+.academic_tutoring .tutoring-title strong {
+  color: #4B3C37;
+  font-family: "Noto Sans";
+  font-size: 32px;
+  font-weight: 700;
+  line-height: normal;
+  text-align: center;
+}
+
+.academic_tutoring .tutoring-title .tutoring-title-text {
+  color: #4B3C37;
+  text-align: center;
+  font-family: "Noto Sans";
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  word-break: keep-all;
+  margin-top: 16px;
+}
+
+.tutoring-guide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background-color: #fff;
+  padding-bottom: 80px;
+}
+
+.tutoring-guide .t-program-title {
+  color: #803130;
+  text-align: center;
+  font-family: "Noto Sans";
+  font-size: 20px;
+  font-weight: 900;
+  line-height: normal;
+  letter-spacing: -0.2px;
+  margin-bottom: 24px;
+}
+
+.tutoring-guide .tutoring-layout {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 40px;
+}
+
+.tutoring-guide .tutoring-layout .tut-col {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.tutoring-guide .tutoring-layout .tut-col .tut-box {
+  display: flex;
+  flex-direction: column;
+  width: 576px;
+}
+
+.tutoring-guide .tutoring-layout .tut-col .tut-box strong {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #CE5D5F;
+  color: #FFF;
+  text-align: center;
+  font-family: "Noto Sans";
+  font-size: 20px;
+  font-weight: 900;
+  line-height: normal;
+  letter-spacing: -0.2px;
+  width: 100%;
+  height: 48px;
+}
+
+.tutoring-guide .tutoring-layout .tut-col .tut-box .tut-contents {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  gap: 16px;
+  background: #F8F3EC;
+}
+
+.tutoring-guide .tutoring-layout .tut-col .tut-box .tut-contents2 {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  gap: 20px;
+  background: #F8F3EC;
+}
+
+.tutoring-guide .tutoring-layout .tut-col .tut-box .tut-contents2 p {
+  color: #4B3C37;
+  font-family: "Noto Sans";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 150%;
+  letter-spacing: -0.16px;
+}
+
+.tutoring-guide .tutoring-layout .tut-col .tut-box .tut-contents2 p b {
+  color: #4B3C37;
+  font-family: "Noto Sans";
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 30px;
+  letter-spacing: -0.2px;
+}
+
+.tutoring-guide .tutoring-layout .tut-col .tut-box .tut-contents p {
+  color: #4B3C37;
+  font-family: "Noto Sans";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 150%;
+  letter-spacing: -0.16px;
+}
+
+.tutoring-guide .tutoring-layout .tut-col .tut-box .tut-contents p b {
+  color: #4B3C37;
+  font-family: "Noto Sans";
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 30px;
+  letter-spacing: -0.2px;
+}
+
+.academic_tutoring .uhak-tutoring {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.academic_tutoring .uhak-tutoring .uhak-title-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.academic_tutoring .uhak-tutoring .uhak-title-layout strong {
+  color: #803130;
+  text-align: center;
+  font-family: "Noto Sans";
+  font-size: 32px;
+  font-weight: 900;
+  line-height: normal;
+  letter-spacing: -0.32px;
+}
+
+.academic_tutoring .uhak-tutoring .uhak-title-layout p {
+  display: flex;
+  padding: 4px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  color: #4B3C37;
+  font-family: "Noto Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  background: #FFC561;
+  margin-top: 16px;
+}
+
+.academic_tutoring .uhak-tutoring .teachers-layout {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 74px;
+  width: 100%;
+  margin-top: 32px;
+}
+
+.academic_tutoring .uhak-tutoring .teachers-layout .teachers-col {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.academic_tutoring .uhak-tutoring .teachers-layout .teacher-box {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 559px;
+}
+
+.academic_tutoring .uhak-tutoring .teachers-layout .teacher-box .teacher-content1 {
+  display: flex;
+  flex-direction: row;
+}
+
+.academic_tutoring .uhak-tutoring .teachers-layout .teacher-box .teacher-content1 strong {
+  display: flex;
+  padding: 6px 16px;
+  justify-content: center;
+  align-items: center;
+  color: #4B3C37;
+  font-family: "Noto Sans";
+  font-size: 20px;
+  font-weight: 900;
+  line-height: normal;
+  letter-spacing: -0.2px;
+  background: #F1E6DE;
+}
+
+.academic_tutoring .uhak-tutoring .teachers-layout .teacher-box .teacher-content1 p {
+  color: #F5F5F5;
+  font-family: "Noto Sans";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: -0.16px;
+  background: #CE5D5F;
+  display: flex;
+  padding: 4px 14px;
+  align-items: center;
+  flex: 1 0 0;
+  align-self: stretch;
+}
+
+.academic_tutoring .uhak-tutoring .teachers-layout .teacher-box .teacher-content2 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 16px;
+  border-radius: 0 0 8px 8px;
+  border: 1px solid #DDD;
+  background: #FFF;
+}
+
+.academic_tutoring .uhak-tutoring .teachers-layout .teacher-box .teacher-content2 img {
+  width: 144px;
+  /* height: 100%; */
+  height: 160px;
+  align-self: self-end;
+}
+
+.academic_tutoring .uhak-tutoring .teachers-layout .teacher-box .teacher-content2 ul {
+  color: #4B3C37;
+  font-family: "Noto Sans";
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 21px;
+  letter-spacing: -0.14px;
+}
+
+.mob-teacher p {
+  display: none;
+}
+
 @media (max-width: 1024px) {
+  .academic_tutoring .uhak-tutoring .teachers-layout .teachers-col {
+    width: 100%;
+    align-items: center;
+    max-width: 400px;
+  }
+
+  .mob-teacher p {
+    display: block;
+  }
+
+  .academic_tutoring .uhak-tutoring .teachers-layout {
+    gap: 32px;
+  }
+
+  .academic_tutoring .uhak-tutoring .teachers-layout .teacher-box .teacher-content1 {
+    display: none;
+  }
+
+  .academic_tutoring .uhak-tutoring .teachers-layout .teacher-box .teacher-content2 .mob-teacher {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+    border-radius: 8px 8px 0 0;
+    background: #F8F3EC;
+    width: 100%;
+  }
+
+  .academic_tutoring .uhak-tutoring .teachers-layout .teacher-box .teacher-content2 .mob-teacher p b {
+    color: #4B3C37;
+    font-family: "Noto Sans";
+    font-size: 20px;
+    font-weight: 900;
+    line-height: normal;
+    letter-spacing: -0.2px;
+  }
+
+  .academic_tutoring .uhak-tutoring .teachers-layout .teacher-box .teacher-content2 .mob-teacher p {
+    color: #666;
+    font-family: "Noto Sans";
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 19px;
+    letter-spacing: -0.16px;
+    padding-right: 2px;
+  }
+
+  .academic_tutoring .uhak-tutoring .teachers-layout .teacher-box .teacher-content2 {
+    flex-direction: column;
+    padding: unset;
+    border: unset;
+  }
+
+  .academic_tutoring .uhak-tutoring .teachers-layout .teacher-box {
+    width: 100%;
+    /* max-width: 320px; */
+  }
+
+  .academic_tutoring .uhak-tutoring .teachers-layout .teacher-box .teacher-content2 img {
+    width: 102px;
+    height: auto;
+    align-self: center;
+  }
+
+  .academic_tutoring .uhak-tutoring .teachers-layout .teacher-box .teacher-content2 ul {
+    font-size: 12px;
+    line-height: 20px;
+    word-break: keep-all;
+    align-self: normal;
+    padding-block: 16px;
+    border-radius: 0 0 8px 8px;
+    border: 1px solid #DDD;
+    background: #FFF;
+    padding-left: 38px;
+    padding-right: 4px;
+  }
+
+  .academic_tutoring .uhak-tutoring .teachers-layout .teacher-box .teacher-content1 p {
+    font-size: 14px;
+  }
+
+  .academic_tutoring .uhak-tutoring .teachers-layout .teacher-box .teacher-content1 strong {
+    font-size: 14px;
+  }
+
+  .academic_tutoring .uhak-tutoring .uhak-title-layout p {
+    display: unset;
+  }
+
+  .academic_tutoring .uhak-tutoring .uhak-title-layout strong {
+    font-size: 24px;
+  }
+
+  .tutoring-guide .tutoring-layout .tut-col .tut-box {
+    width: 100%;
+    max-width: 356px;
+  }
+
+  .tutoring-guide {
+    padding-bottom: 60px;
+    padding-inline: 20px;
+  }
+
+  .tutoring-guide .tutoring-layout .tut-col .tut-box .tut-contents2 {
+    gap: 8px;
+    padding: 12px;
+  }
+
+  .tutoring-guide .tutoring-layout .tut-col .tut-box .tut-contents2 p {
+    font-size: 14px;
+  }
+  
+  .tutoring-guide .tutoring-layout .tut-col .tut-box .tut-contents2 p b {
+    font-size: 14px;
+  }
+
+  .tutoring-guide .tutoring-layout .tut-col .tut-box .tut-contents {
+    padding: 12px;
+    gap: 8px;
+  }
+
+  .tutoring-guide .tutoring-layout .tut-col .tut-box .tut-contents p {
+    font-size: 14px;
+  }
+
+  .tutoring-guide .tutoring-layout .tut-col .tut-box .tut-contents p b {
+    font-size: 14px;
+  }
+
+  .tutoring-guide .tutoring-layout .tut-col .tut-box strong {
+    font-size: 14px;
+    height: 32px;
+  }
+
+  .tutoring-guide .t-program-title {
+    font-size: 18px;
+  }
+
+  .academic_tutoring .tutoring-title strong {
+    font-size: 24px;
+  }
+
+  .academic_tutoring .tutoring-title .tutoring-img img {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .academic_tutoring {
+    padding: 60px 20px 60px;
+  }
+
+  .gnb_kr .gnb__list {
+    box-shadow: 0 12px 24px rgba(0,0,0,.12);
+  }
+  
   .cta3-btn {
     font-size: 14px;
   }

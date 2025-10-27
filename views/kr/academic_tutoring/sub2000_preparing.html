@@ -22,7 +22,9 @@
       <!-- 내비게이션 -->
       <div class="bind-layout">
         <nav class="gnb_kr" aria-label="주요 메뉴">
-          <button class="nav-toggle" aria-expanded="false" aria-controls="gnbList">메뉴</button>
+          <button class="nav-toggle">
+            <img src="/assets/img/nav_menu.svg" class="nav-menu">
+          </button>
           <ul id="gnbList" class="gnb__list">
             <li><a href="/views/kr/about_us/sub1000.html">회사소개</a></li>
 
@@ -72,7 +74,7 @@
             <svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10l5 5 5-5" fill="none" stroke="currentColor" stroke-width="2"/></svg>
           </button>
           <ul class="lang-switch__list" role="listbox" aria-label="Language">
-            <li><button role="option" data-lang="en" data-label="EN" onClick="location.href='/views/en/academic_tutoring/sub1000.html'">EN</button></li>
+            <li><button role="option" data-lang="en" data-label="EN" onClick="location.href='/views/en/academic_tutoring/sub2000.html'">EN</button></li>
             <li><button role="option" data-lang="ko" data-label="KR">KR</button></li>
           </ul>
         </div>
@@ -80,30 +82,36 @@
     </div>
   </header>
 
-  <main class="why-canada-main">
-    <section class="section1 white-bg">
-      <div class="banner-bg">
-        <p>아카데믹 튜터링</p>
+  <main id="main">
+    <!-- ===== 준비중 히어로 ===== -->
+    <section class="ready-hero" aria-labelledby="ready-title">
+      <div class="ready-hero__inner">
+        <!-- 가운데 들어가는 배너 이미지 (두번째 첨부이미지) -->
+        <img class="ready-hero__banner" src="/assets/img/new_preparing.png" alt="HERALD Uhak Canada 준비중 배너">
+
+        <div class="ready-contents">
+          <!-- 안내문구 -->
+          <p id="ready-title" class="ready-hero__text">현재 서비스 준비 중인 페이지입니다.</p>
+  
+          <!-- 메인으로 돌아가기 버튼 -->
+          <a class="btn btn--primary ready-hero__btn" href="/index.html">메인으로 돌아가기 →</a>
+        </div>
       </div>
-      <div class="max-1192">
-        <div class="new-title-layout">
-          <img src="/assets/img/tutoring_title.png">
-          <strong>전용 아카데믹 튜터링 프로그램</strong>
-          <p class="margin-t16 keep-all">HIS헤럴드교육센터는 캐나다 유학생을 위한 전용 교육 프로그램을 운영하며, 학년·학습 단계에 따라 Elementary, Secondary, Post-Secondary, EC(English Competency)로 체계적으로 구분합니다. 학생의 과목별 수준과 학교 커리큘럼, 이해도를 종합 고려해 맞춤 설계하고 필요 시 선택 지원합니다.</p>
-        </div>
-        <div class="tutoring-prog">
-          <p>프로그램 안내</p>
-          <div class="prog-guide">
-            <div>
-              <div></div>
-              <div></div>
-              <div></div>
-            </div>
-            <div>
-              <div></div>
-            </div>
-          </div>
-        </div>
+    </section>
+
+    <!-- ===== 하단 배경영역 ===== -->
+    <section class="ready-bottom" aria-labelledby="kakao-cta-title">
+      <!-- 세번째 첨부이미지: 와이드 배경 (배경으로 사용) -->
+      <div class="ready-bottom__bg"></div>
+
+      <!-- 네번째 첨부이미지(흰색 로고)를 배경 위에 오버레이 -->
+      <div class="ready-bottom__overlay">
+        <img class="ready-bottom__logo" src="/assets/img/new-main-banner.png" alt="HERALD Uhak Canada">
+        <!-- 카카오 상담 CTA -->
+        <h2 id="kakao-cta-title" class="sr-only">카카오톡 빠른 상담 예약</h2>
+        <a class="btn btn--kakao ready-bottom__kakao" href="https://pf.kakao.com" target="_blank" rel="noopener">
+          카카오톡으로 빠른 상담 예약하기 →
+        </a>
       </div>
     </section>
   </main>
@@ -113,9 +121,15 @@
     <div class="footer__inner">
       <!-- 왼쪽 영역 -->
       <div class="footer__left">
-        <a href="/index.html" class="footer__brand" aria-label="HERALD UHAK CA">
-          <img src="/assets/img/herald uhak ca logo3.png" alt="HERALD UHAK CA 로고">
-        </a>
+        <div class="sp-row">
+          <a href="/index.html" class="footer__brand footer-line" aria-label="HERALD UHAK CA">
+            <img src="/assets/img/new_footer2.png" alt="HERALD UHAK CA 로고">
+          </a>
+
+          <a href="/index.html" class="footer__brand" aria-label="HERALD UHAK CA">
+            <img src="/assets/img/new_footer.png" alt="HERALD UHAK CA 로고">
+          </a>
+        </div>
 
         <nav class="footer__links" aria-label="푸터 메뉴">
           <a href="/views/kr/about_us/sub1000.html">회사소개</a>
@@ -126,8 +140,12 @@
         </nav>
 
         <p class="footer__copy">
-          Copyrights KOREAHERALD EDUCATION CANADA Inc. © 2024 All Rights Reserved.<br>
-          400 601 West Broadway, Vancouver, British Columbia, Canada V5Z4C2
+          Copyright © 2025 <strong>Digital Herald Co.,</strong> Ltd. All Rights Reserved.<br>
+          4F, 6 Namdaemun-ro 10-gil, Jung-gu, Seoul, Republic of Korea (04539)
+        </p>
+        <p class="footer__copy">
+          Copyright © 2025 <strong>KoreaHerald Education Canada Inc.</strong> All Rights Reserved.<br>
+          400–601 West Broadway, Vancouver, British Columbia, Canada V5Z 4C2
         </p>
       </div>
     </div>
