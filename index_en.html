@@ -22,8 +22,23 @@
   </style>
 
   <link rel="stylesheet" href="/assets/css/styles.css"/>
-  <script defer src="/assets/js/app.js"></script>
   <noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
+  <!-- Safari 호환성 및 에러 방지 -->
+  <script>
+    // IntersectionObserver 폴리필
+    if (!window.IntersectionObserver) {
+      window.IntersectionObserver = function(callback, options) {
+        this.callback = callback;
+        this.observe = function(target) {
+          // 폴백: 즉시 실행
+          setTimeout(function() {
+            callback([{isIntersecting: true, target: target}]);
+          }, 100);
+        };
+      };
+    }
+  </script>
+  <script src="/assets/js/app.js"></script>
 </head>
 
 <body data-page="home">

@@ -23,6 +23,21 @@
 
   <link rel="stylesheet" href="/assets/css/styles.css"/>
   <noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
+  <!-- Safari 호환성 및 에러 방지 -->
+  <script>
+    // IntersectionObserver 폴리필
+    if (!window.IntersectionObserver) {
+      window.IntersectionObserver = function(callback, options) {
+        this.callback = callback;
+        this.observe = function(target) {
+          // 폴백: 즉시 실행
+          setTimeout(function() {
+            callback([{isIntersecting: true, target: target}]);
+          }, 100);
+        };
+      };
+    }
+  </script>
 </head>
 <body data-page="home">
   <a class="skip" href="#main" data-i18n="a11y.skip">본문 바로가기</a>
@@ -405,6 +420,6 @@
       </div>
     </div>
   </footer>
-  <script defer src="/assets/js/app.js"></script>
+  <script src="/assets/js/app.js"></script>
 </body>
 </html>
