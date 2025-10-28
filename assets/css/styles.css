@@ -4710,7 +4710,7 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
     min-height: unset;
     /* max-height: -webkit-fill-available; */
     /* height: -webkit-fill-available; */
-    max-height: 220px;
+    max-height: 200px;
   }
 
   .why-canada-main .section2 .detail-contents .detail-box {
