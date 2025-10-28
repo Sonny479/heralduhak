@@ -1,13 +1,12 @@
-// 모바일 버전 nav 햄버거바
-document.addEventListener('DOMContentLoaded', () => {
+// todo : 모바일 버전 nav 햄버거바
+function initNav() {
   const navToggleBtn = document.querySelector('.nav-toggle');
   const gnbList = document.querySelector('.gnb__list');
   const hasSubItems = document.querySelectorAll('.has-sub');
 
-  // 현재 뷰포트 너비가 1024px 이하인지 확인하는 함수
   const isMobileView = () => window.innerWidth <= 1024;
 
-  // 1. nav-toggle 기능: nav-toggle 클릭 시 gnb__list active 토글
+  // 1. nav-toggle 클릭 시 메뉴 열기/닫기
   if (navToggleBtn && gnbList) {
     navToggleBtn.addEventListener('click', () => {
       if (isMobileView()) {
@@ -16,33 +15,26 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 2. has-sub 기능: has-sub 클릭 시 해당 서브 메뉴 active 토글
+  // 2. has-sub 클릭 시 서브 메뉴 열기/닫기
   hasSubItems.forEach(item => {
-    // has-sub 바로 아래의 <a> 태그를 클릭 이벤트 대상으로 설정
     const mainLink = item.querySelector('a');
-    // has-sub 바로 아래의 <ul>.sub 태그가 서브 메뉴
     const subMenu = item.querySelector('.sub');
 
-    if (mainLink && subMenu) { // 메인 링크와 서브 메뉴가 모두 존재할 경우에만 동작
+    if (mainLink && subMenu) {
       mainLink.addEventListener('click', (e) => {
         if (isMobileView()) {
-          // 기본 링크 이동 동작 방지 (서브 메뉴 토글이 우선)
           e.preventDefault();
-
-          // 클릭된 has-sub 항목의 서브 메뉴 active 클래스 토글
           subMenu.classList.toggle('active');
         }
       });
     }
   });
 
-  // 3. 화면 크기 조절 시 메뉴 상태 초기화 (옵션)
-  // 1024px을 넘어가면 모바일 메뉴와 서브 메뉴의 active 클래스 제거
+  // 3. 창 크기 변경 시 초기화
   window.addEventListener('resize', () => {
     if (!isMobileView()) {
-      if (gnbList.classList.contains('active')) {
+      if (gnbList && gnbList.classList.contains('active')) {
         gnbList.classList.remove('active');
-        // document.body.classList.remove('no-scroll');
       }
       hasSubItems.forEach(item => {
         const subMenu = item.querySelector('.sub');
@@ -52,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
   });
-});
+}
 
 /* ===== Hero Slider (홈 전용) ===== */
 (function initHeroSliders(){
@@ -192,60 +184,15 @@ document.addEventListener('DOMContentLoaded', () => {
 /* =========================================
    [ADD] Lang Switch + i18n
 ========================================= */
-(function(){
-  const $root = document.documentElement;
-  const $switch = document.getElementById('langSwitch');
-  if(!$switch) return;
+document.addEventListener('DOMContentLoaded', function() {
+  const btn = document.querySelector('.language-style');
+  const layout = btn.closest('.language-layout');
 
-  const $btn = $switch.querySelector('.lang-switch__btn');
-  const $list = $switch.querySelector('.lang-switch__list');
-  const $label = $switch.querySelector('[data-lang-label]');
-
-
-
-  function applyI18n(lang){
-    const dict = I18N[lang] || I18N.ko;
-    document.querySelectorAll('[data-i18n]').forEach(el=>{
-      const key = el.getAttribute('data-i18n');
-      if(dict[key]) el.textContent = dict[key];
-    });
-    $root.setAttribute('lang', lang === 'ko' ? 'ko' : 'en');
-  }
-
-  function setLang(lang, displayLabel){
-    localStorage.setItem('site_lang', lang);
-    if(displayLabel) $label.textContent = displayLabel;
-    // applyI18n(lang);
-  }
-
-  // toggle open/close
-  $btn.addEventListener('click', e=>{
-    e.stopPropagation();
-    const open = $switch.classList.toggle('is-open');
-    $btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  btn.addEventListener('click', function() {
+    layout.classList.toggle('active');
   });
-  // select
-  $list.addEventListener('click', e=>{
-    const b = e.target.closest('button[data-lang]');
-    if(!b) return;
-    const lang = b.getAttribute('data-lang');      // 'en' | 'ko'
-    const lab  = b.getAttribute('data-label');     // 'EN' | 'KR'
-    setLang(lang, lab);
-    $switch.classList.remove('is-open');
-    $btn.setAttribute('aria-expanded','false');
-  });
-  // close on outside
-  document.addEventListener('click', ()=> {
-    if($switch.classList.contains('is-open')){
-      $switch.classList.remove('is-open');
-      $btn.setAttribute('aria-expanded','false');
-    }
-  });
+});
 
-  // init
-  const saved = localStorage.getItem('site_lang') || 'kr';
-  setLang(saved, saved==='ko' ? 'KR' : 'EN');
-})();
 
 // ===== Consult page only =====
 // ===== Consult page only (Extended with Google Sheets Integration) =====

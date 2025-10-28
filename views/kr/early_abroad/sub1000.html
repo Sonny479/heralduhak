@@ -26,60 +26,15 @@
 
       <!-- 내비게이션 -->
       <div class="bind-layout">
-        <nav class="gnb_kr" aria-label="주요 메뉴">
-          <button class="nav-toggle">
-            <img src="/assets/img/nav_menu.svg" class="nav-menu">
-          </button>
-          <ul id="gnbList" class="gnb__list">
-            <li><a href="/views/kr/about_us/sub1000.html">회사소개</a></li>
-  
-            <li class="has-sub">
-              <a href="/views/kr/canada_intro/sub1000.html">캐나다 유학소개</a>
-              <ul class="sub">
-                <li><a href="/views/kr/canada_intro/sub1000.html">캐나다유학, 무엇이 특별한가?</a></li>
-                <li><a href="/views/kr/canada_intro/sub2000.html">밴쿠버, 최고의 유학선택</a></li>
-                <li><a href="/views/kr/canada_intro/sub3000.html">공립, 사립학교 비교와 추천</a></li>
-              </ul>
-            </li>
-  
-            <li class="has-sub">
-              <a href="/views/kr/early_abroad/sub1000.html">조기유학 프로그램</a>
-              <ul class="sub">
-                <li><a href="/views/kr/early_abroad/sub1000.html">부모 동반 유학</a></li>
-                <li><a href="/views/kr/early_abroad/sub2000.html">공립학교 무상 교육</a></li>
-                <li><a href="/views/kr/early_abroad/sub3000.html">천주교 사립학교</a></li>
-                <li><a href="/views/kr/early_abroad/sub4000.html">관리형 유학</a></li>
-              </ul>
-            </li>
-  
-            <li class="has-sub">
-              <a href="/views/kr/academic_tutoring/sub1000.html">아카데믹 튜터링</a>
-              <ul class="sub">
-                <li><a href="/views/kr/academic_tutoring/sub1000.html">캐나다전용 프로그램</a></li>
-                <li><a href="/views/kr/academic_tutoring/sub2000.html">아카데믹 튜터링 강사진</a></li>
-                <li><a href="https://heraldtomorrow.com" target="_blank">헤럴드 학생기자단 캐나다</a></li>
-              </ul>
-            </li>
-  
-            <li class="has-sub">
-              <a href="/views/kr/univ_transfer/sub1000.html">밴쿠버 성인유학</a>
-              <ul class="sub">
-                <li><a href="/views/kr/univ_transfer/sub1000.html">고등학교 과정</a></li>
-                <li><a href="/views/kr/univ_transfer/sub2000.html">대학 편입/준학사 과정</a></li>
-                <li><a href="/views/kr/univ_transfer/sub3000.html">영어ESL 프로그램</a></li>
-              </ul>
-            </li>
-          </ul>
-        </nav>
+        <div id="header"></div>
         <!-- ===== [ADD] Header: Language Switch ===== -->
-        <div class="lang-switch" id="langSwitch">
-          <button class="lang-switch__btn" aria-haspopup="listbox" aria-expanded="false">
-            <span class="lang-switch__label" data-lang-label>EN</span>
-            <svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10l5 5 5-5" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+        <div class="language-layout">
+          <button type="button" class="language-style">
+            <span>KR</span><img src="/assets/img/arrow_down.png" class="lang-arrow">
           </button>
-          <ul class="lang-switch__list" role="listbox" aria-label="Language">
-            <li><button role="option" data-lang="en" data-label="EN" onClick="location.href='/views/en/early_abroad/sub1000.html'">EN</button></li>
-            <li><button role="option" data-lang="ko" data-label="KR">KR</button></li>
+          <ul class="language-box">
+            <li><button type="button" onClick="location.href='/views/en/early_abroad/sub1000.html'">EN</button></li>
+            <li><button type="button">KR</button></li>
           </ul>
         </div>
       </div> 
@@ -398,66 +353,10 @@
   </main>
 
   <!-- ===== Footer ===== -->
-  <footer class="site-footer" role="contentinfo">
-    <div class="footer__inner">
-      <!-- 왼쪽 영역 -->
-      <div class="footer__left">
-        <div class="sp-row">
-          <a href="/index.html" class="footer__brand footer-line" aria-label="HERALD UHAK CA">
-            <img src="/assets/img/new_footer2.png" alt="HERALD UHAK CA 로고">
-          </a>
-
-          <a href="/index.html" class="footer__brand" aria-label="HERALD UHAK CA">
-            <img src="/assets/img/new_footer.png" alt="HERALD UHAK CA 로고">
-          </a>
-        </div>
-
-        <nav class="footer__links" aria-label="푸터 메뉴">
-          <a href="/views/kr/about_us/sub1000.html">회사소개</a>
-          <span class="sep" aria-hidden="true">|</span>
-          <a href="/views/kr/consult.html">상담예약</a>
-          <span class="sep" aria-hidden="true">|</span>
-          <a href="/views/kr/academic_tutoring/sub1000.html">프로그램</a>
-        </nav>
-
-        <p class="footer__copy">
-          Copyright © 2025 <strong>Digital Herald Co.,</strong> Ltd. All Rights Reserved.<br>
-          4F, 6 Namdaemun-ro 10-gil, Jung-gu, Seoul, Republic of Korea (04539)
-        </p>
-        <p class="footer__copy">
-          Copyright © 2025 <strong>KoreaHerald Education Canada Inc.</strong> All Rights Reserved.<br>
-          400–601 West Broadway, Vancouver, British Columbia, Canada V5Z 4C2
-        </p>
-      </div>
-
-      <!-- 오른쪽 영역 -->
-      <!-- <div class="footer__right">
-        <h3 class="footer__title">상담시간</h3>
-        <ul class="footer__hours">
-          <li>주중 09:00 - 20:00</li>
-          <li>토요일 10:00 - 16:00</li>
-        </ul>
-      </div> -->
-    </div>
-  </footer>
-
+  <div id="footer"></div>
+  <script src="/assets/js/include.js"></script>
   <script>
-    // faq-question 토글 버튼 JS
-    const faqButtons = document.querySelectorAll('.faq-question');
-
-    faqButtons.forEach(button => {
-      button.addEventListener('click', () => {
-        const arrow = button.querySelector('.arrow-img');
-        if (arrow) {
-          arrow.classList.toggle('active');
-        }
-
-        const answer = button.nextElementSibling;
-        if (answer && answer.classList.contains('faq-answer')) {
-          answer.hidden = !answer.hidden;
-        }
-      });
-    });
+    includeHTML();
   </script>
 </body>
 </html>

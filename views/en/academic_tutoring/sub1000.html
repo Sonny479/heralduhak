@@ -20,61 +20,16 @@
 
       <!-- Navigation -->
       <div class="bind-layout gap34">
-        <nav class="gnb_kr" aria-label="Main navigation">
-          <button class="nav-toggle">
-            <img src="/assets/img/nav_menu.svg" class="nav-menu">
-          </button>
-          <ul id="gnbList" class="gnb__list">
-            <li><a href="/views/en/about_us/sub1000.html">About Us</a></li>
-  
-            <li class="has-sub">
-              <a href="/views/en/canada_intro/sub1000.html">Study in Canada</a>
-              <ul class="sub">
-                <li><a href="/views/en/canada_intro/sub1000.html">Why study in Canada?</a></li>
-                <li><a href="/views/en/canada_intro/sub2000.html">Vancouver: Your Top Study Destination</a></li>
-                <li><a href="/views/en/canada_intro/sub3000.html">Public vs. Private Schools</a></li>
-              </ul>
-            </li>
-  
-            <li class="has-sub">
-              <a href="/views/en/early_abroad/sub1000.html">K-12 Study Abroad Program</a>
-              <ul class="sub">
-                <li><a href="/views/en/early_abroad/sub1000.html">Parent-Accompanied Study Abroad</a></li>
-                <li><a href="/views/en/early_abroad/sub2000.html">Tuition-Free Public Schools</a></li>
-                <li><a href="/views/en/early_abroad/sub3000.html">Catholic Private Schools</a></li>
-                <li><a href="/views/en/early_abroad/sub4000.html">Guardianship Program</a></li>
-              </ul>
-            </li>
-  
-            <li class="has-sub">
-              <a href="/views/en/academic_tutoring/sub1000.html">Academic Tutoring</a>
-              <ul class="sub">
-                <li><a href="/views/en/academic_tutoring/sub1000.html">Canada-Specific Tutoring Programs</a></li>
-                <li><a href="/views/en/academic_tutoring/sub2000.html">Meet HERALD Tutoring Team</a></li>
-                <li><a href="https://heraldtomorrow.com" target="_blank">Herald Student Reporters Canada</a></li>
-              </ul>
-            </li>
-  
-            <li class="has-sub">
-              <a href="/views/en/univ_transfer/sub1000.html">Adult Study Programs</a>
-              <ul class="sub">
-                <li><a href="/views/en/univ_transfer/sub1000.html">High School Program</a></li>
-                <li><a href="/views/en/univ_transfer/sub2000.html">University Transfer/AA</a></li>
-                <li><a href="/views/en/univ_transfer/sub3000.html">English Studies Program</a></li>
-              </ul>
-            </li>
-          </ul>
-        </nav>
+        <div id="en_header"></div>
         
         <!-- ===== [ADD] Header: Language Switch ===== -->
-        <div class="lang-switch" id="langSwitch">
-          <button class="lang-switch__btn" aria-haspopup="listbox" aria-expanded="false">
-            <span class="lang-switch__label" data-lang-label>EN</span>
-            <svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10l5 5 5-5" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+        <div class="language-layout">
+          <button type="button" class="language-style">
+            <span>EN</span><img src="/assets/img/arrow_down.png" class="lang-arrow">
           </button>
-          <ul class="lang-switch__list" role="listbox" aria-label="Language">
-            <li><button role="option" data-lang="en" data-label="EN">EN</button></li>
-            <li><button role="option" data-lang="ko" data-label="KR" onClick="location.href='/views/kr/academic_tutoring/sub1000.html'">KR</button></li>
+          <ul class="language-box">
+            <li><button type="button">EN</button></li>
+            <li><button type="button" onClick="location.href='/views/kr/academic_tutoring/sub1000.html'">KR</button></li>
           </ul>
         </div>
       </div>
@@ -274,38 +229,11 @@
   </main>
 
   <!-- ===== Footer ===== -->
-  <footer class="site-footer" role="contentinfo">
-    <div class="footer__inner">
-      <div class="footer__left">
-        <div class="sp-row">
-          <a href="/index.html" class="footer__brand footer-line" aria-label="HERALD UHAK CA">
-            <img src="/assets/img/new_footer2.png" alt="HERALD UHAK CA">
-          </a>
-
-          <a href="/index.html" class="footer__brand" aria-label="HERALD UHAK CA">
-            <img src="/assets/img/new_footer.png" alt="HERALD UHAK CA">
-          </a>
-        </div>
-
-        <nav class="footer__links" aria-label="Footer menu" data-i18n-aria-label="footer.nav.aria">
-          <a href="/views/en/about_us/sub1000.html" data-i18n="footer.menu.about">About</a>
-          <span class="sep" aria-hidden="true">|</span>
-          <a href="/views/en/consult.html" data-i18n="footer.menu.consult">Consultation</a>
-          <span class="sep" aria-hidden="true">|</span>
-          <a href="/views/en/academic_tutoring/sub1000.html" data-i18n="footer.menu.programs">Programs</a>
-        </nav>
-
-        <p class="footer__copy">
-          Copyright © 2025 <strong>Digital Herald Co.,</strong> Ltd. All Rights Reserved.<br>
-          4F, 6 Namdaemun-ro 10-gil, Jung-gu, Seoul, Republic of Korea (04539)
-        </p>
-        <p class="footer__copy">
-          Copyright © 2025 <strong>KoreaHerald Education Canada Inc.</strong> All Rights Reserved.<br>
-          400–601 West Broadway, Vancouver, British Columbia, Canada V5Z 4C2
-        </p>
-      </div>
-    </div>
-  </footer>
+  <div id="en_footer"></div>
+  <script src="/assets/js/include.js"></script>
+  <script>
+    includeHTML();
+  </script>
   <script defer src="/assets/js/app.js"></script>
 </body>
 </html>

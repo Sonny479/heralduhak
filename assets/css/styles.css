@@ -4104,6 +4104,60 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
   letter-spacing: -0.2px;
 }
 
+.language-layout {
+  position:relative; 
+  margin-left:12px;
+}
+
+.language-layout .language-style {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border: 1px solid #e5e8ef;
+  border-radius: 6px;
+  padding: 5px 13px;
+  color: #333;
+  font-weight: 600;
+  font-size: 14px;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.language-layout .language-box {
+  display: none;
+}
+
+.language-layout.active .language-box {
+  display: block;
+  position: absolute;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #e5e8ef;
+  border-radius: 6px;
+  background-color: #fff;
+  gap: 6px;
+  width: 65px;
+  padding: 6px;
+}
+
+.language-layout.active .language-box li button {
+  font-weight: 600;
+  font-size: 14px;
+  font-family: 'Noto Sans KR', sans-serif;
+  color: #333;
+}
+
+.language-layout.active .language-box li:hover {
+  background-color: #f5f7fb;
+  border-radius: 6px;
+}
+
+.lang-arrow {
+  width: 14px;
+  height: 14px;
+  margin-left: 4px;
+}
+
 @media (max-width: 1024px) {
   .master-text {
     font-size: 14px;
@@ -5316,8 +5370,9 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
 
   .modal-content-sp {
     /* max-width: 320px; */
-    width: 430px;
-    padding: 65px 30px 30px;
+    /* width: 430px; */
+    width: 340px;
+    padding: 20px 30px 30px;
   }
 
   .policy-modal .modal-wrap-sp .service-img {
