@@ -4159,6 +4159,10 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
 }
 
 @media (max-width: 1024px) {
+  .apple-grid {
+    display: grid;
+  }
+
   .master-text {
     font-size: 14px;
   }
