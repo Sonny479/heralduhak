@@ -3915,7 +3915,8 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
   display: flex;
   flex-direction: column;
   padding: 16px;
-  gap: 20px;
+  /* gap: 20px; */
+  gap: 24px;
   background: #F8F3EC;
 }
 
@@ -3933,7 +3934,8 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
   font-family: "Noto Sans";
   font-size: 20px;
   font-weight: 700;
-  line-height: 30px;
+  /* line-height: 30px; */
+  line-height: 34.3px;
   letter-spacing: -0.2px;
 }
 
@@ -3982,9 +3984,10 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
 
 .academic_tutoring .uhak-tutoring .uhak-title-layout p {
   display: flex;
+  flex-direction: column;
   padding: 4px 24px;
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
   gap: 10px;
   color: #4B3C37;
   font-family: "Noto Sans";
@@ -3994,6 +3997,11 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
   line-height: 24px;
   background: #FFC561;
   margin-top: 16px;
+  text-align: center;
+}
+
+.academic_tutoring .uhak-tutoring .uhak-title-layout p b {
+  font-weight: 900;
 }
 
 .academic_tutoring .uhak-tutoring .teachers-layout {
@@ -4083,7 +4091,24 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
   display: none;
 }
 
+.master-hover:hover {
+  color: #000;
+}
+
+.master-text {
+  color: #4B3C37;
+  font-family: "Noto Sans";
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 30px;
+  letter-spacing: -0.2px;
+}
+
 @media (max-width: 1024px) {
+  .master-text {
+    font-size: 14px;
+  }
+
   .academic_tutoring .uhak-tutoring .teachers-layout .teachers-col {
     width: 100%;
     align-items: center;
@@ -4233,6 +4258,7 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
 
   .academic_tutoring {
     padding: 60px 20px 60px;
+    margin-bottom: -1px;
   }
 
   .gnb_kr .gnb__list {
