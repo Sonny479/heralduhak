@@ -248,17 +248,13 @@ document.addEventListener('DOMContentLoaded', () => {
 })();
 
 // ===== Consult page only =====
-// ===== Consult page only (Extended with Google Sheets Integration) =====
 (function(){
   const doc = document;
   const isConsult = (doc.documentElement.getAttribute('data-page') === 'consult') ||
                     (doc.body && doc.body.getAttribute('data-page') === 'consult');
   if(!isConsult) return;
 
-  // Google Apps Script Web App URL
-  const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzUHHmkFP2nnVqPdMw4uBTYKYu1v4CFTtg2X-GHghPFhsY3ORKE0bnVxRM6RXLQsc8d/exec';
-
-  const form = doc.querySelector('.form-card form') || doc.querySelector('form.form-card');
+  const form = doc.getElementById('consultForm');
   const message = doc.getElementById('message');
   const charNow = doc.getElementById('charNow');
   const interestGroup = doc.getElementById('interestGroup');
@@ -278,94 +274,6 @@ document.addEventListener('DOMContentLoaded', () => {
       if (picked.length > maxPick){
         picked[picked.length - 1].checked = false;
         alert('관심 프로그램은 최대 ' + maxPick + '개까지 선택할 수 있어요.');
-      }
-    });
-  }
-
-  // Form Submit Handler for Google Sheets
-  if(form) {
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      
-      // 폼 데이터 수집
-      const formData = {
-        studentName: doc.getElementById('studentName')?.value || '',
-        gender: doc.querySelector('input[name="gender"]:checked')?.value || '',
-        grade: doc.getElementById('grade')?.value || '',
-        mobile: doc.getElementById('mobile')?.value || '',
-        kakao: doc.getElementById('kakao')?.value || '',
-        email: doc.getElementById('email')?.value || '',
-        country: doc.getElementById('country')?.value || '',
-        interests: Array.from(doc.querySelectorAll('input[name="interest"]:checked')).map(cb => cb.value),
-        message: doc.getElementById('message')?.value || '',
-        timestamp: new Date().toISOString(),
-        language: doc.documentElement.lang || 'ko'
-      };
-      
-      // 개인정보 동의 확인
-      const agreeCheck = doc.getElementById('agree');
-      if(!agreeCheck || !agreeCheck.checked) {
-        const isKorean = doc.documentElement.lang === 'ko' || !doc.documentElement.lang;
-        alert(isKorean ? '개인정보 취급방침에 동의해주세요.' : 'Please agree to the privacy policy.');
-        return;
-      }
-      
-      // 필수 필드 검증
-      if(!formData.studentName || !formData.grade) {
-        const isKorean = doc.documentElement.lang === 'ko' || !doc.documentElement.lang;
-        alert(isKorean ? '필수 항목을 모두 입력해주세요.' : 'Please fill in all required fields.');
-        return;
-      }
-      
-      // 로딩 상태 표시
-      const submitBtn = form.querySelector('.btn-submit') || form.querySelector('button[type="submit"]');
-      const originalText = submitBtn.textContent;
-      const isKorean = doc.documentElement.lang === 'ko' || !doc.documentElement.lang;
-      submitBtn.disabled = true;
-      submitBtn.textContent = isKorean ? '전송 중...' : 'Sending...';
-      
-      try {
-        // Check if Google Script URL is configured
-        if(GOOGLE_SCRIPT_URL === 'YOUR_GOOGLE_APPS_SCRIPT_URL_HERE') {
-          console.warn('Google Apps Script URL is not configured. Form data:', formData);
-          alert(isKorean ? 
-            '현재 시스템 설정 중입니다. 잠시 후 다시 시도해주세요.\n\n문의사항은 카카오톡으로 연락 주시기 바랍니다.' : 
-            'The system is currently being set up. Please try again later.\n\nFor inquiries, please contact us via KakaoTalk.');
-          return;
-        }
-
-        // Google Sheets로 데이터 전송
-        const response = await fetch(GOOGLE_SCRIPT_URL, {
-          method: 'POST',
-          mode: 'no-cors', // CORS 우회
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(formData)
-        });
-        
-        // no-cors 모드에서는 응답을 읽을 수 없으므로 성공으로 간주
-        alert(isKorean ? 
-          '상담 신청이 완료되었습니다.\n빠른 시일 내에 연락드리겠습니다.\n\n감사합니다.' : 
-          'Your consultation request has been submitted.\nWe will contact you soon.\n\nThank you.');
-        
-        // 폼 리셋
-        form.reset();
-        if(charNow) charNow.textContent = '0';
-        
-        // 선택적: 페이지 리다이렉트
-        // setTimeout(() => {
-        //   window.location.href = isKorean ? '/index.html' : '/index_en.html';
-        // }, 2000);
-        
-      } catch(error) {
-        console.error('Error submitting form:', error);
-        alert(isKorean ? 
-          '전송 중 오류가 발생했습니다.\n다시 시도해주세요.\n\n지속적으로 문제가 발생하면 카카오톡으로 문의해주세요.' : 
-          'An error occurred while sending.\nPlease try again.\n\nIf the problem persists, please contact us via KakaoTalk.');
-      } finally {
-        submitBtn.disabled = false;
-        submitBtn.textContent = originalText;
       }
     });
   }
