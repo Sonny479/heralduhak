@@ -256,7 +256,8 @@ document.addEventListener('DOMContentLoaded', () => {
   if(!isConsult) return;
 
   // Google Apps Script Web App URL
-  const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzUHHmkFP2nnVqPdMw4uBTYKYu1v4CFTtg2X-GHghPFhsY3ORKE0bnVxRM6RXLQsc8d/exec';
+  const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwmsSY08AtYwydMX39mnC5YDo45Wm5N2pB6TGyQUWr5z6ti4hDrIf6i8Tc_0eDe0YJl/exec';
+  
 
   const form = doc.querySelector('.form-card form') || doc.querySelector('form.form-card');
   const message = doc.getElementById('message');
