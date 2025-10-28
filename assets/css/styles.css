@@ -4159,9 +4159,6 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
 }
 
 @media (max-width: 1024px) {
-  .apple-grid {
-    display: grid;
-  }
 
   .master-text {
     font-size: 14px;
@@ -4711,6 +4708,8 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
 
   .why-canada-main .section2 .detail-contents .detail-box ul {
     min-height: unset;
+    max-height: -webkit-fill-available;
+    height: -webkit-fill-available;
   }
 
   .why-canada-main .section2 .detail-contents .detail-box {
