@@ -3,13 +3,16 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <title>아카데믹튜터링 - HERALD유학 캐나다</title>
-  <meta name="description" content="Elementary · Secondary · Post-Secondary · EC 프로그램 및 튜터 팀 안내">
+  <title><!-- 페이지 타이틀 --></title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/css/styles.css"/>
   <script defer src="/assets/js/app.js"></script>
   <noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
 </head>
-<body data-page="tutoring">
+
+<body data-page="<!-- about | consult | study | early | tutoring | transfer -->">
   <!-- ===== Header ===== -->
   <header class="site-header" role="banner">
     <div class="header__inner">
@@ -23,14 +26,13 @@
         <div id="en_header"></div>
         
         <!-- ===== [ADD] Header: Language Switch ===== -->
-        <div class="lang-switch" id="langSwitch">
-          <button class="lang-switch__btn" aria-haspopup="listbox" aria-expanded="false">
-            <span class="lang-switch__label" data-lang-label>EN</span>
-            <svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10l5 5 5-5" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+        <div class="language-layout">
+          <button type="button" class="language-style">
+            <span>EN</span><img src="/assets/img/arrow_down.png" class="lang-arrow">
           </button>
-          <ul class="lang-switch__list" role="listbox" aria-label="Language">
-            <li><button role="option" data-lang="en" data-label="EN">EN</button></li>
-            <li><button role="option" data-lang="ko" data-label="KR" onClick="location.href='/views/kr/academic_tutoring/sub1000.html'">KR</button></li>
+          <ul class="language-box">
+            <li><button type="button">EN</button></li>
+            <li><button type="button" onClick="location.href='/views/kr/univ_transfer/sub1000.html'">KR</button></li>
           </ul>
         </div>
       </div>
@@ -73,5 +75,10 @@
 
   <!-- ===== Footer ===== -->
   <div id="en_footer"></div>
+  
+  <script src="/assets/js/include.js"></script>
+  <script>
+    includeHTML();
+  </script>
 </body>
 </html>

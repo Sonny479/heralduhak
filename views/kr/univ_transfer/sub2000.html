@@ -6,7 +6,7 @@
   <title><!-- 페이지 타이틀 --></title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/css/styles.css"/>
   <script defer src="/assets/js/app.js"></script>
   <noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
@@ -17,13 +17,13 @@
   <header class="site-header" role="banner">
     <div class="header__inner">
       <!-- 로고 -->
-      <a href="/index.html" class="header__brand" aria-label="HERALD UHAK CA">
+      <a href="/index_en.html" class="header__brand" aria-label="HERALD UHAK CA">
         <img src="/assets/img/new-header-title.png" alt="HERALD UHAK CA">
       </a>
 
-      <!-- 내비게이션 -->
-      <div class="bind-layout">
-        <div id="header"></div>
+      <!-- Navigation -->
+      <div class="bind-layout gap34">
+        <div id="en_header"></div>
         
         <!-- ===== [ADD] Header: Language Switch ===== -->
         <div class="language-layout">
@@ -31,51 +31,51 @@
             <span>KR</span><img src="/assets/img/arrow_down.png" class="lang-arrow">
           </button>
           <ul class="language-box">
-            <li><button type="button" onClick="location.href='/views/en/univ_transfer/sub2000.html'">EN</button></li>
+            <li><button type="button" onClick="location.href='/views/en/univ_transfer/sub1000.html'">EN</button></li>
             <li><button type="button">KR</button></li>
           </ul>
         </div>
-      </div> 
+      </div>
     </div>
   </header>
 
-
   <main id="main">
-    <!-- ===== 준비중 히어로 ===== -->
+    <!-- ===== Coming Soon Hero ===== -->
     <section class="ready-hero" aria-labelledby="ready-title">
       <div class="ready-hero__inner">
-        <!-- 가운데 들어가는 배너 이미지 (두번째 첨부이미지) -->
-        <img class="ready-hero__banner" src="/assets/img/new_preparing.png" alt="HERALD Uhak Canada 준비중 배너">
+        <!-- Center banner image (second attached image) -->
+        <img class="ready-hero__banner" src="/assets/img/new_preparing.png" alt="HERALD Uhak Canada Coming Soon Banner">
 
         <div class="ready-contents">
-          <!-- 안내문구 -->
-          <p id="ready-title" class="ready-hero__text">현재 서비스 준비 중인 페이지입니다.</p>
-  
-          <!-- 메인으로 돌아가기 버튼 -->
+          <!-- Notice text -->
+          <p id="ready-title" class="ready-hero__text">현재 서비스 준비중인 페이지입니다.</p>
+    
+          <!-- Back to main button -->
           <a class="btn btn--primary ready-hero__btn" href="/index.html">메인으로 돌아가기 →</a>
         </div>
       </div>
     </section>
 
-    <!-- ===== 하단 배경영역 ===== -->
+    <!-- ===== Bottom Background Section ===== -->
     <section class="ready-bottom" aria-labelledby="kakao-cta-title">
-      <!-- 세번째 첨부이미지: 와이드 배경 (배경으로 사용) -->
+      <!-- Third attached image: wide background (used as background) -->
       <div class="ready-bottom__bg"></div>
 
-      <!-- 네번째 첨부이미지(흰색 로고)를 배경 위에 오버레이 -->
+      <!-- Fourth attached image (white logo) overlayed on background -->
       <div class="ready-bottom__overlay">
         <img class="ready-bottom__logo" src="/assets/img/new-main-banner.png" alt="HERALD Uhak Canada">
-        <!-- 카카오 상담 CTA -->
-        <h2 id="kakao-cta-title" class="sr-only">카카오톡 빠른 상담 예약</h2>
+        <!-- KakaoTalk Consultation CTA -->
+        <h2 id="kakao-cta-title" class="sr-only">Quick Consultation via KakaoTalk</h2>
         <a class="btn btn--kakao ready-bottom__kakao" href="https://pf.kakao.com" target="_blank" rel="noopener">
-          카카오톡으로 빠른 상담 예약하기 →
+          Book a Quick Consultation via KakaoTalk →
         </a>
       </div>
     </section>
   </main>
 
   <!-- ===== Footer ===== -->
-  <div id="footer"></div>
+  <div id="en_footer"></div>
+  
   <script src="/assets/js/include.js"></script>
   <script>
     includeHTML();
