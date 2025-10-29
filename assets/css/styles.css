@@ -453,7 +453,8 @@ input::placeholder,textarea::placeholder{color:#8c90a1}
 .aside-hours p {
   font-size: 12px;
   text-align: center;
-  font-family: 'Pretendard';
+  /* font-family: 'Pretendard'; */
+  font-family: 'Noto Sans';
 }
 
 /* ===== Section 3: 상담 예약 CTA ===== */
@@ -2741,7 +2742,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 61px;
+  /* margin-top: 61px; */
 }
 
 .early-abroad-main .e-section6 .part1 .difference-title {
@@ -3435,7 +3436,8 @@ button {
 .aside-item p {
   color: #EEE;
   text-align: center;
-  font-family: 'Pretendard';
+  /* font-family: 'Pretendard'; */
+  font-family: 'Noto Sans';
   /* font-size: 14px; */
   font-size: 12px;
   font-weight: 500;
@@ -4165,6 +4167,9 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
   width: 26px;
 }
 
+.mob-scroll {
+  -width: -webkit-fill-available;
+}
 
 @media (max-width: 1024px) {
 
@@ -4999,10 +5004,6 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
     border-left: 1px solid #adadad;
     /* border-left: 1px solid rgba(255, 255, 255, .12); */
   }
-
-
-
-
 
 
   .aside-hours {
