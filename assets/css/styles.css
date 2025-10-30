@@ -1663,8 +1663,8 @@ main {
   border-bottom: 1px solid #CCC;
   border-left: 1px solid #CCC;
   background-color: #FFF;
-  /* min-height: 305px;
-  max-height: 305px; */
+  min-height: 433px;
+  max-height: 433px;
   height: -webkit-fill-available;
 }
 
@@ -4598,6 +4598,10 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
 }
 
 @media (max-width: 1024px) {
+  .why-canada-main .section2 .detail-contents .flex-wrap .detail-box {
+    max-width: unset;
+  }
+
   .adult-contents .highschool-title .tit-sub-text2 {
     margin-top: 8px;
   }
