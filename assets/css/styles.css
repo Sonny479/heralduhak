@@ -1468,6 +1468,7 @@ main {
   font-size: 24px;
   font-weight: 900;
   line-height: 24px;
+  text-align: center;
 }
 
 .why-canada-main .section2 .Vancouver_abroad p {
@@ -3585,7 +3586,7 @@ a {
 
 .uhak-row .friends-box2 .friends-col strong {
   color: #9A695B;
-  font-family: "Noto Sans";
+  font-family: "Noto Sans KR";
   font-size: 18px;
   font-weight: 600;
   /* letter-spacing: -0.9px; */
@@ -4171,7 +4172,506 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
   -width: -webkit-fill-available;
 }
 
+.adult-contents {
+  display: flex;
+  justify-content: center;
+  background-color: #fff;
+  padding-block: 60px;
+}
+
+.adult-contents .highschool-title {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+
+.adult-contents .highschool-title .tit-text {
+  color: #4B3C37;
+  text-align: center;
+  font-family: "Noto Sans";
+  font-size: 32px;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.adult-contents .highschool-title .tit-sub-text {
+  color: #4B3C37;
+  font-family: "Noto Sans";
+  font-size: 24px;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.adult-contents .highschool-title .tit-sub-text2 {
+  color: #803130;
+  font-family: "Noto Sans";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: -0.48px;
+}
+
+.adult-contents .highschool-title .tit-sub-text3 {
+  color: #4B3C37;
+  font-family: "Noto Sans";
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  margin-top: 16px;
+  word-break: keep-all;
+}
+
+.adult-contents .adult-program {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: 40px;
+}
+
+.adult-contents .adult-program .pro-intro {
+  color: #803130;
+  font-family: "Noto Sans";
+  font-size: 20px;
+  font-weight: 900;
+  line-height: normal;
+  letter-spacing: -0.2px;
+}
+
+.adult-contents .adult-program .pro-sub-intro {
+  text-align: left;
+  width: 100%;
+  color: #333;
+  font-family: "Noto Sans";
+  font-size: 16px;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.16px;
+  margin-top: 8px;
+}
+
+.adult-contents .adult-program .program-contents {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  width: 100%;
+  margin-top: 24px;
+}
+
+.adult-contents .adult-program .program-contents .program-box {
+  border: 1px solid #CCC;
+  width: 100%;
+  max-width: 386px;
+}
+
+.adult-contents .adult-program .program-contents .program-box .pro-title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+  background-color: #F8F3EC;
+  padding: 8px 16px;
+}
+
+.adult-contents .adult-program .program-contents .program-box .pro-title img {
+  width: 24px;
+  height: 24px;
+}
+
+.adult-contents .adult-program .program-contents .program-box .pro-title p {
+  color: rgba(136, 12, 36, 0.70);
+  font-family: "Noto Sans";
+  font-size: 12px;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.36px;
+}
+
+.adult-contents .adult-program .program-contents .program-box .pro-title p span {
+  font-family: "Noto Sans";
+  font-size: 16px;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.adult-contents .adult-program .program-contents .program-box .pro-text {
+  padding: 16px;
+}
+
+.adult-contents .adult-program .program-contents .program-box .pro-text p {
+  color: #333;
+  font-family: "Noto Sans";
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.48px;
+  word-break: keep-all;
+}
+
+.adult-contents .adult-program .program-detail {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 40px;
+}
+
+.adult-contents .adult-program .program-detail .grad-title {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  align-items: center;
+  justify-content: left;
+  width: 100%;
+  background-color: #F8F3EC;
+  padding: 8px 16px;
+}
+
+.adult-contents .adult-program .program-detail .grad-title strong {
+  color: rgba(136, 12, 36, 0.70);
+  font-family: "Noto Sans";
+  font-size: 16px;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.adult-contents .adult-program .program-detail .grad-sub-title {
+  color: #333;
+  font-family: "Noto Sans";
+  font-size: 16px;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.16px;
+  margin-top: 20px;
+  padding-left: 16px;
+  word-break: keep-all;
+}
+
+.adult-contents .adult-program .program-detail .example-table {
+  border-collapse: collapse; 
+  text-align: center; 
+  width: 100%;
+  margin-top: 20px;
+  border: 1px solid #cfcfcf;
+}
+
+.adult-contents .adult-program .program-detail .example-table thead tr th {
+  font-family: "Noto Sans";
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 21px;
+  letter-spacing: -0.32px;
+  padding-block: 8px;
+}
+
+.adult-contents .adult-program .program-detail .example-table thead tr th:nth-of-type(1) {
+  background-color: #F8F3EC;
+  color: #555;
+}
+
+.adult-contents .adult-program .program-detail .example-table thead tr th:nth-of-type(2) {
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), var(--logo_blue, #CE5D5F);
+}
+
+.adult-contents .adult-program .program-detail .example-table thead tr th:nth-of-type(3) {
+  background-color: #CE5D5F;
+}
+
+.adult-contents .adult-program .program-detail .example-table tbody tr td {
+  color: #444;
+  font-family: "Noto Sans";
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 21px;
+  letter-spacing: -0.32px;
+  padding-block: 8px;
+}
+
+.adult-contents .adult-program .program-detail .table-sub-text {
+  margin-top: 20px;
+  color: #666;
+  font-family: "Noto Sans";
+  font-size: 16px;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.16px;
+}
+
+.adult-contents .adult-program .program-detail .division-contents {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; 
+  width: 100%;
+  gap: 16px;
+  margin-top: 40px;
+}
+
+.adult-contents .adult-program .program-detail .division-contents .division-box {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 588px;
+}
+
+.adult-contents .adult-program .program-detail .division-contents .division-box p {
+  background-color: #CE5D5F;
+  color: #FFF;
+  font-family: "Noto Sans";
+  font-size: 16px;
+  font-weight: 700;
+  line-height: normal;
+  padding: 8px 16px;
+}
+
+.adult-contents .adult-program .program-detail .division-contents .division-box ul {
+  background-color: #F8F3EC;
+  padding: 16px 16px 16px 42px;
+  min-height: 160px;
+}
+
+.adult-contents .adult-program .program-detail .division-contents .division-box ul li {
+  color: #333;
+  font-family: "Noto Sans";
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 32px;
+  letter-spacing: -0.48px;
+}
+
+.adult-contents .two-method {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 26px;
+  width: 100%;
+  margin-top: 16px;
+}
+
+.adult-contents .two-method .degree-box {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 583px;
+  border: 1px solid #CCC;
+  border-radius: 8px;
+  background-color: #F8F3EC;
+  padding: 16px;
+}
+
+.adult-contents .two-method .degree-box b {
+  color: #FFF;
+  font-family: "Noto Sans";
+  font-size: 16px;
+  font-weight: 800;
+  line-height: normal;
+  border-radius: 99px;
+  background-color: #CE5D5F;
+  padding-inline: 24px;
+  display: flex;
+  align-items: center;
+  height: 38px;
+  width: fit-content;
+}
+
+.adult-contents .two-method .degree-box b span {
+  color: #FFF;
+  font-family: "Noto Sans";
+  font-size: 14px;
+  font-weight: 500;
+  line-height: normal;
+  margin-left: 16px;
+}
+
+.adult-contents .two-method .degree-box strong {
+  color: #803130;
+  font-family: "Noto Sans";
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 24px;
+  margin-top: 16px;
+}
+
+.adult-contents .two-method .degree-box p {
+  color: #444;
+  font-family: "Noto Sans";
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  margin-top: 6px;
+}
+
+.adult-contents .pro-component {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: #F8F3EC;
+  padding: 16px;
+  border-radius: 8px;
+  border: 1px solid #CCC;
+}
+
+.adult-contents .pro-component .component-title {
+  display: flex;
+  align-items: center;
+  color: #FFF;
+  font-family: "Noto Sans";
+  font-size: 16px;
+  font-weight: 800;
+  line-height: normal;
+  width: fit-content;
+  padding-inline: 24px;
+  height: 38px;
+  border-radius: 99px;
+  background-color: #CE5D5F;
+}
+
+.adult-contents .pro-component .component-table {
+  border-collapse: collapse; 
+  width: 100%; 
+  text-align: center;
+  margin-top: 16px;
+  border: 1px solid #cfcfcf;
+}
+
+.adult-contents .pro-component .component-table thead tr th {
+  border-right: 1px solid #F1E6DE;
+  background: rgba(136, 12, 36, 0.70);
+  color: #FFF;
+  font-family: "Noto Sans";
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 21px;
+  letter-spacing: -0.32px;
+  padding-block: 8px;
+}
+
+.adult-contents .pro-component .component-table tbody tr td {
+  color: #545454;
+  font-family: "Noto Sans";
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 21px;
+  letter-spacing: -0.32px;
+  background-color: #fff;
+  padding-block: 8px;
+}
+
+.adult-contents .pro-component .component-table tbody tr .sp-empty {
+  border: 1px solid #CFCFCF;
+  background-color: #EEE;
+}
+
+.adult-contents .requirement-text {
+  color: #4B3C37;
+  font-family: "Noto Sans";
+  font-size: 16px;
+  font-weight: 500;
+  line-height: normal;
+  margin-top: 16px;
+}
+
 @media (max-width: 1024px) {
+  .adult-contents .highschool-title .tit-sub-text2 {
+    margin-top: 8px;
+  }
+
+  .adult-contents .requirement-text {
+    font-size: 14px;
+  }
+
+  .adult-contents .pro-component {
+    margin-top: 26px;
+  }
+
+  .adult-contents .pro-component .component-table tbody tr td {
+    font-size: 12px;
+  }
+
+  .adult-contents .pro-component .component-table thead tr th {
+    font-size: 14px;
+  }
+
+  .adult-contents .pro-component .component-title {
+    font-size: 14px;
+  }
+
+  .adult-contents .two-method .degree-box p {
+    font-size: 14px;
+    word-break: keep-all;
+  }
+
+  .adult-contents .two-method .degree-box strong {
+    font-size: 14px;
+  }
+
+  .adult-contents .two-method .degree-box b {
+    font-size: 14px;
+    height: 48px;
+    word-break: keep-all;
+  }
+
+  .adult-contents .two-method .degree-box b span {
+    font-size: 14px;
+    margin-left: 12px;
+  }
+
+  .adult-contents .adult-program .program-detail .division-contents {
+    justify-content: center;
+  }
+
+  .adult-contents .adult-program .program-detail .division-contents .division-box p {
+    font-size: 14px;
+  }
+
+  .adult-contents .adult-program .program-detail .division-contents .division-box ul li {
+    font-size: 14px;
+    line-height: 28px;
+    word-break: keep-all;
+  }
+
+  .adult-contents .adult-program .program-detail .table-sub-text {
+    margin-top: 10px;
+    font-size: 12px;
+  }
+  .adult-contents .adult-program .program-detail .example-table tbody tr td {
+    font-size: 14px;
+  }
+
+  .adult-contents .adult-program .program-detail .example-table thead tr th {
+    font-size: 14px;
+  }
+
+  .adult-contents .adult-program .program-detail .grad-sub-title {
+    padding-left: unset;
+  }
+
+  .adult-contents .adult-program .program-contents .program-box .pro-title p span {
+    font-size: 14px;
+  }
+
+  .adult-contents .adult-program .program-contents .program-box .pro-text p {
+    font-size: 14px;
+  }
+
+  .adult-contents .adult-program .pro-intro {
+    font-size: 18px;
+  }
+
+  .early-abroad-main .e-section6 .part1 {
+    margin-top: 60px;
+  }
+
+  .adult-contents .highschool-title .tit-text {
+    font-size: 24px;
+  }
+
+  .about-page .adult-contents {
+    padding-inline: 20px;
+  }
 
   .master-text {
     font-size: 14px;
@@ -4644,6 +5144,7 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
   .early-abroad-main .e-section2 {
     padding-block: unset;
     padding: 60px 20px;
+    margin-block: -1px;
   }
 
   .early-abroad-main .e-section1 .case-contents .case-box ul li {
@@ -4855,6 +5356,7 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
 
   .talk-section .max-800 .talk-layout img {
     width: 100%;
+    max-width: 400px;
   }
 
   .office-card__desc {
@@ -5040,10 +5542,8 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
     align-items: center;
   }
 
-  .en-sp-width {
-    width: 90% !important;
-    height: unset !important;
-    max-width: 190px !important;
+  .about-why__lead {
+    margin-top: 12px;
   }
 
   .ready-hero__inner {
@@ -5084,6 +5584,8 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
 
   .early-abroad-main .e-section6 .part1 .difference-title img {
     width: 100%;
+    height: unset;
+    max-width: 400px;
   }
 
   .early-abroad-main .e-section6 .part2 .program-range {
@@ -5147,7 +5649,7 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
 
   .why-canada-main .section2 .map-contents {
     flex-direction: column;
-    padding-top: 60px;
+    padding-top: 28px;
   }
 
   .why-canada-main .section2 .map-contents .map-img {
@@ -5222,6 +5724,7 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
   .cta3-logo {
     width: 100%;
     height: unset;
+    max-width: 400px;
   }
 
   .talk-section .max-800 .talk-layout {
@@ -5270,6 +5773,7 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
     padding: 0 8px;
     font-size: 12px;
     line-height: 16px;
+    text-align: center;
   }
   
   .hero-cta {
@@ -5354,18 +5858,35 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
   }
 
   .geo{ grid-template-columns: 2fr 1fr; }
+
+  .en-sp-width {
+    max-width: 300px;
+  }
+
+  .early-abroad-main .e-section4 .total-layout .two-item-layout .item-3 ul li {
+    font-size: 14px;
+  }
 }
 
 
 
 
 @media (max-width: 720px) {
-  /* .aside-nav{ 
-    top: auto; 
-    bottom: 20px; 
-    right: 10px; 
-    gap:10px; 
-  } */
+  .en-sp-width {
+    max-width: 200px !important;
+  }
+
+  .about-us-title .about-hero__title p {
+    font-size: 22px;
+  }
+
+  .about-us-title .about-hero__title {
+    align-items: end;
+  }
+
+  .why-canada-main .section2 .detail-contents .detail-box ul {
+    max-height: 358px;
+  }
 
   #not-open {
     min-height: 24px;

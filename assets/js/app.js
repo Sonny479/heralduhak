@@ -46,7 +46,7 @@ function initNav() {
   });
 }
 
-/* ===== Hero Slider (홈 전용) ===== */
+/* ===== Hero Slider (index페이지 배너 슬라이드) ===== */
 (function initHeroSliders(){
   document.querySelectorAll('.slider').forEach(slider=>{
     const slidesWrap = slider.querySelector('.slides');
@@ -179,8 +179,6 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-
-
 /* =========================================
    [ADD] Lang Switch + i18n
 ========================================= */
@@ -193,8 +191,6 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
-
-// ===== Consult page only =====
 // ===== Consult page only (Extended with Google Sheets Integration) =====
 (function(){
   const doc = document;
