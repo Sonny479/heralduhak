@@ -1610,6 +1610,8 @@ main {
   flex-direction: column;
   width: 100%;
   max-width: 286px;
+  height: -webkit-fill-available;
+
 }
 
 .why-canada-main .section2 .detail-contents .detail-box .detail-title {
@@ -1648,9 +1650,9 @@ main {
   border-bottom: 1px solid #CCC;
   border-left: 1px solid #CCC;
   background-color: #FFF;
-  /* min-height: 305px;
-  max-height: 433px; */
-  height: -webkit-fill-available;
+  min-height: 305px;
+  max-height: 305px;
+  /* height: -webkit-fill-available; */
 }
 
 .why-canada-main .section2 .detail-contents .detail-box ul li {
