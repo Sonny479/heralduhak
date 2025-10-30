@@ -1648,10 +1648,9 @@ main {
   border-bottom: 1px solid #CCC;
   border-left: 1px solid #CCC;
   background-color: #FFF;
-  /* min-height: 116px; */
   min-height: 305px;
-  max-height: 305px;
-  /* height: -webkit-fill-available; */
+  max-height: 433px;
+  height: -webkit-fill-available;
 }
 
 .why-canada-main .section2 .detail-contents .detail-box ul li {
