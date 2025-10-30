@@ -10,17 +10,19 @@
 }
 
 /* ===== Typography Base ===== */
-:root{
-  /* 전역 글꼴(노토 산스 KR 고정) */
+/* :root{
   --font-sans: "Noto Sans KR","Noto Sans",system-ui,-apple-system,"Segoe UI",Roboto,"Apple SD Gothic Neo","Malgun Gothic","Helvetica Neue",Arial,sans-serif;
 
-  /* 본문 기본 */
   --text-base: 16px;
   --leading-base: 1.6;
-}
+} */
 
 /* 제목 계층(선택) */
-h1,h2,h3,h4,h5,h6{ font-family: var(--font-sans); margin:0 0 .5em; line-height:1.25; }
+h1,h2,h3,h4,h5,h6 { 
+  /* font-family: var(--font-sans);  */
+  margin:0 0 .5em; 
+  line-height:1.25; 
+}
 h1{ font-weight:800; font-size:clamp(2rem, 2.5vw + 1rem, 2.75rem); }
 h1{ font-size:2.75rem; } /* iOS fallback */
 @media (max-width: 768px) { h1{ font-size:2rem; } }
@@ -59,7 +61,7 @@ strong,b{ font-weight:700; }
 html,body{height:100%}
 body{
     margin:0;
-    font-family:var(--font-sans);
+    /* font-family:var(--font-sans); */
     font-size:var(--text-base);
     line-height:var(--leading-base);
     background:var(--bg); color:var(--text);
@@ -1648,7 +1650,8 @@ main {
   background-color: #FFF;
   /* min-height: 116px; */
   min-height: 305px;
-  height: -webkit-fill-available;
+  max-height: 305px;
+  /* height: -webkit-fill-available; */
 }
 
 .why-canada-main .section2 .detail-contents .detail-box ul li {
