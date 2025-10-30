@@ -427,7 +427,13 @@ input::placeholder,textarea::placeholder{color:#8c90a1}
 
 /* 각 아이템 */
 .aside-item img{ width: 60px; height: auto; display: block; }
-.aside-item{ opacity:.95; transition: transform .15s ease, opacity .15s ease; }
+.aside-item { 
+  opacity:.95; 
+  transition: transform .15s ease, opacity .15s ease; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .aside-item:hover{ transform: translateY(-2px); opacity:1; }
 
 /* 아이템 사이 구분 라인 (이미지 아래 실선) */
@@ -454,7 +460,7 @@ input::placeholder,textarea::placeholder{color:#8c90a1}
   font-size: 12px;
   text-align: center;
   /* font-family: 'Pretendard'; */
-  font-family: 'Noto Sans';
+  font-family: 'Noto Sans KR', 'Noto Sans';
 }
 
 /* ===== Section 3: 상담 예약 CTA ===== */
@@ -643,7 +649,7 @@ input::placeholder,textarea::placeholder{color:#8c90a1}
   color:#eee;
   line-height: 1.6;
   font-size: 14px;
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-weight: 300;
   margin-top: 16px;
 }
@@ -689,7 +695,7 @@ input::placeholder,textarea::placeholder{color:#8c90a1}
   justify-content: center;
   align-items: center;
   color: #FFF;
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 40px;
   font-weight: 700;
   line-height: normal;
@@ -1312,7 +1318,7 @@ main {
 .why-canada-main .section1 .banner-bg strong {
   color: #FFF;
   text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.25);
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 32px;
   font-weight: 700;
   margin-top: 126px;
@@ -1322,7 +1328,7 @@ main {
   text-align: center;
   color: #FFF;
   text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.25);
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
@@ -1344,7 +1350,7 @@ main {
 
 .banner-bg p {
   color: #FFF;
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 40px;
   font-weight: 700;
   line-height: normal;
@@ -1384,7 +1390,7 @@ main {
 .why-canada-main .section1 .canada-advantage-table strong {
   color: #4B3C37;
   text-align: center;
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 24px;
   font-weight: 900;
   line-height: 24px;
@@ -1416,14 +1422,14 @@ main {
 
 .why-canada-main .section1 .canada-advantage-table .advantage-contents .adv-box strong {
   color: #CE5D5F;
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 16px;
   font-weight: 900;
 }
 
 .why-canada-main .section1 .canada-advantage-table .advantage-contents .adv-box p {
   color: #444;
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 16px;
   font-weight: 500;
 }
@@ -1437,7 +1443,7 @@ main {
   padding: 0 32px;
   background-color: #803130;
   color: #F5F5F5;
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 16px;
   font-weight: 800;
   border: unset;
@@ -1464,7 +1470,7 @@ main {
 .why-canada-main .section2 .Vancouver_abroad strong {
   color: #803130;
   text-align: left;
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 24px;
   font-weight: 900;
   line-height: 24px;
@@ -1473,7 +1479,7 @@ main {
 
 .why-canada-main .section2 .Vancouver_abroad p {
   color: #333;
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 16px;
   font-weight: 500;
   line-height: 20px;
@@ -1481,7 +1487,7 @@ main {
 
 .why-canada-main .section2 .Vancouver_abroad p strong {
   color: #333;
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 16px;
   font-weight: 800;
 }
@@ -1507,7 +1513,7 @@ main {
 .why-canada-main .section2 .map-contents .map-img .map-text {
   /* color: #803130; */
   color: #444;
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 14px;
   font-weight: 700;
   line-height: 15px;
@@ -1541,7 +1547,7 @@ main {
 .why-canada-main .section2 .map-contents .edu-spot .edu-title span {
   color: #CE5D5F;
   text-align: center;
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 20px;
   font-weight: 800;
   line-height: normal;
@@ -1567,7 +1573,7 @@ main {
 
 .why-canada-main .section2 .map-contents .edu-spot .edu-contents .edu-box span {
   color: #803130;
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 16px;
   font-weight: 600;
   line-height: 20px
@@ -1583,7 +1589,7 @@ main {
   border: 1px solid #CCC;
   background-color: #F6F6F6;
   color: #999;
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 10px;
   font-weight: 600;
   line-height: 12.5px;
@@ -1622,7 +1628,7 @@ main {
 
 .why-canada-main .section2 .detail-contents .detail-box .detail-title span {
   color: #CE5D5F;
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 16px;
   font-weight: 700;
   line-height: 18px;
@@ -1647,7 +1653,7 @@ main {
 
 .why-canada-main .section2 .detail-contents .detail-box ul li {
   color: #333;
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-weight: 500;
   line-height: normal;
   align-self: stretch;
@@ -1680,7 +1686,7 @@ main {
 
 .why-canada-main .section3 .compare-school .compare-title {
   color: #4B3C37;
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 22px;
   font-style: normal;
   font-weight: 900;
@@ -1688,7 +1694,7 @@ main {
 }
 
 .why-canada-main .section3 .compare-school .compare-bold {
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 18px;
   font-weight: 600;
   text-align: center;
@@ -1699,7 +1705,7 @@ main {
 .why-canada-main .section3 .compare-school .compare-title strong {
   color: #CE5D5F;
   text-align: center;
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 24px;
   font-weight: 900;
   /* line-height: 22px; */
@@ -1707,7 +1713,7 @@ main {
 
 .why-canada-main .section3 .compare-school .compare-sub-title {
   color: #333;
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 16px;
   font-weight: 500;
   line-height: 20px;
@@ -1723,7 +1729,7 @@ main {
 }
 
 .why-canada-main .section3 .compare-table thead tr {
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 16px;
   font-weight: 700;
   line-height: 21px;
@@ -1752,7 +1758,7 @@ main {
 .why-canada-main .section3 .compare-table tbody tr td {
   padding-block: 19px;
   color: #444;
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 16px;
   font-weight: 500;
   line-height: 21px;
@@ -1786,7 +1792,7 @@ main {
 
 .section4 .reservation .suggestion-text strong {
   color: #FFF;
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 24px;
   font-weight: 700;
   line-height: 30px;
@@ -1794,7 +1800,7 @@ main {
 
 .section4 .reservation .suggestion-text p {
   color: #FFF;
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 16px;
   font-weight: 500;
   line-height: 20px;
@@ -1811,7 +1817,7 @@ main {
   border: 2px solid #F5F5F5;
   background-color: transparent;
   color: #F5F5F5;
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 16px;
   font-weight: 600;
   line-height: normal;
@@ -1905,7 +1911,7 @@ main {
 
 .with-title strong {
   color: #4B3C37;
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 32px;
   font-weight: 700;
   line-height: normal;
@@ -1913,7 +1919,7 @@ main {
 
 .with-title p {
   color: #333;
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
@@ -1932,7 +1938,7 @@ main {
 .early-abroad-main .e-section1 .case-title {
   color: #CE5D5F;
   text-align: center;
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 22px;
   font-weight: 900;
   line-height: 22px;
@@ -1961,7 +1967,7 @@ main {
 
 .early-abroad-main .e-section1 .case-contents .case-box ul li {
   color: #333;
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 16px;
   font-weight: 500;
   line-height: normal;
@@ -1977,7 +1983,7 @@ main {
 
 .early-abroad-main .e-section1 .case-contents .case-box .half-bg p {
   color: #FFF;
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 16px;
   font-weight: 500;
   line-height: normal;
@@ -2009,7 +2015,7 @@ main {
   background: #4B3C37;
   color: #F8F3EC;
   text-align: center;
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 22px;
   font-weight: 900;
   line-height: 22px;
@@ -2078,7 +2084,7 @@ main {
 
 .early-abroad-main .e-section2 .sequence-box .sequence-contents .box-block .box-item .box-text strong {
   color: #803130;
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 18px;
   font-weight: 700;
   line-height: 22px;
@@ -2087,7 +2093,7 @@ main {
 
 .early-abroad-main .e-section2 .sequence-box .sequence-contents .box-block .box-item .box-text p {
   color: #4B3C37;
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 16px;
   font-weight: 500;
   line-height: 20px;
@@ -2119,7 +2125,7 @@ main {
 
 .early-abroad-main .e-section3 .service-package strong {
   color: #4B3C37;
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 20px;
   font-weight: 900;
   line-height: normal;
@@ -2146,7 +2152,7 @@ main {
 .early-abroad-main .e-section3 .service-package .row .service-item strong {
   color: #4B3C37;
   text-align: center;
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 16px;
   font-weight: 800;
   line-height: 21px;
@@ -2156,7 +2162,7 @@ main {
 
 .early-abroad-main .e-section3 .service-package .row .service-item p {
  color: #545454;
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 16px;
   font-weight: 500;
   line-height: 35px;
@@ -2180,7 +2186,7 @@ main {
 .early-abroad-main .e-section3 .service-package .row .service-item-short strong {
   color: #4B3C37;
   text-align: center;
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 16px;
   font-weight: 800;
   line-height: 21px;
@@ -2190,7 +2196,7 @@ main {
 
 .early-abroad-main .e-section3 .service-package .row .service-item-short p {
   color: #545454;
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 16px;
   font-weight: 500;
   line-height: 35px;
@@ -2203,7 +2209,7 @@ main {
 
 .early-abroad-main .e-section3 .service-package .s-notice {
   color: #666;
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 16px;
   font-weight: 500;
   line-height: normal;
@@ -2272,7 +2278,7 @@ main {
 
 .early-abroad-main .e-section4 .free-edu strong {
   color: #803130;
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 22px;
   font-weight: 900;
   line-height: normal;
@@ -2281,7 +2287,7 @@ main {
 
 .early-abroad-main .e-section4 .free-edu p {
   color: #000;
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 16px;
   font-weight: 500;
   line-height: normal;
@@ -2318,7 +2324,7 @@ main {
   justify-content: center;
   align-items: center;
   color: #FFF;
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 16px;
   font-weight: 800;
   line-height: normal;
@@ -2326,7 +2332,7 @@ main {
 
 .early-abroad-main .e-section4 .total-layout .item-1 ul li {
   color: #444;
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
@@ -2359,7 +2365,7 @@ main {
   justify-content: center;
   align-items: center;
   color: #FFF;
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 16px;
   font-weight: 800;
   line-height: normal;
@@ -2368,7 +2374,7 @@ main {
 .early-abroad-main .e-section4 .total-layout .two-item-layout .item-2 ul li {
   
   color: var(--444444, #444);
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
@@ -2400,7 +2406,7 @@ main {
   justify-content: center;
   align-items: center;
   color: #FFF;
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 16px;
   font-weight: 800;
   line-height: normal;
@@ -2408,7 +2414,7 @@ main {
 
 .early-abroad-main .e-section4 .total-layout .two-item-layout .item-3 ul li {
   color: var(--444444, #444);
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
@@ -2440,7 +2446,7 @@ main {
   justify-content: center;
   align-items: center;
   color: #FFF;
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 16px;
   font-weight: 800;
   line-height: normal;
@@ -2448,7 +2454,7 @@ main {
 
 .early-abroad-main .e-section4 .total-layout .two-item-layout .item-3 p {
   color: #444;
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
@@ -2483,7 +2489,7 @@ main {
   justify-content: center;
   align-items: center;
   color: #FFF;
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 16px;
   font-weight: 800;
   line-height: normal;
@@ -2491,7 +2497,7 @@ main {
 
 .early-abroad-main .e-section4 .study-cost .cost-title span {
   color: #4B3C37;
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 14px;
   font-weight: 500;
   line-height: normal;
@@ -2511,7 +2517,7 @@ main {
 .early-abroad-main .e-section4 .study-cost .cost-table thead tr th {
   padding-block: 8px;
   color: #FFF;
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 16px;
   font-weight: 700;
   line-height: 21px;
@@ -2525,7 +2531,7 @@ main {
 .early-abroad-main .e-section4 .study-cost .cost-table tbody tr td {
   padding-block: 8px;
   color: #545454;
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 16px;
   font-weight: 500;
   line-height: 21px;
@@ -2552,7 +2558,7 @@ main {
 
 .early-abroad-main .e-section5 .catholic-school .catholic-title {
   color: #803130;
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 22px;
   font-weight: 900;
   line-height: 22px;
@@ -2560,7 +2566,7 @@ main {
 
 .early-abroad-main .e-section5 .catholic-school p {
   color: #333;
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
@@ -2578,7 +2584,7 @@ main {
 
 .early-abroad-main .e-section5 .catholic-contents p {
   color: #803130;
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 16px;
   font-weight: 900;
   line-height: 16px;
@@ -2587,7 +2593,7 @@ main {
 .early-abroad-main .e-section5 .catholic-contents p span {
   color: #777;
   text-align: center;
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 16px;
   font-weight: 700;
   line-height: 16px;
@@ -2607,7 +2613,7 @@ main {
 .early-abroad-main .e-section5 .catholic-contents .catholic-table thead tr th {
   padding-block: 9px;
   color: #FFF;
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 16px;
   font-weight: 700;
   line-height: 21px;
@@ -2621,7 +2627,7 @@ main {
 
 .early-abroad-main .e-section5 .catholic-contents .catholic-table tbody tr td {
   color: #545454;
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 16px;
   font-weight: 500;
   line-height: 21px;
@@ -2640,7 +2646,7 @@ main {
 
 .early-abroad-main .e-section5 .christian-contents p {
   color: #803130;
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 16px;
   font-weight: 900;
   line-height: 16px;
@@ -2649,7 +2655,7 @@ main {
 .early-abroad-main .e-section5 .christian-contents p span {
   color: #777;
   text-align: center;
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 16px;
   font-weight: 700;
   line-height: 16px;
@@ -2669,7 +2675,7 @@ main {
 .early-abroad-main .e-section5 .christian-contents .christian-table thead tr th {
   padding-block: 9px;
   color: #FFF;
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 16px;
   font-weight: 700;
   line-height: 21px;
@@ -2683,7 +2689,7 @@ main {
 
 .early-abroad-main .e-section5 .christian-contents .christian-table tbody tr td {
   color: #545454;
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 16px;
   font-weight: 500;
   line-height: 21px;
@@ -2695,7 +2701,7 @@ main {
 
 .early-abroad-main .e-section5 .sub-text {
   color:#888;
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 16px;
   font-weight: 500;
   line-height: 20px;
@@ -2722,7 +2728,7 @@ main {
 .early-abroad-main .e-section6 .management-abroad .abroad-title {
   color: #803130;
   text-align: center;
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 22px;
   font-weight: 900;
   line-height: 22px;
@@ -2731,7 +2737,7 @@ main {
 
 .early-abroad-main .e-section6 .management-abroad .abroad-text {
   color: #333;
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
@@ -2760,7 +2766,7 @@ main {
 .early-abroad-main .e-section6 .part1 .difference-title p {
   color: #CE5D5F;
   text-align: center;
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 18px;
   font-weight: 900;
   line-height: 18px;
@@ -2804,7 +2810,7 @@ main {
   padding: 4px 12px;
   background: #803130;
   color: #FFF;
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 18px;
   font-weight: 700;
   line-height: normal;
@@ -2813,7 +2819,7 @@ main {
 .early-abroad-main .e-section6 .part1 .difference-contents .differ-item p {
   color: #803130;
   text-align: center;
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 16px;
   font-weight: 600;
   line-height: 24px;
@@ -2832,7 +2838,7 @@ main {
 .early-abroad-main .e-section6 .part2 .program-title {
   color: #CE5D5F;
   text-align: center;
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 18px;
   font-weight: 900;
   line-height: 24px;
@@ -2863,7 +2869,7 @@ main {
   height: 40px;
   padding: 4px 12px;
   color: #FFF;
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 18px;
   font-weight: 700;
   line-height: normal;
@@ -2883,7 +2889,7 @@ main {
   gap: 8px;
   line-height: 21px;
   color: #4B3C37;
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 16px;
   font-weight: 500;
   letter-spacing: -0.32px;
@@ -2949,7 +2955,7 @@ main {
 .early-abroad-main .e-section7 .faq-contents .faq-item .faq-question .question-text {
   color: #555;
   text-align: center;
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 16px;
   font-weight: 700;
   line-height: normal;
@@ -2958,7 +2964,7 @@ main {
 .early-abroad-main .e-section7 .faq-contents .faq-item .faq-question .font-red {
   color: #B92E2C;
   text-align: center;
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 16px;
   font-weight: 700;
   line-height: normal;
@@ -2986,7 +2992,7 @@ main {
 
 .early-abroad-main .e-section7 .faq-contents .faq-item .faq-answer {
   color: #666;
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
@@ -3078,7 +3084,7 @@ main {
 .ready-contents .ready-hero__text {
   color: #4B3C37;
   text-align: center;
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 22px;
   font-weight: 700;
   line-height: 22px;
@@ -3094,7 +3100,7 @@ main {
   background: #CE5D5F;
   border: unset;
   color: #F5F5F5;
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 16px;
   font-weight: 600;
   line-height: normal;
@@ -3159,7 +3165,7 @@ textarea {
 .consult-bg .consult-title p {
   text-align: center;
   font-size: 26px;
-  font-family: "Noto Sans KR";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-weight: 500;
 }
 
@@ -3341,7 +3347,7 @@ textarea {
 
 .new-title-layout strong {
   color: #4B3C37;
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 32px;
   font-weight: 700;
   line-height: normal;
@@ -3350,7 +3356,7 @@ textarea {
 .new-title-layout p {
   color: #333;
   text-align: center;
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
@@ -3387,7 +3393,7 @@ textarea {
   align-items: center;
   border-radius: 999px;
   background-color: #FFDE4D;
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 16px;
   font-weight: 600;
   color: #5F482F;
@@ -3405,7 +3411,7 @@ button {
   flex-direction: column;
   color: #333;
   text-align: center;
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
@@ -3429,7 +3435,7 @@ button {
 }
 
 .aside-item img {
-  justify-self: center;
+  /* justify-self: center; */
   width: 32px !important;
   height: 32px;
 }
@@ -3438,7 +3444,7 @@ button {
   color: #EEE;
   text-align: center;
   /* font-family: 'Pretendard'; */
-  font-family: 'Noto Sans';
+  font-family: 'Noto Sans KR', 'Noto Sans';
   /* font-size: 14px; */
   font-size: 12px;
   font-weight: 500;
@@ -3531,7 +3537,7 @@ a {
 
 .uhak-row .friends-box strong {
   color: #9A695B;
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 18px;
   font-weight: 600;
   letter-spacing: -0.9px;
@@ -3545,7 +3551,7 @@ a {
 
 .uhak-row .friends-box p {
   color: rgba(53, 47, 45, 0.90);
-  font-family: "Noto Sans KR";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 14px;
   font-weight: 500;
   line-height: 22px;
@@ -3586,7 +3592,7 @@ a {
 
 .uhak-row .friends-box2 .friends-col strong {
   color: #9A695B;
-  font-family: "Noto Sans KR";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 18px;
   font-weight: 600;
   /* letter-spacing: -0.9px; */
@@ -3601,7 +3607,7 @@ a {
 
 .uhak-row .friends-box2 .friends-col p {
   color: rgba(53, 47, 45, 0.90);
-  font-family: "Noto Sans KR";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 14px;
   font-weight: 500;
   line-height: 21px;
@@ -3672,7 +3678,7 @@ a {
 
 textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
   font-size: 14px;
-  font-family: 'Noto Sans KR';
+  font-family: 'Noto Sans KR', 'Noto Sans';
 }
 
 .academic_tutoring {
@@ -3695,7 +3701,7 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
 
 .academic_tutoring .tutoring-title strong {
   color: #4B3C37;
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 32px;
   font-weight: 700;
   line-height: normal;
@@ -3705,7 +3711,7 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
 .academic_tutoring .tutoring-title .tutoring-title-text {
   color: #4B3C37;
   text-align: center;
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
@@ -3725,7 +3731,7 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
 .tutoring-guide .t-program-title {
   color: #803130;
   text-align: center;
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 20px;
   font-weight: 900;
   line-height: normal;
@@ -3761,7 +3767,7 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
   background: #CE5D5F;
   color: #FFF;
   text-align: center;
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 20px;
   font-weight: 900;
   line-height: normal;
@@ -3789,7 +3795,7 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
 
 .tutoring-guide .tutoring-layout .tut-col .tut-box .tut-contents2 p {
   color: #4B3C37;
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 16px;
   font-weight: 600;
   line-height: 150%;
@@ -3798,7 +3804,7 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
 
 .tutoring-guide .tutoring-layout .tut-col .tut-box .tut-contents2 p b {
   color: #4B3C37;
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 20px;
   font-weight: 700;
   /* line-height: 30px; */
@@ -3808,7 +3814,7 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
 
 .tutoring-guide .tutoring-layout .tut-col .tut-box .tut-contents p {
   color: #4B3C37;
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 16px;
   font-weight: 600;
   line-height: 150%;
@@ -3817,7 +3823,7 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
 
 .tutoring-guide .tutoring-layout .tut-col .tut-box .tut-contents p b {
   color: #4B3C37;
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 20px;
   font-weight: 700;
   line-height: 30px;
@@ -3842,7 +3848,7 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
 .academic_tutoring .uhak-tutoring .uhak-title-layout strong {
   color: #803130;
   text-align: center;
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 32px;
   font-weight: 900;
   line-height: normal;
@@ -3857,7 +3863,7 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
   /* align-items: center; */
   gap: 10px;
   color: #4B3C37;
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 16px;
   font-style: normal;
   font-weight: 700;
@@ -3905,7 +3911,7 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
   justify-content: center;
   align-items: center;
   color: #4B3C37;
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 20px;
   font-weight: 900;
   line-height: normal;
@@ -3915,7 +3921,7 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
 
 .academic_tutoring .uhak-tutoring .teachers-layout .teacher-box .teacher-content1 p {
   color: #F5F5F5;
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 16px;
   font-weight: 600;
   line-height: normal;
@@ -3947,7 +3953,7 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
 
 .academic_tutoring .uhak-tutoring .teachers-layout .teacher-box .teacher-content2 ul {
   color: #4B3C37;
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 14px;
   font-weight: 500;
   line-height: 21px;
@@ -3964,7 +3970,7 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
 
 .master-text {
   color: #4B3C37;
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 20px;
   font-weight: 700;
   line-height: 30px;
@@ -4189,7 +4195,7 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
 .adult-contents .highschool-title .tit-text {
   color: #4B3C37;
   text-align: center;
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 32px;
   font-weight: 700;
   line-height: normal;
@@ -4197,7 +4203,7 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
 
 .adult-contents .highschool-title .tit-sub-text {
   color: #4B3C37;
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 24px;
   font-weight: 700;
   line-height: normal;
@@ -4205,7 +4211,7 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
 
 .adult-contents .highschool-title .tit-sub-text2 {
   color: #803130;
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 16px;
   font-weight: 600;
   line-height: normal;
@@ -4214,7 +4220,7 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
 
 .adult-contents .highschool-title .tit-sub-text3 {
   color: #4B3C37;
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
@@ -4232,7 +4238,7 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
 
 .adult-contents .adult-program .pro-intro {
   color: #803130;
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 20px;
   font-weight: 900;
   line-height: normal;
@@ -4243,7 +4249,7 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
   text-align: left;
   width: 100%;
   color: #333;
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 16px;
   font-weight: 500;
   line-height: normal;
@@ -4283,7 +4289,7 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
 
 .adult-contents .adult-program .program-contents .program-box .pro-title p {
   color: rgba(136, 12, 36, 0.70);
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 12px;
   font-weight: 500;
   line-height: normal;
@@ -4291,7 +4297,7 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
 }
 
 .adult-contents .adult-program .program-contents .program-box .pro-title p span {
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 16px;
   font-weight: 700;
   line-height: normal;
@@ -4303,7 +4309,7 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
 
 .adult-contents .adult-program .program-contents .program-box .pro-text p {
   color: #333;
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
@@ -4331,7 +4337,7 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
 
 .adult-contents .adult-program .program-detail .grad-title strong {
   color: rgba(136, 12, 36, 0.70);
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 16px;
   font-weight: 700;
   line-height: normal;
@@ -4339,7 +4345,7 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
 
 .adult-contents .adult-program .program-detail .grad-sub-title {
   color: #333;
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 16px;
   font-weight: 500;
   line-height: normal;
@@ -4358,7 +4364,7 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
 }
 
 .adult-contents .adult-program .program-detail .example-table thead tr th {
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 16px;
   font-weight: 700;
   line-height: 21px;
@@ -4381,7 +4387,7 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
 
 .adult-contents .adult-program .program-detail .example-table tbody tr td {
   color: #444;
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 16px;
   font-weight: 500;
   line-height: 21px;
@@ -4392,7 +4398,7 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
 .adult-contents .adult-program .program-detail .table-sub-text {
   margin-top: 20px;
   color: #666;
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 16px;
   font-weight: 500;
   line-height: normal;
@@ -4418,7 +4424,7 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
 .adult-contents .adult-program .program-detail .division-contents .division-box p {
   background-color: #CE5D5F;
   color: #FFF;
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 16px;
   font-weight: 700;
   line-height: normal;
@@ -4433,7 +4439,7 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
 
 .adult-contents .adult-program .program-detail .division-contents .division-box ul li {
   color: #333;
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 16px;
   font-weight: 500;
   line-height: 32px;
@@ -4463,7 +4469,7 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
 
 .adult-contents .two-method .degree-box b {
   color: #FFF;
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 16px;
   font-weight: 800;
   line-height: normal;
@@ -4478,7 +4484,7 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
 
 .adult-contents .two-method .degree-box b span {
   color: #FFF;
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 14px;
   font-weight: 500;
   line-height: normal;
@@ -4487,7 +4493,7 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
 
 .adult-contents .two-method .degree-box strong {
   color: #803130;
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 16px;
   font-weight: 800;
   line-height: 24px;
@@ -4496,7 +4502,7 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
 
 .adult-contents .two-method .degree-box p {
   color: #444;
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
@@ -4518,7 +4524,7 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
   display: flex;
   align-items: center;
   color: #FFF;
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 16px;
   font-weight: 800;
   line-height: normal;
@@ -4541,7 +4547,7 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
   border-right: 1px solid #F1E6DE;
   background: rgba(136, 12, 36, 0.70);
   color: #FFF;
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 16px;
   font-weight: 700;
   line-height: 21px;
@@ -4551,7 +4557,7 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
 
 .adult-contents .pro-component .component-table tbody tr td {
   color: #545454;
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 16px;
   font-weight: 500;
   line-height: 21px;
@@ -4567,7 +4573,7 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
 
 .adult-contents .requirement-text {
   color: #4B3C37;
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 16px;
   font-weight: 500;
   line-height: normal;
@@ -4707,7 +4713,7 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
 
   .academic_tutoring .uhak-tutoring .teachers-layout .teacher-box .teacher-content2 .mob-teacher p b {
     color: #4B3C37;
-    font-family: "Noto Sans";
+    font-family: 'Noto Sans KR', 'Noto Sans';
     font-size: 20px;
     font-weight: 900;
     line-height: normal;
@@ -4716,7 +4722,7 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
 
   .academic_tutoring .uhak-tutoring .teachers-layout .teacher-box .teacher-content2 .mob-teacher p {
     color: #666;
-    font-family: "Noto Sans";
+    font-family: 'Noto Sans KR', 'Noto Sans';
     font-size: 16px;
     font-weight: 600;
     line-height: 19px;
@@ -4879,7 +4885,7 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
 
   textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
     font-size: 14px;
-    font-family: 'Noto Sans KR';
+    font-family: 'Noto Sans KR', 'Noto Sans';
   }
 
   .consult-question {
@@ -5735,7 +5741,7 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
     display: block;
     margin-top: 20px;
     color: #EEE;
-    font-family: "Noto Sans KR";
+    font-family: 'Noto Sans KR', 'Noto Sans';
     font-size: 12px;
     font-weight: 350;
     line-height: 18px;
