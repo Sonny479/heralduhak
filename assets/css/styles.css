@@ -1648,8 +1648,8 @@ main {
   border-bottom: 1px solid #CCC;
   border-left: 1px solid #CCC;
   background-color: #FFF;
-  min-height: 305px;
-  max-height: 433px;
+  /* min-height: 305px;
+  max-height: 433px; */
   height: -webkit-fill-available;
 }
 
