@@ -1598,14 +1598,27 @@ main {
 }
 
 .why-canada-main .section2 .detail-contents {
-  display: flex;
+  /* display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 80px; */
+  display: flex;
+  flex-direction: column;
   gap: 16px;
   margin-bottom: 80px;
 } 
 
-.why-canada-main .section2 .detail-contents .detail-box {
+.why-canada-main .section2 .detail-contents .flex-wrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.why-canada-main .section2 .detail-contents .flex-wrap .detail-box {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -1614,7 +1627,7 @@ main {
 
 }
 
-.why-canada-main .section2 .detail-contents .detail-box .detail-title {
+.why-canada-main .section2 .detail-contents .flex-wrap .detail-box .detail-title {
   display: flex;
   align-items: center;
   align-self: stretch;
@@ -1625,12 +1638,12 @@ main {
   border: 1px solid #F1E6DE; 
 }
 
-.why-canada-main .section2 .detail-contents .detail-box .detail-title img {
+.why-canada-main .section2 .detail-contents .flex-wrap .detail-box .detail-title img {
   width: 24px;
   height: 24px;
 }
 
-.why-canada-main .section2 .detail-contents .detail-box .detail-title span {
+.why-canada-main .section2 .detail-contents .flex-wrap .detail-box .detail-title span {
   color: #CE5D5F;
   font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 16px;
@@ -1638,7 +1651,7 @@ main {
   line-height: 18px;
 }
 
-.why-canada-main .section2 .detail-contents .detail-box ul {
+.why-canada-main .section2 .detail-contents .flex-wrap .detail-box ul {
   display: flex;
   padding: 16px 16px 16px 30px;
   flex-direction: column;
@@ -1650,12 +1663,12 @@ main {
   border-bottom: 1px solid #CCC;
   border-left: 1px solid #CCC;
   background-color: #FFF;
-  min-height: 305px;
-  max-height: 305px;
-  /* height: -webkit-fill-available; */
+  /* min-height: 305px;
+  max-height: 305px; */
+  height: -webkit-fill-available;
 }
 
-.why-canada-main .section2 .detail-contents .detail-box ul li {
+.why-canada-main .section2 .detail-contents .flex-wrap .detail-box ul li {
   color: #333;
   font-family: 'Noto Sans KR', 'Noto Sans';
   font-weight: 500;
@@ -1668,7 +1681,7 @@ main {
   /* max-width: 520px; */
 }
 
-.why-canada-main .section2 .detail-contents .detail-box ul li span {
+.why-canada-main .section2 .detail-contents .flex-wrap .detail-box ul li span {
   padding-left: 1px;
 }
 
