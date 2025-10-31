@@ -4609,8 +4609,8 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
 
 @media (max-width: 1024px) {
   .why-canada-main .section2 .detail-contents .flex-wrap .detail-box ul {
-    min-height: unset;
-    max-height: unset;
+    min-height: unset !important;
+    max-height: 310 !important;
   }
 
   .safari-height2 {
@@ -4619,7 +4619,7 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
 
   .safari-height {
     min-height: unset !important;
-    max-height: unset !important;
+    max-height: 310px !important;
   }
 
   .why-canada-main .section2 .detail-contents .flex-wrap {
@@ -4628,6 +4628,7 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
 
   .why-canada-main .section2 .detail-contents .flex-wrap .detail-box {
     max-width: unset;
+    max-height: 310px;
   }
 
   .adult-contents .highschool-title .tit-sub-text2 {
