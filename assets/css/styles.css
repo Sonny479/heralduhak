@@ -4603,7 +4603,20 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
   max-height: 330px !important;
 }
 
+.safri-height2 {
+  height: 385px !important;
+}
+
 @media (max-width: 1024px) {
+  .safri-height2 {
+    height: unset !important;
+  }
+
+  .safri-height {
+    min-height: unset !important;
+    max-height: unset !important;
+  }
+
   .why-canada-main .section2 .detail-contents .flex-wrap {
     height: unset;
   }
