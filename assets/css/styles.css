@@ -1082,7 +1082,7 @@ input::placeholder,textarea::placeholder{color:#8c90a1}
 .why-item__badge{
   display:inline-block; align-self:flex-start;
   background:#cf6a6a; color:#fff; border-radius:999px;
-  padding:6px 12px; font-size: 16px;
+  padding:6px 12px; font-size: 16px; font-family: 'Noto Sans KR', 'Noto Sans';
 }
 .why-item__body{ 
   color:#444444; 
