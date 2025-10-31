@@ -4598,21 +4598,26 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
   margin-top: 16px;
 }
 
-.safri-height {
-  min-height: 330px !important;
-  max-height: 330px !important;
+.safari-height {
+  min-height: 320px !important;
+  max-height: 320px !important;
 }
 
-.safri-height2 {
-  height: 385px !important;
+.safari-height2 {
+  height: 378px !important;
 }
 
 @media (max-width: 1024px) {
-  .safri-height2 {
+  .why-canada-main .section2 .detail-contents .flex-wrap .detail-box ul {
+    min-height: unset;
+    max-height: unset;
+  }
+
+  .safari-height2 {
     height: unset !important;
   }
 
-  .safri-height {
+  .safari-height {
     min-height: unset !important;
     max-height: unset !important;
   }
