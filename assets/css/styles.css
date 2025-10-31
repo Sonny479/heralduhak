@@ -642,6 +642,7 @@ input::placeholder,textarea::placeholder{color:#8c90a1}
 }
 .footer__links a{
   color:#e5edf7; text-decoration:none; font-weight:500; font-size: 16px;
+  font-family: 'Noto Sans KR', 'Noto Sans';
 }
 .footer__links a:hover{ text-decoration:underline; }
 .footer__links .sep{ opacity:.5; }
@@ -1049,9 +1050,10 @@ input::placeholder,textarea::placeholder{color:#8c90a1}
   display: flex;
   line-height: 18px;
   justify-content: center;
+  font-family: 'Noto Sans KR', 'Noto Sans';
 }
 .about-why__lead{
-  text-align:center; color:#444444; margin:0 0 22px;
+  text-align:center; color:#444444; margin:0 0 22px; font-family: 'Noto Sans KR', 'Noto Sans';
 }
 .about-why__grid{
   /* display:grid; 
@@ -1082,7 +1084,10 @@ input::placeholder,textarea::placeholder{color:#8c90a1}
   background:#cf6a6a; color:#fff; border-radius:999px;
   padding:6px 12px; font-size: 16px;
 }
-.why-item__body{ color:#444444; }
+.why-item__body{ 
+  color:#444444; 
+  font-family: 'Noto Sans KR', 'Noto Sans';
+}
 
 /* ③ Returnee */
 .about-returnee{ background:#ffffff; padding:80px 0; }
@@ -1091,9 +1096,11 @@ input::placeholder,textarea::placeholder{color:#8c90a1}
   display:block; padding:8px 16px; 
   margin:0 auto 10px;
   font-size: 24px;
+  font-family: 'Noto Sans KR', 'Noto Sans';
 }
 .returnee__sub{
   text-align:center;  color:#803130; margin:0 0 20px; font-size: 24px;
+  font-family: 'Noto Sans KR', 'Noto Sans';
 }
 .returnee__grid{
   display:grid; grid-template-columns: 1fr; gap:16px; max-width: 980px; margin:0 auto;
@@ -1109,12 +1116,14 @@ input::placeholder,textarea::placeholder{color:#8c90a1}
   width:190px; height:41px; text-align:center;display:inline-block; background:#CE5D5F; color:#fff; border-radius:999px;
   padding:6px 12px;  
   font-size: 18px;
+  font-family: 'Noto Sans KR', 'Noto Sans';
 }
 .returnee-card__badge2{
   width:190px; height:41px; text-align:center;display:inline-block; background:#CE5D5F; color:#fff; border-radius:999px;
   padding:6px 12px;  
+  font-family: 'Noto Sans KR', 'Noto Sans';
 }
-.returnee-card__body{ color:#473d3d; font: 16px;}
+.returnee-card__body{ color:#473d3d; font: 16px; font-family: 'Noto Sans KR', 'Noto Sans';}
 
 /* ④ CTA */
 .about-cta{
@@ -3518,6 +3527,7 @@ a {
 
 .redbrown .about-cta__desc {
   color: #fff;
+  font-family: 'Noto Sans KR', 'Noto Sans';
 }
 
 .footer-line::after {
