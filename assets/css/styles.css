@@ -1209,7 +1209,7 @@ html[data-page="consult"], body[data-page="consult"]{ background:#efe6e0; }
 
 /* 헤더/상단 알림 */
 .form-card__head{ display:flex; align-items:center; gap:10px; margin-bottom:10px; }
-.form-card__title{ margin:0;  color:#CE5D5F; display:flex; align-items:center; gap:6px; }
+.form-card__title{ margin:0;  color:#CE5D5F; display:flex; align-items:center; gap:6px; font-family: 'Noto Sans KR', 'Noto Sans';}
 .form-card__title .ico{ font-size:18px; }
 .form-card__meta{ margin:0;  color:#999999; }
 .form-card__notice{
@@ -3718,6 +3718,7 @@ a {
 
 .consult-question {
   font-size: 18px;
+  font-family: 'Noto Sans KR', 'Noto Sans';
 }
 
 .en-consult-title {
@@ -5117,6 +5118,13 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
 }
 
 @media (max-width: 1024px) {
+  .choice span {
+    font-family: 'Noto Sans KR', 'Noto Sans';
+  }
+  .form-card__title {
+    font-family: 'Noto Sans KR', 'Noto Sans';
+  }
+
   .esl-program .esl-recommend .esl-recommend-box {
     max-height: 248px;
   }
@@ -5643,6 +5651,7 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
 
   .btn-submit {
     font-size: 14px;
+    font-family: 'Noto Sans KR', 'Noto Sans';
   }
 
   .agree-row {
@@ -5672,6 +5681,7 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
 
   .consult-question {
     font-size: 14px;
+    font-family: 'Noto Sans KR', 'Noto Sans';
   }
 
   .consult-bg .consult-title p {
@@ -5753,6 +5763,7 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
 
   .early-abroad-main .e-section6 .part2 .program-range .program-item p {
     font-size: 14px;
+    max-height: 200px;
   }
 
   .early-abroad-main .e-section6 .part2 .program-range .program-item .item-title {
@@ -5781,6 +5792,7 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
 
   .early-abroad-main .e-section6 .management-abroad .abroad-title {
     font-size: 24px;
+    text-align: center;
   }
 
   .early-abroad-main .e-section6 {
@@ -5827,6 +5839,7 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
 
   .early-abroad-main .e-section5 .catholic-school .catholic-title {
     font-size: 24px;
+    text-align: center;
   }
 
   .early-abroad-main .e-section4 .study-cost .cost-table thead tr th {
@@ -5891,6 +5904,7 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
 
   .early-abroad-main .e-section4 .free-edu strong {
     font-size: 24px;
+    text-align: center;
   }
 
   .early-abroad-main .e-section4 {
@@ -5961,6 +5975,7 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
 
   .with-title strong {
     font-size: 24px;
+    text-align: center;
   }
 
   .why-canada-main .section3 .compare-table thead tr th {
