@@ -5350,6 +5350,7 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
   .why-canada-main .section2 .detail-contents .flex-wrap .detail-box ul {
     min-height: unset !important;
     max-height: 310 !important;
+    height: -webkit-fit-content;
   }
 
   .safari-height2 {
