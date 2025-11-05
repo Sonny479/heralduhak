@@ -1234,14 +1234,14 @@ html[data-page="consult"], body[data-page="consult"]{ background:#efe6e0; }
   border:1px solid #dfe3ea; border-radius:10px; background:#fff; font-size:15px; resize:vertical;
 }
 .select-wrap{ position:relative; }
-.field .help{ margin:2px 0 0; font-size:12px; color:#8a93a2; }
-.field .help.warn{ color:#b24b4b; }
+.field .help{ margin:2px 0 0; font-size:12px; color:#8a93a2; font-family: 'Noto Sans KR', 'Noto Sans';}
+.field .help.warn{ color:#b24b4b; font-family: 'Noto Sans KR', 'Noto Sans';}
 .field .muted{ color:#b24b4b; font-style:normal; font-weight:700; }
 
 .choice-row{ display:flex; flex-wrap:wrap; gap:14px; }
 .choice{ display:inline-flex; align-items:center; gap:6px; font-weight:600; }
 .choice input{ width:16px; height:16px; }
-.char{ text-align:right; font-size:12px; color:#8a93a2; }
+.char{ text-align:right; font-size:12px; color:#8a93a2; font-family: 'Noto Sans KR', 'Noto Sans';}
 
 /* 동의/방침 */
 .agree-row{ align-items:center; gap:10px; }
@@ -5368,6 +5368,7 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
   .why-canada-main .section2 .detail-contents .flex-wrap .detail-box {
     max-width: unset;
     max-height: 420px;
+    height: -webkit-fit-content;
   }
 
   .adult-contents .highschool-title .tit-sub-text2 {
@@ -5957,7 +5958,7 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
 
   .early-abroad-main .e-section1 .case-contents .case-box .half-bg p {
     font-size: 14px;
-    word-break: keep-all;
+    /* word-break: keep-all; */
   }
 
   .early-abroad-main .e-section1 .case-contents .case-box .half-bg {
