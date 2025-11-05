@@ -1463,6 +1463,7 @@ main {
   font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 16px;
   font-weight: 500;
+  word-break: keep-all;
 }
 
 .why-canada-main .section1 .canada-advantage-table .go-btn {
@@ -6102,6 +6103,7 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
   
   .returnee-card__body{ 
     font-size: 14px;
+    word-break: keep-all;
   }
 
   .returnee-card__badge {
@@ -6141,6 +6143,7 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
 
   .why-item__body {
     font-size: 14px;
+    word-break: keep-all;
   }
 
   .about-why__title {
