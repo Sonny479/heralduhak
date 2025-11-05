@@ -715,6 +715,21 @@ input::placeholder,textarea::placeholder{color:#8c90a1}
   padding: 64px 0 88px;
   position: relative;
 }
+
+/* .nav-location {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  opacity: 0.9;
+  background-color: #cfcfcf;
+  font-size: 18px;
+  color: #fff;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  padding-left: 16px;
+} */
+
 .about-hero__inner{ max-width: var(--max, 1200px); margin: 0 auto; }
 /* .about-hero__title{
   margin: 0 0 12px; font-size: 34px; font-weight: 900; letter-spacing: -0.02em;
@@ -5102,6 +5117,14 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
 }
 
 @media (max-width: 1024px) {
+  .esl-program .esl-recommend .esl-recommend-box {
+    max-height: 248px;
+  }
+
+  .esl-program .esl-distinct .case-contents .case-box {
+    max-height: 155px;
+  }
+
   .gnb_kr .gnb__list li a {
     padding: 12px 16px;
   }
