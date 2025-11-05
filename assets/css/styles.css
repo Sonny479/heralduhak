@@ -4877,6 +4877,7 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
   line-height: 24px;
   letter-spacing: -0.16px;
   margin-top: 24px;
+  word-break: keep-all;
 }
 
 .esl-program .esl-purpose {
@@ -5228,7 +5229,8 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
 
   .esl-process .process-composition .level-box ul li {
     font-size: 14px;
-    line-height: 22px
+    line-height: 22px;
+    word-break: keep-all;
   }
 
   .esl-process .process-composition .level-box b {
