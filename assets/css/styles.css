@@ -4121,7 +4121,7 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 5px;
+  /* gap: 5px; */
 }
 
 .gnb_kr .gnb__list li {
@@ -4136,11 +4136,13 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
   font-family: "Noto Sans KR","Noto Sans";
   font-weight: 500;
   font-size: 16px;
-  padding: 8px 16px;
+  /* padding: 8px 16px; */
+  padding: 12px 18px;
 }
 
 .gap34 .gnb_kr .gnb__list li a {
   font-family: "Noto Sans" !important;
+  padding: 12px;
 }
 
 .gnb_kr .gnb__list li a:hover {
@@ -4168,7 +4170,7 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
 
 .gnb__list .sub {
   position: absolute; 
-  top: 50px;
+  top: 52px;
   left: 0; 
   min-width: 240px;
   background: #fff; 
@@ -5117,7 +5119,36 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
   letter-spacing: -0.16px;
 }
 
+.mobile {
+  display: none !important;
+}
+
+.pc {
+  display: flex !important;
+}
+
 @media (max-width: 1024px) {
+  .mobile .m-space {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .mobile {
+    display: flex !important;
+  }
+
+  .pc {
+    display: none !important;
+  }
+  .adult-contents .adult-program .program-detail .grad-title {
+    padding: 8px;
+  }
+
+  .advantage-layout .field-contents .field-box .major-col {
+    flex-wrap: wrap;
+  }
+
   .choice span {
     font-family: 'Noto Sans KR', 'Noto Sans';
   }
@@ -5265,6 +5296,7 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
 
   .qualification .qualification-bg {
     gap: 4px;
+    word-break: keep-all;
   }
 
   .qualification .qualification-bg b {
@@ -5375,6 +5407,7 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
   .adult-contents .highschool-title .tit-sub-text2 {
     margin-top: 8px;
     text-align: center;
+    word-break: keep-all;
   }
 
   .adult-contents .requirement-text {
@@ -5404,12 +5437,18 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
 
   .adult-contents .two-method .degree-box strong {
     font-size: 14px;
+    word-break: keep-all;
   }
 
   .adult-contents .two-method .degree-box b {
+    display: flex;
+    justify-content: center;
     font-size: 14px;
-    height: 48px;
+    height: 38px;
     word-break: keep-all;
+    width: 100%;
+    max-width: 360px;
+    padding-inline: 6px;
   }
 
   .adult-contents .two-method .degree-box b span {
@@ -5537,6 +5576,7 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
     width: 102px;
     height: auto;
     align-self: center;
+    border-radius: 8px 0 0 0;
   }
 
   .academic_tutoring .uhak-tutoring .teachers-layout .teacher-box .teacher-content2 ul {
@@ -5562,10 +5602,12 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
 
   .academic_tutoring .uhak-tutoring .uhak-title-layout p {
     display: unset;
+    word-break: keep-all;
   }
 
   .academic_tutoring .uhak-tutoring .uhak-title-layout strong {
-    font-size: 24px;
+    /* font-size: 24px; */
+    font-size: 21px;
   }
 
   .tutoring-guide .tutoring-layout .tut-col .tut-box {
@@ -5846,6 +5888,7 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
 
   .early-abroad-main .e-section4 .study-cost .cost-table thead tr th {
     font-size: 14px;
+    padding: 4px;
   }
 
   .early-abroad-main .e-section4 .study-cost .cost-table tbody tr td {
@@ -6341,6 +6384,7 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
 
   .early-abroad-main .e-section4 .total-layout .two-item-layout .item-3 {
     width: 100%;
+    gap: 8px;
   }
 
   .early-abroad-main .e-section4 .total-layout .two-item-layout {
