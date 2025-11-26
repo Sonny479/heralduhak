@@ -5207,7 +5207,6 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
   font-size: 18px;
   font-weight: 500;
   line-height: normal;
-  text-transform: uppercase;
 }
 
 .univ-result {
@@ -5377,6 +5376,7 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
   font-family: "Noto Sans";
   font-size: 16px;
   font-weight: 900;
+  text-align: center;
   line-height: normal;
 }
 
@@ -5532,6 +5532,40 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
   padding: 16px;
   gap: 16px;
   background-color: #F8F3EC;
+}
+
+.univ-result .u-title-layout {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #cfcfcf;
+  background-color: #fff;
+  /* background-color: #F8F3EC; */
+  padding: 24px 16px;
+  gap: 8px;
+}
+
+.univ-result .u-title-layout .u-title-re {
+  color: #CE5D5F;
+  font-family: "Noto Sans";
+  font-size: 20px;
+  font-weight: 800;
+  line-height: normal;
+}
+
+.univ-result .u-title-layout p {
+  color: #333;
+  font-family: "Noto Sans";
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 22px;
+}
+
+.text-red {
+  color: #CE5D5F;
+  font-family: "Noto Sans";
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
 }
 
 @media (max-width: 1024px) {
