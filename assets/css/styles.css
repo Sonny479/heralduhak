@@ -5537,9 +5537,10 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
 .univ-result .u-title-layout {
   display: flex;
   flex-direction: column;
-  border: 1px solid #cfcfcf;
-  background-color: #fff;
+  /* border: 1px solid #cfcfcf; */
+  /* background-color: #fff; */
   /* background-color: #F8F3EC; */
+  border-bottom: 1px solid #cfcfcf;
   padding: 24px 16px;
   gap: 8px;
 }
