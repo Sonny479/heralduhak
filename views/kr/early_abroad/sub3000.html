@@ -14,6 +14,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="/assets/css/styles.css"/>
+
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
   <script defer src="/assets/js/app.js"></script>
   <noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
 </head>
@@ -75,6 +79,48 @@
             </div>
           </div>
         </div>
+
+        <div class="gallery-campus">
+          <div class="gallery-contents">
+            <strong class="gallery-title">캠퍼스 & 기숙사 미리 보기</strong>
+            <p class="gallery-text">St. George’s School의 캠퍼스 환경과 기숙사 생활 분위기를 사진으로 확인해 보세요.</p>
+            <div class="swiper">
+              <div class="swiper-wrapper">
+
+                <div class="swiper-slide">
+                  <img src="/assets/img/school1.jpg">
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="/assets/img/school2.jpg">
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="/assets/img/school3.png">
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="/assets/img/school4.png">
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="/assets/img/school5.png">
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="/assets/img/school6.png">
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="/assets/img/school7.png">
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+
         <div class="univ-result">
           <strong class="u-title">대학입시결과(University Placement)</strong>
           <div class="total-result">
@@ -224,11 +270,40 @@
   <!-- ===== Footer ===== -->
   <div id="footer"></div>
   <script>
+
+    // 클릭시, 펼쳐지는 토글
     const moreBtn = document.querySelector('.more-btn');
     const totalResult = document.querySelector('.total-result');
 
       moreBtn.addEventListener('click', () => {
       totalResult.classList.toggle('active');
+    });
+
+
+    // 학교 슬라이드 
+    const swiper = new Swiper('.swiper', {
+      slidesPerView: 3,
+      spaceBetween: 20,
+      loop: true,
+      autoplay: {
+        delay: 2000,
+        disableOnInteraction: false
+      },
+      speed: 500,
+
+      breakpoints: {
+        0: {
+          slidesPerView: 1,
+        },
+
+        768: {
+          slidesPerView: 2,
+        },
+
+        1024: {
+          slidesPerView: 3,
+        }
+      }
     });
   </script>
   <script src="/assets/js/include.js"></script>

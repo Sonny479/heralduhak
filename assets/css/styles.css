@@ -269,7 +269,7 @@ input::placeholder,textarea::placeholder{color:#8c90a1}
 .dot{ width:10px; height:10px; border-radius:50%; background:#ffffff70; border:1px solid #ffffff99; cursor:pointer; }
 .dot.is-active{ 
   background: #B92E2C; 
-  border-color: #8c3b37; 
+  border-color: #8c3b37;
 }
 
 /* 이미지 타이틀/버튼 크기 */
@@ -2113,6 +2113,11 @@ main {
   background: #F8F3EC;
   box-shadow: 2px 4px 10px 0 rgba(0, 0, 0, 0.25);
   padding: 16px 18px;
+}
+
+.height190 {
+  height: 190px;
+  padding: 14px 14px !important;
 }
 
 .early-abroad-main .e-section2 .sequence-box .sequence-contents .box-block .box-item img {
@@ -5569,7 +5574,48 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
   line-height: 24px;
 }
 
+.gallery-campus {
+  display: flex;
+  flex-direction: column;
+  margin-block: 60px;
+}
+
+.gallery-campus .gallery-contents .swiper {
+  margin-top: 40px;
+}
+
+.gallery-campus .gallery-contents .swiper .swiper-wrapper .swiper-slide img {
+  max-width: 390px;
+  height: 300px;
+}
+
+.gallery-campus .gallery-title {
+  color: #CE5D5F;
+  font-family: "Noto Sans";
+  font-size: 24px;
+  font-weight: 900;
+  text-align: center;
+  line-height: normal;
+}
+
+.gallery-campus .gallery-text {
+  color: #333;
+  font-family: "Noto Sans";
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  margin-top: 8px;
+}
+
+
+
+
+
 @media (max-width: 1024px) {
+  .height190 {
+    height: unset;
+  }
+
   .result-guide {
     margin-block: unset;
     margin-top: 40px;
@@ -5593,12 +5639,14 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
 
   .boarding-program .except-detail {
     padding: 16px;
+    max-width: 528px;
   }
 
   .boarding-program .except-detail p {
     font-size: 16px;
     word-break: keep-all;
     font-weight: 700;
+    text-align: center;
   }
 
   .program-layout .program-detail {
