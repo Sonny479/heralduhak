@@ -263,7 +263,7 @@ input::placeholder,textarea::placeholder{color:#8c90a1}
 .slide__inner{ position:relative; z-index:1; height:100%; display:flex; align-items:center; }
 .slide__text{ max-width:920px; }
 .text-brand{ color:var(--brand1); }
-.slider__nav{ position:absolute; top:50%; transform:translateY(-50%); width:44px; height:44px; border-radius:50%; display:grid; place-items:center; background:#00000055; color:#fff; border:1px solid #ffffff2a; cursor:pointer; z-index:2; }
+.slider__nav{ position:absolute; top:50%; transform:translateY(-50%); width:44px; height:44px; border-radius:50%; display:grid; place-items:center; background:#00000055; color:#fff; border:1px solid #ffffff2a; cursor:pointer; z-index:2; font-weight: 900;}
 .slider__nav:hover{ background:#00000088 } .slider__nav.prev{ left:16px } .slider__nav.next{ right:16px }
 .dots{ position:absolute; left:50%; bottom:22px; transform:translateX(-50%); display:flex; gap:10px; z-index:2; }
 .dot{ width:10px; height:10px; border-radius:50%; background:#ffffff70; border:1px solid #ffffff99; cursor:pointer; }
