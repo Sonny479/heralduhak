@@ -7386,3 +7386,14 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
     max-width: 350px;
   }
 }
+
+@media (max-width: 358px) {
+  .text-space {
+    white-space: unset;
+  }
+
+  .adult-contents .two-method .degree-box b {
+    padding-inline: 18px;
+    line-height: 14px;
+  }
+}
