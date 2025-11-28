@@ -5491,6 +5491,10 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
   margin-top: 24px;
 }
 
+.enter-reservation .margin-unset {
+  margin-top: unset !important;
+}
+
 .enter-reservation ul li {
   color: #333;
   font-family: 'Noto Sans KR', 'Noto Sans';
