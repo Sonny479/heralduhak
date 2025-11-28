@@ -5389,22 +5389,25 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
   display: flex;
   justify-content: center;
   align-items: center;
-  /* flex-shrink: 0; */
   border-radius: 8px;
-  border: 1px solid #CCC;
-  background-color: #FFF;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
+  /* flex-shrink: 0; */
+  /* background-color: #FFF; */
+  /* border: 1px solid #CCC; */
+  /* box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15); */
   width: 100%;
   padding: 36px 80px;
   margin-top: 22px;
 }
 
 .boarding-program .except-detail p {
+  /* font-size: 24px; */
+  /* font-weight: 500; */
   color: #444;
   font-family: 'Noto Sans KR', 'Noto Sans';
-  font-size: 24px;
-  font-weight: 500;
+  font-size: 16px;
+  font-weight: 700;
   line-height: normal;
+  text-align: center;
 }
 
 .enter-guide {
@@ -5481,6 +5484,11 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
   font-size: 16px;
   font-weight: 600;
   line-height: normal;
+  margin-top: 24px;
+}
+
+.enter-reservation ul {
+  margin-top: 24px;
 }
 
 .enter-reservation ul li {
@@ -5537,6 +5545,7 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
   padding: 16px;
   gap: 16px;
   background-color: #F8F3EC;
+  text-align: left;
 }
 
 .univ-result .u-title-layout {
