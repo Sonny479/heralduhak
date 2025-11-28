@@ -5694,7 +5694,7 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
   }
 
   .univ-result {
-    margin-top: 20px;
+    margin-top: 15px;
   }
 
   .univ-result .u-title {
@@ -5709,7 +5709,7 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
   }
 
   .boarding-layout .boarding-num .boarding-box b {
-    font-size: 14px;
+    font-size: 16px;
   }
 
   .boarding-layout .boarding-num .boarding-box p {
