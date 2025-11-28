@@ -5141,7 +5141,7 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
 
 .boarding-title strong {
   color: #333;
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 32px;
   font-weight: 700;
   line-height: normal;
@@ -5151,7 +5151,7 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
 .boarding-title p {
   color: #333;
   text-align: center;
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
@@ -5174,7 +5174,7 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
   text-align: center;
   font-size: 24px;
   color: #4B3C37;
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-weight: 700;
   line-height: 24px;
 }
@@ -5200,7 +5200,7 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
 
 .boarding-layout .boarding-num .boarding-box b {
   color: #CE5D5F;
-  font-family: "Noto Sans";
+  font-family: "Noto Sans KR', 'Noto Sans";
   font-size: 20px;
   font-weight: 800;
   line-height: normal;
@@ -5208,7 +5208,7 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
 
 .boarding-layout .boarding-num .boarding-box p {
   color: #444;
-  font-family: "Noto Sans";
+  font-family: "Noto Sans KR', 'Noto Sans";
   font-size: 18px;
   font-weight: 500;
   line-height: normal;
@@ -5226,7 +5226,7 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
   align-items: center;
   justify-content: center;
   color: #fff;
-  font-family: "Noto Sans";
+  font-family: "Noto Sans KR', 'Noto Sans";
   font-size: 20px;
   font-weight: 900;
   line-height: normal;
@@ -5255,7 +5255,7 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
   flex: 1;
   color: #545454;
   text-align: center;
-  font-family: "Noto Sans";
+  font-family: "Noto Sans KR', 'Noto Sans";
   font-size: 16px;
   font-weight: 500;
   line-height: 21px;
@@ -5333,7 +5333,7 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
 .boarding-program > strong {
   color: #4B3C37;
   text-align: center;
-  font-family: "Noto Sans";
+  font-family: "Noto Sans KR', 'Noto Sans";
   font-size: 24px;
   font-weight: 900;
   line-height: 24px;
@@ -5342,7 +5342,7 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
 .boarding-program > p {
   color: #333;
   text-align: center;
-  font-family: "Noto Sans";
+  font-family: "Noto Sans KR', 'Noto Sans";
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
@@ -5378,7 +5378,7 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
 
 .program-layout .program-detail span {
   color: #CE5D5F;
-  font-family: "Noto Sans";
+  font-family: "Noto Sans KR', 'Noto Sans";
   font-size: 16px;
   font-weight: 900;
   text-align: center;
@@ -5401,7 +5401,7 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
 
 .boarding-program .except-detail p {
   color: #444;
-  font-family: "Noto Sans";
+  font-family: "Noto Sans KR', 'Noto Sans";
   font-size: 24px;
   font-weight: 500;
   line-height: normal;
@@ -5414,7 +5414,7 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
 
 .enter-guide strong {
   color: #CE5D5F;
-  font-family: "Noto Sans";
+  font-family: "Noto Sans KR', 'Noto Sans";
   font-size: 22px;
   font-weight: 900;
   line-height: normal;
@@ -5435,7 +5435,7 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
 
 .enter-guide .guide-detail p {
   color: #333;
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 16px;
   font-weight: 500;
   line-height: 32px;
@@ -5452,7 +5452,7 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
 
 .enter-reservation strong {
   color: #CE5D5F;
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 22px;
   font-weight: 900;
   line-height: normal;
@@ -5461,7 +5461,7 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
 
 .enter-reservation p {
   color: #333;
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
@@ -5477,7 +5477,7 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
   border-radius: 999px;
   background: #FFDE4D;
   color: #5F482F;
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 16px;
   font-weight: 600;
   line-height: normal;
@@ -5485,7 +5485,7 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
 
 .enter-reservation ul li {
   color: #333;
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 16px;
   font-weight: 500;
   line-height: 28px;
@@ -5505,7 +5505,7 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
 .result-guide strong {
   color: #FFF;
   text-align: center;
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 18px;
   font-weight: 900;
   line-height: normal;
@@ -5523,7 +5523,7 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
 .result-guide p {
   color: #333;
   text-align: center;
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 16px;
   font-weight: 500;
   line-height: 32px;
@@ -5552,7 +5552,7 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
 
 .univ-result .u-title-layout .u-title-re {
   color: #CE5D5F;
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 20px;
   font-weight: 800;
   line-height: normal;
@@ -5560,7 +5560,7 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
 
 .univ-result .u-title-layout p {
   color: #333;
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 18px;
   font-weight: 500;
   line-height: 22px;
@@ -5568,7 +5568,7 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
 
 .text-red {
   color: #CE5D5F;
-  font-family: "Noto Sans";
+  font-family: 'Noto Sans KR', 'Noto Sans';
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
@@ -5591,7 +5591,7 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
 
 .gallery-campus .gallery-title {
   color: #CE5D5F;
-  font-family: "Noto Sans";
+  font-family: "Noto Sans KR', 'Noto Sans";
   font-size: 24px;
   font-weight: 900;
   text-align: center;
@@ -5600,7 +5600,7 @@ textarea::-webkit-input-placeholder { /* 크롬, 사파리 */
 
 .gallery-campus .gallery-text {
   color: #333;
-  font-family: "Noto Sans";
+  font-family: "Noto Sans KR', 'Noto Sans";
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
